@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:midnight_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:chiseled_midnight_bricks"
+  }
+}

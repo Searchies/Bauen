@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:treated_bricks",
+    "minecraft:bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:mixed_bricks"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:chiseled_treated_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:mossy_chiseled_treated_bricks"
+  }
+}

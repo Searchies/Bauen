@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "industrial_iron_grate",
+  "key": {
+    "M": "bauen:industrial_iron_block"
+  },
+  "pattern": [
+    " M ",
+    "M M",
+    " M "
+  ],
+  "result": {
+    "count": 4,
+    "id": "bauen:industrial_iron_grate"
+  }
+}

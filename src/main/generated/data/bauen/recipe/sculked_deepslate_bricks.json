@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:deepslate_bricks",
+    "minecraft:sculk"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:sculked_deepslate_bricks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "bauen:block/carved_industrial_iron"
+  }
+}

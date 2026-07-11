@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "bauen",
+	"version": "${version}",
+	"name": "Bauen",
+	"description": "Building but cooler",
+	"authors": [
+		"Searchies",
+		"PhantomPickle"
+	],
+	"contact": {
+		"homepage": "https://searchies.net/",
+		"sources": "https://github.com/Searchies/Bauen"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/bauen/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.searchies.bauen.Bauen"
+		],
+		"fabric-datagen": [
+			"net.searchies.bauen.BauenDataGenerator"
+		]
+	},
+	"mixins": [
+		"bauen.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"accessWidener": "bauen.accesswidener"
+}

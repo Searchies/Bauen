@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:mixed_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:mossy_mixed_bricks"
+  }
+}

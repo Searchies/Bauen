@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:calcite_bricks",
+    "minecraft:pale_moss_block"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:mossy_calcite_bricks"
+  }
+}

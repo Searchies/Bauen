@@ -1,0 +1,10 @@
+// 1.21.11	-999999999-01-01T00:00:00	Bauen/Tags for minecraft:block
+32aaf3374733ad6f70f9bd8a1ef0913f42a9d2f5 data/bauen/tags/block/custom_brick_blocks_tag.json
+e3abd03740ad5ae4a82012930b0433318efe90bd data/bauen/tags/block/custom_gold_blocks_tag.json
+8fa8d76e5a599d7176d270903d896149312714ec data/bauen/tags/block/custom_stone_tag.json
+49a98c335a3847245d3d138d9dd518b4e8c6852c data/bauen/tags/block/industrial_iron_blocks_tag.json
+43deef642993c64236afe1c78f8d68f991e9b684 data/bauen/tags/block/midnight_blocks_tag.json
+4b97f56668228e1c8388e1bb994a4670fd2a2a9c data/minecraft/tags/block/bars.json
+c534c1b962518518b051608707cb213eedc89c67 data/minecraft/tags/block/chains.json
+33adc95515c5e1195f272f908358f31a5e2ab3af data/minecraft/tags/block/lanterns.json
+6580fa663cdb0d8279ad98d9ace51c5f25748601 data/minecraft/tags/block/mineable/pickaxe.json
