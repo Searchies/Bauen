@@ -10,7 +10,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
 import net.searchies.bauen.block.ModBlocks;
 import net.searchies.bauen.item.ModItems;
 
@@ -121,6 +120,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 createDoorRecipe(ModBlocks.GOLD_DOOR, Ingredient.ofItem(Items.GOLD_INGOT))
                     .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                    .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_HOARD)
+                    .input('#', ModBlocks.GOLD_COINS)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(ModBlocks.GOLD_COINS), conditionsFromItem(ModBlocks.GOLD_COINS))
                     .offerTo(exporter);
 
                 // INDUSTRIAL IRON BLOCKS //
@@ -240,6 +245,108 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     ModBlocks.CRACKED_CALCITE_BRICKS, 0.1F, 200)
                 .criterion(hasItem(ModBlocks.CALCITE_BRICKS), conditionsFromItem(ModBlocks.CALCITE_BRICKS))
                 .offerTo(exporter);
+
+                // ANDESITE BRICKS //
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS)
+                    .input('#', Blocks.ANDESITE)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(Blocks.ANDESITE), conditionsFromItem(Blocks.ANDESITE))
+                    .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANDESITE_BRICKS)
+                    .input(ModBlocks.ANDESITE_BRICKS)
+                    .input(Blocks.VINE)
+                    .criterion(hasItem(Blocks.VINE), conditionsFromItem(Blocks.VINE))
+                    .offerTo(exporter);
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.ANDESITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                    ModBlocks.CRACKED_ANDESITE_BRICKS, 0.1F, 200)
+                .criterion(hasItem(ModBlocks.ANDESITE_BRICKS), conditionsFromItem(ModBlocks.ANDESITE_BRICKS))
+                .offerTo(exporter);
+
+                // DIORITE BRICKS //
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIORITE_BRICKS)
+                    .input('#', Blocks.DIORITE)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(Blocks.DIORITE), conditionsFromItem(Blocks.DIORITE))
+                    .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DIORITE_BRICKS)
+                    .input(ModBlocks.DIORITE_BRICKS)
+                    .input(Blocks.VINE)
+                    .criterion(hasItem(Blocks.VINE), conditionsFromItem(Blocks.VINE))
+                    .offerTo(exporter);
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.DIORITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                    ModBlocks.CRACKED_DIORITE_BRICKS, 0.1F, 200)
+                .criterion(hasItem(ModBlocks.DIORITE_BRICKS), conditionsFromItem(ModBlocks.DIORITE_BRICKS))
+                .offerTo(exporter);
+
+                // DRIPSTONE BRICKS //
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS)
+                    .input('#', Blocks.DRIPSTONE_BLOCK)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(Blocks.DRIPSTONE_BLOCK), conditionsFromItem(Blocks.DRIPSTONE_BLOCK))
+                    .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DRIPSTONE_BRICKS)
+                    .input(ModBlocks.DRIPSTONE_BRICKS)
+                    .input(Blocks.VINE)
+                    .criterion(hasItem(Blocks.VINE), conditionsFromItem(Blocks.VINE))
+                    .offerTo(exporter);
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.DRIPSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                    ModBlocks.CRACKED_DRIPSTONE_BRICKS, 0.1F, 200)
+                .criterion(hasItem(ModBlocks.DRIPSTONE_BRICKS), conditionsFromItem(ModBlocks.DRIPSTONE_BRICKS))
+                .offerTo(exporter);
+
+                // GRANITE BRICKS //
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRANITE_BRICKS)
+                    .input('#', Blocks.GRANITE)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(Blocks.GRANITE), conditionsFromItem(Blocks.GRANITE))
+                    .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_GRANITE_BRICKS)
+                    .input(ModBlocks.GRANITE_BRICKS)
+                    .input(Blocks.VINE)
+                    .criterion(hasItem(Blocks.VINE), conditionsFromItem(Blocks.VINE))
+                    .offerTo(exporter);
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.GRANITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                    ModBlocks.CRACKED_GRANITE_BRICKS, 0.1F, 200)
+                .criterion(hasItem(ModBlocks.GRANITE_BRICKS), conditionsFromItem(ModBlocks.GRANITE_BRICKS))
+                .offerTo(exporter);
+
+                // OCEANSLATE //
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE)
+                    .input(Items.COPPER_NUGGET, 2)
+                    .input(Blocks.DEEPSLATE, 2)
+                    .criterion(hasItem(Blocks.DEEPSLATE), conditionsFromItem(Blocks.DEEPSLATE))
+                .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_BRICKS)
+                    .input('#', ModBlocks.OCEANSLATE)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(ModBlocks.OCEANSLATE), conditionsFromItem(ModBlocks.OCEANSLATE))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_TILES, ModBlocks.OCEANSLATE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_OCEANSLATE, ModBlocks.OCEANSLATE);
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.OCEANSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                    ModBlocks.CRACKED_OCEANSLATE_BRICKS, 0.1F, 200)
+                .criterion(hasItem(ModBlocks.OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.OCEANSLATE_BRICKS))
+                .offerTo(exporter);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_OCEANSLATE_BRICKS)
+                    .input(ModBlocks.OCEANSLATE_BRICKS)
+                    .input(Blocks.KELP)
+                    .criterion(hasItem(Blocks.KELP), conditionsFromItem(Blocks.KELP))
+                    .offerTo(exporter);
 
                 // TROWEL //
 

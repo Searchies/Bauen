@@ -30,6 +30,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.GOLD_TRAPDOOR.asItem(),"Gold Trapdoor");
         translationBuilder.add(ModBlocks.GOLD_DOOR.asItem(),"Gold Door");
         translationBuilder.add(ModBlocks.GOLD_COINS.asItem(),"Gold Coins");
+        translationBuilder.add(ModBlocks.GOLD_HOARD.asItem(),"Gold Hoard");
+        translationBuilder.add(ModBlocks.GOLD_HOARD_BLOCK.asItem(),"Gold Hoard Block");
 
         translationBuilder.add(ModBlocks.MIXED_COBBLESTONE.asItem(),"Mixed Cobblestone");
 
@@ -70,8 +72,31 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.MOSSY_CALCITE_BRICKS.asItem(), "Mossy Calcite Bricks");
         translationBuilder.add(ModBlocks.CRACKED_CALCITE_BRICKS.asItem(), "Cracked Calcite Bricks");
 
+        translationBuilder.add(ModBlocks.ANDESITE_BRICKS.asItem(), "Andesite Bricks");
+        translationBuilder.add(ModBlocks.MOSSY_ANDESITE_BRICKS.asItem(), "Mossy Andesite Bricks");
+        translationBuilder.add(ModBlocks.CRACKED_ANDESITE_BRICKS.asItem(), "Cracked Andesite Bricks");
+
+        translationBuilder.add(ModBlocks.DIORITE_BRICKS.asItem(), "Diorite Bricks");
+        translationBuilder.add(ModBlocks.MOSSY_DIORITE_BRICKS.asItem(), "Mossy Diorite Bricks");
+        translationBuilder.add(ModBlocks.CRACKED_DIORITE_BRICKS.asItem(), "Cracked Diorite Bricks");
+
+        translationBuilder.add(ModBlocks.DRIPSTONE_BRICKS.asItem(), "Dripstone Bricks");
+        translationBuilder.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS.asItem(), "Mossy Dripstone Bricks");
+        translationBuilder.add(ModBlocks.CRACKED_DRIPSTONE_BRICKS.asItem(), "Cracked Dripstone Bricks");
+
+        translationBuilder.add(ModBlocks.GRANITE_BRICKS.asItem(), "Granite Bricks");
+        translationBuilder.add(ModBlocks.MOSSY_GRANITE_BRICKS.asItem(), "Mossy Granite Bricks");
+        translationBuilder.add(ModBlocks.CRACKED_GRANITE_BRICKS.asItem(), "Cracked Granite Bricks");
+
+        translationBuilder.add(ModBlocks.OCEANSLATE.asItem(), "Oceanslate");
+        translationBuilder.add(ModBlocks.OCEANSLATE_BRICKS.asItem(), "Oceanslate Bricks");
+        translationBuilder.add(ModBlocks.OCEANSLATE_TILES.asItem(), "Oceanslate Tiles");
+        translationBuilder.add(ModBlocks.POLISHED_OCEANSLATE.asItem(), "Polished Oceanslate");
+        translationBuilder.add(ModBlocks.CRACKED_OCEANSLATE_BRICKS.asItem(), "Cracked Oceanslate Bricks");
+        translationBuilder.add(ModBlocks.KELPY_OCEANSLATE_BRICKS.asItem(), "Kelpy Oceanslate Bricks");
+
         translationBuilder.add(ModItems.TROWEL, "Trowel");
 
-//        translationBuilder.add(ModItemGroups.MIDNIGHT_BRICKS_GROUP., "");
+        translationBuilder.add("itemgroup.bauen.bauen_blocks_group", "Bauen");
     }
 }

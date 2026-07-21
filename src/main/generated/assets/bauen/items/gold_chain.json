@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "bauen:item/gold_chain"
+    "model": "bauen:block/gold_chain"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:oceanslate_bricks",
+    "minecraft:kelp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:kelpy_oceanslate_bricks"
+  }
+}

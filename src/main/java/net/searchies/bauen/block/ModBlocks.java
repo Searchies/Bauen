@@ -13,7 +13,6 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.UndergroundConfiguredFeatures;
 import net.searchies.bauen.Bauen;
 
 import java.util.function.Function;
@@ -42,6 +41,9 @@ public class ModBlocks {
     public static final Block GOLD_DOOR = registerCustomBlock("gold_door", settings -> new DoorBlock(BlockSetType.COPPER, settings), ABS_DOOR);
     public static final Block GOLD_COINS = registerCustomBlock("gold_coins", LeafLitterBlock::new,
             AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().noCollision().sounds(BlockSoundGroup.LEAF_LITTER).pistonBehavior(PistonBehavior.DESTROY));
+    public static final Block GOLD_HOARD = registerCustomBlock("gold_hoard", SnowBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().notSolid().ticksRandomly().strength(0.1f).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY));
+    public static final Block GOLD_HOARD_BLOCK = registerCustomBlock("gold_hoard_block", SnowBlock::new,
+            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().noCollision().sounds(BlockSoundGroup.CHAIN).pistonBehavior(PistonBehavior.DESTROY));
 
     public static final Block MIXED_COBBLESTONE = registerBlock("mixed_cobblestone", AbstractBlock.Settings.copy(Blocks.COBBLESTONE).strength(3.0F));
 
@@ -79,6 +81,30 @@ public class ModBlocks {
     public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks", ABS_BRICKS);
     public static final Block MOSSY_CALCITE_BRICKS = registerBlock("mossy_calcite_bricks", ABS_BRICKS);
     public static final Block CRACKED_CALCITE_BRICKS = registerBlock("cracked_calcite_bricks", ABS_BRICKS);
+
+    public static final Block ANDESITE_BRICKS = registerBlock("andesite_bricks", ABS_BRICKS);
+    public static final Block MOSSY_ANDESITE_BRICKS = registerBlock("mossy_andesite_bricks", ABS_BRICKS);
+    public static final Block CRACKED_ANDESITE_BRICKS = registerBlock("cracked_andesite_bricks", ABS_BRICKS);
+
+    public static final Block DIORITE_BRICKS = registerBlock("diorite_bricks", ABS_BRICKS);
+    public static final Block MOSSY_DIORITE_BRICKS = registerBlock("mossy_diorite_bricks", ABS_BRICKS);
+    public static final Block CRACKED_DIORITE_BRICKS = registerBlock("cracked_diorite_bricks", ABS_BRICKS);
+
+    public static final Block DRIPSTONE_BRICKS = registerBlock("dripstone_bricks", ABS_BRICKS);
+    public static final Block MOSSY_DRIPSTONE_BRICKS = registerBlock("mossy_dripstone_bricks", ABS_BRICKS);
+    public static final Block CRACKED_DRIPSTONE_BRICKS = registerBlock("cracked_dripstone_bricks", ABS_BRICKS);
+
+    public static final Block GRANITE_BRICKS = registerBlock("granite_bricks", ABS_BRICKS);
+    public static final Block MOSSY_GRANITE_BRICKS = registerBlock("mossy_granite_bricks", ABS_BRICKS);
+    public static final Block CRACKED_GRANITE_BRICKS = registerBlock("cracked_granite_bricks", ABS_BRICKS);
+
+    public static final Block OCEANSLATE = registerBlock("oceanslate", ABS_BRICKS);
+    public static final Block OCEANSLATE_BRICKS = registerBlock("oceanslate_bricks", ABS_BRICKS);
+    public static final Block OCEANSLATE_TILES = registerBlock("oceanslate_tiles", ABS_BRICKS);
+    public static final Block POLISHED_OCEANSLATE = registerBlock("polished_oceanslate", ABS_BRICKS);
+    public static final Block CRACKED_OCEANSLATE_BRICKS = registerBlock("cracked_oceanslate_bricks", ABS_BRICKS);
+    public static final Block KELPY_OCEANSLATE_BRICKS = registerBlock("kelpy_oceanslate_bricks", ABS_BRICKS);
+
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
@@ -119,6 +145,8 @@ public class ModBlocks {
             entries.add(ModBlocks.GOLD_TRAPDOOR);
             entries.add(ModBlocks.GOLD_DOOR);
             entries.add(ModBlocks.GOLD_COINS);
+            entries.add(ModBlocks.GOLD_HOARD);
+            entries.add(ModBlocks.GOLD_HOARD_BLOCK);
 
             entries.add(ModBlocks.MIXED_COBBLESTONE);
 
@@ -156,6 +184,29 @@ public class ModBlocks {
             entries.add(ModBlocks.CALCITE_BRICKS);
             entries.add(ModBlocks.MOSSY_CALCITE_BRICKS);
             entries.add(ModBlocks.CRACKED_CALCITE_BRICKS);
+
+            entries.add(ModBlocks.ANDESITE_BRICKS);
+            entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS);
+            entries.add(ModBlocks.CRACKED_ANDESITE_BRICKS);
+
+            entries.add(ModBlocks.DIORITE_BRICKS);
+            entries.add(ModBlocks.MOSSY_DIORITE_BRICKS);
+            entries.add(ModBlocks.CRACKED_DIORITE_BRICKS);
+
+            entries.add(ModBlocks.DRIPSTONE_BRICKS);
+            entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS);
+            entries.add(ModBlocks.CRACKED_DRIPSTONE_BRICKS);
+
+            entries.add(ModBlocks.GRANITE_BRICKS);
+            entries.add(ModBlocks.MOSSY_GRANITE_BRICKS);
+            entries.add(ModBlocks.CRACKED_GRANITE_BRICKS);
+
+            entries.add(ModBlocks.OCEANSLATE);
+            entries.add(ModBlocks.OCEANSLATE_BRICKS);
+            entries.add(ModBlocks.OCEANSLATE_TILES);
+            entries.add(ModBlocks.POLISHED_OCEANSLATE);
+            entries.add(ModBlocks.CRACKED_OCEANSLATE_BRICKS);
+            entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS);
         });
     }
 }

@@ -2,8 +2,6 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Items;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.searchies.bauen.block.ModBlocks;
@@ -34,6 +32,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GOLD_TRAPDOOR);
         addDrop(ModBlocks.GOLD_DOOR, doorDrops(ModBlocks.GOLD_DOOR));
         addDrop(ModBlocks.GOLD_COINS, segmentedDrops(ModBlocks.GOLD_COINS));
+        addDrop(ModBlocks.GOLD_HOARD, segmentedDrops(ModBlocks.GOLD_HOARD));
+        addDrop(ModBlocks.GOLD_HOARD_BLOCK);
 
         addDrop(ModBlocks.MIXED_COBBLESTONE);
 
@@ -71,6 +71,29 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CALCITE_BRICKS);
         addDrop(ModBlocks.MOSSY_CALCITE_BRICKS);
         addDrop(ModBlocks.CRACKED_CALCITE_BRICKS);
+
+        addDrop(ModBlocks.ANDESITE_BRICKS);
+        addDrop(ModBlocks.MOSSY_ANDESITE_BRICKS);
+        addDrop(ModBlocks.CRACKED_ANDESITE_BRICKS);
+
+        addDrop(ModBlocks.DIORITE_BRICKS);
+        addDrop(ModBlocks.MOSSY_DIORITE_BRICKS);
+        addDrop(ModBlocks.CRACKED_DIORITE_BRICKS);
+
+        addDrop(ModBlocks.DRIPSTONE_BRICKS);
+        addDrop(ModBlocks.MOSSY_DRIPSTONE_BRICKS);
+        addDrop(ModBlocks.CRACKED_DRIPSTONE_BRICKS);
+
+        addDrop(ModBlocks.GRANITE_BRICKS);
+        addDrop(ModBlocks.MOSSY_GRANITE_BRICKS);
+        addDrop(ModBlocks.CRACKED_GRANITE_BRICKS);
+
+        addDrop(ModBlocks.OCEANSLATE);
+        addDrop(ModBlocks.OCEANSLATE_BRICKS);
+        addDrop(ModBlocks.OCEANSLATE_TILES);
+        addDrop(ModBlocks.POLISHED_OCEANSLATE);
+        addDrop(ModBlocks.CRACKED_OCEANSLATE_BRICKS);
+        addDrop(ModBlocks.KELPY_OCEANSLATE_BRICKS);
 
     }
 }
