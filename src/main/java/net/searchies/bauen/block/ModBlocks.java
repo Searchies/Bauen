@@ -40,10 +40,11 @@ public class ModBlocks {
     public static final Block GOLD_TRAPDOOR = registerCustomBlock("gold_trapdoor", settings -> new TrapdoorBlock(BlockSetType.COPPER, settings), ABS_TRAPDOOR);
     public static final Block GOLD_DOOR = registerCustomBlock("gold_door", settings -> new DoorBlock(BlockSetType.COPPER, settings), ABS_DOOR);
     public static final Block GOLD_COINS = registerCustomBlock("gold_coins", LeafLitterBlock::new,
-            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().noCollision().sounds(BlockSoundGroup.LEAF_LITTER).pistonBehavior(PistonBehavior.DESTROY));
-    public static final Block GOLD_HOARD = registerCustomBlock("gold_hoard", SnowBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().notSolid().ticksRandomly().strength(0.1f).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY));
-    public static final Block GOLD_HOARD_BLOCK = registerCustomBlock("gold_hoard_block", SnowBlock::new,
             AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().noCollision().sounds(BlockSoundGroup.CHAIN).pistonBehavior(PistonBehavior.DESTROY));
+    public static final Block GOLD_HOARD = registerCustomBlock("gold_hoard", GoldHoardBlock::new,
+            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().notSolid().ticksRandomly().strength(2.0f,4.0f).requiresTool().sounds(BlockSoundGroup.CHAIN).blockVision((state, world, pos) -> state.get(GoldHoardBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY));
+    public static final Block GOLD_HOARD_BLOCK = registerBlock("gold_hoard_block",
+            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(3.0f,6.0f).sounds(BlockSoundGroup.CHAIN));
 
     public static final Block MIXED_COBBLESTONE = registerBlock("mixed_cobblestone", AbstractBlock.Settings.copy(Blocks.COBBLESTONE).strength(3.0F));
 

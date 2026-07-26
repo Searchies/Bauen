@@ -2,9 +2,11 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.state.property.Properties;
+import net.searchies.bauen.block.GoldHoardBlock;
 import net.searchies.bauen.block.ModBlocks;
 import net.searchies.bauen.item.ModItems;
 
@@ -26,14 +28,19 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.GOLD_CHAIN, createWeightedVariant(TexturedModel.TEMPLATE_CHAIN.upload(ModBlocks.GOLD_CHAIN, blockStateModelGenerator.modelCollector)));
         blockStateModelGenerator.registerBars(ModBlocks.GOLD_BARS);
+        blockStateModelGenerator.registerLantern(ModBlocks.GOLD_LANTERN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_GOLD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_GOLD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GOLD_GRATE);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GOLD_TRAPDOOR);
         blockStateModelGenerator.registerDoor(ModBlocks.GOLD_DOOR);
         blockStateModelGenerator.registerLeafLitter(ModBlocks.GOLD_COINS);
-        registerHoards(blockStateModelGenerator);
-        blockStateModelGenerator.registerLantern(ModBlocks.GOLD_LANTERN);
+        registerGoldHoards(blockStateModelGenerator);
+//        GoldHoardBlock.LAYERS.getValues().forEach(layer -> {
+//            blockStateModelGenerator.createWeightedVariant()
+//        });
+//        WeightedVariant weightedVariant = BlockStateModelGenerator.createWeightedVariant(Models.CUBE_BOTTOM_TOP.upload(Blocks.GRASS_BLOCK, "_snow", textureMap, this.modelCollector));
+
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIXED_COBBLESTONE);
 
@@ -101,14 +108,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.KAOLIN_CLAY_BALL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MIDNIGHT_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.TROWEL, Models.HANDHELD);
+        itemModelGenerator.register(ModBlocks.GOLD_CHAIN.asItem(), Models.GENERATED);
     }
 
-    private void registerHoards(BlockStateModelGenerator blockStateModelGenerator) {
+    private void registerGoldHoards(BlockStateModelGenerator blockStateModelGenerator) {
         TextureMap textureMap = TextureMap.all(ModBlocks.GOLD_HOARD);
         WeightedVariant weightedVariant = createWeightedVariant(Models.CUBE_ALL.upload(ModBlocks.GOLD_HOARD_BLOCK, textureMap, blockStateModelGenerator.modelCollector));
         blockStateModelGenerator.blockStateCollector.accept(
             VariantsBlockModelDefinitionCreator.of(ModBlocks.GOLD_HOARD).with(
-                BlockStateVariantMap.models(Properties.LAYERS).generate(
+                BlockStateVariantMap.models(GoldHoardBlock.LAYERS).generate(
                         layers -> layers < 8 ? createWeightedVariant(ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height" + layers * 2)) : weightedVariant
                 )
             )

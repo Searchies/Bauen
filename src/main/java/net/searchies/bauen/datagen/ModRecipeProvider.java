@@ -121,7 +121,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createDoorRecipe(ModBlocks.GOLD_DOOR, Ingredient.ofItem(Items.GOLD_INGOT))
                     .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
                     .offerTo(exporter);
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_HOARD)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_HOARD, 8)
                     .input('#', ModBlocks.GOLD_COINS)
                     .pattern("##")
                     .pattern("##")

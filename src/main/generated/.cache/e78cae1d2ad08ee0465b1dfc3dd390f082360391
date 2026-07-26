@@ -88,7 +88,7 @@ ffdb0a7976ad90891ef2b90ac2f6bce2ecfdb4b0 assets/bauen/items/cut_industrial_iron.
 b908e6ed1b49b61eb97fbbc150b72fea1479f46b assets/bauen/items/diorite_bricks.json
 4b3665806e03cca62b0fbd06a53b50f8df460f95 assets/bauen/items/dripstone_bricks.json
 ada7da751c6b8e2ce2bf6977d26f026d55854bcd assets/bauen/items/gold_bars.json
-e22e7279867a2f168a8120c2f9b64b0db3da35aa assets/bauen/items/gold_chain.json
+b64e3f6dd8b3f15b721f8dd49a361d97c4162dd9 assets/bauen/items/gold_chain.json
 a6eba26efed4f3f937f50356c24d2771dc653d35 assets/bauen/items/gold_coins.json
 f8ad39695e2de4d63e2399fa0887f80b5fcf510c assets/bauen/items/gold_door.json
 da678c0ae7ff7b500788f3b80c75660cb6ee5936 assets/bauen/items/gold_grate.json
@@ -221,6 +221,7 @@ e0990f5e560b6f189ba9aa2ce73f7487bd3da135 assets/bauen/models/block/oceanslate_ti
 40a1e2c383ee5eda69af316a21fa1bcfb10d771e assets/bauen/models/block/sculked_deepslate_bricks.json
 bd4f5f582a0b1f5c9e20fd9e8df48aa80582d498 assets/bauen/models/block/treated_bricks.json
 ceca1901b5ba6caa1c923315cd506587ba3f9754 assets/bauen/models/item/gold_bars.json
+c161dbd2dd1f1de3f71900c484c972d1b8d278a2 assets/bauen/models/item/gold_chain.json
 0bcbcc19048e8c72a6b00b349e0224694fcdf315 assets/bauen/models/item/gold_coins.json
 6ba9dbb9c36148c0902651eb1504eccd63fe1eb5 assets/bauen/models/item/gold_door.json
 6031662f193e473083a1a1fb4c993cf55f9c2fcd assets/bauen/models/item/gold_lantern.json
