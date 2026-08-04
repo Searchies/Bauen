@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/oceanslate_tiles_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/oceanslate_tiles"
+    },
+    "type=top": {
+      "model": "bauen:block/oceanslate_tiles_slab_top"
+    }
+  }
+}

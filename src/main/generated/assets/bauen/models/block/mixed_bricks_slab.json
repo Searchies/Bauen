@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bauen:block/mixed_bricks",
+    "side": "bauen:block/mixed_bricks",
+    "top": "bauen:block/mixed_bricks"
+  }
+}

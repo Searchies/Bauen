@@ -19,25 +19,79 @@ public class ModItemGroups {
                 .entries((displayContext, entries) -> {
                     // Custom Bricks //
                     entries.add(ModBlocks.MOSSY_BRICKS);
+                    entries.add(ModBlocks.MOSSY_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_BRICKS);
+                    entries.add(ModBlocks.CRACKED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_BRICKS_WALL);
                     entries.add(ModBlocks.CHISELED_BRICKS);
+                    entries.add(ModBlocks.CHISELED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CHISELED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CHISELED_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_CHISELED_BRICKS);
+                    entries.add(ModBlocks.MOSSY_CHISELED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_CHISELED_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_CHISELED_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_CHISELED_BRICKS);
+                    entries.add(ModBlocks.CRACKED_CHISELED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_CHISELED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_CHISELED_BRICKS_WALL);
 
                     entries.add(ModBlocks.MOSSY_PACKED_MUD);
+                    entries.add(ModBlocks.MOSSY_PACKED_MUD_STAIRS);
+                    entries.add(ModBlocks.MOSSY_PACKED_MUD_SLAB);
+                    entries.add(ModBlocks.MOSSY_PACKED_MUD_WALL);
                     entries.add(ModBlocks.MOSSY_MUD_BRICKS);
+                    entries.add(ModBlocks.MOSSY_MUD_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_MUD_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_MUD_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_TUFF_BRICKS);
+                    entries.add(ModBlocks.MOSSY_TUFF_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_TUFF_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_TUFF_BRICKS_WALL);
                     entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS);
+                    entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS_WALL);
 
                     entries.add(ModBlocks.TREATED_BRICKS);
+                    entries.add(ModBlocks.TREATED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.TREATED_BRICKS_SLAB);
+                    entries.add(ModBlocks.TREATED_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_TREATED_BRICKS);
+                    entries.add(ModBlocks.MOSSY_TREATED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_TREATED_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_TREATED_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_TREATED_BRICKS);
+                    entries.add(ModBlocks.CRACKED_TREATED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_TREATED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_TREATED_BRICKS_WALL);
                     entries.add(ModBlocks.CHISELED_TREATED_BRICKS);
+                    entries.add(ModBlocks.CHISELED_TREATED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CHISELED_TREATED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CHISELED_TREATED_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS);
+                    entries.add(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS);
+                    entries.add(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_WALL);
                     entries.add(ModBlocks.MIXED_BRICKS);
+                    entries.add(ModBlocks.MIXED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MIXED_BRICKS_SLAB);
+                    entries.add(ModBlocks.MIXED_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_MIXED_BRICKS);
+                    entries.add(ModBlocks.MOSSY_MIXED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_MIXED_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_MIXED_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_MIXED_BRICKS);
+                    entries.add(ModBlocks.CRACKED_MIXED_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_MIXED_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_MIXED_BRICKS_WALL);
 
                     // Gold Blocks //
                     entries.add(ModBlocks.GOLD_CHAIN);
@@ -49,20 +103,37 @@ public class ModItemGroups {
                     entries.add(ModBlocks.GOLD_TRAPDOOR);
                     entries.add(ModBlocks.GOLD_DOOR);
                     entries.add(ModBlocks.GOLD_COINS);
-                    entries.add(ModBlocks.GOLD_HOARD);
+//                    entries.add(ModBlocks.GOLD_HOARD);
 
                     // Kaolin Clay //
                     entries.add(ModItems.KAOLIN_CLAY_BALL);
                     entries.add(ModBlocks.KAOLIN_CLAY);
 
                     // Midnight Bricks //
-                    entries.add(ModItems.MIDNIGHT_BRICK);
                     entries.add(ModBlocks.MIDNIGHT_BRICKS);
+                    entries.add(ModBlocks.MIDNIGHT_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MIDNIGHT_BRICKS_SLAB);
+                    entries.add(ModBlocks.MIDNIGHT_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_MIDNIGHT_BRICKS);
+                    entries.add(ModBlocks.MOSSY_MIDNIGHT_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_MIDNIGHT_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_MIDNIGHT_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_MIDNIGHT_BRICKS);
+                    entries.add(ModBlocks.CRACKED_MIDNIGHT_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_MIDNIGHT_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_MIDNIGHT_BRICKS_WALL);
                     entries.add(ModBlocks.CHISELED_MIDNIGHT_BRICKS);
+                    entries.add(ModBlocks.CHISELED_MIDNIGHT_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CHISELED_MIDNIGHT_BRICKS_SLAB);
+                    entries.add(ModBlocks.CHISELED_MIDNIGHT_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS);
+                    entries.add(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS);
+                    entries.add(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_WALL);
 
                     // Iron Blocks //
                     entries.add(ModBlocks.INDUSTRIAL_IRON_BLOCK);
@@ -73,39 +144,105 @@ public class ModItemGroups {
                     entries.add(ModBlocks.INDUSTRIAL_IRON_DOOR);
 
                     entries.add(ModBlocks.MIXED_COBBLESTONE);
+                    entries.add(ModBlocks.MIXED_COBBLESTONE_STAIRS);
+                    entries.add(ModBlocks.MIXED_COBBLESTONE_SLAB);
+                    entries.add(ModBlocks.MIXED_COBBLESTONE_WALL);
 
                     // Calcite Bricks //
                     entries.add(ModBlocks.CALCITE_BRICKS);
+                    entries.add(ModBlocks.CALCITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CALCITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CALCITE_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_CALCITE_BRICKS);
+                    entries.add(ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_CALCITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_CALCITE_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_CALCITE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_CALCITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_CALCITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_CALCITE_BRICKS_WALL);
 
                     // Andesite Bricks //
                     entries.add(ModBlocks.ANDESITE_BRICKS);
+                    entries.add(ModBlocks.ANDESITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.ANDESITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.ANDESITE_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS);
+                    entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_ANDESITE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_ANDESITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_ANDESITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_ANDESITE_BRICKS_WALL);
 
                     // Diorite Bricks //
                     entries.add(ModBlocks.DIORITE_BRICKS);
+                    entries.add(ModBlocks.DIORITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.DIORITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.DIORITE_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_DIORITE_BRICKS);
+                    entries.add(ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_DIORITE_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_DIORITE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_DIORITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_DIORITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_DIORITE_BRICKS_WALL);
 
                     // Dripstone Bricks //
                     entries.add(ModBlocks.DRIPSTONE_BRICKS);
+                    entries.add(ModBlocks.DRIPSTONE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.DRIPSTONE_BRICKS_SLAB);
+                    entries.add(ModBlocks.DRIPSTONE_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS);
+                    entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_DRIPSTONE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_DRIPSTONE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_DRIPSTONE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_DRIPSTONE_BRICKS_WALL);
 
                     // Granite Bricks //
                     entries.add(ModBlocks.GRANITE_BRICKS);
+                    entries.add(ModBlocks.GRANITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.GRANITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.GRANITE_BRICKS_WALL);
                     entries.add(ModBlocks.MOSSY_GRANITE_BRICKS);
+                    entries.add(ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.MOSSY_GRANITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.MOSSY_GRANITE_BRICKS_WALL);
                     entries.add(ModBlocks.CRACKED_GRANITE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_GRANITE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_GRANITE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_GRANITE_BRICKS_WALL);
 
                     // Oceanslate //
                     entries.add(ModBlocks.OCEANSLATE);
+                    entries.add(ModBlocks.OCEANSLATE_STAIRS);
+                    entries.add(ModBlocks.OCEANSLATE_SLAB);
+                    entries.add(ModBlocks.OCEANSLATE_WALL);
                     entries.add(ModBlocks.OCEANSLATE_BRICKS);
+                    entries.add(ModBlocks.OCEANSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.OCEANSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.OCEANSLATE_BRICKS_WALL);
                     entries.add(ModBlocks.OCEANSLATE_TILES);
+                    entries.add(ModBlocks.OCEANSLATE_TILES_STAIRS);
+                    entries.add(ModBlocks.OCEANSLATE_TILES_SLAB);
+                    entries.add(ModBlocks.OCEANSLATE_TILES_WALL);
                     entries.add(ModBlocks.POLISHED_OCEANSLATE);
+                    entries.add(ModBlocks.POLISHED_OCEANSLATE_STAIRS);
+                    entries.add(ModBlocks.POLISHED_OCEANSLATE_SLAB);
+                    entries.add(ModBlocks.POLISHED_OCEANSLATE_WALL);
                     entries.add(ModBlocks.CRACKED_OCEANSLATE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_OCEANSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_OCEANSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_OCEANSLATE_BRICKS_WALL);
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS);
+                    entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
                 }).build());
 
     public static void registerModItemGroups() {

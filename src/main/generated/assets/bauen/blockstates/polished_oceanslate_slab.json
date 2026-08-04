@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/polished_oceanslate_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/polished_oceanslate"
+    },
+    "type=top": {
+      "model": "bauen:block/polished_oceanslate_slab_top"
+    }
+  }
+}

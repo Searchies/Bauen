@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/cracked_oceanslate_bricks_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/cracked_oceanslate_bricks"
+    },
+    "type=top": {
+      "model": "bauen:block/cracked_oceanslate_bricks_slab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cracked_chiseled_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:cracked_chiseled_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:cracked_chiseled_bricks_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cracked_chiseled_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:cracked_chiseled_bricks_wall"
+    ]
+  }
+}

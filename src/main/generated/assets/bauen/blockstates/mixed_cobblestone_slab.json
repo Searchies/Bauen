@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/mixed_cobblestone_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/mixed_cobblestone"
+    },
+    "type=top": {
+      "model": "bauen:block/mixed_cobblestone_slab_top"
+    }
+  }
+}

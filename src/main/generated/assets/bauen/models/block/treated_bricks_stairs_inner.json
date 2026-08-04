@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "bauen:block/treated_bricks",
+    "side": "bauen:block/treated_bricks",
+    "top": "bauen:block/treated_bricks"
+  }
+}

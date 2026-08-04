@@ -2,4 +2,5 @@
 4b97f56668228e1c8388e1bb994a4670fd2a2a9c data/minecraft/tags/block/bars.json
 c534c1b962518518b051608707cb213eedc89c67 data/minecraft/tags/block/chains.json
 33adc95515c5e1195f272f908358f31a5e2ab3af data/minecraft/tags/block/lanterns.json
-ad375491d77d2c352f28b6abcf6c50fbd92c2b7b data/minecraft/tags/block/mineable/pickaxe.json
+0730573b1cf20eb3d66d37867509752b9eb3ced9 data/minecraft/tags/block/mineable/pickaxe.json
+2b75f3b1ae396eb67a0fc8192c93b39eb3f7a962 data/minecraft/tags/block/walls.json

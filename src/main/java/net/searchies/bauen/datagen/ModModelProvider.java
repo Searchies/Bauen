@@ -6,9 +6,12 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
 import net.searchies.bauen.block.GoldHoardBlock;
 import net.searchies.bauen.block.ModBlocks;
 import net.searchies.bauen.item.ModItems;
+
+import java.util.Optional;
 
 import static net.minecraft.client.data.BlockStateModelGenerator.createSingletonBlockState;
 import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
@@ -20,11 +23,28 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_BRICKS)
+                .stairs(ModBlocks.MOSSY_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_BRICKS_WALL);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_BRICKS)
+                .stairs(ModBlocks.CRACKED_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_BRICKS_WALL);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHISELED_BRICKS)
+                .stairs(ModBlocks.CHISELED_BRICKS_STAIRS)
+                .slab(ModBlocks.CHISELED_BRICKS_SLAB)
+                .wall(ModBlocks.CHISELED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_CHISELED_BRICKS)
+                .stairs(ModBlocks.MOSSY_CHISELED_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_CHISELED_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_CHISELED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_CHISELED_BRICKS)
+                .stairs(ModBlocks.CRACKED_CHISELED_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_CHISELED_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_CHISELED_BRICKS_WALL);
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.GOLD_CHAIN, createWeightedVariant(TexturedModel.TEMPLATE_CHAIN.upload(ModBlocks.GOLD_CHAIN, blockStateModelGenerator.modelCollector)));
         blockStateModelGenerator.registerBars(ModBlocks.GOLD_BARS);
@@ -35,14 +55,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GOLD_TRAPDOOR);
         blockStateModelGenerator.registerDoor(ModBlocks.GOLD_DOOR);
         blockStateModelGenerator.registerLeafLitter(ModBlocks.GOLD_COINS);
-        registerGoldHoards(blockStateModelGenerator);
+//        registerGoldHoards(blockStateModelGenerator);
 //        GoldHoardBlock.LAYERS.getValues().forEach(layer -> {
 //            blockStateModelGenerator.createWeightedVariant()
 //        });
 //        WeightedVariant weightedVariant = BlockStateModelGenerator.createWeightedVariant(Models.CUBE_BOTTOM_TOP.upload(Blocks.GRASS_BLOCK, "_snow", textureMap, this.modelCollector));
 
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIXED_COBBLESTONE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MIXED_COBBLESTONE)
+                .stairs(ModBlocks.MIXED_COBBLESTONE_STAIRS)
+                .slab(ModBlocks.MIXED_COBBLESTONE_SLAB)
+                .wall(ModBlocks.MIXED_COBBLESTONE_WALL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDUSTRIAL_IRON_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_INDUSTRIAL_IRON);
@@ -51,56 +73,176 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);
         blockStateModelGenerator.registerDoor(ModBlocks.INDUSTRIAL_IRON_DOOR);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_PACKED_MUD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_MUD_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_TUFF_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SCULKED_DEEPSLATE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_PACKED_MUD)
+                .stairs(ModBlocks.MOSSY_PACKED_MUD_STAIRS)
+                .slab(ModBlocks.MOSSY_PACKED_MUD_SLAB)
+                .wall(ModBlocks.MOSSY_PACKED_MUD_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_MUD_BRICKS)
+                .stairs(ModBlocks.MOSSY_MUD_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_MUD_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_MUD_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_TUFF_BRICKS)
+                .stairs(ModBlocks.MOSSY_TUFF_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_TUFF_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_TUFF_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SCULKED_DEEPSLATE_BRICKS)
+                .stairs(ModBlocks.SCULKED_DEEPSLATE_BRICKS_STAIRS)
+                .slab(ModBlocks.SCULKED_DEEPSLATE_BRICKS_SLAB)
+                .wall(ModBlocks.SCULKED_DEEPSLATE_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIDNIGHT_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_MIDNIGHT_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_MIDNIGHT_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_MIDNIGHT_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MIDNIGHT_BRICKS)
+                .stairs(ModBlocks.MIDNIGHT_BRICKS_STAIRS)
+                .slab(ModBlocks.MIDNIGHT_BRICKS_SLAB)
+                .wall(ModBlocks.MIDNIGHT_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_MIDNIGHT_BRICKS)
+                .stairs(ModBlocks.MOSSY_MIDNIGHT_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_MIDNIGHT_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_MIDNIGHT_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_MIDNIGHT_BRICKS)
+                .stairs(ModBlocks.CRACKED_MIDNIGHT_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_MIDNIGHT_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_MIDNIGHT_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHISELED_MIDNIGHT_BRICKS)
+                .stairs(ModBlocks.CHISELED_MIDNIGHT_BRICKS_STAIRS)
+                .slab(ModBlocks.CHISELED_MIDNIGHT_BRICKS_SLAB)
+                .wall(ModBlocks.CHISELED_MIDNIGHT_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS)
+                .stairs(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS)
+                .stairs(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_WALL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KAOLIN_CLAY);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TREATED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_TREATED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_TREATED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_TREATED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIXED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_MIXED_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_MIXED_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TREATED_BRICKS)
+                .stairs(ModBlocks.TREATED_BRICKS_STAIRS)
+                .slab(ModBlocks.TREATED_BRICKS_SLAB)
+                .wall(ModBlocks.TREATED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_TREATED_BRICKS)
+                .stairs(ModBlocks.MOSSY_TREATED_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_TREATED_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_TREATED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_TREATED_BRICKS)
+                .stairs(ModBlocks.CRACKED_TREATED_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_TREATED_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_TREATED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHISELED_TREATED_BRICKS)
+                .stairs(ModBlocks.CHISELED_TREATED_BRICKS_STAIRS)
+                .slab(ModBlocks.CHISELED_TREATED_BRICKS_SLAB)
+                .wall(ModBlocks.CHISELED_TREATED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS)
+                .stairs(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS)
+                .stairs(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MIXED_BRICKS)
+                .stairs(ModBlocks.MIXED_BRICKS_STAIRS)
+                .slab(ModBlocks.MIXED_BRICKS_SLAB)
+                .wall(ModBlocks.MIXED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_MIXED_BRICKS)
+                .stairs(ModBlocks.MOSSY_MIXED_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_MIXED_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_MIXED_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_MIXED_BRICKS)
+                .stairs(ModBlocks.CRACKED_MIXED_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_MIXED_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_MIXED_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CALCITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CALCITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CALCITE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CALCITE_BRICKS)
+                .stairs(ModBlocks.CALCITE_BRICKS_STAIRS)
+                .slab(ModBlocks.CALCITE_BRICKS_SLAB)
+                .wall(ModBlocks.CALCITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_CALCITE_BRICKS)
+                .stairs(ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_CALCITE_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_CALCITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_CALCITE_BRICKS)
+                .stairs(ModBlocks.CRACKED_CALCITE_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_CALCITE_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_CALCITE_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANDESITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_ANDESITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_ANDESITE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ANDESITE_BRICKS)
+                .stairs(ModBlocks.ANDESITE_BRICKS_STAIRS)
+                .slab(ModBlocks.ANDESITE_BRICKS_SLAB)
+                .wall(ModBlocks.ANDESITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_ANDESITE_BRICKS)
+                .stairs(ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_ANDESITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_ANDESITE_BRICKS)
+                .stairs(ModBlocks.CRACKED_ANDESITE_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_ANDESITE_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_ANDESITE_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DIORITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_DIORITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_DIORITE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DIORITE_BRICKS)
+                .stairs(ModBlocks.DIORITE_BRICKS_STAIRS)
+                .slab(ModBlocks.DIORITE_BRICKS_SLAB)
+                .wall(ModBlocks.DIORITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_DIORITE_BRICKS)
+                .stairs(ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_DIORITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_DIORITE_BRICKS)
+                .stairs(ModBlocks.CRACKED_DIORITE_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_DIORITE_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_DIORITE_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIPSTONE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_DRIPSTONE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_DRIPSTONE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DRIPSTONE_BRICKS)
+                .stairs(ModBlocks.DRIPSTONE_BRICKS_STAIRS)
+                .slab(ModBlocks.DRIPSTONE_BRICKS_SLAB)
+                .wall(ModBlocks.DRIPSTONE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_DRIPSTONE_BRICKS)
+                .stairs(ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_DRIPSTONE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_DRIPSTONE_BRICKS)
+                .stairs(ModBlocks.CRACKED_DRIPSTONE_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_DRIPSTONE_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_DRIPSTONE_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRANITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_GRANITE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_GRANITE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRANITE_BRICKS)
+                .stairs(ModBlocks.GRANITE_BRICKS_STAIRS)
+                .slab(ModBlocks.GRANITE_BRICKS_SLAB)
+                .wall(ModBlocks.GRANITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_GRANITE_BRICKS)
+                .stairs(ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS)
+                .slab(ModBlocks.MOSSY_GRANITE_BRICKS_SLAB)
+                .wall(ModBlocks.MOSSY_GRANITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_GRANITE_BRICKS)
+                .stairs(ModBlocks.CRACKED_GRANITE_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_GRANITE_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_GRANITE_BRICKS_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OCEANSLATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OCEANSLATE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OCEANSLATE_TILES);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_OCEANSLATE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_OCEANSLATE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KELPY_OCEANSLATE_BRICKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OCEANSLATE)
+                .stairs(ModBlocks.OCEANSLATE_STAIRS)
+                .slab(ModBlocks.OCEANSLATE_SLAB)
+                .wall(ModBlocks.OCEANSLATE_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OCEANSLATE_BRICKS)
+                .stairs(ModBlocks.OCEANSLATE_BRICKS_STAIRS)
+                .slab(ModBlocks.OCEANSLATE_BRICKS_SLAB)
+                .wall(ModBlocks.OCEANSLATE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OCEANSLATE_TILES)
+                .stairs(ModBlocks.OCEANSLATE_TILES_STAIRS)
+                .slab(ModBlocks.OCEANSLATE_TILES_SLAB)
+                .wall(ModBlocks.OCEANSLATE_TILES_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_OCEANSLATE)
+                .stairs(ModBlocks.POLISHED_OCEANSLATE_STAIRS)
+                .slab(ModBlocks.POLISHED_OCEANSLATE_SLAB)
+                .wall(ModBlocks.POLISHED_OCEANSLATE_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_OCEANSLATE_BRICKS)
+                .stairs(ModBlocks.CRACKED_OCEANSLATE_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_OCEANSLATE_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_OCEANSLATE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KELPY_OCEANSLATE_BRICKS)
+                .stairs(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS)
+                .slab(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB)
+                .wall(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
     }
 
     @Override
@@ -111,17 +253,17 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModBlocks.GOLD_CHAIN.asItem(), Models.GENERATED);
     }
 
-    private void registerGoldHoards(BlockStateModelGenerator blockStateModelGenerator) {
-        TextureMap textureMap = TextureMap.all(ModBlocks.GOLD_HOARD);
-        WeightedVariant weightedVariant = createWeightedVariant(Models.CUBE_ALL.upload(ModBlocks.GOLD_HOARD_BLOCK, textureMap, blockStateModelGenerator.modelCollector));
-        blockStateModelGenerator.blockStateCollector.accept(
-            VariantsBlockModelDefinitionCreator.of(ModBlocks.GOLD_HOARD).with(
-                BlockStateVariantMap.models(GoldHoardBlock.LAYERS).generate(
-                        layers -> layers < 8 ? createWeightedVariant(ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height" + layers * 2)) : weightedVariant
-                )
-            )
-        );
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.GOLD_HOARD, ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height2"));
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(ModBlocks.GOLD_HOARD_BLOCK, weightedVariant));
-    }
+//    private void registerGoldHoards(BlockStateModelGenerator blockStateModelGenerator) {
+//        TextureMap textureMap = TextureMap.all(ModBlocks.GOLD_HOARD);
+//        WeightedVariant weightedVariant = createWeightedVariant(Models.CUBE_ALL.upload(ModBlocks.GOLD_HOARD_BLOCK, textureMap, blockStateModelGenerator.modelCollector));
+//        blockStateModelGenerator.blockStateCollector.accept(
+//            VariantsBlockModelDefinitionCreator.of(ModBlocks.GOLD_HOARD).with(
+//                BlockStateVariantMap.models(Properties.LAYERS).generate(
+//                        layers -> layers < 8 ? createWeightedVariant(ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height" + layers * 2)) : weightedVariant
+//                )
+//            )
+//        );
+//        blockStateModelGenerator.registerParentedItemModel(ModBlocks.GOLD_HOARD, ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height2"));
+//        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(ModBlocks.GOLD_HOARD_BLOCK, weightedVariant));
+//    }
 }
