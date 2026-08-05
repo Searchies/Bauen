@@ -45,6 +45,9 @@
     "bauen:oceanslate_tiles_wall",
     "bauen:polished_oceanslate_wall",
     "bauen:cracked_oceanslate_bricks_wall",
-    "bauen:kelpy_oceanslate_bricks_wall"
+    "bauen:kelpy_oceanslate_bricks_wall",
+    "bauen:cut_gold_wall",
+    "bauen:industrial_iron_wall",
+    "bauen:cut_industrial_iron_wall"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "bauen:block/cut_industrial_iron",
+    "side": "bauen:block/cut_industrial_iron",
+    "top": "bauen:block/cut_industrial_iron"
+  }
+}

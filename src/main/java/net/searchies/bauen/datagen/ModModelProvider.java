@@ -49,7 +49,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.GOLD_CHAIN, createWeightedVariant(TexturedModel.TEMPLATE_CHAIN.upload(ModBlocks.GOLD_CHAIN, blockStateModelGenerator.modelCollector)));
         blockStateModelGenerator.registerBars(ModBlocks.GOLD_BARS);
         blockStateModelGenerator.registerLantern(ModBlocks.GOLD_LANTERN);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_GOLD);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CUT_GOLD)
+                .stairs(ModBlocks.CUT_GOLD_STAIRS)
+                .slab(ModBlocks.CUT_GOLD_SLAB)
+                .wall(ModBlocks.CUT_GOLD_WALL);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_GOLD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GOLD_GRATE);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GOLD_TRAPDOOR);
@@ -66,8 +69,14 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.MIXED_COBBLESTONE_SLAB)
                 .wall(ModBlocks.MIXED_COBBLESTONE_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDUSTRIAL_IRON_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_INDUSTRIAL_IRON);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.INDUSTRIAL_IRON_BLOCK)
+                .stairs(ModBlocks.INDUSTRIAL_IRON_STAIRS)
+                .slab(ModBlocks.INDUSTRIAL_IRON_SLAB)
+                .wall(ModBlocks.INDUSTRIAL_IRON_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CUT_INDUSTRIAL_IRON)
+                .stairs(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS)
+                .slab(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB)
+                .wall(ModBlocks.CUT_INDUSTRIAL_IRON_WALL);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CARVED_INDUSTRIAL_IRON);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDUSTRIAL_IRON_GRATE);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);

@@ -156,6 +156,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD, Blocks.GOLD_BLOCK, 4);
+                createStairsRecipe(ModBlocks.CUT_GOLD_STAIRS, Ingredient.ofItem(ModBlocks.CUT_GOLD))
+                        .criterion(hasItem(ModBlocks.CUT_GOLD), conditionsFromItem(ModBlocks.CUT_GOLD))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_SLAB, ModBlocks.CUT_GOLD);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_WALL, ModBlocks.CUT_GOLD);
+
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GOLD, Blocks.GOLD_BLOCK, 4);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_TRAPDOOR, Items.GOLD_INGOT);
                 offerGrateRecipe(ModBlocks.GOLD_GRATE, Blocks.GOLD_BLOCK);
@@ -175,7 +181,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 // INDUSTRIAL IRON BLOCKS //
 
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDUSTRIAL_IRON_BLOCK, Items.IRON_INGOT);
+                createStairsRecipe(ModBlocks.INDUSTRIAL_IRON_STAIRS, Ingredient.ofItem(ModBlocks.INDUSTRIAL_IRON_BLOCK))
+                        .criterion(hasItem(ModBlocks.INDUSTRIAL_IRON_BLOCK), conditionsFromItem(ModBlocks.INDUSTRIAL_IRON_BLOCK))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDUSTRIAL_IRON_SLAB, ModBlocks.INDUSTRIAL_IRON_BLOCK);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDUSTRIAL_IRON_WALL, ModBlocks.INDUSTRIAL_IRON_BLOCK);
+
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_INDUSTRIAL_IRON, ModBlocks.INDUSTRIAL_IRON_BLOCK, 4);
+                createStairsRecipe(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS, Ingredient.ofItem(ModBlocks.CUT_INDUSTRIAL_IRON))
+                        .criterion(hasItem(ModBlocks.CUT_INDUSTRIAL_IRON), conditionsFromItem(ModBlocks.CUT_INDUSTRIAL_IRON))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_INDUSTRIAL_IRON_SLAB, ModBlocks.CUT_INDUSTRIAL_IRON);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_INDUSTRIAL_IRON_WALL, ModBlocks.CUT_INDUSTRIAL_IRON);
+
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARVED_INDUSTRIAL_IRON, ModBlocks.INDUSTRIAL_IRON_BLOCK, 4);
                 offerGrateRecipe(ModBlocks.INDUSTRIAL_IRON_GRATE, ModBlocks.INDUSTRIAL_IRON_BLOCK);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDUSTRIAL_IRON_TRAPDOOR, ModBlocks.INDUSTRIAL_IRON_BLOCK);

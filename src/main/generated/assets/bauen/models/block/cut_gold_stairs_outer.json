@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "bauen:block/cut_gold",
+    "side": "bauen:block/cut_gold",
+    "top": "bauen:block/cut_gold"
+  }
+}

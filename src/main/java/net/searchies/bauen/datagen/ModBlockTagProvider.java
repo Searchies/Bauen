@@ -41,6 +41,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.GOLD_LANTERN)
             .add(ModBlocks.GOLD_BARS)
             .add(ModBlocks.CUT_GOLD)
+            .add(ModBlocks.CUT_GOLD_STAIRS)
+            .add(ModBlocks.CUT_GOLD_SLAB)
+            .add(ModBlocks.CUT_GOLD_WALL)
             .add(ModBlocks.CHISELED_GOLD)
             .add(ModBlocks.GOLD_GRATE)
             .add(ModBlocks.GOLD_TRAPDOOR)
@@ -55,7 +58,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.MIXED_COBBLESTONE_WALL)
 
             .add(ModBlocks.INDUSTRIAL_IRON_BLOCK)
+            .add(ModBlocks.INDUSTRIAL_IRON_STAIRS)
+            .add(ModBlocks.INDUSTRIAL_IRON_SLAB)
+            .add(ModBlocks.INDUSTRIAL_IRON_WALL)
             .add(ModBlocks.CUT_INDUSTRIAL_IRON)
+            .add(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS)
+            .add(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB)
+            .add(ModBlocks.CUT_INDUSTRIAL_IRON_WALL)
             .add(ModBlocks.CARVED_INDUSTRIAL_IRON)
             .add(ModBlocks.INDUSTRIAL_IRON_GRATE)
             .add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR)
@@ -279,6 +288,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.OCEANSLATE_TILES_WALL)
             .add(ModBlocks.POLISHED_OCEANSLATE_WALL)
             .add(ModBlocks.CRACKED_OCEANSLATE_BRICKS_WALL)
-            .add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
+            .add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL)
+            .add(ModBlocks.CUT_GOLD_WALL)
+            .add(ModBlocks.INDUSTRIAL_IRON_WALL)
+            .add(ModBlocks.CUT_INDUSTRIAL_IRON_WALL);
     }
 }

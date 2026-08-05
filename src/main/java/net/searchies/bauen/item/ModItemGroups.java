@@ -137,7 +137,13 @@ public class ModItemGroups {
 
                     // Iron Blocks //
                     entries.add(ModBlocks.INDUSTRIAL_IRON_BLOCK);
+                    entries.add(ModBlocks.INDUSTRIAL_IRON_STAIRS);
+                    entries.add(ModBlocks.INDUSTRIAL_IRON_SLAB);
+                    entries.add(ModBlocks.INDUSTRIAL_IRON_WALL);
                     entries.add(ModBlocks.CUT_INDUSTRIAL_IRON);
+                    entries.add(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS);
+                    entries.add(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB);
+                    entries.add(ModBlocks.CUT_INDUSTRIAL_IRON_WALL);
                     entries.add(ModBlocks.CARVED_INDUSTRIAL_IRON);
                     entries.add(ModBlocks.INDUSTRIAL_IRON_GRATE);
                     entries.add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);
@@ -243,6 +249,8 @@ public class ModItemGroups {
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS);
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB);
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
+
+                    entries.add(ModItems.TROWEL);
                 }).build());
 
     public static void registerModItemGroups() {

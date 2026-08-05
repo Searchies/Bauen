@@ -79,7 +79,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MIXED_COBBLESTONE_WALL);
 
         addDrop(ModBlocks.INDUSTRIAL_IRON_BLOCK);
+        addDrop(ModBlocks.INDUSTRIAL_IRON_STAIRS);
+        addDrop(ModBlocks.INDUSTRIAL_IRON_SLAB, slabDrops(ModBlocks.INDUSTRIAL_IRON_SLAB));
+        addDrop(ModBlocks.INDUSTRIAL_IRON_WALL);
+
         addDrop(ModBlocks.CUT_INDUSTRIAL_IRON);
+        addDrop(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS);
+        addDrop(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB, slabDrops(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB));
+        addDrop(ModBlocks.CUT_INDUSTRIAL_IRON_WALL);
+
         addDrop(ModBlocks.CARVED_INDUSTRIAL_IRON);
         addDrop(ModBlocks.INDUSTRIAL_IRON_GRATE);
         addDrop(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);

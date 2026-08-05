@@ -55,7 +55,13 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.MIXED_COBBLESTONE_WALL.asItem(),"Mixed Cobblestone Wall");
 
         translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_BLOCK.asItem(),"Industrial Iron Block");
+        translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_STAIRS.asItem(),"Industrial Iron Stairs");
+        translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_SLAB.asItem(),"Industrial Iron Slab");
+        translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_WALL.asItem(),"Industrial Iron Wall");
         translationBuilder.add(ModBlocks.CUT_INDUSTRIAL_IRON.asItem(),"Cut Industrial Iron");
+        translationBuilder.add(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS.asItem(),"Cut Industrial Iron Stairs");
+        translationBuilder.add(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB.asItem(),"Cut Industrial Iron Slab");
+        translationBuilder.add(ModBlocks.CUT_INDUSTRIAL_IRON_WALL.asItem(),"Cut Industrial Iron Wall");
         translationBuilder.add(ModBlocks.CARVED_INDUSTRIAL_IRON.asItem(),"Carved Industrial Iron");
         translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_GRATE.asItem(),"Industrial Iron Grate");
         translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR.asItem(),"Industrial Iron Trapdoor");

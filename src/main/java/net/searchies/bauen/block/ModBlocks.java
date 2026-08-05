@@ -51,6 +51,10 @@ public class ModBlocks {
     public static final Block CRACKED_CHISELED_BRICKS_WALL = registerCustomBlock("cracked_chiseled_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
     public static final Block CUT_GOLD = registerBlock("cut_gold", ABS_COPPER);
+    public static final Block CUT_GOLD_STAIRS = registerCustomBlock("cut_gold_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CUT_GOLD.getDefaultState(), ABS_COPPER), ABS_COPPER);
+    public static final Block CUT_GOLD_SLAB = registerCustomBlock("cut_gold_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block CUT_GOLD_WALL = registerCustomBlock("cut_gold_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_COPPER), ABS_COPPER);
+
     public static final Block CHISELED_GOLD = registerBlock("chiseled_gold", ABS_COPPER);
     public static final Block GOLD_GRATE = registerBlock("gold_grate", ABS_COPPER);
     public static final Block GOLD_CHAIN = registerCustomBlock("gold_chain", ChainBlock::new, ABS_COPPER);
@@ -72,7 +76,15 @@ public class ModBlocks {
     public static final Block MIXED_COBBLESTONE_WALL = registerCustomBlock("mixed_cobblestone_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_COBBLE), ABS_COBBLE);
 
     public static final Block INDUSTRIAL_IRON_BLOCK = registerBlock("industrial_iron_block", ABS_COPPER);
+    public static final Block INDUSTRIAL_IRON_STAIRS = registerCustomBlock("industrial_iron_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.INDUSTRIAL_IRON_BLOCK.getDefaultState(), ABS_COPPER), ABS_COPPER);
+    public static final Block INDUSTRIAL_IRON_SLAB = registerCustomBlock("industrial_iron_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block INDUSTRIAL_IRON_WALL = registerCustomBlock("industrial_iron_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_COPPER), ABS_COPPER);
+
     public static final Block CUT_INDUSTRIAL_IRON = registerBlock("cut_industrial_iron", ABS_COPPER);
+    public static final Block CUT_INDUSTRIAL_IRON_STAIRS = registerCustomBlock("cut_industrial_iron_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CUT_INDUSTRIAL_IRON.getDefaultState(), ABS_COPPER), ABS_COPPER);
+    public static final Block CUT_INDUSTRIAL_IRON_SLAB = registerCustomBlock("cut_industrial_iron_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block CUT_INDUSTRIAL_IRON_WALL = registerCustomBlock("cut_industrial_iron_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_COPPER), ABS_COPPER);
+
     public static final Block CARVED_INDUSTRIAL_IRON = registerBlock("carved_industrial_iron", ABS_COPPER);
     public static final Block INDUSTRIAL_IRON_GRATE = registerBlock("industrial_iron_grate", ABS_COPPER);
     public static final Block INDUSTRIAL_IRON_TRAPDOOR = registerCustomBlock("industrial_iron_trapdoor", settings -> new TrapdoorBlock(BlockSetType.COPPER, settings), ABS_TRAPDOOR);
@@ -330,6 +342,9 @@ public class ModBlocks {
             entries.add(ModBlocks.GOLD_LANTERN);
             entries.add(ModBlocks.GOLD_BARS);
             entries.add(ModBlocks.CUT_GOLD);
+            entries.add(ModBlocks.CUT_GOLD_STAIRS);
+            entries.add(ModBlocks.CUT_GOLD_SLAB);
+            entries.add(ModBlocks.CUT_GOLD_WALL);
             entries.add(ModBlocks.CHISELED_GOLD);
             entries.add(ModBlocks.GOLD_GRATE);
             entries.add(ModBlocks.GOLD_TRAPDOOR);
@@ -344,7 +359,13 @@ public class ModBlocks {
             entries.add(ModBlocks.MIXED_COBBLESTONE_WALL);
 
             entries.add(ModBlocks.INDUSTRIAL_IRON_BLOCK);
+            entries.add(ModBlocks.INDUSTRIAL_IRON_STAIRS);
+            entries.add(ModBlocks.INDUSTRIAL_IRON_SLAB);
+            entries.add(ModBlocks.INDUSTRIAL_IRON_WALL);
             entries.add(ModBlocks.CUT_INDUSTRIAL_IRON);
+            entries.add(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS);
+            entries.add(ModBlocks.CUT_INDUSTRIAL_IRON_SLAB);
+            entries.add(ModBlocks.CUT_INDUSTRIAL_IRON_WALL);
             entries.add(ModBlocks.CARVED_INDUSTRIAL_IRON);
             entries.add(ModBlocks.INDUSTRIAL_IRON_GRATE);
             entries.add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);
