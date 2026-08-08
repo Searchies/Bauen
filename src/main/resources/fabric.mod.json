@@ -19,6 +19,9 @@
 		"main": [
 			"net.searchies.bauen.Bauen"
 		],
+		"client": [
+			"net.searchies.bauen.BauenClient"
+		],
 		"fabric-datagen": [
 			"net.searchies.bauen.BauenDataGenerator"
 		]

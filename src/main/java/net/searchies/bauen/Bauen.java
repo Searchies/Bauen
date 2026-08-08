@@ -20,18 +20,7 @@ public class Bauen implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
-		BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
-				ModBlocks.GOLD_CHAIN,
-				ModBlocks.GOLD_LANTERN,
-				ModBlocks.GOLD_TRAPDOOR,
-				ModBlocks.GOLD_GRATE,
-				ModBlocks.GOLD_BARS,
-				ModBlocks.GOLD_DOOR,
-				ModBlocks.GOLD_COINS,
-				ModBlocks.CARVED_INDUSTRIAL_IRON,
-				ModBlocks.INDUSTRIAL_IRON_GRATE,
-				ModBlocks.INDUSTRIAL_IRON_TRAPDOOR,
-				ModBlocks.INDUSTRIAL_IRON_DOOR);
+
 		Bauen.LOGGER.info("Hello guys and welcome back to the Channel - PhantomPickle 2026");
 	}
 }
