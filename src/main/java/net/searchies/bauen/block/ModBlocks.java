@@ -24,6 +24,9 @@ public class ModBlocks {
     private static final AbstractBlock.Settings ABS_COBBLE = AbstractBlock.Settings.copy(Blocks.COBBLESTONE).strength(3.0F);
     private static final AbstractBlock.Settings ABS_DOOR = AbstractBlock.Settings.create().strength(3.0F, 6.0F).nonOpaque().pistonBehavior(PistonBehavior.DESTROY);
     private static final AbstractBlock.Settings ABS_TRAPDOOR = AbstractBlock.Settings.create().requiresTool().strength(3.0F, 6.0F).nonOpaque().allowsSpawning(Blocks::never);
+    private static final AbstractBlock.Settings ABS_MUD = AbstractBlock.Settings.copy(Blocks.MUD);
+    private static final AbstractBlock.Settings ABS_ICE = AbstractBlock.Settings.copy(Blocks.ICE);
+    private static final AbstractBlock.Settings ABS_PACKED_ICE = AbstractBlock.Settings.copy(Blocks.PACKED_ICE);
 
     public static final Block MOSSY_BRICKS = registerBlock("mossy_bricks", ABS_BRICKS);
     public static final Block MOSSY_BRICKS_STAIRS = registerCustomBlock("mossy_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -90,6 +93,18 @@ public class ModBlocks {
     public static final Block INDUSTRIAL_IRON_TRAPDOOR = registerCustomBlock("industrial_iron_trapdoor", settings -> new TrapdoorBlock(BlockSetType.COPPER, settings), ABS_TRAPDOOR);
     public static final Block INDUSTRIAL_IRON_DOOR = registerCustomBlock("industrial_iron_door", settings -> new DoorBlock(BlockSetType.COPPER, settings), ABS_DOOR);
 
+    public static final Block ICE_STAIRS = registerCustomBlock("ice_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(Blocks.ICE.getDefaultState(), ABS_ICE), ABS_ICE);
+    public static final Block ICE_SLAB = registerCustomBlock("ice_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_ICE), ABS_ICE);
+    public static final Block ICE_WALL = registerCustomBlock("ice_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_ICE), ABS_ICE);
+
+    public static final Block PACKED_ICE_STAIRS = registerCustomBlock("packed_ice_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(Blocks.PACKED_ICE.getDefaultState(), ABS_PACKED_ICE), ABS_PACKED_ICE);
+    public static final Block PACKED_ICE_SLAB = registerCustomBlock("packed_ice_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PACKED_ICE), ABS_PACKED_ICE);
+    public static final Block PACKED_ICE_WALL = registerCustomBlock("packed_ice_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PACKED_ICE), ABS_PACKED_ICE);
+
+    public static final Block MUD_STAIRS = registerCustomBlock("mud_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(Blocks.MUD.getDefaultState(), ABS_MUD), ABS_MUD);
+    public static final Block MUD_SLAB = registerCustomBlock("mud_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_MUD), ABS_MUD);
+    public static final Block MUD_WALL = registerCustomBlock("mud_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_MUD), ABS_MUD);
+
     public static final Block MOSSY_PACKED_MUD = registerBlock("mossy_packed_mud", ABS_BRICKS);
     public static final Block MOSSY_PACKED_MUD_STAIRS = registerCustomBlock("mossy_packed_mud_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_PACKED_MUD.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block MOSSY_PACKED_MUD_SLAB = registerCustomBlock("mossy_packed_mud_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
@@ -151,7 +166,6 @@ public class ModBlocks {
     public static final Block MOSSY_TREATED_BRICKS_STAIRS = registerCustomBlock("mossy_treated_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_TREATED_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block MOSSY_TREATED_BRICKS_SLAB = registerCustomBlock("mossy_treated_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block MOSSY_TREATED_BRICKS_WALL = registerCustomBlock("mossy_treated_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
-
 
     public static final Block CRACKED_TREATED_BRICKS = registerBlock("cracked_treated_bricks", ABS_BRICKS);
     public static final Block CRACKED_TREATED_BRICKS_STAIRS = registerCustomBlock("cracked_treated_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CRACKED_TREATED_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -371,6 +385,15 @@ public class ModBlocks {
             entries.add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);
             entries.add(ModBlocks.INDUSTRIAL_IRON_DOOR);
 
+            entries.add(ModBlocks.ICE_STAIRS);
+            entries.add(ModBlocks.ICE_SLAB);
+            entries.add(ModBlocks.ICE_WALL);
+            entries.add(ModBlocks.PACKED_ICE_STAIRS);
+            entries.add(ModBlocks.PACKED_ICE_SLAB);
+            entries.add(ModBlocks.PACKED_ICE_WALL);
+            entries.add(ModBlocks.MUD_STAIRS);
+            entries.add(ModBlocks.MUD_SLAB);
+            entries.add(ModBlocks.MUD_WALL);
             entries.add(ModBlocks.MOSSY_PACKED_MUD);
             entries.add(ModBlocks.MOSSY_PACKED_MUD_STAIRS);
             entries.add(ModBlocks.MOSSY_PACKED_MUD_SLAB);

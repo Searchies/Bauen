@@ -39,6 +39,16 @@ public class ModItemGroups {
                     entries.add(ModBlocks.CRACKED_CHISELED_BRICKS_SLAB);
                     entries.add(ModBlocks.CRACKED_CHISELED_BRICKS_WALL);
 
+                    entries.add(ModBlocks.ICE_STAIRS);
+                    entries.add(ModBlocks.ICE_SLAB);
+                    entries.add(ModBlocks.ICE_WALL);
+                    entries.add(ModBlocks.PACKED_ICE_STAIRS);
+                    entries.add(ModBlocks.PACKED_ICE_SLAB);
+                    entries.add(ModBlocks.PACKED_ICE_WALL);
+
+                    entries.add(ModBlocks.MUD_STAIRS);
+                    entries.add(ModBlocks.MUD_SLAB);
+                    entries.add(ModBlocks.MUD_WALL);
                     entries.add(ModBlocks.MOSSY_PACKED_MUD);
                     entries.add(ModBlocks.MOSSY_PACKED_MUD_STAIRS);
                     entries.add(ModBlocks.MOSSY_PACKED_MUD_SLAB);

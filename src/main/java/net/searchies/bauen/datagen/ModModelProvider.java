@@ -82,6 +82,21 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR);
         blockStateModelGenerator.registerDoor(ModBlocks.INDUSTRIAL_IRON_DOOR);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.ICE)
+                .stairs(ModBlocks.ICE_STAIRS)
+                .slab(ModBlocks.ICE_SLAB)
+                .wall(ModBlocks.ICE_WALL);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.PACKED_ICE)
+                .stairs(ModBlocks.PACKED_ICE_STAIRS)
+                .slab(ModBlocks.PACKED_ICE_SLAB)
+                .wall(ModBlocks.PACKED_ICE_WALL);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.MUD)
+                .stairs(ModBlocks.MUD_STAIRS)
+                .slab(ModBlocks.MUD_SLAB)
+                .wall(ModBlocks.MUD_WALL);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_PACKED_MUD)
                 .stairs(ModBlocks.MOSSY_PACKED_MUD_STAIRS)
                 .slab(ModBlocks.MOSSY_PACKED_MUD_SLAB)

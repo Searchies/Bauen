@@ -81,6 +81,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BRICKS_SLAB, ModBlocks.CHISELED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BRICKS_WALL, ModBlocks.CHISELED_BRICKS);
 
+                createStairsRecipe(ModBlocks.ICE_STAIRS, Ingredient.ofItem(Blocks.ICE))
+                    .criterion(hasItem(Blocks.ICE), conditionsFromItem(Blocks.ICE))
+                    .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_SLAB, Blocks.ICE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_WALL, Blocks.ICE);
+
+                createStairsRecipe(ModBlocks.PACKED_ICE_STAIRS, Ingredient.ofItem(Blocks.PACKED_ICE))
+                    .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
+                    .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ICE_SLAB, Blocks.PACKED_ICE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ICE_WALL, Blocks.PACKED_ICE);
+
+                createStairsRecipe(ModBlocks.MUD_STAIRS, Ingredient.ofItem(Blocks.MUD))
+                    .criterion(hasItem(Blocks.MUD), conditionsFromItem(Blocks.MUD))
+                    .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_SLAB, Blocks.MUD);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_WALL, Blocks.MUD);
+
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_PACKED_MUD, 1)
                     .input(Blocks.PACKED_MUD)
                     .input(Items.VINE)

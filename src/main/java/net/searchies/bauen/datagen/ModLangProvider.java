@@ -67,6 +67,16 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR.asItem(),"Industrial Iron Trapdoor");
         translationBuilder.add(ModBlocks.INDUSTRIAL_IRON_DOOR.asItem(),"Industrial Iron Door");
 
+        translationBuilder.add(ModBlocks.ICE_STAIRS.asItem(), "Ice Stairs");
+        translationBuilder.add(ModBlocks.ICE_SLAB.asItem(), "Ice Slab");
+        translationBuilder.add(ModBlocks.ICE_WALL.asItem(), "Ice Wall");
+        translationBuilder.add(ModBlocks.PACKED_ICE_STAIRS.asItem(), "Packed Ice Stairs");
+        translationBuilder.add(ModBlocks.PACKED_ICE_SLAB.asItem(), "Packed Ice Slab");
+        translationBuilder.add(ModBlocks.PACKED_ICE_WALL.asItem(), "Packed Ice Wall");
+
+        translationBuilder.add(ModBlocks.MUD_STAIRS.asItem(), "Mud Stairs");
+        translationBuilder.add(ModBlocks.MUD_SLAB.asItem(), "Mud Slab");
+        translationBuilder.add(ModBlocks.MUD_WALL.asItem(),"Mud Wall");
         translationBuilder.add(ModBlocks.MOSSY_PACKED_MUD.asItem(),"Mossy Packed Mud");
         translationBuilder.add(ModBlocks.MOSSY_PACKED_MUD_STAIRS.asItem(),"Mossy Packed Mud Stairs");
         translationBuilder.add(ModBlocks.MOSSY_PACKED_MUD_SLAB.asItem(),"Mossy Packed Mud Slab");

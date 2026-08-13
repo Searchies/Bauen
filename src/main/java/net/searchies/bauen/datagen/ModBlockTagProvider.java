@@ -2,6 +2,7 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.searchies.bauen.block.ModBlocks;
@@ -70,6 +71,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.INDUSTRIAL_IRON_TRAPDOOR)
             .add(ModBlocks.INDUSTRIAL_IRON_DOOR)
 
+            .add(ModBlocks.MUD_STAIRS)
+            .add(ModBlocks.MUD_SLAB)
+            .add(ModBlocks.MUD_WALL)
+            .add(ModBlocks.ICE_STAIRS)
+            .add(ModBlocks.ICE_SLAB)
+            .add(ModBlocks.ICE_WALL)
+            .add(ModBlocks.PACKED_ICE_STAIRS)
+            .add(ModBlocks.PACKED_ICE_SLAB)
+            .add(ModBlocks.PACKED_ICE_WALL)
             .add(ModBlocks.MOSSY_PACKED_MUD)
             .add(ModBlocks.MOSSY_PACKED_MUD_STAIRS)
             .add(ModBlocks.MOSSY_PACKED_MUD_SLAB)
@@ -249,6 +259,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.MOSSY_CHISELED_BRICKS_WALL)
             .add(ModBlocks.CRACKED_CHISELED_BRICKS_WALL)
             .add(ModBlocks.MIXED_COBBLESTONE_WALL)
+            .add(ModBlocks.ICE_WALL)
+            .add(ModBlocks.PACKED_ICE_WALL)
+            .add(ModBlocks.MUD_WALL)
             .add(ModBlocks.MOSSY_PACKED_MUD_WALL)
             .add(ModBlocks.MOSSY_MUD_BRICKS_WALL)
             .add(ModBlocks.MOSSY_TUFF_BRICKS_WALL)
