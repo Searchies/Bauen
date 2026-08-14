@@ -1,8 +1,6 @@
-package net.searchies.bauen.item;
+package net.searchies.bauen.init;
 
-import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -10,6 +8,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
+import net.searchies.bauen.item.TrowelItem;
 
 import java.util.function.Function;
 

@@ -1,4 +1,4 @@
-package net.searchies.bauen.item;
+package net.searchies.bauen.init;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -8,7 +8,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
-import net.searchies.bauen.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup BAUEN_BLOCKS = Registry.register(Registries.ITEM_GROUP,
@@ -259,6 +258,22 @@ public class ModItemGroups {
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS);
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB);
                     entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
+
+                    entries.add(ModBlocks.RED_SEAT);
+                    entries.add(ModBlocks.ORANGE_SEAT);
+                    entries.add(ModBlocks.YELLOW_SEAT);
+                    entries.add(ModBlocks.GREEN_SEAT);
+                    entries.add(ModBlocks.CYAN_SEAT);
+                    entries.add(ModBlocks.LIGHT_BLUE_SEAT);
+                    entries.add(ModBlocks.BLUE_SEAT);
+                    entries.add(ModBlocks.PINK_SEAT);
+                    entries.add(ModBlocks.MAGENTA_SEAT);
+                    entries.add(ModBlocks.PURPLE_SEAT);
+                    entries.add(ModBlocks.BROWN_SEAT);
+                    entries.add(ModBlocks.LIGHT_GRAY_SEAT);
+                    entries.add(ModBlocks.GRAY_SEAT);
+                    entries.add(ModBlocks.BLACK_SEAT);
+                    entries.add(ModBlocks.WHITE_SEAT);
 
                     entries.add(ModItems.TROWEL);
                 }).build());

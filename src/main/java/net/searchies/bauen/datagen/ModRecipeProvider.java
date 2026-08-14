@@ -10,8 +10,9 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.searchies.bauen.block.ModBlocks;
-import net.searchies.bauen.item.ModItems;
+import net.minecraft.registry.tag.ItemTags;
+import net.searchies.bauen.init.ModBlocks;
+import net.searchies.bauen.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -173,7 +174,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .criterion("has_gold_ingot", conditionsFromItem(Items.GOLD_INGOT))
                     .offerTo(exporter);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD, Blocks.GOLD_BLOCK, 4);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD, Blocks.GOLD_BLOCK, 9);
                 createStairsRecipe(ModBlocks.CUT_GOLD_STAIRS, Ingredient.ofItem(ModBlocks.CUT_GOLD))
                         .criterion(hasItem(ModBlocks.CUT_GOLD), conditionsFromItem(ModBlocks.CUT_GOLD))
                         .offerTo(exporter);
@@ -246,7 +247,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // MIDNIGHT BRICKS //
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIDNIGHT_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIDNIGHT_BRICKS, 4)
                     .input('#', ModItems.MIDNIGHT_BRICK)
                     .pattern("##")
                     .pattern("##")
@@ -286,6 +287,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_WALL, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.MIDNIGHT_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                    ModBlocks.CRACKED_MIDNIGHT_BRICKS, 0.1F, 200
+                )
+                .criterion(hasItem(ModBlocks.MIDNIGHT_BRICKS), conditionsFromItem(ModBlocks.MIDNIGHT_BRICKS))
+                .offerTo(exporter);
+                createStairsRecipe(ModBlocks.CRACKED_MIDNIGHT_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CRACKED_MIDNIGHT_BRICKS))
+                        .criterion(hasItem(ModBlocks.CRACKED_MIDNIGHT_BRICKS), conditionsFromItem(ModBlocks.CRACKED_MIDNIGHT_BRICKS))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CRACKED_MIDNIGHT_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MIDNIGHT_BRICKS_WALL, ModBlocks.CRACKED_MIDNIGHT_BRICKS);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.CHISELED_MIDNIGHT_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -361,7 +374,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_WALL, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS);
 
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_BRICKS)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_BRICKS, 4)
                     .input(ModBlocks.TREATED_BRICKS)
                     .input(Blocks.BRICKS)
                     .criterion("has_bricks", conditionsFromItem(Blocks.BRICKS))
@@ -396,7 +409,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // CALCITE BRICKS //
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_BRICKS, 4)
                     .input('#', Blocks.CALCITE)
                     .pattern("##")
                     .pattern("##")
@@ -432,7 +445,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // ANDESITE BRICKS //
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS, 4)
                     .input('#', Blocks.ANDESITE)
                     .pattern("##")
                     .pattern("##")
@@ -468,7 +481,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // DIORITE BRICKS //
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIORITE_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIORITE_BRICKS, 4)
                     .input('#', Blocks.DIORITE)
                     .pattern("##")
                     .pattern("##")
@@ -504,7 +517,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // DRIPSTONE BRICKS //
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS, 4)
                     .input('#', Blocks.DRIPSTONE_BLOCK)
                     .pattern("##")
                     .pattern("##")
@@ -540,7 +553,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // GRANITE BRICKS //
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRANITE_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRANITE_BRICKS, 4)
                     .input('#', Blocks.GRANITE)
                     .pattern("##")
                     .pattern("##")
@@ -576,7 +589,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // OCEANSLATE //
 
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE, 4)
                     .input(Items.COPPER_NUGGET, 2)
                     .input(Blocks.DEEPSLATE, 2)
                     .criterion(hasItem(Blocks.DEEPSLATE), conditionsFromItem(Blocks.DEEPSLATE))
@@ -587,7 +600,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_SLAB, ModBlocks.OCEANSLATE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_WALL, ModBlocks.OCEANSLATE);
 
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_BRICKS, 4)
                     .input('#', ModBlocks.OCEANSLATE)
                     .pattern("##")
                     .pattern("##")
@@ -634,6 +647,119 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB, ModBlocks.KELPY_OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL, ModBlocks.KELPY_OCEANSLATE_BRICKS);
+
+                // SEATS //
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_SEAT, 4)
+                        .input('W', Blocks.RED_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_SEAT, 4)
+                        .input('W', Blocks.ORANGE_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.ORANGE_WOOL), conditionsFromItem(Blocks.ORANGE_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_SEAT, 4)
+                        .input('W', Blocks.GREEN_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.GREEN_WOOL), conditionsFromItem(Blocks.GREEN_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_SEAT, 4)
+                        .input('W', Blocks.CYAN_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.CYAN_WOOL), conditionsFromItem(Blocks.CYAN_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_SEAT, 4)
+                        .input('W', Blocks.LIGHT_BLUE_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.LIGHT_BLUE_WOOL), conditionsFromItem(Blocks.LIGHT_BLUE_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_SEAT, 4)
+                        .input('W', Blocks.BLUE_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.BLUE_WOOL), conditionsFromItem(Blocks.BLUE_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_SEAT, 4)
+                        .input('W', Blocks.PINK_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.PINK_WOOL), conditionsFromItem(Blocks.PINK_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_SEAT, 4)
+                        .input('W', Blocks.MAGENTA_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.MAGENTA_WOOL), conditionsFromItem(Blocks.MAGENTA_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_SEAT, 4)
+                        .input('W', Blocks.PURPLE_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.PURPLE_WOOL), conditionsFromItem(Blocks.PURPLE_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_SEAT, 4)
+                        .input('W', Blocks.BROWN_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.BROWN_WOOL), conditionsFromItem(Blocks.BROWN_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_SEAT, 4)
+                        .input('W', Blocks.LIGHT_GRAY_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.LIGHT_GRAY_WOOL), conditionsFromItem(Blocks.LIGHT_GRAY_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_SEAT, 4)
+                        .input('W', Blocks.GRAY_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.GRAY_WOOL), conditionsFromItem(Blocks.GRAY_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_SEAT, 4)
+                        .input('W', Blocks.BLACK_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_SEAT, 4)
+                        .input('W', Blocks.WHITE_WOOL)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .pattern("WW")
+                        .pattern("SS")
+                        .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL))
+                        .offerTo(exporter);
 
                 // TROWEL //
 

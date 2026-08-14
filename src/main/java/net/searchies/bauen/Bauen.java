@@ -2,12 +2,11 @@ package net.searchies.bauen;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-import net.minecraft.client.render.BlockRenderLayer;
-import net.searchies.bauen.block.ModBlocks;
+import net.searchies.bauen.init.ModBlocks;
 
-import net.searchies.bauen.item.ModItemGroups;
-import net.searchies.bauen.item.ModItems;
+import net.searchies.bauen.init.ModEntities;
+import net.searchies.bauen.init.ModItemGroups;
+import net.searchies.bauen.init.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +19,7 @@ public class Bauen implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
+		ModEntities.registerModEntities();
 
 		Bauen.LOGGER.info("Hello guys and welcome back to the Channel - PhantomPickle 2026");
 	}

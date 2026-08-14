@@ -2,18 +2,15 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.model.json.WeightedVariant;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import net.searchies.bauen.block.GoldHoardBlock;
-import net.searchies.bauen.block.ModBlocks;
-import net.searchies.bauen.item.ModItems;
+import net.searchies.bauen.Bauen;
+import net.searchies.bauen.init.ModBlocks;
+import net.searchies.bauen.init.ModItems;
 
-import java.util.Optional;
-
-import static net.minecraft.client.data.BlockStateModelGenerator.createSingletonBlockState;
 import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -267,6 +264,22 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS)
                 .slab(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB)
                 .wall(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
+
+        registerSeat(ModBlocks.RED_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.ORANGE_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.YELLOW_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.GREEN_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.CYAN_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.LIGHT_BLUE_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.BLUE_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.PINK_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.MAGENTA_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.PURPLE_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.BROWN_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.LIGHT_GRAY_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.GRAY_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.BLACK_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.WHITE_SEAT, blockStateModelGenerator);
     }
 
     @Override
@@ -275,6 +288,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MIDNIGHT_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.TROWEL, Models.HANDHELD);
         itemModelGenerator.register(ModBlocks.GOLD_CHAIN.asItem(), Models.GENERATED);
+    }
+
+    public void registerSeat(Block block, BlockStateModelGenerator generator) {
+        // Modified TextureMap.sideTopBottom()
+        TextureMap textureMap = new TextureMap().put(TextureKey.SIDE, TextureMap.getSubId(block, "_side")).put(TextureKey.TOP, TextureMap.getSubId(block, "_top")).put(TextureKey.BOTTOM, Identifier.of(Bauen.MOD_ID, "block/seat_bottom"));
+
+        WeightedVariant weightedVariant = BlockStateModelGenerator.createWeightedVariant(Models.SLAB.upload(block, textureMap, generator.modelCollector));
+        generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, weightedVariant));
     }
 
 //    private void registerGoldHoards(BlockStateModelGenerator blockStateModelGenerator) {

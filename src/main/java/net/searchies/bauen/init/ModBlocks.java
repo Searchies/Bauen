@@ -1,4 +1,4 @@
-package net.searchies.bauen.block;
+package net.searchies.bauen.init;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -14,6 +14,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
+import net.searchies.bauen.block.SeatBlock;
 
 import java.util.function.Function;
 
@@ -307,6 +308,22 @@ public class ModBlocks {
     public static final Block KELPY_OCEANSLATE_BRICKS_SLAB = registerCustomBlock("kelpy_oceanslate_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block KELPY_OCEANSLATE_BRICKS_WALL = registerCustomBlock("kelpy_oceanslate_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
+    public static final Block RED_SEAT = registerCustomBlock("red_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.RED_WOOL).strength(0.4f));
+    public static final Block ORANGE_SEAT = registerCustomBlock("orange_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.ORANGE_WOOL).strength(0.4f));
+    public static final Block YELLOW_SEAT = registerCustomBlock("yellow_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.YELLOW_WOOL).strength(0.4f));
+    public static final Block GREEN_SEAT = registerCustomBlock("green_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.GREEN_WOOL).strength(0.4f));
+    public static final Block CYAN_SEAT = registerCustomBlock("cyan_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.CYAN_WOOL).strength(0.4f));
+    public static final Block LIGHT_BLUE_SEAT = registerCustomBlock("light_blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_WOOL).strength(0.4f));
+    public static final Block BLUE_SEAT = registerCustomBlock("blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.BLUE_WOOL).strength(0.4f));
+    public static final Block PINK_SEAT = registerCustomBlock("pink_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.PINK_WOOL).strength(0.4f));
+    public static final Block MAGENTA_SEAT = registerCustomBlock("magenta_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.MAGENTA_WOOL).strength(0.4f));
+    public static final Block PURPLE_SEAT = registerCustomBlock("purple_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL).strength(0.4f));
+    public static final Block BROWN_SEAT = registerCustomBlock("brown_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.BROWN_WOOL).strength(0.4f));
+    public static final Block LIGHT_GRAY_SEAT = registerCustomBlock("light_gray_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_WOOL).strength(0.4f));
+    public static final Block GRAY_SEAT = registerCustomBlock("gray_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.GRAY_WOOL).strength(0.4f));
+    public static final Block BLACK_SEAT = registerCustomBlock("black_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.BLACK_WOOL).strength(0.4f));
+    public static final Block WHITE_SEAT = registerCustomBlock("white_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.WHITE_WOOL).strength(0.4f));
+
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
         Block block = new Block(blockSettings.registryKey(key));
@@ -564,6 +581,22 @@ public class ModBlocks {
             entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS);
             entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB);
             entries.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
+
+            entries.add(ModBlocks.RED_SEAT);
+            entries.add(ModBlocks.ORANGE_SEAT);
+            entries.add(ModBlocks.YELLOW_SEAT);
+            entries.add(ModBlocks.GREEN_SEAT);
+            entries.add(ModBlocks.CYAN_SEAT);
+            entries.add(ModBlocks.LIGHT_BLUE_SEAT);
+            entries.add(ModBlocks.BLUE_SEAT);
+            entries.add(ModBlocks.PINK_SEAT);
+            entries.add(ModBlocks.MAGENTA_SEAT);
+            entries.add(ModBlocks.PURPLE_SEAT);
+            entries.add(ModBlocks.BROWN_SEAT);
+            entries.add(ModBlocks.LIGHT_GRAY_SEAT);
+            entries.add(ModBlocks.GRAY_SEAT);
+            entries.add(ModBlocks.BLACK_SEAT);
+            entries.add(ModBlocks.WHITE_SEAT);
         });
     }
 }

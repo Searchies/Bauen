@@ -3,8 +3,8 @@ package net.searchies.bauen.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
-import net.searchies.bauen.block.ModBlocks;
-import net.searchies.bauen.item.ModItems;
+import net.searchies.bauen.init.ModBlocks;
+import net.searchies.bauen.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -249,6 +249,22 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS.asItem(), "Kelpy Oceanslate Bricks Stairs");
         translationBuilder.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB.asItem(), "Kelpy Oceanslate Bricks Slab");
         translationBuilder.add(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL.asItem(), "Kelpy Oceanslate Bricks Wall");
+
+        translationBuilder.add(ModBlocks.RED_SEAT.asItem(), "Red Seat");
+        translationBuilder.add(ModBlocks.ORANGE_SEAT.asItem(), "Orange Seat");
+        translationBuilder.add(ModBlocks.YELLOW_SEAT.asItem(), "Yellow Seat");
+        translationBuilder.add(ModBlocks.GREEN_SEAT.asItem(), "Green Seat");
+        translationBuilder.add(ModBlocks.CYAN_SEAT.asItem(), "Cyan Seat");
+        translationBuilder.add(ModBlocks.LIGHT_BLUE_SEAT.asItem(), "Light Blue Seat");
+        translationBuilder.add(ModBlocks.BLUE_SEAT.asItem(), "Blue Seat");
+        translationBuilder.add(ModBlocks.PINK_SEAT.asItem(), "Pink Seat");
+        translationBuilder.add(ModBlocks.MAGENTA_SEAT.asItem(), "Magenta Seat");
+        translationBuilder.add(ModBlocks.PURPLE_SEAT.asItem(), "Purple Seat");
+        translationBuilder.add(ModBlocks.BROWN_SEAT.asItem(), "Brown Seat");
+        translationBuilder.add(ModBlocks.LIGHT_GRAY_SEAT.asItem(), "Light Gray Seat");
+        translationBuilder.add(ModBlocks.GRAY_SEAT.asItem(), "Gray Seat");
+        translationBuilder.add(ModBlocks.BLACK_SEAT.asItem(), "Black Seat");
+        translationBuilder.add(ModBlocks.WHITE_SEAT.asItem(), "White Seat");
 
         translationBuilder.add(ModItems.TROWEL, "Trowel");
 

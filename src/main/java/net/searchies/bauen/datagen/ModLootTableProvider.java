@@ -2,27 +2,10 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SnowBlock;
-import net.minecraft.item.Items;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
-import net.minecraft.loot.condition.EntityPropertiesLootCondition;
-import net.minecraft.loot.context.LootContext;
-import net.minecraft.loot.entry.AlternativeEntry;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LeafEntry;
-import net.minecraft.loot.entry.LootPoolEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
-import net.searchies.bauen.Bauen;
-import net.searchies.bauen.block.GoldHoardBlock;
-import net.searchies.bauen.block.ModBlocks;
-import net.searchies.bauen.item.ModItems;
+import net.searchies.bauen.init.ModBlocks;
+import net.searchies.bauen.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -312,5 +295,21 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS);
         addDrop(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB, slabDrops(ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB));
         addDrop(ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
+
+        addDrop(ModBlocks.RED_SEAT);
+        addDrop(ModBlocks.ORANGE_SEAT);
+        addDrop(ModBlocks.YELLOW_SEAT);
+        addDrop(ModBlocks.GREEN_SEAT);
+        addDrop(ModBlocks.CYAN_SEAT);
+        addDrop(ModBlocks.LIGHT_BLUE_SEAT);
+        addDrop(ModBlocks.BLUE_SEAT);
+        addDrop(ModBlocks.PINK_SEAT);
+        addDrop(ModBlocks.MAGENTA_SEAT);
+        addDrop(ModBlocks.PURPLE_SEAT);
+        addDrop(ModBlocks.BROWN_SEAT);
+        addDrop(ModBlocks.LIGHT_GRAY_SEAT);
+        addDrop(ModBlocks.GRAY_SEAT);
+        addDrop(ModBlocks.BLACK_SEAT);
+        addDrop(ModBlocks.WHITE_SEAT);
     }
 }

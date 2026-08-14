@@ -1,4 +1,4 @@
-package net.searchies.bauen.util;
+package net.searchies.bauen.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

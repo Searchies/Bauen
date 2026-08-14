@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": "minecraft:gold_block",
   "result": {
-    "count": 4,
+    "count": 9,
     "id": "bauen:cut_gold"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bauen:block/seat_bottom",
+    "side": "bauen:block/black_seat_side",
+    "top": "bauen:block/black_seat_top"
+  }
+}

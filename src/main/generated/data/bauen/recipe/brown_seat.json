@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "#minecraft:wooden_slabs",
+    "W": "minecraft:brown_wool"
+  },
+  "pattern": [
+    "WW",
+    "SS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bauen:brown_seat"
+  }
+}
