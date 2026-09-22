@@ -160,10 +160,18 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.CRACKED_MIXED_BRICKS_SLAB.asItem(),"Cracked Mixed Bricks Slab");
         translationBuilder.add(ModBlocks.CRACKED_MIXED_BRICKS_WALL.asItem(),"Cracked Mixed Bricks Wall");
 
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE.asItem(), "Polished Calcite");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_STAIRS.asItem(), "Polished Calcite Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_SLAB.asItem(), "Polished Calcite Slab");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_WALL.asItem(), "Polished Calcite Wall");
         translationBuilder.add(ModBlocks.CALCITE_BRICKS.asItem(), "Calcite Bricks");
         translationBuilder.add(ModBlocks.CALCITE_BRICKS_STAIRS.asItem(), "Calcite Bricks Stairs");
         translationBuilder.add(ModBlocks.CALCITE_BRICKS_SLAB.asItem(), "Calcite Bricks Slab");
         translationBuilder.add(ModBlocks.CALCITE_BRICKS_WALL.asItem(), "Calcite Bricks Wall");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_BRICKS.asItem(), "Polished Calcite Bricks");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_BRICKS_STAIRS.asItem(), "Polished Calcite Bricks Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_BRICKS_SLAB.asItem(), "Polished Calcite Bricks Slab");
+        translationBuilder.add(ModBlocks.POLISHED_CALCITE_BRICKS_WALL.asItem(), "Polished Calcite Bricks Wall");
         translationBuilder.add(ModBlocks.MOSSY_CALCITE_BRICKS.asItem(), "Mossy Calcite Bricks");
         translationBuilder.add(ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS.asItem(), "Mossy Calcite Bricks Stairs");
         translationBuilder.add(ModBlocks.MOSSY_CALCITE_BRICKS_SLAB.asItem(), "Mossy Calcite Bricks Slab");
@@ -177,6 +185,10 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ANDESITE_BRICKS_STAIRS.asItem(), "Andesite Bricks Stairs");
         translationBuilder.add(ModBlocks.ANDESITE_BRICKS_SLAB.asItem(), "Andesite Bricks Slab");
         translationBuilder.add(ModBlocks.ANDESITE_BRICKS_WALL.asItem(), "Andesite Bricks Wall");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_BRICKS.asItem(), "Polished Andesite Bricks");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_BRICKS_STAIRS.asItem(), "Polished Andesite Bricks Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB.asItem(), "Polished Andesite Bricks Slab");
+        translationBuilder.add(ModBlocks.POLISHED_ANDESITE_BRICKS_WALL.asItem(), "Polished Andesite Bricks Wall");
         translationBuilder.add(ModBlocks.MOSSY_ANDESITE_BRICKS.asItem(), "Mossy Andesite Bricks");
         translationBuilder.add(ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS.asItem(), "Mossy Andesite Bricks Stairs");
         translationBuilder.add(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB.asItem(), "Mossy Andesite Bricks Slab");
@@ -190,6 +202,10 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DIORITE_BRICKS_STAIRS.asItem(), "Diorite Bricks Stairs");
         translationBuilder.add(ModBlocks.DIORITE_BRICKS_SLAB.asItem(), "Diorite Bricks Slab");
         translationBuilder.add(ModBlocks.DIORITE_BRICKS_WALL.asItem(), "Diorite Bricks Wall");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_BRICKS.asItem(), "Polished Diorite Bricks");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_BRICKS_STAIRS.asItem(), "Polished Diorite Bricks Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_BRICKS_SLAB.asItem(), "Polished Diorite Bricks Slab");
+        translationBuilder.add(ModBlocks.POLISHED_DIORITE_BRICKS_WALL.asItem(), "Polished Diorite Bricks Wall");
         translationBuilder.add(ModBlocks.MOSSY_DIORITE_BRICKS.asItem(), "Mossy Diorite Bricks");
         translationBuilder.add(ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS.asItem(), "Mossy Diorite Bricks Stairs");
         translationBuilder.add(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB.asItem(), "Mossy Diorite Bricks Slab");
@@ -199,10 +215,18 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.CRACKED_DIORITE_BRICKS_SLAB.asItem(), "Cracked Diorite Bricks Slab");
         translationBuilder.add(ModBlocks.CRACKED_DIORITE_BRICKS_WALL.asItem(), "Cracked Diorite Bricks Wall");
 
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE.asItem(), "Polished Dripstone");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_STAIRS.asItem(), "Polished Dripstone Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_SLAB.asItem(), "Polished Dripstone Slab");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_WALL.asItem(), "Polished Dripstone Wall");
         translationBuilder.add(ModBlocks.DRIPSTONE_BRICKS.asItem(), "Dripstone Bricks");
         translationBuilder.add(ModBlocks.DRIPSTONE_BRICKS_STAIRS.asItem(), "Dripstone Bricks Stairs");
         translationBuilder.add(ModBlocks.DRIPSTONE_BRICKS_SLAB.asItem(), "Dripstone Bricks Slab");
         translationBuilder.add(ModBlocks.DRIPSTONE_BRICKS_WALL.asItem(), "Dripstone Bricks Wall");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS.asItem(), "Polished Dripstone Bricks");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS_STAIRS.asItem(), "Polished Dripstone Bricks Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB.asItem(), "Polished Dripstone Bricks Slab");
+        translationBuilder.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS_WALL.asItem(), "Polished Dripstone Bricks Wall");
         translationBuilder.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS.asItem(), "Mossy Dripstone Bricks");
         translationBuilder.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS.asItem(), "Mossy Dripstone Bricks Stairs");
         translationBuilder.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB.asItem(), "Mossy Dripstone Bricks Slab");
@@ -216,6 +240,10 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.GRANITE_BRICKS_STAIRS.asItem(), "Granite Bricks Stairs");
         translationBuilder.add(ModBlocks.GRANITE_BRICKS_SLAB.asItem(), "Granite Bricks Slab");
         translationBuilder.add(ModBlocks.GRANITE_BRICKS_WALL.asItem(), "Granite Bricks Wall");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_BRICKS.asItem(), "Polished Granite Bricks");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_BRICKS_STAIRS.asItem(), "Polished Granite Bricks Stairs");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_BRICKS_SLAB.asItem(), "Polished Granite Bricks Slab");
+        translationBuilder.add(ModBlocks.POLISHED_GRANITE_BRICKS_WALL.asItem(), "Polished Granite Bricks Wall");
         translationBuilder.add(ModBlocks.MOSSY_GRANITE_BRICKS.asItem(), "Mossy Granite Bricks");
         translationBuilder.add(ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS.asItem(), "Mossy Granite Bricks Stairs");
         translationBuilder.add(ModBlocks.MOSSY_GRANITE_BRICKS_SLAB.asItem(), "Mossy Granite Bricks Slab");
@@ -253,6 +281,7 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.RED_SEAT.asItem(), "Red Seat");
         translationBuilder.add(ModBlocks.ORANGE_SEAT.asItem(), "Orange Seat");
         translationBuilder.add(ModBlocks.YELLOW_SEAT.asItem(), "Yellow Seat");
+        translationBuilder.add(ModBlocks.LIME_SEAT.asItem(), "Lime Seat");
         translationBuilder.add(ModBlocks.GREEN_SEAT.asItem(), "Green Seat");
         translationBuilder.add(ModBlocks.CYAN_SEAT.asItem(), "Cyan Seat");
         translationBuilder.add(ModBlocks.LIGHT_BLUE_SEAT.asItem(), "Light Blue Seat");

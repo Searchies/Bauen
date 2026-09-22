@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:dripstone_block"
+    "#": "bauen:polished_dripstone"
   },
   "pattern": [
     "##",

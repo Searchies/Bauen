@@ -175,10 +175,18 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.CRACKED_MIXED_BRICKS_SLAB)
                 .wall(ModBlocks.CRACKED_MIXED_BRICKS_WALL);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_CALCITE)
+                .stairs(ModBlocks.POLISHED_CALCITE_STAIRS)
+                .slab(ModBlocks.POLISHED_CALCITE_SLAB)
+                .wall(ModBlocks.POLISHED_CALCITE_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CALCITE_BRICKS)
                 .stairs(ModBlocks.CALCITE_BRICKS_STAIRS)
                 .slab(ModBlocks.CALCITE_BRICKS_SLAB)
                 .wall(ModBlocks.CALCITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_CALCITE_BRICKS)
+                .stairs(ModBlocks.POLISHED_CALCITE_BRICKS_STAIRS)
+                .slab(ModBlocks.POLISHED_CALCITE_BRICKS_SLAB)
+                .wall(ModBlocks.POLISHED_CALCITE_BRICKS_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_CALCITE_BRICKS)
                 .stairs(ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS)
                 .slab(ModBlocks.MOSSY_CALCITE_BRICKS_SLAB)
@@ -192,6 +200,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.ANDESITE_BRICKS_STAIRS)
                 .slab(ModBlocks.ANDESITE_BRICKS_SLAB)
                 .wall(ModBlocks.ANDESITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_ANDESITE_BRICKS)
+                .stairs(ModBlocks.POLISHED_ANDESITE_BRICKS_STAIRS)
+                .slab(ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB)
+                .wall(ModBlocks.POLISHED_ANDESITE_BRICKS_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_ANDESITE_BRICKS)
                 .stairs(ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS)
                 .slab(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB)
@@ -205,6 +217,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.DIORITE_BRICKS_STAIRS)
                 .slab(ModBlocks.DIORITE_BRICKS_SLAB)
                 .wall(ModBlocks.DIORITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_DIORITE_BRICKS)
+                .stairs(ModBlocks.POLISHED_DIORITE_BRICKS_STAIRS)
+                .slab(ModBlocks.POLISHED_DIORITE_BRICKS_SLAB)
+                .wall(ModBlocks.POLISHED_DIORITE_BRICKS_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_DIORITE_BRICKS)
                 .stairs(ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS)
                 .slab(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB)
@@ -214,10 +230,18 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.CRACKED_DIORITE_BRICKS_SLAB)
                 .wall(ModBlocks.CRACKED_DIORITE_BRICKS_WALL);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_DRIPSTONE)
+                .stairs(ModBlocks.POLISHED_DRIPSTONE_STAIRS)
+                .slab(ModBlocks.POLISHED_DRIPSTONE_SLAB)
+                .wall(ModBlocks.POLISHED_DRIPSTONE_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DRIPSTONE_BRICKS)
                 .stairs(ModBlocks.DRIPSTONE_BRICKS_STAIRS)
                 .slab(ModBlocks.DRIPSTONE_BRICKS_SLAB)
                 .wall(ModBlocks.DRIPSTONE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_DRIPSTONE_BRICKS)
+                .stairs(ModBlocks.POLISHED_DRIPSTONE_BRICKS_STAIRS)
+                .slab(ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB)
+                .wall(ModBlocks.POLISHED_DRIPSTONE_BRICKS_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_DRIPSTONE_BRICKS)
                 .stairs(ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS)
                 .slab(ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB)
@@ -231,6 +255,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.GRANITE_BRICKS_STAIRS)
                 .slab(ModBlocks.GRANITE_BRICKS_SLAB)
                 .wall(ModBlocks.GRANITE_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_GRANITE_BRICKS)
+                .stairs(ModBlocks.POLISHED_GRANITE_BRICKS_STAIRS)
+                .slab(ModBlocks.POLISHED_GRANITE_BRICKS_SLAB)
+                .wall(ModBlocks.POLISHED_GRANITE_BRICKS_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOSSY_GRANITE_BRICKS)
                 .stairs(ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS)
                 .slab(ModBlocks.MOSSY_GRANITE_BRICKS_SLAB)
@@ -268,6 +296,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerSeat(ModBlocks.RED_SEAT, blockStateModelGenerator);
         registerSeat(ModBlocks.ORANGE_SEAT, blockStateModelGenerator);
         registerSeat(ModBlocks.YELLOW_SEAT, blockStateModelGenerator);
+        registerSeat(ModBlocks.LIME_SEAT, blockStateModelGenerator);
         registerSeat(ModBlocks.GREEN_SEAT, blockStateModelGenerator);
         registerSeat(ModBlocks.CYAN_SEAT, blockStateModelGenerator);
         registerSeat(ModBlocks.LIGHT_BLUE_SEAT, blockStateModelGenerator);

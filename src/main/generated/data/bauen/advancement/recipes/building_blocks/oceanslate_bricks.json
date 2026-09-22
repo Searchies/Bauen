@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oceanslate": {
+    "has_polished_oceanslate": {
       "conditions": {
         "items": [
           {
-            "items": "bauen:oceanslate"
+            "items": "bauen:polished_oceanslate"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_oceanslate"
+      "has_polished_oceanslate"
     ]
   ],
   "rewards": {

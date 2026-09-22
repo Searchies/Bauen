@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "seat_dye",
+  "ingredients": [
+    "minecraft:gray_dye",
+    [
+      "bauen:black_seat",
+      "bauen:blue_seat",
+      "bauen:brown_seat",
+      "bauen:cyan_seat",
+      "bauen:green_seat",
+      "bauen:light_blue_seat",
+      "bauen:light_gray_seat",
+      "bauen:lime_seat",
+      "bauen:magenta_seat",
+      "bauen:orange_seat",
+      "bauen:pink_seat",
+      "bauen:purple_seat",
+      "bauen:red_seat",
+      "bauen:yellow_seat",
+      "bauen:white_seat"
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:gray_seat"
+  }
+}

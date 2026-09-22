@@ -186,10 +186,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRACKED_MIXED_BRICKS_WALL);
 
 
+        addDrop(ModBlocks.POLISHED_CALCITE);
+        addDrop(ModBlocks.POLISHED_CALCITE_STAIRS);
+        addDrop(ModBlocks.POLISHED_CALCITE_SLAB, slabDrops(ModBlocks.POLISHED_CALCITE_SLAB));
+        addDrop(ModBlocks.POLISHED_CALCITE_WALL);
+
         addDrop(ModBlocks.CALCITE_BRICKS);
         addDrop(ModBlocks.CALCITE_BRICKS_STAIRS);
         addDrop(ModBlocks.CALCITE_BRICKS_SLAB, slabDrops(ModBlocks.CALCITE_BRICKS_SLAB));
         addDrop(ModBlocks.CALCITE_BRICKS_WALL);
+
+        addDrop(ModBlocks.POLISHED_CALCITE_BRICKS);
+        addDrop(ModBlocks.POLISHED_CALCITE_BRICKS_STAIRS);
+        addDrop(ModBlocks.POLISHED_CALCITE_BRICKS_SLAB, slabDrops(ModBlocks.POLISHED_CALCITE_BRICKS_SLAB));
+        addDrop(ModBlocks.POLISHED_CALCITE_BRICKS_WALL);
 
         addDrop(ModBlocks.MOSSY_CALCITE_BRICKS);
         addDrop(ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS);
@@ -207,6 +217,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ANDESITE_BRICKS_SLAB, slabDrops(ModBlocks.ANDESITE_BRICKS_SLAB));
         addDrop(ModBlocks.ANDESITE_BRICKS_WALL);
 
+        addDrop(ModBlocks.POLISHED_ANDESITE_BRICKS);
+        addDrop(ModBlocks.POLISHED_ANDESITE_BRICKS_STAIRS);
+        addDrop(ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB, slabDrops(ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB));
+        addDrop(ModBlocks.POLISHED_ANDESITE_BRICKS_WALL);
+
         addDrop(ModBlocks.MOSSY_ANDESITE_BRICKS);
         addDrop(ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS);
         addDrop(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB, slabDrops(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB));
@@ -223,6 +238,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DIORITE_BRICKS_SLAB, slabDrops(ModBlocks.DIORITE_BRICKS_SLAB));
         addDrop(ModBlocks.DIORITE_BRICKS_WALL);
 
+        addDrop(ModBlocks.POLISHED_DIORITE_BRICKS);
+        addDrop(ModBlocks.POLISHED_DIORITE_BRICKS_STAIRS);
+        addDrop(ModBlocks.POLISHED_DIORITE_BRICKS_SLAB, slabDrops(ModBlocks.POLISHED_DIORITE_BRICKS_SLAB));
+        addDrop(ModBlocks.POLISHED_DIORITE_BRICKS_WALL);
+
         addDrop(ModBlocks.MOSSY_DIORITE_BRICKS);
         addDrop(ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS);
         addDrop(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB, slabDrops(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB));
@@ -234,10 +254,20 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRACKED_DIORITE_BRICKS_WALL);
 
 
+        addDrop(ModBlocks.POLISHED_DRIPSTONE);
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_STAIRS);
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_SLAB, slabDrops(ModBlocks.POLISHED_DRIPSTONE_SLAB));
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_WALL);
+
         addDrop(ModBlocks.DRIPSTONE_BRICKS);
         addDrop(ModBlocks.DRIPSTONE_BRICKS_STAIRS);
         addDrop(ModBlocks.DRIPSTONE_BRICKS_SLAB, slabDrops(ModBlocks.DRIPSTONE_BRICKS_SLAB));
         addDrop(ModBlocks.DRIPSTONE_BRICKS_WALL);
+
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_BRICKS);
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_BRICKS_STAIRS);
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB, slabDrops(ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB));
+        addDrop(ModBlocks.POLISHED_DRIPSTONE_BRICKS_WALL);
 
         addDrop(ModBlocks.MOSSY_DRIPSTONE_BRICKS);
         addDrop(ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS);
@@ -254,6 +284,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GRANITE_BRICKS_STAIRS);
         addDrop(ModBlocks.GRANITE_BRICKS_SLAB, slabDrops(ModBlocks.GRANITE_BRICKS_SLAB));
         addDrop(ModBlocks.GRANITE_BRICKS_WALL);
+
+        addDrop(ModBlocks.POLISHED_GRANITE_BRICKS);
+        addDrop(ModBlocks.POLISHED_GRANITE_BRICKS_STAIRS);
+        addDrop(ModBlocks.POLISHED_GRANITE_BRICKS_SLAB, slabDrops(ModBlocks.POLISHED_GRANITE_BRICKS_SLAB));
+        addDrop(ModBlocks.POLISHED_GRANITE_BRICKS_WALL);
 
         addDrop(ModBlocks.MOSSY_GRANITE_BRICKS);
         addDrop(ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS);
@@ -299,6 +334,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RED_SEAT);
         addDrop(ModBlocks.ORANGE_SEAT);
         addDrop(ModBlocks.YELLOW_SEAT);
+        addDrop(ModBlocks.LIME_SEAT);
         addDrop(ModBlocks.GREEN_SEAT);
         addDrop(ModBlocks.CYAN_SEAT);
         addDrop(ModBlocks.LIGHT_BLUE_SEAT);

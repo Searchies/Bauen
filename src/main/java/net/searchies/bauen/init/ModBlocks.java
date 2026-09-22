@@ -203,6 +203,16 @@ public class ModBlocks {
     public static final Block CRACKED_MIXED_BRICKS_SLAB = registerCustomBlock("cracked_mixed_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_MIXED_BRICKS_WALL = registerCustomBlock("cracked_mixed_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
+    public static final Block POLISHED_CALCITE = registerBlock("polished_calcite", ABS_BRICKS);
+    public static final Block POLISHED_CALCITE_STAIRS = registerCustomBlock("polished_calcite_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_CALCITE.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_CALCITE_SLAB = registerCustomBlock("polished_calcite_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_CALCITE_WALL = registerCustomBlock("polished_calcite_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block POLISHED_CALCITE_BRICKS = registerBlock("polished_calcite_bricks", ABS_BRICKS);
+    public static final Block POLISHED_CALCITE_BRICKS_STAIRS = registerCustomBlock("polished_calcite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_CALCITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_CALCITE_BRICKS_SLAB = registerCustomBlock("polished_calcite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_CALCITE_BRICKS_WALL = registerCustomBlock("polished_calcite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
     public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks", ABS_BRICKS);
     public static final Block CALCITE_BRICKS_STAIRS = registerCustomBlock("calcite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CALCITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block CALCITE_BRICKS_SLAB = registerCustomBlock("calcite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
@@ -217,6 +227,11 @@ public class ModBlocks {
     public static final Block CRACKED_CALCITE_BRICKS_STAIRS = registerCustomBlock("cracked_calcite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CRACKED_CALCITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_CALCITE_BRICKS_SLAB = registerCustomBlock("cracked_calcite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_CALCITE_BRICKS_WALL = registerCustomBlock("cracked_calcite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block POLISHED_ANDESITE_BRICKS = registerBlock("polished_andesite_bricks", ABS_BRICKS);
+    public static final Block POLISHED_ANDESITE_BRICKS_STAIRS = registerCustomBlock("polished_andesite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_ANDESITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_ANDESITE_BRICKS_SLAB = registerCustomBlock("polished_andesite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_ANDESITE_BRICKS_WALL = registerCustomBlock("polished_andesite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
     public static final Block ANDESITE_BRICKS = registerBlock("andesite_bricks", ABS_BRICKS);
     public static final Block ANDESITE_BRICKS_STAIRS = registerCustomBlock("andesite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ANDESITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -233,6 +248,11 @@ public class ModBlocks {
     public static final Block CRACKED_ANDESITE_BRICKS_SLAB = registerCustomBlock("cracked_andesite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_ANDESITE_BRICKS_WALL = registerCustomBlock("cracked_andesite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
+    public static final Block POLISHED_DIORITE_BRICKS = registerBlock("polished_diorite_bricks", ABS_BRICKS);
+    public static final Block POLISHED_DIORITE_BRICKS_STAIRS = registerCustomBlock("polished_diorite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_DIORITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_DIORITE_BRICKS_SLAB = registerCustomBlock("polished_diorite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_DIORITE_BRICKS_WALL = registerCustomBlock("polished_diorite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
     public static final Block DIORITE_BRICKS = registerBlock("diorite_bricks", ABS_BRICKS);
     public static final Block DIORITE_BRICKS_STAIRS = registerCustomBlock("diorite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DIORITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block DIORITE_BRICKS_SLAB = registerCustomBlock("diorite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
@@ -248,10 +268,20 @@ public class ModBlocks {
     public static final Block CRACKED_DIORITE_BRICKS_SLAB = registerCustomBlock("cracked_diorite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_DIORITE_BRICKS_WALL = registerCustomBlock("cracked_diorite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
+    public static final Block POLISHED_DRIPSTONE = registerBlock("polished_dripstone", ABS_BRICKS);
+    public static final Block POLISHED_DRIPSTONE_STAIRS = registerCustomBlock("polished_dripstone_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_DRIPSTONE.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_DRIPSTONE_SLAB = registerCustomBlock("polished_dripstone_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_DRIPSTONE_WALL = registerCustomBlock("polished_dripstone_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
     public static final Block DRIPSTONE_BRICKS = registerBlock("dripstone_bricks", ABS_BRICKS);
     public static final Block DRIPSTONE_BRICKS_STAIRS = registerCustomBlock("dripstone_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DRIPSTONE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block DRIPSTONE_BRICKS_SLAB = registerCustomBlock("dripstone_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block DRIPSTONE_BRICKS_WALL = registerCustomBlock("dripstone_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block POLISHED_DRIPSTONE_BRICKS = registerBlock("polished_dripstone_bricks", ABS_BRICKS);
+    public static final Block POLISHED_DRIPSTONE_BRICKS_STAIRS = registerCustomBlock("polished_dripstone_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_DRIPSTONE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_DRIPSTONE_BRICKS_SLAB = registerCustomBlock("polished_dripstone_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_DRIPSTONE_BRICKS_WALL = registerCustomBlock("polished_dripstone_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
     public static final Block MOSSY_DRIPSTONE_BRICKS = registerBlock("mossy_dripstone_bricks", ABS_BRICKS);
     public static final Block MOSSY_DRIPSTONE_BRICKS_STAIRS = registerCustomBlock("mossy_dripstone_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_DRIPSTONE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -262,6 +292,11 @@ public class ModBlocks {
     public static final Block CRACKED_DRIPSTONE_BRICKS_STAIRS = registerCustomBlock("cracked_dripstone_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CRACKED_DRIPSTONE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_DRIPSTONE_BRICKS_SLAB = registerCustomBlock("cracked_dripstone_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block CRACKED_DRIPSTONE_BRICKS_WALL = registerCustomBlock("cracked_dripstone_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block POLISHED_GRANITE_BRICKS = registerBlock("polished_granite_bricks", ABS_BRICKS);
+    public static final Block POLISHED_GRANITE_BRICKS_STAIRS = registerCustomBlock("polished_granite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_GRANITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_GRANITE_BRICKS_SLAB = registerCustomBlock("polished_granite_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_GRANITE_BRICKS_WALL = registerCustomBlock("polished_granite_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
     public static final Block GRANITE_BRICKS = registerBlock("granite_bricks", ABS_BRICKS);
     public static final Block GRANITE_BRICKS_STAIRS = registerCustomBlock("granite_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GRANITE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -311,6 +346,7 @@ public class ModBlocks {
     public static final Block RED_SEAT = registerCustomBlock("red_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.RED_WOOL).strength(0.4f));
     public static final Block ORANGE_SEAT = registerCustomBlock("orange_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.ORANGE_WOOL).strength(0.4f));
     public static final Block YELLOW_SEAT = registerCustomBlock("yellow_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.YELLOW_WOOL).strength(0.4f));
+    public static final Block LIME_SEAT = registerCustomBlock("lime_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.LIME_WOOL).strength(0.4f));
     public static final Block GREEN_SEAT = registerCustomBlock("green_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.GREEN_WOOL).strength(0.4f));
     public static final Block CYAN_SEAT = registerCustomBlock("cyan_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.CYAN_WOOL).strength(0.4f));
     public static final Block LIGHT_BLUE_SEAT = registerCustomBlock("light_blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_WOOL).strength(0.4f));
@@ -492,10 +528,18 @@ public class ModBlocks {
             entries.add(ModBlocks.CRACKED_MIXED_BRICKS_SLAB);
             entries.add(ModBlocks.CRACKED_MIXED_BRICKS_WALL);
 
+            entries.add(ModBlocks.POLISHED_CALCITE);
+            entries.add(ModBlocks.POLISHED_CALCITE_STAIRS);
+            entries.add(ModBlocks.POLISHED_CALCITE_SLAB);
+            entries.add(ModBlocks.POLISHED_CALCITE_WALL);
             entries.add(ModBlocks.CALCITE_BRICKS);
             entries.add(ModBlocks.CALCITE_BRICKS_STAIRS);
             entries.add(ModBlocks.CALCITE_BRICKS_SLAB);
             entries.add(ModBlocks.CALCITE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_CALCITE_BRICKS);
+            entries.add(ModBlocks.POLISHED_CALCITE_BRICKS_STAIRS);
+            entries.add(ModBlocks.POLISHED_CALCITE_BRICKS_SLAB);
+            entries.add(ModBlocks.POLISHED_CALCITE_BRICKS_WALL);
             entries.add(ModBlocks.MOSSY_CALCITE_BRICKS);
             entries.add(ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS);
             entries.add(ModBlocks.MOSSY_CALCITE_BRICKS_SLAB);
@@ -509,6 +553,10 @@ public class ModBlocks {
             entries.add(ModBlocks.ANDESITE_BRICKS_STAIRS);
             entries.add(ModBlocks.ANDESITE_BRICKS_SLAB);
             entries.add(ModBlocks.ANDESITE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_ANDESITE_BRICKS);
+            entries.add(ModBlocks.POLISHED_ANDESITE_BRICKS_STAIRS);
+            entries.add(ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB);
+            entries.add(ModBlocks.POLISHED_ANDESITE_BRICKS_WALL);
             entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS);
             entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS);
             entries.add(ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB);
@@ -522,6 +570,10 @@ public class ModBlocks {
             entries.add(ModBlocks.DIORITE_BRICKS_STAIRS);
             entries.add(ModBlocks.DIORITE_BRICKS_SLAB);
             entries.add(ModBlocks.DIORITE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_DIORITE_BRICKS);
+            entries.add(ModBlocks.POLISHED_DIORITE_BRICKS_STAIRS);
+            entries.add(ModBlocks.POLISHED_DIORITE_BRICKS_SLAB);
+            entries.add(ModBlocks.POLISHED_DIORITE_BRICKS_WALL);
             entries.add(ModBlocks.MOSSY_DIORITE_BRICKS);
             entries.add(ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS);
             entries.add(ModBlocks.MOSSY_DIORITE_BRICKS_SLAB);
@@ -531,10 +583,18 @@ public class ModBlocks {
             entries.add(ModBlocks.CRACKED_DIORITE_BRICKS_SLAB);
             entries.add(ModBlocks.CRACKED_DIORITE_BRICKS_WALL);
 
+            entries.add(ModBlocks.POLISHED_DRIPSTONE);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_STAIRS);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_SLAB);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_WALL);
             entries.add(ModBlocks.DRIPSTONE_BRICKS);
             entries.add(ModBlocks.DRIPSTONE_BRICKS_STAIRS);
             entries.add(ModBlocks.DRIPSTONE_BRICKS_SLAB);
             entries.add(ModBlocks.DRIPSTONE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS_STAIRS);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB);
+            entries.add(ModBlocks.POLISHED_DRIPSTONE_BRICKS_WALL);
             entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS);
             entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS);
             entries.add(ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB);
@@ -548,6 +608,10 @@ public class ModBlocks {
             entries.add(ModBlocks.GRANITE_BRICKS_STAIRS);
             entries.add(ModBlocks.GRANITE_BRICKS_SLAB);
             entries.add(ModBlocks.GRANITE_BRICKS_WALL);
+            entries.add(ModBlocks.POLISHED_GRANITE_BRICKS);
+            entries.add(ModBlocks.POLISHED_GRANITE_BRICKS_STAIRS);
+            entries.add(ModBlocks.POLISHED_GRANITE_BRICKS_SLAB);
+            entries.add(ModBlocks.POLISHED_GRANITE_BRICKS_WALL);
             entries.add(ModBlocks.MOSSY_GRANITE_BRICKS);
             entries.add(ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS);
             entries.add(ModBlocks.MOSSY_GRANITE_BRICKS_SLAB);
@@ -585,6 +649,7 @@ public class ModBlocks {
             entries.add(ModBlocks.RED_SEAT);
             entries.add(ModBlocks.ORANGE_SEAT);
             entries.add(ModBlocks.YELLOW_SEAT);
+            entries.add(ModBlocks.LIME_SEAT);
             entries.add(ModBlocks.GREEN_SEAT);
             entries.add(ModBlocks.CYAN_SEAT);
             entries.add(ModBlocks.LIGHT_BLUE_SEAT);

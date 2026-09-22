@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:diorite"
+    "#": "minecraft:polished_diorite"
   },
   "pattern": [
     "##",
