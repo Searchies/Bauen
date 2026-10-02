@@ -1,4 +1,5 @@
 {
+  "enchantment.bauen.multitool": "Multitool",
   "item.bauen.andesite_bricks": "Andesite Bricks",
   "item.bauen.andesite_bricks_slab": "Andesite Bricks Slab",
   "item.bauen.andesite_bricks_stairs": "Andesite Bricks Stairs",
@@ -77,6 +78,9 @@
   "item.bauen.cracked_treated_bricks_stairs": "Cracked Treated Bricks Stairs",
   "item.bauen.cracked_treated_bricks_wall": "Cracked Treated Bricks Wall",
   "item.bauen.cut_gold": "Cut Gold",
+  "item.bauen.cut_gold_slab": "Cut Gold Slab",
+  "item.bauen.cut_gold_stairs": "Cut Gold Stairs",
+  "item.bauen.cut_gold_wall": "Cut Gold Wall",
   "item.bauen.cut_industrial_iron": "Cut Industrial Iron",
   "item.bauen.cut_industrial_iron_slab": "Cut Industrial Iron Slab",
   "item.bauen.cut_industrial_iron_stairs": "Cut Industrial Iron Stairs",

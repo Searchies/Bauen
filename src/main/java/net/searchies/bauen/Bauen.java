@@ -2,6 +2,8 @@ package net.searchies.bauen;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.searchies.bauen.datagen.ModEnchantments;
+import net.searchies.bauen.enchantment.ModEnchantmentEffects;
 import net.searchies.bauen.init.ModBlocks;
 
 import net.searchies.bauen.init.ModEntities;
@@ -20,6 +22,7 @@ public class Bauen implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 		ModEntities.registerModEntities();
+		ModEnchantmentEffects.registerEnchantmentEffects();
 
 		Bauen.LOGGER.info("Hello guys and welcome back to the Channel - PhantomPickle 2026");
 	}

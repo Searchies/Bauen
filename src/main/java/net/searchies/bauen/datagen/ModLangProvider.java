@@ -41,6 +41,9 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.GOLD_LANTERN.asItem(),"Gold Lantern");
         translationBuilder.add(ModBlocks.GOLD_BARS.asItem(),"Gold Bars");
         translationBuilder.add(ModBlocks.CUT_GOLD.asItem(),"Cut Gold");
+        translationBuilder.add(ModBlocks.CUT_GOLD_STAIRS.asItem(),"Cut Gold Stairs");
+        translationBuilder.add(ModBlocks.CUT_GOLD_SLAB.asItem(),"Cut Gold Slab");
+        translationBuilder.add(ModBlocks.CUT_GOLD_WALL.asItem(),"Cut Gold Wall");
         translationBuilder.add(ModBlocks.CHISELED_GOLD.asItem(),"Chiseled Gold");
         translationBuilder.add(ModBlocks.GOLD_GRATE.asItem(),"Gold Grate");
         translationBuilder.add(ModBlocks.GOLD_TRAPDOOR.asItem(),"Gold Trapdoor");
@@ -298,5 +301,6 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TROWEL, "Trowel");
 
         translationBuilder.add("itemgroup.bauen.bauen_blocks_group", "Bauen");
+        translationBuilder.add("enchantment.bauen.multitool", "Multitool");
     }
 }

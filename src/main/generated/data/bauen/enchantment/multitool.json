@@ -1,0 +1,33 @@
+{
+  "anvil_cost": 8,
+  "description": {
+    "translate": "enchantment.bauen.multitool"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:levels_squared",
+          "added": 3.0
+        },
+        "attribute": "minecraft:block_break_speed",
+        "id": "bauen:enchantment.multitool",
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#bauen:enchantable/trowel",
+  "weight": 1
+}
