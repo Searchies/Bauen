@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:soul_sandstone",
+  "result": {
+    "count": 1,
+    "id": "bauen:cut_soul_sandstone"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/aberrant_dark_prismarine_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/aberrant_dark_prismarine"
+    },
+    "type=top": {
+      "model": "bauen:block/aberrant_dark_prismarine_slab_top"
+    }
+  }
+}

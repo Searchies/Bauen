@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bauen:block/aberrant_dark_prismarine",
+    "side": "bauen:block/aberrant_dark_prismarine",
+    "top": "bauen:block/aberrant_dark_prismarine"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:glow_berries",
+    "minecraft:amethyst_shard",
+    "minecraft:glow_ink_sac"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:aberrant_paste"
+  }
+}

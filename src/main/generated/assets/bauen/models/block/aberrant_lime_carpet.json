@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "bauen:block/aberrant_lime_wool"
+  }
+}

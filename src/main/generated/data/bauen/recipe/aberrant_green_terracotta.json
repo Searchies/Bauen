@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:green_terracotta",
+    "P": "bauen:aberrant_paste"
+  },
+  "pattern": [
+    "BBB",
+    "BPB",
+    "BBB"
+  ],
+  "result": {
+    "count": 8,
+    "id": "bauen:aberrant_green_terracotta"
+  }
+}

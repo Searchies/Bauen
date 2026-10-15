@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/soul_sandstone_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/soul_sandstone"
+    },
+    "type=top": {
+      "model": "bauen:block/soul_sandstone_slab_top"
+    }
+  }
+}

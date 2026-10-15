@@ -12,6 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
 import net.searchies.bauen.block.SeatBlock;
@@ -28,6 +29,10 @@ public class ModBlocks {
     private static final AbstractBlock.Settings ABS_MUD = AbstractBlock.Settings.copy(Blocks.MUD);
     private static final AbstractBlock.Settings ABS_ICE = AbstractBlock.Settings.copy(Blocks.ICE);
     private static final AbstractBlock.Settings ABS_PACKED_ICE = AbstractBlock.Settings.copy(Blocks.PACKED_ICE);
+    private static final AbstractBlock.Settings ABS_SEA_LANTERN = AbstractBlock.Settings.copy(Blocks.SEA_LANTERN);
+    private static final AbstractBlock.Settings ABS_PRISMARINE = AbstractBlock.Settings.copy(Blocks.PRISMARINE);
+    private static final AbstractBlock.Settings ABS_SANDSTONE = AbstractBlock.Settings.copy(Blocks.SANDSTONE);
+    private static final AbstractBlock.Settings ABS_TERRACOTA = AbstractBlock.Settings.copy(Blocks.TERRACOTTA);
 
     public static final Block MOSSY_BRICKS = registerBlock("mossy_bricks", ABS_BRICKS);
     public static final Block MOSSY_BRICKS_STAIRS = registerCustomBlock("mossy_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -360,6 +365,187 @@ public class ModBlocks {
     public static final Block BLACK_SEAT = registerCustomBlock("black_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.BLACK_WOOL).strength(0.4f));
     public static final Block WHITE_SEAT = registerCustomBlock("white_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(Blocks.WHITE_WOOL).strength(0.4f));
 
+    public static final Block ABERRANT = registerBlock("aberrant",  ABS_BRICKS);
+    public static final Block ABERRANT_SEA_LANTERN = registerBlock("aberrant_sea_lantern",  ABS_SEA_LANTERN);
+    public static final Block ABERRANT_DARK_PRISMARINE = registerBlock("aberrant_dark_prismarine",  ABS_PRISMARINE);
+    public static final Block ABERRANT_DARK_PRISMARINE_STAIRS = registerCustomBlock("aberrant_dark_prismarine_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_DARK_PRISMARINE.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_DARK_PRISMARINE_SLAB = registerCustomBlock("aberrant_dark_prismarine_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_DARK_PRISMARINE_WALL = registerCustomBlock("aberrant_dark_prismarine_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE = registerBlock("aberrant_prismarine",  ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE_STAIRS = registerCustomBlock("aberrant_prismarine_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PRISMARINE.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE_SLAB = registerCustomBlock("aberrant_prismarine_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE_WALL = registerCustomBlock("aberrant_prismarine_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE_BRICKS = registerBlock("aberrant_prismarine_bricks",  ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE_BRICKS_STAIRS = registerCustomBlock("aberrant_prismarine_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PRISMARINE_BRICKS.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_PRISMARINE_BRICKS_SLAB = registerCustomBlock("aberrant_prismarine_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE = registerBlock("aberrant_oceanslate",  ABS_BRICKS);
+    public static final Block ABERRANT_OCEANSLATE_STAIRS = registerCustomBlock("aberrant_oceanslate_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_OCEANSLATE.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_SLAB = registerCustomBlock("aberrant_oceanslate_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_WALL = registerCustomBlock("aberrant_oceanslate_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_POLISHED_OCEANSLATE = registerBlock("aberrant_polished_oceanslate",  ABS_BRICKS);
+    public static final Block ABERRANT_POLISHED_OCEANSLATE_STAIRS = registerCustomBlock("aberrant_polished_oceanslate_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_POLISHED_OCEANSLATE.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_POLISHED_OCEANSLATE_SLAB = registerCustomBlock("aberrant_polished_oceanslate_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_POLISHED_OCEANSLATE_WALL = registerCustomBlock("aberrant_polished_oceanslate_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_TILES = registerBlock("aberrant_oceanslate_tiles",  ABS_BRICKS);
+    public static final Block ABERRANT_OCEANSLATE_TILES_STAIRS = registerCustomBlock("aberrant_oceanslate_tiles_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_OCEANSLATE_TILES.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_TILES_SLAB = registerCustomBlock("aberrant_oceanslate_tiles_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_TILES_WALL = registerCustomBlock("aberrant_oceanslate_tiles_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_BRICKS = registerBlock("aberrant_oceanslate_bricks",  ABS_BRICKS);
+    public static final Block ABERRANT_OCEANSLATE_BRICKS_STAIRS = registerCustomBlock("aberrant_oceanslate_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_OCEANSLATE_BRICKS.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_BRICKS_SLAB = registerCustomBlock("aberrant_oceanslate_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block ABERRANT_OCEANSLATE_BRICKS_WALL = registerCustomBlock("aberrant_oceanslate_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block CRACKED_ABERRANT_OCEANSLATE_BRICKS = registerBlock("cracked_aberrant_oceanslate_bricks",  ABS_BRICKS);
+    public static final Block CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS = registerCustomBlock("cracked_aberrant_oceanslate_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB = registerCustomBlock("cracked_aberrant_oceanslate_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL = registerCustomBlock("cracked_aberrant_oceanslate_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block KELPY_ABERRANT_OCEANSLATE_BRICKS = registerBlock("kelpy_aberrant_oceanslate_bricks",  ABS_BRICKS);
+    public static final Block KELPY_ABERRANT_OCEANSLATE_BRICKS_STAIRS = registerCustomBlock("kelpy_aberrant_oceanslate_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS.getDefaultState(), ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB = registerCustomBlock("kelpy_aberrant_oceanslate_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+    public static final Block KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL = registerCustomBlock("kelpy_aberrant_oceanslate_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_PRISMARINE), ABS_PRISMARINE);
+
+    public static final Block SOUL_SANDSTONE = registerBlock("soul_sandstone",  ABS_SANDSTONE);
+    public static final Block SOUL_SANDSTONE_STAIRS = registerCustomBlock("soul_sandstone_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.SOUL_SANDSTONE.getDefaultState(), ABS_SANDSTONE), ABS_SANDSTONE);
+    public static final Block SOUL_SANDSTONE_SLAB = registerCustomBlock("soul_sandstone_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_SANDSTONE), ABS_SANDSTONE);
+    public static final Block SOUL_SANDSTONE_WALL = registerCustomBlock("soul_sandstone_wall",  (AbstractBlock.Settings settings) -> new WallBlock(ABS_SANDSTONE), ABS_SANDSTONE);
+    public static final Block CUT_SOUL_SANDSTONE = registerBlock("cut_soul_sandstone",  ABS_SANDSTONE);
+    public static final Block CHISELED_SOUL_SANDSTONE = registerBlock("chiseled_soul_sandstone",  ABS_SANDSTONE);
+    public static final Block SMOOTH_SOUL_SANDSTONE = registerBlock("smooth_soul_sandstone",  ABS_SANDSTONE);
+    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = registerCustomBlock("smooth_soul_sandstone_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.SMOOTH_SOUL_SANDSTONE.getDefaultState(), ABS_SANDSTONE), ABS_SANDSTONE);
+    public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = registerCustomBlock("smooth_soul_sandstone_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_SANDSTONE), ABS_SANDSTONE);
+    public static final Block SMOOTH_SOUL_SANDSTONE_WALL = registerCustomBlock("smooth_soul_sandstone_wall",  (AbstractBlock.Settings settings) -> new WallBlock(ABS_SANDSTONE), ABS_SANDSTONE);
+
+    public static final Block ABERRANT_TERRACOTTA = registerBlock("aberrant_terracotta", ABS_TERRACOTA);
+
+    public static final Block ABERRANT_RED_WOOL = registerCustomBlock("aberrant_red_wool", Block::new, AbstractBlock.Settings.copy(Blocks.RED_WOOL));
+
+    public static final Block ABERRANT_RED_SEAT = registerCustomBlock("aberrant_red_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_RED_WOOL).strength(0.4f));
+    public static final Block ABERRANT_RED_CONCRETE = registerCustomBlock("aberrant_red_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.RED_CONCRETE));
+    public static final Block ABERRANT_RED_CONCRETE_POWER = registerCustomBlock("aberrant_red_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_RED_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.RED_CONCRETE_POWDER));
+    public static final Block ABERRANT_RED_TERRACOTTA = registerBlock("aberrant_red_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_RED_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_red_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.RED_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_ORANGE_WOOL = registerCustomBlock("aberrant_orange_wool", Block::new, AbstractBlock.Settings.copy(Blocks.ORANGE_WOOL));
+    public static final Block ABERRANT_ORANGE_SEAT = registerCustomBlock("aberrant_orange_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_ORANGE_WOOL).strength(0.4f));
+    public static final Block ABERRANT_ORANGE_CONCRETE = registerCustomBlock("aberrant_orange_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.ORANGE_CONCRETE));
+    public static final Block ABERRANT_ORANGE_CONCRETE_POWER = registerCustomBlock("aberrant_orange_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_ORANGE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.ORANGE_CONCRETE_POWDER));
+    public static final Block ABERRANT_ORANGE_TERRACOTTA = registerBlock("aberrant_orange_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_ORANGE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_orange_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.ORANGE_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_YELLOW_WOOL = registerCustomBlock("aberrant_yellow_wool", Block::new, AbstractBlock.Settings.copy(Blocks.YELLOW_WOOL));
+    public static final Block ABERRANT_YELLOW_SEAT = registerCustomBlock("aberrant_yellow_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_YELLOW_WOOL).strength(0.4f));
+    public static final Block ABERRANT_YELLOW_CONCRETE = registerCustomBlock("aberrant_yellow_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.YELLOW_CONCRETE));
+    public static final Block ABERRANT_YELLOW_CONCRETE_POWER = registerCustomBlock("aberrant_yellow_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_YELLOW_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.YELLOW_CONCRETE_POWDER));
+    public static final Block ABERRANT_YELLOW_TERRACOTTA = registerBlock("aberrant_yellow_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_YELLOW_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_yellow_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.YELLOW_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_LIME_WOOL = registerCustomBlock("aberrant_lime_wool", Block::new, AbstractBlock.Settings.copy(Blocks.LIME_WOOL));
+    public static final Block ABERRANT_LIME_SEAT = registerCustomBlock("aberrant_lime_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_LIME_WOOL).strength(0.4f));
+    public static final Block ABERRANT_LIME_CONCRETE = registerCustomBlock("aberrant_lime_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.LIME_CONCRETE));
+    public static final Block ABERRANT_LIME_CONCRETE_POWER = registerCustomBlock("aberrant_lime_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_LIME_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.LIME_CONCRETE_POWDER));
+    public static final Block ABERRANT_LIME_TERRACOTTA = registerBlock("aberrant_lime_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_LIME_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_lime_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.LIME_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_GREEN_WOOL = registerCustomBlock("aberrant_green_wool", Block::new, AbstractBlock.Settings.copy(Blocks.GREEN_WOOL));
+    public static final Block ABERRANT_GREEN_SEAT = registerCustomBlock("aberrant_green_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_GREEN_WOOL).strength(0.4f));
+    public static final Block ABERRANT_GREEN_CONCRETE = registerCustomBlock("aberrant_green_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.GREEN_CONCRETE));
+    public static final Block ABERRANT_GREEN_CONCRETE_POWER = registerCustomBlock("aberrant_green_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_GREEN_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.GREEN_CONCRETE_POWDER));
+    public static final Block ABERRANT_GREEN_TERRACOTTA = registerBlock("aberrant_green_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_GREEN_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_green_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.GREEN_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_CYAN_WOOL = registerCustomBlock("aberrant_cyan_wool", Block::new, AbstractBlock.Settings.copy(Blocks.CYAN_WOOL));
+    public static final Block ABERRANT_CYAN_SEAT = registerCustomBlock("aberrant_cyan_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_CYAN_WOOL).strength(0.4f));
+    public static final Block ABERRANT_CYAN_CONCRETE = registerCustomBlock("aberrant_cyan_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.CYAN_CONCRETE));
+    public static final Block ABERRANT_CYAN_CONCRETE_POWER = registerCustomBlock("aberrant_cyan_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_CYAN_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.CYAN_CONCRETE_POWDER));
+    public static final Block ABERRANT_CYAN_TERRACOTTA = registerBlock("aberrant_cyan_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_CYAN_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_cyan_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.CYAN_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_LIGHT_BLUE_WOOL = registerCustomBlock("aberrant_light_blue_wool", Block::new, AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_WOOL));
+    public static final Block ABERRANT_LIGHT_BLUE_SEAT = registerCustomBlock("aberrant_light_blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL).strength(0.4f));
+    public static final Block ABERRANT_LIGHT_BLUE_CONCRETE = registerCustomBlock("aberrant_light_blue_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CONCRETE));
+    public static final Block ABERRANT_LIGHT_BLUE_CONCRETE_POWER = registerCustomBlock("aberrant_light_blue_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CONCRETE_POWDER));
+    public static final Block ABERRANT_LIGHT_BLUE_TERRACOTTA = registerBlock("aberrant_light_blue_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_light_blue_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_BLUE_WOOL = registerCustomBlock("aberrant_blue_wool", Block::new, AbstractBlock.Settings.copy(Blocks.BLUE_WOOL));
+    public static final Block ABERRANT_BLUE_SEAT = registerCustomBlock("aberrant_blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_BLUE_WOOL).strength(0.4f));
+    public static final Block ABERRANT_BLUE_CONCRETE = registerCustomBlock("aberrant_blue_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.BLUE_CONCRETE));
+    public static final Block ABERRANT_BLUE_CONCRETE_POWER = registerCustomBlock("aberrant_blue_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_BLUE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.BLUE_CONCRETE_POWDER));
+    public static final Block ABERRANT_BLUE_TERRACOTTA = registerBlock("aberrant_blue_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_BLUE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_blue_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.BLUE_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_PINK_WOOL = registerCustomBlock("aberrant_pink_wool", Block::new, AbstractBlock.Settings.copy(Blocks.PINK_WOOL));
+    public static final Block ABERRANT_PINK_SEAT = registerCustomBlock("aberrant_pink_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_PINK_WOOL).strength(0.4f));
+    public static final Block ABERRANT_PINK_CONCRETE = registerCustomBlock("aberrant_pink_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.PINK_CONCRETE));
+    public static final Block ABERRANT_PINK_CONCRETE_POWER = registerCustomBlock("aberrant_pink_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_PINK_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.PINK_CONCRETE_POWDER));
+    public static final Block ABERRANT_PINK_TERRACOTTA = registerBlock("aberrant_pink_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_PINK_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_pink_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_MAGENTA_WOOL = registerCustomBlock("aberrant_magenta_wool", Block::new, AbstractBlock.Settings.copy(Blocks.MAGENTA_WOOL));
+    public static final Block ABERRANT_MAGENTA_SEAT = registerCustomBlock("aberrant_magenta_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_MAGENTA_WOOL).strength(0.4f));
+    public static final Block ABERRANT_MAGENTA_CONCRETE = registerCustomBlock("aberrant_magenta_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.MAGENTA_CONCRETE));
+    public static final Block ABERRANT_MAGENTA_CONCRETE_POWER = registerCustomBlock("aberrant_magenta_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_MAGENTA_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.MAGENTA_CONCRETE_POWDER));
+    public static final Block ABERRANT_MAGENTA_TERRACOTTA = registerBlock("aberrant_magenta_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_MAGENTA_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_magenta_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.MAGENTA_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_PURPLE_WOOL = registerCustomBlock("aberrant_purple_wool", Block::new, AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL));
+    public static final Block ABERRANT_PURPLE_SEAT = registerCustomBlock("aberrant_purple_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_PURPLE_WOOL).strength(0.4f));
+    public static final Block ABERRANT_PURPLE_CONCRETE = registerCustomBlock("aberrant_purple_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.PURPLE_CONCRETE));
+    public static final Block ABERRANT_PURPLE_CONCRETE_POWER = registerCustomBlock("aberrant_purple_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_PURPLE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.PURPLE_CONCRETE_POWDER));
+    public static final Block ABERRANT_PURPLE_TERRACOTTA = registerBlock("aberrant_purple_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_PURPLE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_purple_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.PURPLE_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_BROWN_WOOL = registerCustomBlock("aberrant_brown_wool", Block::new, AbstractBlock.Settings.copy(Blocks.BROWN_WOOL));
+    public static final Block ABERRANT_BROWN_SEAT = registerCustomBlock("aberrant_brown_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_BROWN_WOOL).strength(0.4f));
+    public static final Block ABERRANT_BROWN_CONCRETE = registerCustomBlock("aberrant_brown_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.BROWN_CONCRETE));
+    public static final Block ABERRANT_BROWN_CONCRETE_POWER = registerCustomBlock("aberrant_brown_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_BROWN_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.BROWN_CONCRETE_POWDER));
+    public static final Block ABERRANT_BROWN_TERRACOTTA = registerBlock("aberrant_brown_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_BROWN_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_brown_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.BROWN_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_BLACK_WOOL = registerCustomBlock("aberrant_black_wool", Block::new, AbstractBlock.Settings.copy(Blocks.BLACK_WOOL));
+    public static final Block ABERRANT_BLACK_SEAT = registerCustomBlock("aberrant_black_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_BLACK_WOOL).strength(0.4f));
+    public static final Block ABERRANT_BLACK_CONCRETE = registerCustomBlock("aberrant_black_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.BLACK_CONCRETE));
+    public static final Block ABERRANT_BLACK_CONCRETE_POWER = registerCustomBlock("aberrant_black_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_BLACK_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.BLACK_CONCRETE_POWDER));
+    public static final Block ABERRANT_BLACK_TERRACOTTA = registerBlock("aberrant_black_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_BLACK_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_black_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.BLACK_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_GRAY_WOOL = registerCustomBlock("aberrant_gray_wool", Block::new, AbstractBlock.Settings.copy(Blocks.GRAY_WOOL));
+    public static final Block ABERRANT_GRAY_SEAT = registerCustomBlock("aberrant_gray_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_GRAY_WOOL).strength(0.4f));
+    public static final Block ABERRANT_GRAY_CONCRETE = registerCustomBlock("aberrant_gray_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.GRAY_CONCRETE));
+    public static final Block ABERRANT_GRAY_CONCRETE_POWER = registerCustomBlock("aberrant_gray_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_GRAY_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.GRAY_CONCRETE_POWDER));
+    public static final Block ABERRANT_GRAY_TERRACOTTA = registerBlock("aberrant_gray_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_GRAY_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_gray_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.GRAY_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_LIGHT_GRAY_WOOL = registerCustomBlock("aberrant_light_gray_wool", Block::new, AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_WOOL));
+    public static final Block ABERRANT_LIGHT_GRAY_SEAT = registerCustomBlock("aberrant_light_gray_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL).strength(0.4f));
+    public static final Block ABERRANT_LIGHT_GRAY_CONCRETE = registerCustomBlock("aberrant_light_gray_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_CONCRETE));
+    public static final Block ABERRANT_LIGHT_GRAY_CONCRETE_POWER = registerCustomBlock("aberrant_light_gray_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_CONCRETE_POWDER));
+    public static final Block ABERRANT_LIGHT_GRAY_TERRACOTTA = registerBlock("aberrant_light_gray_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_light_gray_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_WHITE_WOOL = registerCustomBlock("aberrant_white_wool", Block::new, AbstractBlock.Settings.copy(Blocks.WHITE_WOOL));
+    public static final Block ABERRANT_WHITE_SEAT = registerCustomBlock("aberrant_white_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_WHITE_WOOL).strength(0.4f));
+    public static final Block ABERRANT_WHITE_CONCRETE = registerCustomBlock("aberrant_white_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE));
+    public static final Block ABERRANT_WHITE_CONCRETE_POWER = registerCustomBlock("aberrant_white_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_WHITE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE_POWDER));
+    public static final Block ABERRANT_WHITE_TERRACOTTA = registerBlock("aberrant_white_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_WHITE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_white_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.WHITE_GLAZED_TERRACOTTA));
+
+    public static final Block ABERRANT_RED_CARPET = registerCustomBlock("aberrant_red_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.RED, settings), AbstractBlock.Settings.copy(Blocks.RED_CARPET));
+    public static final Block ABERRANT_ORANGE_CARPET = registerCustomBlock("aberrant_orange_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.ORANGE, settings), AbstractBlock.Settings.copy(Blocks.ORANGE_CARPET));
+    public static final Block ABERRANT_YELLOW_CARPET = registerCustomBlock("aberrant_yellow_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.YELLOW, settings), AbstractBlock.Settings.copy(Blocks.YELLOW_CARPET));
+    public static final Block ABERRANT_LIME_CARPET = registerCustomBlock("aberrant_lime_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.LIME, settings), AbstractBlock.Settings.copy(Blocks.LIME_CARPET));
+    public static final Block ABERRANT_GREEN_CARPET = registerCustomBlock("aberrant_green_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.GREEN, settings), AbstractBlock.Settings.copy(Blocks.GREEN_CARPET));
+    public static final Block ABERRANT_CYAN_CARPET = registerCustomBlock("aberrant_cyan_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.CYAN, settings), AbstractBlock.Settings.copy(Blocks.CYAN_CARPET));
+    public static final Block ABERRANT_LIGHT_BLUE_CARPET = registerCustomBlock("aberrant_light_blue_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.LIGHT_BLUE, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CARPET));
+    public static final Block ABERRANT_BLUE_CARPET = registerCustomBlock("aberrant_blue_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.BLUE, settings), AbstractBlock.Settings.copy(Blocks.BLUE_CARPET));
+    public static final Block ABERRANT_PINK_CARPET = registerCustomBlock("aberrant_pink_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.PINK, settings), AbstractBlock.Settings.copy(Blocks.PINK_CARPET));
+    public static final Block ABERRANT_MAGENTA_CARPET = registerCustomBlock("aberrant_magenta_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.MAGENTA, settings), AbstractBlock.Settings.copy(Blocks.MAGENTA_CARPET));
+    public static final Block ABERRANT_PURPLE_CARPET = registerCustomBlock("aberrant_purple_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.PURPLE, settings), AbstractBlock.Settings.copy(Blocks.PURPLE_CARPET));
+    public static final Block ABERRANT_BROWN_CARPET = registerCustomBlock("aberrant_brown_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.BROWN, settings), AbstractBlock.Settings.copy(Blocks.BROWN_CARPET));
+    public static final Block ABERRANT_BLACK_CARPET = registerCustomBlock("aberrant_black_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.BLACK, settings), AbstractBlock.Settings.copy(Blocks.BLACK_CARPET));
+    public static final Block ABERRANT_GRAY_CARPET = registerCustomBlock("aberrant_gray_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.GRAY, settings), AbstractBlock.Settings.copy(Blocks.GRAY_CARPET));
+    public static final Block ABERRANT_LIGHT_GRAY_CARPET = registerCustomBlock("aberrant_light_gray_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.LIGHT_GRAY, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_CARPET));
+    public static final Block ABERRANT_WHITE_CARPET = registerCustomBlock("aberrant_white_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.WHITE, settings), AbstractBlock.Settings.copy(Blocks.WHITE_CARPET));
+
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
         Block block = new Block(blockSettings.registryKey(key));
@@ -662,6 +848,185 @@ public class ModBlocks {
             entries.add(ModBlocks.GRAY_SEAT);
             entries.add(ModBlocks.BLACK_SEAT);
             entries.add(ModBlocks.WHITE_SEAT);
+
+            entries.add(ModBlocks.ABERRANT);
+            entries.add(ModBlocks.ABERRANT_SEA_LANTERN);
+            entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE);
+            entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE_SLAB);
+            entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE_WALL);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE_SLAB);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE_WALL);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE_BRICKS);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE_BRICKS_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PRISMARINE_BRICKS_SLAB);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_SLAB);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_WALL);
+            entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE);
+            entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_SLAB);
+            entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_WALL);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES_STAIRS);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES_SLAB);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES_WALL);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_STAIRS);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_SLAB);
+            entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_WALL);
+            entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
+            entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS);
+            entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB);
+            entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL);
+            entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS);
+            entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_STAIRS);
+            entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB);
+            entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL);
+
+            entries.add(ModBlocks.SOUL_SANDSTONE);
+            entries.add(ModBlocks.SOUL_SANDSTONE_STAIRS);
+            entries.add(ModBlocks.SOUL_SANDSTONE_SLAB);
+            entries.add(ModBlocks.SOUL_SANDSTONE_WALL);
+            entries.add(ModBlocks.CUT_SOUL_SANDSTONE);
+            entries.add(ModBlocks.CHISELED_SOUL_SANDSTONE);
+            entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE);
+            entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS);
+            entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE_SLAB);
+            entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE_WALL);
+
+            entries.add(ModBlocks.ABERRANT_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_RED_WOOL);
+            entries.add(ModBlocks.ABERRANT_RED_SEAT);
+            entries.add(ModBlocks.ABERRANT_RED_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_RED_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_RED_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_RED_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_ORANGE_WOOL);
+            entries.add(ModBlocks.ABERRANT_ORANGE_SEAT);
+            entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_ORANGE_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_YELLOW_WOOL);
+            entries.add(ModBlocks.ABERRANT_YELLOW_SEAT);
+            entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_YELLOW_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_YELLOW_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_LIME_WOOL);
+            entries.add(ModBlocks.ABERRANT_LIME_SEAT);
+            entries.add(ModBlocks.ABERRANT_LIME_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_LIME_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_LIME_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_LIME_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_GREEN_WOOL);
+            entries.add(ModBlocks.ABERRANT_GREEN_SEAT);
+            entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_GREEN_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_GREEN_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_CYAN_WOOL);
+            entries.add(ModBlocks.ABERRANT_CYAN_SEAT);
+            entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_CYAN_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_CYAN_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_SEAT);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_BLUE_WOOL);
+            entries.add(ModBlocks.ABERRANT_BLUE_SEAT);
+            entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_BLUE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_BLUE_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_PINK_WOOL);
+            entries.add(ModBlocks.ABERRANT_PINK_SEAT);
+            entries.add(ModBlocks.ABERRANT_PINK_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_PINK_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_PINK_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_PINK_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_MAGENTA_WOOL);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_SEAT);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_PURPLE_WOOL);
+            entries.add(ModBlocks.ABERRANT_PURPLE_SEAT);
+            entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_PURPLE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_PURPLE_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_BROWN_WOOL);
+            entries.add(ModBlocks.ABERRANT_BROWN_SEAT);
+            entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_BROWN_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_BROWN_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_BLACK_WOOL);
+            entries.add(ModBlocks.ABERRANT_BLACK_SEAT);
+            entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_BLACK_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_BLACK_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_GRAY_WOOL);
+            entries.add(ModBlocks.ABERRANT_GRAY_SEAT);
+            entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_GRAY_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_GRAY_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_SEAT);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_WHITE_WOOL);
+            entries.add(ModBlocks.ABERRANT_WHITE_SEAT);
+            entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE);
+            entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE_POWER);
+            entries.add(ModBlocks.ABERRANT_WHITE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_WHITE_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_RED_CARPET);
+            entries.add(ModBlocks.ABERRANT_ORANGE_CARPET);
+            entries.add(ModBlocks.ABERRANT_YELLOW_CARPET);
+            entries.add(ModBlocks.ABERRANT_LIME_CARPET);
+            entries.add(ModBlocks.ABERRANT_GREEN_CARPET);
+            entries.add(ModBlocks.ABERRANT_CYAN_CARPET);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CARPET);
+            entries.add(ModBlocks.ABERRANT_BLUE_CARPET);
+            entries.add(ModBlocks.ABERRANT_PINK_CARPET);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_CARPET);
+            entries.add(ModBlocks.ABERRANT_PURPLE_CARPET);
+            entries.add(ModBlocks.ABERRANT_BROWN_CARPET);
+            entries.add(ModBlocks.ABERRANT_BLACK_CARPET);
+            entries.add(ModBlocks.ABERRANT_GRAY_CARPET);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CARPET);
+            entries.add(ModBlocks.ABERRANT_WHITE_CARPET);
         });
     }
 }

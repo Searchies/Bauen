@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
+import net.searchies.bauen.item.AberrantPasteItem;
 import net.searchies.bauen.item.TrowelItem;
 
 import java.util.function.Function;
@@ -16,6 +17,7 @@ public class ModItems {
     public static final Item KAOLIN_CLAY_BALL = registerItem("kaolin_clay_ball", Item::new);
     public static final Item MIDNIGHT_BRICK = registerItem("midnight_brick", Item::new);
     public static final Item TROWEL = registerItem("trowel", settings ->  new TrowelItem(ToolMaterial.IRON, 1.0F, -3.0F, settings));
+    public static final Item ABERRANT_PASTE = registerItem("aberrant_paste", AberrantPasteItem::new);
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(Bauen.MOD_ID, name),

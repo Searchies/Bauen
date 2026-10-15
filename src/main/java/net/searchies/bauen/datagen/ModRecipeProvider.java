@@ -2,6 +2,7 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -895,6 +896,1184 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .pattern(" I")
                     .pattern("S ")
                     .criterion("has_iron_ingot", conditionsFromItem(Items.IRON_INGOT))
+                    .offerTo(exporter);
+
+                // ABERRANT //
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.ABERRANT_PASTE, 4)
+                    .input(Items.GLOW_BERRIES)
+                    .input(Items.AMETHYST_SHARD)
+                    .input(Items.GLOW_INK_SAC)
+                    .criterion(hasItem(Items.GLOW_BERRIES), conditionsFromItem(Items.GLOW_BERRIES))
+                    .offerTo(exporter);
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT)
+                    .input(ModItems.ABERRANT_PASTE, 4)
+                    .criterion(hasItem(ModItems.ABERRANT_PASTE), conditionsFromItem(ModItems.ABERRANT_PASTE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SEA_LANTERN, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.SEA_LANTERN)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.SEA_LANTERN), conditionsFromItem(Blocks.SEA_LANTERN))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_DARK_PRISMARINE, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', Blocks.DARK_PRISMARINE)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(Blocks.DARK_PRISMARINE), conditionsFromItem(Blocks.DARK_PRISMARINE))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_DARK_PRISMARINE_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_DARK_PRISMARINE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_DARK_PRISMARINE), conditionsFromItem(ModBlocks.ABERRANT_DARK_PRISMARINE))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_DARK_PRISMARINE_SLAB, ModBlocks.ABERRANT_DARK_PRISMARINE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_DARK_PRISMARINE_WALL, ModBlocks.ABERRANT_DARK_PRISMARINE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', Blocks.PRISMARINE)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(Blocks.PRISMARINE), conditionsFromItem(Blocks.PRISMARINE))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_PRISMARINE_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_PRISMARINE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_PRISMARINE), conditionsFromItem(ModBlocks.ABERRANT_PRISMARINE))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_SLAB, ModBlocks.ABERRANT_PRISMARINE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_WALL, ModBlocks.ABERRANT_PRISMARINE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_BRICKS, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', Blocks.PRISMARINE_BRICKS)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(Blocks.PRISMARINE_BRICKS), conditionsFromItem(Blocks.PRISMARINE_BRICKS))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_PRISMARINE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_PRISMARINE_BRICKS))
+                        .criterion(hasItem(ModBlocks.ABERRANT_PRISMARINE_BRICKS), conditionsFromItem(ModBlocks.ABERRANT_PRISMARINE_BRICKS))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_BRICKS_SLAB, ModBlocks.ABERRANT_PRISMARINE_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', ModBlocks.OCEANSLATE)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(ModBlocks.OCEANSLATE), conditionsFromItem(ModBlocks.OCEANSLATE))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_OCEANSLATE_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_OCEANSLATE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_OCEANSLATE), conditionsFromItem(ModBlocks.ABERRANT_OCEANSLATE))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_SLAB, ModBlocks.ABERRANT_OCEANSLATE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_WALL, ModBlocks.ABERRANT_OCEANSLATE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', ModBlocks.POLISHED_OCEANSLATE)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(ModBlocks.POLISHED_OCEANSLATE), conditionsFromItem(ModBlocks.POLISHED_OCEANSLATE))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_POLISHED_OCEANSLATE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_POLISHED_OCEANSLATE), conditionsFromItem(ModBlocks.ABERRANT_POLISHED_OCEANSLATE))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_SLAB, ModBlocks.ABERRANT_POLISHED_OCEANSLATE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_WALL, ModBlocks.ABERRANT_POLISHED_OCEANSLATE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_TILES, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', ModBlocks.OCEANSLATE_TILES)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(ModBlocks.OCEANSLATE_TILES), conditionsFromItem(ModBlocks.OCEANSLATE_TILES))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_OCEANSLATE_TILES_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_OCEANSLATE_TILES))
+                        .criterion(hasItem(ModBlocks.ABERRANT_OCEANSLATE_TILES), conditionsFromItem(ModBlocks.ABERRANT_OCEANSLATE_TILES))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_TILES_SLAB, ModBlocks.ABERRANT_OCEANSLATE_TILES);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_TILES_WALL, ModBlocks.ABERRANT_OCEANSLATE_TILES);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', ModBlocks.OCEANSLATE_BRICKS)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(ModBlocks.OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.OCEANSLATE_BRICKS))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.ABERRANT_OCEANSLATE_BRICKS))
+                        .criterion(hasItem(ModBlocks.ABERRANT_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.ABERRANT_OCEANSLATE_BRICKS))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.ABERRANT_OCEANSLATE_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.ABERRANT_OCEANSLATE_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', ModBlocks.CRACKED_OCEANSLATE_BRICKS)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(ModBlocks.CRACKED_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.CRACKED_OCEANSLATE_BRICKS))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS))
+                        .criterion(hasItem(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS, 8)
+                        .input('P', ModItems.ABERRANT_PASTE)
+                        .input('B', ModBlocks.KELPY_OCEANSLATE_BRICKS)
+                        .pattern("BBB")
+                        .pattern("BPB")
+                        .pattern("BBB")
+                        .criterion(hasItem(ModBlocks.KELPY_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.KELPY_OCEANSLATE_BRICKS))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS))
+                        .criterion(hasItem(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS);
+
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SANDSTONE, Blocks.SOUL_SAND);
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SANDSTONE_SLAB,
+                        Ingredient.ofItems(ModBlocks.SOUL_SANDSTONE, ModBlocks.CHISELED_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.SOUL_SANDSTONE), conditionsFromItem(ModBlocks.SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.CHISELED_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.CHISELED_SOUL_SANDSTONE))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.SOUL_SANDSTONE_STAIRS,
+                        Ingredient.ofItems(ModBlocks.SOUL_SANDSTONE, ModBlocks.CHISELED_SOUL_SANDSTONE, ModBlocks.CUT_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.SOUL_SANDSTONE), conditionsFromItem(ModBlocks.SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.CHISELED_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.CHISELED_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.CUT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.CUT_SOUL_SANDSTONE))
+                        .offerTo(exporter);
+                offerWallRecipe(RecipeCategory.DECORATIONS, ModBlocks.SOUL_SANDSTONE_WALL, ModBlocks.SOUL_SANDSTONE);
+                offerChiseledBlockRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SOUL_SANDSTONE, ModBlocks.SOUL_SANDSTONE_SLAB);
+                offerCutCopperRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_SOUL_SANDSTONE, ModBlocks.SOUL_SANDSTONE);
+
+                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItem(ModBlocks.SOUL_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SOUL_SANDSTONE.asItem(),0.1f, 200)
+                    .criterion(hasItem(ModBlocks.SOUL_SANDSTONE), conditionsFromItem(ModBlocks.SOUL_SANDSTONE))
+                    .offerTo(exporter);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_SOUL_SANDSTONE, ModBlocks.SOUL_SANDSTONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SANDSTONE_SLAB, ModBlocks.SOUL_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SANDSTONE_STAIRS, ModBlocks.SOUL_SANDSTONE);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.SOUL_SANDSTONE_WALL, ModBlocks.SOUL_SANDSTONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SOUL_SANDSTONE, ModBlocks.SOUL_SANDSTONE);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, ModBlocks.SMOOTH_SOUL_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, ModBlocks.SMOOTH_SOUL_SANDSTONE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.TERRACOTTA), conditionsFromItem(Blocks.TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.RED_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_RED_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_RED_WOOL), conditionsFromItem(ModBlocks.ABERRANT_RED_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.RED_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.RED_CONCRETE), conditionsFromItem(Blocks.RED_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.RED_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.RED_CONCRETE_POWDER), conditionsFromItem(Blocks.RED_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.RED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.RED_TERRACOTTA), conditionsFromItem(Blocks.RED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.RED_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.RED_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.RED_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.ORANGE_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.ORANGE_WOOL), conditionsFromItem(Blocks.ORANGE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_ORANGE_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_ORANGE_WOOL), conditionsFromItem(ModBlocks.ABERRANT_ORANGE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.ORANGE_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.ORANGE_CONCRETE), conditionsFromItem(Blocks.ORANGE_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.ORANGE_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.ORANGE_CONCRETE_POWDER), conditionsFromItem(Blocks.ORANGE_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.ORANGE_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.ORANGE_TERRACOTTA), conditionsFromItem(Blocks.ORANGE_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.ORANGE_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.ORANGE_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.ORANGE_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.YELLOW_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.YELLOW_WOOL), conditionsFromItem(Blocks.YELLOW_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_YELLOW_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_YELLOW_WOOL), conditionsFromItem(ModBlocks.ABERRANT_YELLOW_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.YELLOW_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.YELLOW_CONCRETE), conditionsFromItem(Blocks.YELLOW_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.YELLOW_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.YELLOW_CONCRETE_POWDER), conditionsFromItem(Blocks.YELLOW_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.YELLOW_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.YELLOW_TERRACOTTA), conditionsFromItem(Blocks.YELLOW_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.YELLOW_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.YELLOW_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.YELLOW_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIME_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIME_WOOL), conditionsFromItem(Blocks.LIME_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_LIME_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_LIME_WOOL), conditionsFromItem(ModBlocks.ABERRANT_LIME_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIME_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIME_CONCRETE), conditionsFromItem(Blocks.LIME_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIME_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIME_CONCRETE_POWDER), conditionsFromItem(Blocks.LIME_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIME_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIME_TERRACOTTA), conditionsFromItem(Blocks.LIME_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIME_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIME_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.LIME_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GREEN_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GREEN_WOOL), conditionsFromItem(Blocks.GREEN_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_GREEN_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_GREEN_WOOL), conditionsFromItem(ModBlocks.ABERRANT_GREEN_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GREEN_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GREEN_CONCRETE), conditionsFromItem(Blocks.GREEN_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GREEN_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GREEN_CONCRETE_POWDER), conditionsFromItem(Blocks.GREEN_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GREEN_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GREEN_TERRACOTTA), conditionsFromItem(Blocks.GREEN_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GREEN_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GREEN_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.GREEN_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.CYAN_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.CYAN_WOOL), conditionsFromItem(Blocks.CYAN_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_CYAN_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_CYAN_WOOL), conditionsFromItem(ModBlocks.ABERRANT_CYAN_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.CYAN_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.CYAN_CONCRETE), conditionsFromItem(Blocks.CYAN_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.CYAN_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.CYAN_CONCRETE_POWDER), conditionsFromItem(Blocks.CYAN_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.CYAN_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.CYAN_TERRACOTTA), conditionsFromItem(Blocks.CYAN_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.CYAN_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.CYAN_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.CYAN_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_BLUE_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_WOOL), conditionsFromItem(Blocks.LIGHT_BLUE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_LIGHT_BLUE_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL), conditionsFromItem(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_BLUE_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_CONCRETE), conditionsFromItem(Blocks.LIGHT_BLUE_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_BLUE_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_CONCRETE_POWDER), conditionsFromItem(Blocks.LIGHT_BLUE_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_BLUE_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_BLUE_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLUE_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLUE_WOOL), conditionsFromItem(Blocks.BLUE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_BLUE_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_BLUE_WOOL), conditionsFromItem(ModBlocks.ABERRANT_BLUE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLUE_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLUE_CONCRETE), conditionsFromItem(Blocks.BLUE_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLUE_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLUE_CONCRETE_POWDER), conditionsFromItem(Blocks.BLUE_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLUE_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLUE_TERRACOTTA), conditionsFromItem(Blocks.BLUE_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLUE_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLUE_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.BLUE_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PINK_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PINK_WOOL), conditionsFromItem(Blocks.PINK_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_PINK_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_PINK_WOOL), conditionsFromItem(ModBlocks.ABERRANT_PINK_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PINK_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PINK_CONCRETE), conditionsFromItem(Blocks.PINK_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PINK_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PINK_CONCRETE_POWDER), conditionsFromItem(Blocks.PINK_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PINK_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PINK_TERRACOTTA), conditionsFromItem(Blocks.PINK_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PINK_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PINK_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.PINK_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.MAGENTA_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.MAGENTA_WOOL), conditionsFromItem(Blocks.MAGENTA_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_MAGENTA_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_MAGENTA_WOOL), conditionsFromItem(ModBlocks.ABERRANT_MAGENTA_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.MAGENTA_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.MAGENTA_CONCRETE), conditionsFromItem(Blocks.MAGENTA_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.MAGENTA_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.MAGENTA_CONCRETE_POWDER), conditionsFromItem(Blocks.MAGENTA_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.MAGENTA_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.MAGENTA_TERRACOTTA), conditionsFromItem(Blocks.MAGENTA_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.MAGENTA_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.MAGENTA_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.MAGENTA_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PURPLE_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PURPLE_WOOL), conditionsFromItem(Blocks.PURPLE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_PURPLE_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_PURPLE_WOOL), conditionsFromItem(ModBlocks.ABERRANT_PURPLE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PURPLE_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PURPLE_CONCRETE), conditionsFromItem(Blocks.PURPLE_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PURPLE_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PURPLE_CONCRETE_POWDER), conditionsFromItem(Blocks.PURPLE_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PURPLE_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PURPLE_TERRACOTTA), conditionsFromItem(Blocks.PURPLE_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PURPLE_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PURPLE_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.PURPLE_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BROWN_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BROWN_WOOL), conditionsFromItem(Blocks.BROWN_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_BROWN_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_BROWN_WOOL), conditionsFromItem(ModBlocks.ABERRANT_BROWN_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BROWN_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BROWN_CONCRETE), conditionsFromItem(Blocks.BROWN_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BROWN_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BROWN_CONCRETE_POWDER), conditionsFromItem(Blocks.BROWN_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BROWN_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BROWN_TERRACOTTA), conditionsFromItem(Blocks.BROWN_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BROWN_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BROWN_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.BROWN_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLACK_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_BLACK_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_BLACK_WOOL), conditionsFromItem(ModBlocks.ABERRANT_BLACK_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLACK_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLACK_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLACK_CONCRETE_POWDER), conditionsFromItem(Blocks.BLACK_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLACK_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLACK_TERRACOTTA), conditionsFromItem(Blocks.BLACK_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLACK_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLACK_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.BLACK_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GRAY_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GRAY_WOOL), conditionsFromItem(Blocks.GRAY_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_GRAY_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_GRAY_WOOL), conditionsFromItem(ModBlocks.ABERRANT_GRAY_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GRAY_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GRAY_CONCRETE), conditionsFromItem(Blocks.GRAY_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GRAY_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GRAY_CONCRETE_POWDER), conditionsFromItem(Blocks.GRAY_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GRAY_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GRAY_TERRACOTTA), conditionsFromItem(Blocks.GRAY_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GRAY_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GRAY_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.GRAY_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_GRAY_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_GRAY_WOOL), conditionsFromItem(Blocks.LIGHT_GRAY_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_LIGHT_GRAY_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL), conditionsFromItem(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_GRAY_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_GRAY_CONCRETE), conditionsFromItem(Blocks.LIGHT_GRAY_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_GRAY_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_GRAY_CONCRETE_POWDER), conditionsFromItem(Blocks.LIGHT_GRAY_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_GRAY_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_GRAY_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_GRAY_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_WOOL, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.WHITE_WOOL)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_SEAT, 4)
+                    .input('W', ModBlocks.ABERRANT_WHITE_WOOL)
+                    .input('S', ItemTags.WOODEN_SLABS)
+                    .pattern("WW")
+                    .pattern("SS")
+                    .criterion(hasItem(ModBlocks.ABERRANT_WHITE_WOOL), conditionsFromItem(ModBlocks.ABERRANT_WHITE_WOOL))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_CONCRETE, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.WHITE_CONCRETE)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.WHITE_CONCRETE), conditionsFromItem(Blocks.WHITE_CONCRETE))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_CONCRETE_POWER, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.WHITE_CONCRETE_POWDER)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.WHITE_CONCRETE_POWDER), conditionsFromItem(Blocks.WHITE_CONCRETE_POWDER))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.WHITE_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.WHITE_TERRACOTTA), conditionsFromItem(Blocks.WHITE_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_GLAZED_TERRACOTTA, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.WHITE_GLAZED_TERRACOTTA)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.WHITE_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.WHITE_GLAZED_TERRACOTTA))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.RED_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.RED_CARPET), conditionsFromItem(Blocks.RED_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_ORANGE_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.ORANGE_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.ORANGE_CARPET), conditionsFromItem(Blocks.ORANGE_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_YELLOW_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.YELLOW_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.YELLOW_CARPET), conditionsFromItem(Blocks.YELLOW_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIME_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIME_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIME_CARPET), conditionsFromItem(Blocks.LIME_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GREEN_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GREEN_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GREEN_CARPET), conditionsFromItem(Blocks.GREEN_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CYAN_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.CYAN_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.CYAN_CARPET), conditionsFromItem(Blocks.CYAN_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_BLUE_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_BLUE_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_CARPET), conditionsFromItem(Blocks.LIGHT_BLUE_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLUE_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLUE_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLUE_CARPET), conditionsFromItem(Blocks.BLUE_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PINK_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PINK_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PINK_CARPET), conditionsFromItem(Blocks.PINK_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_MAGENTA_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.MAGENTA_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.MAGENTA_CARPET), conditionsFromItem(Blocks.MAGENTA_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PURPLE_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.PURPLE_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.PURPLE_CARPET), conditionsFromItem(Blocks.PURPLE_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BROWN_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BROWN_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BROWN_CARPET), conditionsFromItem(Blocks.BROWN_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_BLACK_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.BLACK_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.BLACK_CARPET), conditionsFromItem(Blocks.BLACK_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_GRAY_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.GRAY_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.GRAY_CARPET), conditionsFromItem(Blocks.GRAY_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_LIGHT_GRAY_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.LIGHT_GRAY_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.LIGHT_GRAY_CARPET), conditionsFromItem(Blocks.LIGHT_GRAY_CARPET))
+                    .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_WHITE_CARPET, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', Blocks.WHITE_CARPET)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(Blocks.WHITE_CARPET), conditionsFromItem(Blocks.WHITE_CARPET))
                     .offerTo(exporter);
             }
         };

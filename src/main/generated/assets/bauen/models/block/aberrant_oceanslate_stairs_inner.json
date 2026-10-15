@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "bauen:block/aberrant_oceanslate",
+    "side": "bauen:block/aberrant_oceanslate",
+    "top": "bauen:block/aberrant_oceanslate"
+  }
+}

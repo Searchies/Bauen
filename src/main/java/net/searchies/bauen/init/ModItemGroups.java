@@ -305,6 +305,185 @@ public class ModItemGroups {
                     entries.add(ModBlocks.WHITE_SEAT);
 
                     entries.add(ModItems.TROWEL);
+
+                    entries.add(ModBlocks.ABERRANT);
+                    entries.add(ModBlocks.ABERRANT_SEA_LANTERN);
+                    entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE);
+                    entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE_SLAB);
+                    entries.add(ModBlocks.ABERRANT_DARK_PRISMARINE_WALL);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE_SLAB);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE_WALL);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE_BRICKS);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_PRISMARINE_BRICKS_SLAB);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_SLAB);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_WALL);
+                    entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE);
+                    entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_SLAB);
+                    entries.add(ModBlocks.ABERRANT_POLISHED_OCEANSLATE_WALL);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES_SLAB);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_TILES_WALL);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.ABERRANT_OCEANSLATE_BRICKS_WALL);
+                    entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
+                    entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL);
+                    entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS);
+                    entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_STAIRS);
+                    entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB);
+                    entries.add(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL);
+
+                    entries.add(ModBlocks.SOUL_SANDSTONE);
+                    entries.add(ModBlocks.SOUL_SANDSTONE_STAIRS);
+                    entries.add(ModBlocks.SOUL_SANDSTONE_SLAB);
+                    entries.add(ModBlocks.SOUL_SANDSTONE_WALL);
+                    entries.add(ModBlocks.CUT_SOUL_SANDSTONE);
+                    entries.add(ModBlocks.CHISELED_SOUL_SANDSTONE);
+                    entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE);
+                    entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS);
+                    entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE_SLAB);
+                    entries.add(ModBlocks.SMOOTH_SOUL_SANDSTONE_WALL);
+
+                    entries.add(ModBlocks.ABERRANT_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_RED_WOOL);
+                    entries.add(ModBlocks.ABERRANT_RED_SEAT);
+                    entries.add(ModBlocks.ABERRANT_RED_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_RED_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_RED_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_RED_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_ORANGE_WOOL);
+                    entries.add(ModBlocks.ABERRANT_ORANGE_SEAT);
+                    entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_ORANGE_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_YELLOW_WOOL);
+                    entries.add(ModBlocks.ABERRANT_YELLOW_SEAT);
+                    entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_YELLOW_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_YELLOW_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_LIME_WOOL);
+                    entries.add(ModBlocks.ABERRANT_LIME_SEAT);
+                    entries.add(ModBlocks.ABERRANT_LIME_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_LIME_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_LIME_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_LIME_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_GREEN_WOOL);
+                    entries.add(ModBlocks.ABERRANT_GREEN_SEAT);
+                    entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_GREEN_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_GREEN_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_CYAN_WOOL);
+                    entries.add(ModBlocks.ABERRANT_CYAN_SEAT);
+                    entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_CYAN_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_CYAN_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_SEAT);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_BLUE_WOOL);
+                    entries.add(ModBlocks.ABERRANT_BLUE_SEAT);
+                    entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_BLUE_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_BLUE_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_PINK_WOOL);
+                    entries.add(ModBlocks.ABERRANT_PINK_SEAT);
+                    entries.add(ModBlocks.ABERRANT_PINK_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_PINK_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_PINK_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_PINK_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_WOOL);
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_SEAT);
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_PURPLE_WOOL);
+                    entries.add(ModBlocks.ABERRANT_PURPLE_SEAT);
+                    entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_PURPLE_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_PURPLE_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_BROWN_WOOL);
+                    entries.add(ModBlocks.ABERRANT_BROWN_SEAT);
+                    entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_BROWN_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_BROWN_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_BLACK_WOOL);
+                    entries.add(ModBlocks.ABERRANT_BLACK_SEAT);
+                    entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_BLACK_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_BLACK_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_GRAY_WOOL);
+                    entries.add(ModBlocks.ABERRANT_GRAY_SEAT);
+                    entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_GRAY_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_GRAY_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_SEAT);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_WHITE_WOOL);
+                    entries.add(ModBlocks.ABERRANT_WHITE_SEAT);
+                    entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE);
+                    entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE_POWER);
+                    entries.add(ModBlocks.ABERRANT_WHITE_TERRACOTTA);
+                    entries.add(ModBlocks.ABERRANT_WHITE_GLAZED_TERRACOTTA);
+
+                    entries.add(ModBlocks.ABERRANT_RED_CARPET);
+                    entries.add(ModBlocks.ABERRANT_ORANGE_CARPET);
+                    entries.add(ModBlocks.ABERRANT_YELLOW_CARPET);
+                    entries.add(ModBlocks.ABERRANT_LIME_CARPET);
+                    entries.add(ModBlocks.ABERRANT_GREEN_CARPET);
+                    entries.add(ModBlocks.ABERRANT_CYAN_CARPET);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CARPET);
+                    entries.add(ModBlocks.ABERRANT_BLUE_CARPET);
+                    entries.add(ModBlocks.ABERRANT_PINK_CARPET);
+                    entries.add(ModBlocks.ABERRANT_MAGENTA_CARPET);
+                    entries.add(ModBlocks.ABERRANT_PURPLE_CARPET);
+                    entries.add(ModBlocks.ABERRANT_BROWN_CARPET);
+                    entries.add(ModBlocks.ABERRANT_BLACK_CARPET);
+                    entries.add(ModBlocks.ABERRANT_GRAY_CARPET);
+                    entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CARPET);
+                    entries.add(ModBlocks.ABERRANT_WHITE_CARPET);
                 }).build());
 
     public static void registerModItemGroups() {
