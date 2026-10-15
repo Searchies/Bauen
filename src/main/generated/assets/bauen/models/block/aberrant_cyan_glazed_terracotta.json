@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/template_glazed_terracotta",
   "textures": {
-    "all": "bauen:block/aberrant_cyan_glazed_terracotta"
+    "pattern": "bauen:block/aberrant_cyan_glazed_terracotta"
   }
 }

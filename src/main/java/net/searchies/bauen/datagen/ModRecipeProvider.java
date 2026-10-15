@@ -8,6 +8,7 @@ import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -136,6 +137,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TUFF_BRICKS_SLAB, ModBlocks.MOSSY_TUFF_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TUFF_BRICKS_WALL, ModBlocks.MOSSY_TUFF_BRICKS);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                                Ingredient.ofItem(Blocks.TUFF_BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                                ModBlocks.CRACKED_TUFF_BRICKS, 0.1F, 200
+                        )
+                        .criterion(hasItem(Blocks.TUFF_BRICKS), conditionsFromItem(Blocks.TUFF_BRICKS))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.CRACKED_TUFF_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CRACKED_TUFF_BRICKS))
+                        .criterion(hasItem(ModBlocks.CRACKED_TUFF_BRICKS), conditionsFromItem(ModBlocks.CRACKED_TUFF_BRICKS))
+                        .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICKS_SLAB, ModBlocks.CRACKED_TUFF_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICKS_WALL, ModBlocks.CRACKED_TUFF_BRICKS);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULKED_DEEPSLATE_BRICKS, 1)
                     .input(Blocks.DEEPSLATE_BRICKS)
@@ -2075,9 +2088,521 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .pattern("BBB")
                     .criterion(hasItem(Blocks.WHITE_CARPET), conditionsFromItem(Blocks.WHITE_CARPET))
                     .offerTo(exporter);
+
+                // Custom Resin //
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BEETROOT_RESIN_CLUMP, 9)
+                    .input('D', Items.RED_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.BEETROOT_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BLOCK)
+                    .input(ModItems.BEETROOT_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.BEETROOT_RESIN_CLUMP), conditionsFromItem(ModItems.BEETROOT_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BLOCK_STAIRS, ModBlocks.BEETROOT_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.BEETROOT_RESIN_BLOCK_SLAB, ModBlocks.BEETROOT_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BLOCK_WALL, ModBlocks.BEETROOT_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.BEETROOT_RESIN_CLUMP), RecipeCategory.MISC, ModItems.BEETROOT_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.BEETROOT_RESIN_CLUMP), conditionsFromItem(ModItems.BEETROOT_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BRICKS, ModItems.BEETROOT_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BRICKS_SLAB, ModBlocks.BEETROOT_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BRICKS_STAIRS, ModBlocks.BEETROOT_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.BEETROOT_RESIN_BRICKS_WALL, ModBlocks.BEETROOT_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BEETROOT_RESIN_BRICKS, ModBlocks.BEETROOT_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CHORUS_RESIN_CLUMP, 9)
+                    .input('D', Items.PURPLE_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BLOCK)
+                    .input(ModItems.CHORUS_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.CHORUS_RESIN_CLUMP), conditionsFromItem(ModItems.CHORUS_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BLOCK_STAIRS, ModBlocks.CHORUS_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CHORUS_RESIN_BLOCK_SLAB, ModBlocks.CHORUS_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BLOCK_WALL, ModBlocks.CHORUS_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.CHORUS_RESIN_CLUMP), RecipeCategory.MISC, ModItems.CHORUS_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.CHORUS_RESIN_CLUMP), conditionsFromItem(ModItems.CHORUS_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BRICKS, ModItems.CHORUS_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BRICKS_SLAB, ModBlocks.CHORUS_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BRICKS_STAIRS, ModBlocks.CHORUS_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CHORUS_RESIN_BRICKS_WALL, ModBlocks.CHORUS_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CHORUS_RESIN_BRICKS, ModBlocks.CHORUS_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.LEMON_RESIN_CLUMP, 9)
+                    .input('D', Items.YELLOW_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BLOCK)
+                    .input(ModItems.LEMON_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.LEMON_RESIN_CLUMP), conditionsFromItem(ModItems.LEMON_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BLOCK_STAIRS, ModBlocks.LEMON_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.LEMON_RESIN_BLOCK_SLAB, ModBlocks.LEMON_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BLOCK_WALL, ModBlocks.LEMON_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.LEMON_RESIN_CLUMP), RecipeCategory.MISC, ModItems.LEMON_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.LEMON_RESIN_CLUMP), conditionsFromItem(ModItems.LEMON_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BRICKS, ModItems.LEMON_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BRICKS_SLAB, ModBlocks.LEMON_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BRICKS_STAIRS, ModBlocks.LEMON_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.LEMON_RESIN_BRICKS_WALL, ModBlocks.LEMON_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_LEMON_RESIN_BRICKS, ModBlocks.LEMON_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GLACIER_RESIN_CLUMP, 9)
+                    .input('D', Items.LIGHT_BLUE_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BLOCK)
+                    .input(ModItems.GLACIER_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.GLACIER_RESIN_CLUMP), conditionsFromItem(ModItems.GLACIER_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BLOCK_STAIRS, ModBlocks.GLACIER_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.GLACIER_RESIN_BLOCK_SLAB, ModBlocks.GLACIER_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BLOCK_WALL, ModBlocks.GLACIER_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.GLACIER_RESIN_CLUMP), RecipeCategory.MISC, ModItems.GLACIER_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.GLACIER_RESIN_CLUMP), conditionsFromItem(ModItems.GLACIER_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BRICKS, ModItems.GLACIER_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BRICKS_SLAB, ModBlocks.GLACIER_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BRICKS_STAIRS, ModBlocks.GLACIER_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.GLACIER_RESIN_BRICKS_WALL, ModBlocks.GLACIER_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLACIER_RESIN_BRICKS, ModBlocks.GLACIER_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CARAMEL_RESIN_CLUMP, 9)
+                    .input('D', Items.ORANGE_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BLOCK)
+                    .input(ModItems.CARAMEL_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.CARAMEL_RESIN_CLUMP), conditionsFromItem(ModItems.CARAMEL_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BLOCK_STAIRS, ModBlocks.CARAMEL_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CARAMEL_RESIN_BLOCK_SLAB, ModBlocks.CARAMEL_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BLOCK_WALL, ModBlocks.CARAMEL_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.CARAMEL_RESIN_CLUMP), RecipeCategory.MISC, ModItems.CARAMEL_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.CARAMEL_RESIN_CLUMP), conditionsFromItem(ModItems.CARAMEL_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BRICKS, ModItems.CARAMEL_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BRICKS_SLAB, ModBlocks.CARAMEL_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BRICKS_STAIRS, ModBlocks.CARAMEL_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CARAMEL_RESIN_BRICKS_WALL, ModBlocks.CARAMEL_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CARAMEL_RESIN_BRICKS, ModBlocks.CARAMEL_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TOXIC_RESIN_CLUMP, 9)
+                    .input('D', Items.LIME_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BLOCK)
+                    .input(ModItems.TOXIC_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.TOXIC_RESIN_CLUMP), conditionsFromItem(ModItems.TOXIC_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BLOCK_STAIRS, ModBlocks.TOXIC_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.TOXIC_RESIN_BLOCK_SLAB, ModBlocks.TOXIC_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BLOCK_WALL, ModBlocks.TOXIC_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.TOXIC_RESIN_CLUMP), RecipeCategory.MISC, ModItems.TOXIC_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.TOXIC_RESIN_CLUMP), conditionsFromItem(ModItems.TOXIC_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BRICKS, ModItems.TOXIC_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BRICKS_SLAB, ModBlocks.TOXIC_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BRICKS_STAIRS, ModBlocks.TOXIC_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.TOXIC_RESIN_BRICKS_WALL, ModBlocks.TOXIC_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TOXIC_RESIN_BRICKS, ModBlocks.TOXIC_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.JADE_RESIN_CLUMP, 9)
+                    .input('D', Items.CYAN_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BLOCK)
+                    .input(ModItems.JADE_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.JADE_RESIN_CLUMP), conditionsFromItem(ModItems.JADE_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BLOCK_STAIRS, ModBlocks.JADE_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.JADE_RESIN_BLOCK_SLAB, ModBlocks.JADE_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BLOCK_WALL, ModBlocks.JADE_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.JADE_RESIN_CLUMP), RecipeCategory.MISC, ModItems.JADE_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.JADE_RESIN_CLUMP), conditionsFromItem(ModItems.JADE_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BRICKS, ModItems.JADE_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BRICKS_SLAB, ModBlocks.JADE_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BRICKS_STAIRS, ModBlocks.JADE_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.JADE_RESIN_BRICKS_WALL, ModBlocks.JADE_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_JADE_RESIN_BRICKS, ModBlocks.JADE_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BUBBLE_RESIN_CLUMP, 9)
+                    .input('D', Items.CYAN_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BLOCK)
+                    .input(ModItems.BUBBLE_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.BUBBLE_RESIN_CLUMP), conditionsFromItem(ModItems.BUBBLE_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BLOCK_STAIRS, ModBlocks.BUBBLE_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.BUBBLE_RESIN_BLOCK_SLAB, ModBlocks.BUBBLE_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BLOCK_WALL, ModBlocks.BUBBLE_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.BUBBLE_RESIN_CLUMP), RecipeCategory.MISC, ModItems.BUBBLE_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.BUBBLE_RESIN_CLUMP), conditionsFromItem(ModItems.BUBBLE_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BRICKS, ModItems.BUBBLE_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BRICKS_SLAB, ModBlocks.BUBBLE_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_RESIN_BRICKS_STAIRS, ModBlocks.BUBBLE_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.BUBBLE_RESIN_BRICKS_WALL, ModBlocks.BUBBLE_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BUBBLE_RESIN_BRICKS, ModBlocks.BUBBLE_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.OCEAN_RESIN_CLUMP, 9)
+                    .input('D', Items.BLUE_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BLOCK)
+                    .input(ModItems.OCEAN_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.OCEAN_RESIN_CLUMP), conditionsFromItem(ModItems.OCEAN_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BLOCK_STAIRS, ModBlocks.OCEAN_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.OCEAN_RESIN_BLOCK_SLAB, ModBlocks.OCEAN_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BLOCK_WALL, ModBlocks.OCEAN_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.OCEAN_RESIN_CLUMP), RecipeCategory.MISC, ModItems.OCEAN_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.OCEAN_RESIN_CLUMP), conditionsFromItem(ModItems.OCEAN_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BRICKS, ModItems.OCEAN_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BRICKS_SLAB, ModBlocks.OCEAN_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_RESIN_BRICKS_STAIRS, ModBlocks.OCEAN_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.OCEAN_RESIN_BRICKS_WALL, ModBlocks.OCEAN_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_OCEAN_RESIN_BRICKS, ModBlocks.OCEAN_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.EMERALD_RESIN_CLUMP, 9)
+                    .input('D', Items.GREEN_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BLOCK)
+                    .input(ModItems.EMERALD_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.EMERALD_RESIN_CLUMP), conditionsFromItem(ModItems.EMERALD_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BLOCK_STAIRS, ModBlocks.EMERALD_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.EMERALD_RESIN_BLOCK_SLAB, ModBlocks.EMERALD_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BLOCK_WALL, ModBlocks.EMERALD_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.EMERALD_RESIN_CLUMP), RecipeCategory.MISC, ModItems.EMERALD_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.EMERALD_RESIN_CLUMP), conditionsFromItem(ModItems.EMERALD_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BRICKS, ModItems.EMERALD_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BRICKS_SLAB, ModBlocks.EMERALD_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_RESIN_BRICKS_STAIRS, ModBlocks.EMERALD_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.EMERALD_RESIN_BRICKS_WALL, ModBlocks.EMERALD_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_EMERALD_RESIN_BRICKS, ModBlocks.EMERALD_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.DUSK_RESIN_CLUMP, 9)
+                    .input('D', Items.MAGENTA_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BLOCK)
+                    .input(ModItems.DUSK_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.DUSK_RESIN_CLUMP), conditionsFromItem(ModItems.DUSK_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BLOCK_STAIRS, ModBlocks.DUSK_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.DUSK_RESIN_BLOCK_SLAB, ModBlocks.DUSK_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BLOCK_WALL, ModBlocks.DUSK_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.DUSK_RESIN_CLUMP), RecipeCategory.MISC, ModItems.DUSK_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.DUSK_RESIN_CLUMP), conditionsFromItem(ModItems.DUSK_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BRICKS, ModItems.DUSK_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BRICKS_SLAB, ModBlocks.DUSK_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_RESIN_BRICKS_STAIRS, ModBlocks.DUSK_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.DUSK_RESIN_BRICKS_WALL, ModBlocks.DUSK_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DUSK_RESIN_BRICKS, ModBlocks.DUSK_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.DAYBREAK_RESIN_CLUMP, 9)
+                    .input('D', Items.WHITE_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BLOCK)
+                    .input(ModItems.DAYBREAK_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.DAYBREAK_RESIN_CLUMP), conditionsFromItem(ModItems.DAYBREAK_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BLOCK_STAIRS, ModBlocks.DAYBREAK_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.DAYBREAK_RESIN_BLOCK_SLAB, ModBlocks.DAYBREAK_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BLOCK_WALL, ModBlocks.DAYBREAK_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.DAYBREAK_RESIN_CLUMP), RecipeCategory.MISC, ModItems.DAYBREAK_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.DAYBREAK_RESIN_CLUMP), conditionsFromItem(ModItems.DAYBREAK_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BRICKS, ModItems.DAYBREAK_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BRICKS_SLAB, ModBlocks.DAYBREAK_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_RESIN_BRICKS_STAIRS, ModBlocks.DAYBREAK_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.DAYBREAK_RESIN_BRICKS_WALL, ModBlocks.DAYBREAK_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DAYBREAK_RESIN_BRICKS, ModBlocks.DAYBREAK_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.SILT_RESIN_CLUMP, 9)
+                    .input('D', Items.LIGHT_GRAY_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BLOCK)
+                    .input(ModItems.SILT_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.SILT_RESIN_CLUMP), conditionsFromItem(ModItems.SILT_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BLOCK_STAIRS, ModBlocks.SILT_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.SILT_RESIN_BLOCK_SLAB, ModBlocks.SILT_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BLOCK_WALL, ModBlocks.SILT_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.SILT_RESIN_CLUMP), RecipeCategory.MISC, ModItems.SILT_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.SILT_RESIN_CLUMP), conditionsFromItem(ModItems.SILT_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BRICKS, ModItems.SILT_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BRICKS_SLAB, ModBlocks.SILT_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_RESIN_BRICKS_STAIRS, ModBlocks.SILT_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.SILT_RESIN_BRICKS_WALL, ModBlocks.SILT_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SILT_RESIN_BRICKS, ModBlocks.SILT_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GRAPHITE_RESIN_CLUMP, 9)
+                    .input('D', Items.GRAY_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BLOCK)
+                    .input(ModItems.GRAPHITE_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.GRAPHITE_RESIN_CLUMP), conditionsFromItem(ModItems.GRAPHITE_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BLOCK_STAIRS, ModBlocks.GRAPHITE_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.GRAPHITE_RESIN_BLOCK_SLAB, ModBlocks.GRAPHITE_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BLOCK_WALL, ModBlocks.GRAPHITE_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.GRAPHITE_RESIN_CLUMP), RecipeCategory.MISC, ModItems.GRAPHITE_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.GRAPHITE_RESIN_CLUMP), conditionsFromItem(ModItems.GRAPHITE_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BRICKS, ModItems.GRAPHITE_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BRICKS_SLAB, ModBlocks.GRAPHITE_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_RESIN_BRICKS_STAIRS, ModBlocks.GRAPHITE_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.GRAPHITE_RESIN_BRICKS_WALL, ModBlocks.GRAPHITE_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GRAPHITE_RESIN_BRICKS, ModBlocks.GRAPHITE_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.OBSIDIAN_RESIN_CLUMP, 9)
+                    .input('D', Items.BLACK_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BLOCK)
+                    .input(ModItems.OBSIDIAN_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.OBSIDIAN_RESIN_CLUMP), conditionsFromItem(ModItems.OBSIDIAN_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BLOCK_STAIRS, ModBlocks.OBSIDIAN_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.OBSIDIAN_RESIN_BLOCK_SLAB, ModBlocks.OBSIDIAN_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BLOCK_WALL, ModBlocks.OBSIDIAN_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.OBSIDIAN_RESIN_CLUMP), RecipeCategory.MISC, ModItems.OBSIDIAN_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.OBSIDIAN_RESIN_CLUMP), conditionsFromItem(ModItems.OBSIDIAN_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BRICKS, ModItems.OBSIDIAN_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BRICKS_SLAB, ModBlocks.OBSIDIAN_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_RESIN_BRICKS_STAIRS, ModBlocks.OBSIDIAN_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.OBSIDIAN_RESIN_BRICKS_WALL, ModBlocks.OBSIDIAN_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_OBSIDIAN_RESIN_BRICKS, ModBlocks.OBSIDIAN_RESIN_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.COCOA_RESIN_CLUMP, 9)
+                    .input('D', Items.BROWN_DYE)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('C', Items.RESIN_CLUMP)
+                    .pattern("CDC")
+                    .pattern("CPC")
+                    .pattern("CCC")
+                    .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                    .offerTo(exporter);
+
+//                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.CHORUS_RESIN_CLUMP, RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BLOCK);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BLOCK)
+                    .input(ModItems.COCOA_RESIN_CLUMP, 9)
+                    .criterion(hasItem(ModItems.COCOA_RESIN_CLUMP), conditionsFromItem(ModItems.COCOA_RESIN_CLUMP))
+                    .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BLOCK_STAIRS, ModBlocks.COCOA_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.COCOA_RESIN_BLOCK_SLAB, ModBlocks.COCOA_RESIN_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BLOCK_WALL, ModBlocks.COCOA_RESIN_BLOCK);
+
+                CookingRecipeJsonBuilder.createSmelting(
+                        Ingredient.ofItem(ModItems.COCOA_RESIN_CLUMP), RecipeCategory.MISC, ModItems.COCOA_RESIN_BRICK, 0.1f, 200)
+                        .criterion(hasItem(ModItems.COCOA_RESIN_CLUMP), conditionsFromItem(ModItems.COCOA_RESIN_CLUMP))
+                        .offerTo(exporter);
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BRICKS, ModItems.COCOA_RESIN_BRICK);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BRICKS_SLAB, ModBlocks.COCOA_RESIN_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_RESIN_BRICKS_STAIRS, ModBlocks.COCOA_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.COCOA_RESIN_BRICKS_WALL, ModBlocks.COCOA_RESIN_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_COCOA_RESIN_BRICKS, ModBlocks.COCOA_RESIN_BRICKS);
+
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RESIN, Blocks.RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_POLISHED_RESIN, ModBlocks.BEETROOT_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_POLISHED_RESIN, ModBlocks.CARAMEL_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_POLISHED_RESIN, ModBlocks.LEMON_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_POLISHED_RESIN, ModBlocks.TOXIC_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_POLISHED_RESIN, ModBlocks.EMERALD_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_POLISHED_RESIN, ModBlocks.JADE_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_POLISHED_RESIN, ModBlocks.OCEAN_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_POLISHED_RESIN, ModBlocks.GLACIER_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_POLISHED_RESIN, ModBlocks.BUBBLE_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_POLISHED_RESIN, ModBlocks.DUSK_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_POLISHED_RESIN, ModBlocks.CHORUS_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_POLISHED_RESIN, ModBlocks.SILT_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_POLISHED_RESIN, ModBlocks.GRAPHITE_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_POLISHED_RESIN, ModBlocks.OBSIDIAN_RESIN_BLOCK);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_POLISHED_RESIN, ModBlocks.COCOA_RESIN_BLOCK);
+
+
+            }
+
+            public void offer2x2CompactingRecipe4(RecipeCategory category, ItemConvertible output, ItemConvertible input) {
+                createShaped(category, output, 4)
+                    .input(Character.valueOf('#'), input)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(RecipeGenerator.hasItem(input), conditionsFromItem(input))
+                    .offerTo(exporter);
             }
         };
     }
+
+
 
     @Override
     public String getName() {

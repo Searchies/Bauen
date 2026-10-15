@@ -33,6 +33,8 @@ public class ModBlocks {
     private static final AbstractBlock.Settings ABS_PRISMARINE = AbstractBlock.Settings.copy(Blocks.PRISMARINE);
     private static final AbstractBlock.Settings ABS_SANDSTONE = AbstractBlock.Settings.copy(Blocks.SANDSTONE);
     private static final AbstractBlock.Settings ABS_TERRACOTA = AbstractBlock.Settings.copy(Blocks.TERRACOTTA);
+    private static final AbstractBlock.Settings ABS_RESIN_BLOCK = AbstractBlock.Settings.copy(Blocks.RESIN_BLOCK);
+    private static final AbstractBlock.Settings ABS_CLUMPS = AbstractBlock.Settings.copy(Blocks.RESIN_CLUMP);
 
     public static final Block MOSSY_BRICKS = registerBlock("mossy_bricks", ABS_BRICKS);
     public static final Block MOSSY_BRICKS_STAIRS = registerCustomBlock("mossy_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -125,6 +127,11 @@ public class ModBlocks {
     public static final Block MOSSY_TUFF_BRICKS_STAIRS = registerCustomBlock("mossy_tuff_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MOSSY_TUFF_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
     public static final Block MOSSY_TUFF_BRICKS_SLAB = registerCustomBlock("mossy_tuff_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
     public static final Block MOSSY_TUFF_BRICKS_WALL = registerCustomBlock("mossy_tuff_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block CRACKED_TUFF_BRICKS = registerBlock("cracked_tuff_bricks", ABS_BRICKS);
+    public static final Block CRACKED_TUFF_BRICKS_STAIRS = registerCustomBlock("cracked_tuff_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CRACKED_TUFF_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block CRACKED_TUFF_BRICKS_SLAB = registerCustomBlock("cracked_tuff_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CRACKED_TUFF_BRICKS_WALL = registerCustomBlock("cracked_tuff_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
 
     public static final Block SCULKED_DEEPSLATE_BRICKS = registerBlock("sculked_deepslate_bricks", ABS_BRICKS);
     public static final Block SCULKED_DEEPSLATE_BRICKS_STAIRS = registerCustomBlock("sculked_deepslate_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.SCULKED_DEEPSLATE_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
@@ -546,6 +553,268 @@ public class ModBlocks {
     public static final Block ABERRANT_LIGHT_GRAY_CARPET = registerCustomBlock("aberrant_light_gray_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.LIGHT_GRAY, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_CARPET));
     public static final Block ABERRANT_WHITE_CARPET = registerCustomBlock("aberrant_white_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.WHITE, settings), AbstractBlock.Settings.copy(Blocks.WHITE_CARPET));
 
+    public static final Block BEETROOT_RESIN_BRICKS = registerBlock("beetroot_resin_bricks", ABS_BRICKS);
+    public static final Block BEETROOT_RESIN_BRICKS_STAIRS = registerCustomBlock("beetroot_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.BEETROOT_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block BEETROOT_RESIN_BRICKS_SLAB = registerCustomBlock("beetroot_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block BEETROOT_RESIN_BRICKS_WALL = registerCustomBlock("beetroot_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block BEETROOT_RESIN_BLOCK = registerBlock("beetroot_resin_block", ABS_RESIN_BLOCK);
+    public static final Block BEETROOT_RESIN_BLOCK_STAIRS = registerCustomBlock("beetroot_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.BEETROOT_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block BEETROOT_RESIN_BLOCK_SLAB = registerCustomBlock("beetroot_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block BEETROOT_RESIN_BLOCK_WALL = registerCustomBlock("beetroot_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_BEETROOT_RESIN_BRICKS = registerBlock("chiseled_beetroot_resin_bricks", ABS_BRICKS);
+    public static final Block BEETROOT_RESIN_CLUMP = registerCustomBlockNotItem("beetroot_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block CHORUS_RESIN_BRICKS = registerBlock("chorus_resin_bricks", ABS_BRICKS);
+    public static final Block CHORUS_RESIN_BRICKS_STAIRS = registerCustomBlock("chorus_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CHORUS_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block CHORUS_RESIN_BRICKS_SLAB = registerCustomBlock("chorus_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CHORUS_RESIN_BRICKS_WALL = registerCustomBlock("chorus_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CHORUS_RESIN_BLOCK = registerBlock("chorus_resin_block", ABS_RESIN_BLOCK);
+    public static final Block CHORUS_RESIN_BLOCK_STAIRS = registerCustomBlock("chorus_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CHORUS_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHORUS_RESIN_BLOCK_SLAB = registerCustomBlock("chorus_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHORUS_RESIN_BLOCK_WALL = registerCustomBlock("chorus_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_CHORUS_RESIN_BRICKS = registerBlock("chiseled_chorus_resin_bricks", ABS_BRICKS);
+    public static final Block CHORUS_RESIN_CLUMP = registerCustomBlockNotItem("chorus_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block LEMON_RESIN_BRICKS = registerBlock("lemon_resin_bricks", ABS_BRICKS);
+    public static final Block LEMON_RESIN_BRICKS_STAIRS = registerCustomBlock("lemon_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.LEMON_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block LEMON_RESIN_BRICKS_SLAB = registerCustomBlock("lemon_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block LEMON_RESIN_BRICKS_WALL = registerCustomBlock("lemon_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block LEMON_RESIN_BLOCK = registerBlock("lemon_resin_block", ABS_RESIN_BLOCK);
+    public static final Block LEMON_RESIN_BLOCK_STAIRS = registerCustomBlock("lemon_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.LEMON_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block LEMON_RESIN_BLOCK_SLAB = registerCustomBlock("lemon_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block LEMON_RESIN_BLOCK_WALL = registerCustomBlock("lemon_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_LEMON_RESIN_BRICKS = registerBlock("chiseled_lemon_resin_bricks", ABS_BRICKS);
+    public static final Block LEMON_RESIN_CLUMP = registerCustomBlockNotItem("lemon_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block GLACIER_RESIN_BRICKS = registerBlock("glacier_resin_bricks", ABS_BRICKS);
+    public static final Block GLACIER_RESIN_BRICKS_STAIRS = registerCustomBlock("glacier_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GLACIER_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block GLACIER_RESIN_BRICKS_SLAB = registerCustomBlock("glacier_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block GLACIER_RESIN_BRICKS_WALL = registerCustomBlock("glacier_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block GLACIER_RESIN_BLOCK = registerBlock("glacier_resin_block", ABS_RESIN_BLOCK);
+    public static final Block GLACIER_RESIN_BLOCK_STAIRS = registerCustomBlock("glacier_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GLACIER_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block GLACIER_RESIN_BLOCK_SLAB = registerCustomBlock("glacier_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block GLACIER_RESIN_BLOCK_WALL = registerCustomBlock("glacier_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_GLACIER_RESIN_BRICKS = registerBlock("chiseled_glacier_resin_bricks", ABS_BRICKS);
+    public static final Block GLACIER_RESIN_CLUMP = registerCustomBlockNotItem("glacier_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block CARAMEL_RESIN_BRICKS = registerBlock("caramel_resin_bricks", ABS_BRICKS);
+    public static final Block CARAMEL_RESIN_BRICKS_STAIRS = registerCustomBlock("caramel_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CARAMEL_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block CARAMEL_RESIN_BRICKS_SLAB = registerCustomBlock("caramel_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CARAMEL_RESIN_BRICKS_WALL = registerCustomBlock("caramel_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CARAMEL_RESIN_BLOCK = registerBlock("caramel_resin_block", ABS_RESIN_BLOCK);
+    public static final Block CARAMEL_RESIN_BLOCK_STAIRS = registerCustomBlock("caramel_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CARAMEL_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CARAMEL_RESIN_BLOCK_SLAB = registerCustomBlock("caramel_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CARAMEL_RESIN_BLOCK_WALL = registerCustomBlock("caramel_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_CARAMEL_RESIN_BRICKS = registerBlock("chiseled_caramel_resin_bricks", ABS_BRICKS);
+    public static final Block CARAMEL_RESIN_CLUMP = registerCustomBlockNotItem("caramel_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block TOXIC_RESIN_BRICKS = registerBlock("toxic_resin_bricks", ABS_BRICKS);
+    public static final Block TOXIC_RESIN_BRICKS_STAIRS = registerCustomBlock("toxic_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.TOXIC_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block TOXIC_RESIN_BRICKS_SLAB = registerCustomBlock("toxic_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block TOXIC_RESIN_BRICKS_WALL = registerCustomBlock("toxic_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block TOXIC_RESIN_BLOCK = registerBlock("toxic_resin_block", ABS_RESIN_BLOCK);
+    public static final Block TOXIC_RESIN_BLOCK_STAIRS = registerCustomBlock("toxic_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.TOXIC_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block TOXIC_RESIN_BLOCK_SLAB = registerCustomBlock("toxic_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block TOXIC_RESIN_BLOCK_WALL = registerCustomBlock("toxic_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_TOXIC_RESIN_BRICKS = registerBlock("chiseled_toxic_resin_bricks", ABS_BRICKS);
+    public static final Block TOXIC_RESIN_CLUMP = registerCustomBlockNotItem("toxic_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block JADE_RESIN_BRICKS = registerBlock("jade_resin_bricks", ABS_BRICKS);
+    public static final Block JADE_RESIN_BRICKS_STAIRS = registerCustomBlock("jade_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.JADE_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block JADE_RESIN_BRICKS_SLAB = registerCustomBlock("jade_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block JADE_RESIN_BRICKS_WALL = registerCustomBlock("jade_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block JADE_RESIN_BLOCK = registerBlock("jade_resin_block", ABS_RESIN_BLOCK);
+    public static final Block JADE_RESIN_BLOCK_STAIRS = registerCustomBlock("jade_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.JADE_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block JADE_RESIN_BLOCK_SLAB = registerCustomBlock("jade_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block JADE_RESIN_BLOCK_WALL = registerCustomBlock("jade_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_JADE_RESIN_BRICKS = registerBlock("chiseled_jade_resin_bricks", ABS_BRICKS);
+    public static final Block JADE_RESIN_CLUMP = registerCustomBlockNotItem("jade_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block BUBBLE_RESIN_BRICKS = registerBlock("bubble_resin_bricks", ABS_BRICKS);
+    public static final Block BUBBLE_RESIN_BRICKS_STAIRS = registerCustomBlock("bubble_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.BUBBLE_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block BUBBLE_RESIN_BRICKS_SLAB = registerCustomBlock("bubble_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block BUBBLE_RESIN_BRICKS_WALL = registerCustomBlock("bubble_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block BUBBLE_RESIN_BLOCK = registerBlock("bubble_resin_block", ABS_RESIN_BLOCK);
+    public static final Block BUBBLE_RESIN_BLOCK_STAIRS = registerCustomBlock("bubble_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.BUBBLE_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block BUBBLE_RESIN_BLOCK_SLAB = registerCustomBlock("bubble_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block BUBBLE_RESIN_BLOCK_WALL = registerCustomBlock("bubble_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_BUBBLE_RESIN_BRICKS = registerBlock("chiseled_bubble_resin_bricks", ABS_BRICKS);
+    public static final Block BUBBLE_RESIN_CLUMP = registerCustomBlockNotItem("bubble_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block OCEAN_RESIN_BRICKS = registerBlock("ocean_resin_bricks", ABS_BRICKS);
+    public static final Block OCEAN_RESIN_BRICKS_STAIRS = registerCustomBlock("ocean_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.OCEAN_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block OCEAN_RESIN_BRICKS_SLAB = registerCustomBlock("ocean_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block OCEAN_RESIN_BRICKS_WALL = registerCustomBlock("ocean_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block OCEAN_RESIN_BLOCK = registerBlock("ocean_resin_block", ABS_RESIN_BLOCK);
+    public static final Block OCEAN_RESIN_BLOCK_STAIRS = registerCustomBlock("ocean_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.OCEAN_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block OCEAN_RESIN_BLOCK_SLAB = registerCustomBlock("ocean_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block OCEAN_RESIN_BLOCK_WALL = registerCustomBlock("ocean_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_OCEAN_RESIN_BRICKS = registerBlock("chiseled_ocean_resin_bricks", ABS_BRICKS);
+    public static final Block OCEAN_RESIN_CLUMP = registerCustomBlockNotItem("ocean_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block EMERALD_RESIN_BRICKS = registerBlock("emerald_resin_bricks", ABS_BRICKS);
+    public static final Block EMERALD_RESIN_BRICKS_STAIRS = registerCustomBlock("emerald_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.EMERALD_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block EMERALD_RESIN_BRICKS_SLAB = registerCustomBlock("emerald_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block EMERALD_RESIN_BRICKS_WALL = registerCustomBlock("emerald_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block EMERALD_RESIN_BLOCK = registerBlock("emerald_resin_block", ABS_RESIN_BLOCK);
+    public static final Block EMERALD_RESIN_BLOCK_STAIRS = registerCustomBlock("emerald_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.EMERALD_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block EMERALD_RESIN_BLOCK_SLAB = registerCustomBlock("emerald_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block EMERALD_RESIN_BLOCK_WALL = registerCustomBlock("emerald_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_EMERALD_RESIN_BRICKS = registerBlock("chiseled_emerald_resin_bricks", ABS_BRICKS);
+    public static final Block EMERALD_RESIN_CLUMP = registerCustomBlockNotItem("emerald_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block DUSK_RESIN_BRICKS = registerBlock("dusk_resin_bricks", ABS_BRICKS);
+    public static final Block DUSK_RESIN_BRICKS_STAIRS = registerCustomBlock("dusk_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DUSK_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block DUSK_RESIN_BRICKS_SLAB = registerCustomBlock("dusk_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block DUSK_RESIN_BRICKS_WALL = registerCustomBlock("dusk_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block DUSK_RESIN_BLOCK = registerBlock("dusk_resin_block", ABS_RESIN_BLOCK);
+    public static final Block DUSK_RESIN_BLOCK_STAIRS = registerCustomBlock("dusk_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DUSK_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block DUSK_RESIN_BLOCK_SLAB = registerCustomBlock("dusk_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block DUSK_RESIN_BLOCK_WALL = registerCustomBlock("dusk_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_DUSK_RESIN_BRICKS = registerBlock("chiseled_dusk_resin_bricks", ABS_BRICKS);
+    public static final Block DUSK_RESIN_CLUMP = registerCustomBlockNotItem("dusk_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block DAYBREAK_RESIN_BRICKS = registerBlock("daybreak_resin_bricks", ABS_BRICKS);
+    public static final Block DAYBREAK_RESIN_BRICKS_STAIRS = registerCustomBlock("daybreak_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DAYBREAK_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block DAYBREAK_RESIN_BRICKS_SLAB = registerCustomBlock("daybreak_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block DAYBREAK_RESIN_BRICKS_WALL = registerCustomBlock("daybreak_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block DAYBREAK_RESIN_BLOCK = registerBlock("daybreak_resin_block", ABS_RESIN_BLOCK);
+    public static final Block DAYBREAK_RESIN_BLOCK_STAIRS = registerCustomBlock("daybreak_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DAYBREAK_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block DAYBREAK_RESIN_BLOCK_SLAB = registerCustomBlock("daybreak_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block DAYBREAK_RESIN_BLOCK_WALL = registerCustomBlock("daybreak_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_DAYBREAK_RESIN_BRICKS = registerBlock("chiseled_daybreak_resin_bricks", ABS_BRICKS);
+    public static final Block DAYBREAK_RESIN_CLUMP = registerCustomBlockNotItem("daybreak_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block SILT_RESIN_BRICKS = registerBlock("silt_resin_bricks", ABS_BRICKS);
+    public static final Block SILT_RESIN_BRICKS_STAIRS = registerCustomBlock("silt_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.SILT_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block SILT_RESIN_BRICKS_SLAB = registerCustomBlock("silt_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block SILT_RESIN_BRICKS_WALL = registerCustomBlock("silt_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block SILT_RESIN_BLOCK = registerBlock("silt_resin_block", ABS_RESIN_BLOCK);
+    public static final Block SILT_RESIN_BLOCK_STAIRS = registerCustomBlock("silt_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.SILT_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block SILT_RESIN_BLOCK_SLAB = registerCustomBlock("silt_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block SILT_RESIN_BLOCK_WALL = registerCustomBlock("silt_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_SILT_RESIN_BRICKS = registerBlock("chiseled_silt_resin_bricks", ABS_BRICKS);
+    public static final Block SILT_RESIN_CLUMP = registerCustomBlockNotItem("silt_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block GRAPHITE_RESIN_BRICKS = registerBlock("graphite_resin_bricks", ABS_BRICKS);
+    public static final Block GRAPHITE_RESIN_BRICKS_STAIRS = registerCustomBlock("graphite_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GRAPHITE_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block GRAPHITE_RESIN_BRICKS_SLAB = registerCustomBlock("graphite_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block GRAPHITE_RESIN_BRICKS_WALL = registerCustomBlock("graphite_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block GRAPHITE_RESIN_BLOCK = registerBlock("graphite_resin_block", ABS_RESIN_BLOCK);
+    public static final Block GRAPHITE_RESIN_BLOCK_STAIRS = registerCustomBlock("graphite_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GRAPHITE_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block GRAPHITE_RESIN_BLOCK_SLAB = registerCustomBlock("graphite_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block GRAPHITE_RESIN_BLOCK_WALL = registerCustomBlock("graphite_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_GRAPHITE_RESIN_BRICKS = registerBlock("chiseled_graphite_resin_bricks", ABS_BRICKS);
+    public static final Block GRAPHITE_RESIN_CLUMP = registerCustomBlockNotItem("graphite_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block OBSIDIAN_RESIN_BRICKS = registerBlock("obsidian_resin_bricks", ABS_BRICKS);
+    public static final Block OBSIDIAN_RESIN_BRICKS_STAIRS = registerCustomBlock("obsidian_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.OBSIDIAN_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block OBSIDIAN_RESIN_BRICKS_SLAB = registerCustomBlock("obsidian_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block OBSIDIAN_RESIN_BRICKS_WALL = registerCustomBlock("obsidian_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block OBSIDIAN_RESIN_BLOCK = registerBlock("obsidian_resin_block", ABS_RESIN_BLOCK);
+    public static final Block OBSIDIAN_RESIN_BLOCK_STAIRS = registerCustomBlock("obsidian_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.OBSIDIAN_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block OBSIDIAN_RESIN_BLOCK_SLAB = registerCustomBlock("obsidian_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block OBSIDIAN_RESIN_BLOCK_WALL = registerCustomBlock("obsidian_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_OBSIDIAN_RESIN_BRICKS = registerBlock("chiseled_obsidian_resin_bricks", ABS_BRICKS);
+    public static final Block OBSIDIAN_RESIN_CLUMP = registerCustomBlockNotItem("obsidian_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block COCOA_RESIN_BRICKS = registerBlock("cocoa_resin_bricks", ABS_BRICKS);
+    public static final Block COCOA_RESIN_BRICKS_STAIRS = registerCustomBlock("cocoa_resin_bricks_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.COCOA_RESIN_BRICKS.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block COCOA_RESIN_BRICKS_SLAB = registerCustomBlock("cocoa_resin_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block COCOA_RESIN_BRICKS_WALL = registerCustomBlock("cocoa_resin_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block COCOA_RESIN_BLOCK = registerBlock("cocoa_resin_block", ABS_RESIN_BLOCK);
+    public static final Block COCOA_RESIN_BLOCK_STAIRS = registerCustomBlock("cocoa_resin_block_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.COCOA_RESIN_BLOCK.getDefaultState(), ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block COCOA_RESIN_BLOCK_SLAB = registerCustomBlock("cocoa_resin_block_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block COCOA_RESIN_BLOCK_WALL = registerCustomBlock("cocoa_resin_block_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_RESIN_BLOCK), ABS_RESIN_BLOCK);
+    public static final Block CHISELED_COCOA_RESIN_BRICKS = registerBlock("chiseled_cocoa_resin_bricks", ABS_BRICKS);
+    public static final Block COCOA_RESIN_CLUMP = registerCustomBlockNotItem("cocoa_resin_clump", MultifaceBlock::new, ABS_CLUMPS);
+
+    public static final Block POLISHED_RESIN = registerBlock("polished_resin", ABS_BRICKS);
+    public static final Block POLISHED_RESIN_STAIRS = registerCustomBlock("polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_RESIN_SLAB = registerCustomBlock("polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block POLISHED_RESIN_WALL = registerCustomBlock("polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block BEETROOT_POLISHED_RESIN = registerBlock("beetroot_polished_resin", ABS_BRICKS);
+    public static final Block BEETROOT_POLISHED_RESIN_STAIRS = registerCustomBlock("beetroot_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.BEETROOT_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block BEETROOT_POLISHED_RESIN_SLAB = registerCustomBlock("beetroot_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block BEETROOT_POLISHED_RESIN_WALL = registerCustomBlock("beetroot_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block CARAMEL_POLISHED_RESIN = registerBlock("caramel_polished_resin", ABS_BRICKS);
+    public static final Block CARAMEL_POLISHED_RESIN_STAIRS = registerCustomBlock("caramel_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CARAMEL_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block CARAMEL_POLISHED_RESIN_SLAB = registerCustomBlock("caramel_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CARAMEL_POLISHED_RESIN_WALL = registerCustomBlock("caramel_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block LEMON_POLISHED_RESIN = registerBlock("lemon_polished_resin", ABS_BRICKS);
+    public static final Block LEMON_POLISHED_RESIN_STAIRS = registerCustomBlock("lemon_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.LEMON_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block LEMON_POLISHED_RESIN_SLAB = registerCustomBlock("lemon_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block LEMON_POLISHED_RESIN_WALL = registerCustomBlock("lemon_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block TOXIC_POLISHED_RESIN = registerBlock("toxic_polished_resin", ABS_BRICKS);
+    public static final Block TOXIC_POLISHED_RESIN_STAIRS = registerCustomBlock("toxic_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.TOXIC_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block TOXIC_POLISHED_RESIN_SLAB = registerCustomBlock("toxic_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block TOXIC_POLISHED_RESIN_WALL = registerCustomBlock("toxic_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block EMERALD_POLISHED_RESIN = registerBlock("emerald_polished_resin", ABS_BRICKS);
+    public static final Block EMERALD_POLISHED_RESIN_STAIRS = registerCustomBlock("emerald_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.EMERALD_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block EMERALD_POLISHED_RESIN_SLAB = registerCustomBlock("emerald_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block EMERALD_POLISHED_RESIN_WALL = registerCustomBlock("emerald_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block JADE_POLISHED_RESIN = registerBlock("jade_polished_resin", ABS_BRICKS);
+    public static final Block JADE_POLISHED_RESIN_STAIRS = registerCustomBlock("jade_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.JADE_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block JADE_POLISHED_RESIN_SLAB = registerCustomBlock("jade_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block JADE_POLISHED_RESIN_WALL = registerCustomBlock("jade_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block OCEAN_POLISHED_RESIN = registerBlock("ocean_polished_resin", ABS_BRICKS);
+    public static final Block OCEAN_POLISHED_RESIN_STAIRS = registerCustomBlock("ocean_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.OCEAN_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block OCEAN_POLISHED_RESIN_SLAB = registerCustomBlock("ocean_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block OCEAN_POLISHED_RESIN_WALL = registerCustomBlock("ocean_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block GLACIER_POLISHED_RESIN = registerBlock("glacier_polished_resin", ABS_BRICKS);
+    public static final Block GLACIER_POLISHED_RESIN_STAIRS = registerCustomBlock("glacier_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GLACIER_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block GLACIER_POLISHED_RESIN_SLAB = registerCustomBlock("glacier_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block GLACIER_POLISHED_RESIN_WALL = registerCustomBlock("glacier_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block BUBBLE_POLISHED_RESIN = registerBlock("bubble_polished_resin", ABS_BRICKS);
+    public static final Block BUBBLE_POLISHED_RESIN_STAIRS = registerCustomBlock("bubble_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.BUBBLE_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block BUBBLE_POLISHED_RESIN_SLAB = registerCustomBlock("bubble_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block BUBBLE_POLISHED_RESIN_WALL = registerCustomBlock("bubble_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block DUSK_POLISHED_RESIN = registerBlock("dusk_polished_resin", ABS_BRICKS);
+    public static final Block DUSK_POLISHED_RESIN_STAIRS = registerCustomBlock("dusk_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DUSK_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block DUSK_POLISHED_RESIN_SLAB = registerCustomBlock("dusk_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block DUSK_POLISHED_RESIN_WALL = registerCustomBlock("dusk_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block CHORUS_POLISHED_RESIN = registerBlock("chorus_polished_resin", ABS_BRICKS);
+    public static final Block CHORUS_POLISHED_RESIN_STAIRS = registerCustomBlock("chorus_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.CHORUS_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block CHORUS_POLISHED_RESIN_SLAB = registerCustomBlock("chorus_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block CHORUS_POLISHED_RESIN_WALL = registerCustomBlock("chorus_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block DAYBREAK_POLISHED_RESIN = registerBlock("daybreak_polished_resin", ABS_BRICKS);
+    public static final Block DAYBREAK_POLISHED_RESIN_STAIRS = registerCustomBlock("daybreak_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.DAYBREAK_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block DAYBREAK_POLISHED_RESIN_SLAB = registerCustomBlock("daybreak_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block DAYBREAK_POLISHED_RESIN_WALL = registerCustomBlock("daybreak_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block SILT_POLISHED_RESIN = registerBlock("silt_polished_resin", ABS_BRICKS);
+    public static final Block SILT_POLISHED_RESIN_STAIRS = registerCustomBlock("silt_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.SILT_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block SILT_POLISHED_RESIN_SLAB = registerCustomBlock("silt_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block SILT_POLISHED_RESIN_WALL = registerCustomBlock("silt_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block GRAPHITE_POLISHED_RESIN = registerBlock("graphite_polished_resin", ABS_BRICKS);
+    public static final Block GRAPHITE_POLISHED_RESIN_STAIRS = registerCustomBlock("graphite_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.GRAPHITE_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block GRAPHITE_POLISHED_RESIN_SLAB = registerCustomBlock("graphite_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block GRAPHITE_POLISHED_RESIN_WALL = registerCustomBlock("graphite_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block OBSIDIAN_POLISHED_RESIN = registerBlock("obsidian_polished_resin", ABS_BRICKS);
+    public static final Block OBSIDIAN_POLISHED_RESIN_STAIRS = registerCustomBlock("obsidian_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.OBSIDIAN_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block OBSIDIAN_POLISHED_RESIN_SLAB = registerCustomBlock("obsidian_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block OBSIDIAN_POLISHED_RESIN_WALL = registerCustomBlock("obsidian_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+    public static final Block COCOA_POLISHED_RESIN = registerBlock("cocoa_polished_resin", ABS_BRICKS);
+    public static final Block COCOA_POLISHED_RESIN_STAIRS = registerCustomBlock("cocoa_polished_resin_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.COCOA_POLISHED_RESIN.getDefaultState(), ABS_BRICKS), ABS_BRICKS);
+    public static final Block COCOA_POLISHED_RESIN_SLAB = registerCustomBlock("cocoa_polished_resin_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_BRICKS), ABS_BRICKS);
+    public static final Block COCOA_POLISHED_RESIN_WALL = registerCustomBlock("cocoa_polished_resin_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_BRICKS), ABS_BRICKS);
+
+
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
         Block block = new Block(blockSettings.registryKey(key));
@@ -560,11 +829,26 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, key, block);
     }
 
+    private static Block registerCustomBlockNotItem(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings) {
+        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
+        Block block = factory.apply(blockSettings.registryKey(key));
+        return Registry.register(Registries.BLOCK, key, block);
+    }
+
     private static void registerBlockItem(String name, Block block) {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Bauen.MOD_ID, name));
         BlockItem item = new BlockItem(block, new Item.Settings().registryKey(key));
         Registry.register(Registries.ITEM, key, item);
     }
+
+//    private static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+//        return Blocks.register(Blocks.keyOf(id), factory, settings);
+//    }
+//
+//    public static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+//        Block block = factory.apply(settings.registryKey(key));
+//        return Registry.register(Registries.BLOCK, key, block);
+//    }
 
     public static void registerModBlocks() {
         Bauen.LOGGER.info(Bauen.MOD_ID + " || Registering ModBlocks");
@@ -645,6 +929,10 @@ public class ModBlocks {
             entries.add(ModBlocks.MOSSY_TUFF_BRICKS_STAIRS);
             entries.add(ModBlocks.MOSSY_TUFF_BRICKS_SLAB);
             entries.add(ModBlocks.MOSSY_TUFF_BRICKS_WALL);
+            entries.add(ModBlocks.CRACKED_TUFF_BRICKS);
+            entries.add(ModBlocks.CRACKED_TUFF_BRICKS_STAIRS);
+            entries.add(ModBlocks.CRACKED_TUFF_BRICKS_SLAB);
+            entries.add(ModBlocks.CRACKED_TUFF_BRICKS_WALL);
             entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS);
             entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS_STAIRS);
             entries.add(ModBlocks.SCULKED_DEEPSLATE_BRICKS_SLAB);
@@ -1027,6 +1315,235 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_GRAY_CARPET);
             entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CARPET);
             entries.add(ModBlocks.ABERRANT_WHITE_CARPET);
+
+            entries.add(ModBlocks.BEETROOT_RESIN_BRICKS);
+            entries.add(ModBlocks.BEETROOT_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.BEETROOT_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.BEETROOT_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.BEETROOT_RESIN_BLOCK);
+            entries.add(ModBlocks.BEETROOT_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.BEETROOT_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.BEETROOT_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_BEETROOT_RESIN_BRICKS);
+
+            entries.add(ModBlocks.CHORUS_RESIN_BRICKS);
+            entries.add(ModBlocks.CHORUS_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.CHORUS_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.CHORUS_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.CHORUS_RESIN_BLOCK);
+            entries.add(ModBlocks.CHORUS_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.CHORUS_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.CHORUS_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_CHORUS_RESIN_BRICKS);
+
+            entries.add(ModBlocks.LEMON_RESIN_BRICKS);
+            entries.add(ModBlocks.LEMON_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.LEMON_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.LEMON_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.LEMON_RESIN_BLOCK);
+            entries.add(ModBlocks.LEMON_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.LEMON_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.LEMON_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_LEMON_RESIN_BRICKS);
+
+            entries.add(ModBlocks.GLACIER_RESIN_BRICKS);
+            entries.add(ModBlocks.GLACIER_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.GLACIER_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.GLACIER_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.GLACIER_RESIN_BLOCK);
+            entries.add(ModBlocks.GLACIER_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.GLACIER_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.GLACIER_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_GLACIER_RESIN_BRICKS);
+
+            entries.add(ModBlocks.CARAMEL_RESIN_BRICKS);
+            entries.add(ModBlocks.CARAMEL_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.CARAMEL_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.CARAMEL_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.CARAMEL_RESIN_BLOCK);
+            entries.add(ModBlocks.CARAMEL_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.CARAMEL_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.CARAMEL_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_CARAMEL_RESIN_BRICKS);
+
+            entries.add(ModBlocks.TOXIC_RESIN_BRICKS);
+            entries.add(ModBlocks.TOXIC_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.TOXIC_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.TOXIC_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.TOXIC_RESIN_BLOCK);
+            entries.add(ModBlocks.TOXIC_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.TOXIC_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.TOXIC_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_TOXIC_RESIN_BRICKS);
+
+            entries.add(ModBlocks.JADE_RESIN_BRICKS);
+            entries.add(ModBlocks.JADE_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.JADE_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.JADE_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.JADE_RESIN_BLOCK);
+            entries.add(ModBlocks.JADE_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.JADE_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.JADE_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_JADE_RESIN_BRICKS);
+
+            entries.add(ModBlocks.BUBBLE_RESIN_BRICKS);
+            entries.add(ModBlocks.BUBBLE_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.BUBBLE_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.BUBBLE_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.BUBBLE_RESIN_BLOCK);
+            entries.add(ModBlocks.BUBBLE_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.BUBBLE_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.BUBBLE_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_BUBBLE_RESIN_BRICKS);
+
+            entries.add(ModBlocks.OCEAN_RESIN_BRICKS);
+            entries.add(ModBlocks.OCEAN_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.OCEAN_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.OCEAN_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.OCEAN_RESIN_BLOCK);
+            entries.add(ModBlocks.OCEAN_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.OCEAN_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.OCEAN_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_OCEAN_RESIN_BRICKS);
+
+            entries.add(ModBlocks.EMERALD_RESIN_BRICKS);
+            entries.add(ModBlocks.EMERALD_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.EMERALD_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.EMERALD_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.EMERALD_RESIN_BLOCK);
+            entries.add(ModBlocks.EMERALD_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.EMERALD_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.EMERALD_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_EMERALD_RESIN_BRICKS);
+
+            entries.add(ModBlocks.DUSK_RESIN_BRICKS);
+            entries.add(ModBlocks.DUSK_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.DUSK_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.DUSK_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.DUSK_RESIN_BLOCK);
+            entries.add(ModBlocks.DUSK_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.DUSK_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.DUSK_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_DUSK_RESIN_BRICKS);
+
+            entries.add(ModBlocks.DAYBREAK_RESIN_BRICKS);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BLOCK);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.DAYBREAK_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_DAYBREAK_RESIN_BRICKS);
+
+            entries.add(ModBlocks.SILT_RESIN_BRICKS);
+            entries.add(ModBlocks.SILT_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.SILT_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.SILT_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.SILT_RESIN_BLOCK);
+            entries.add(ModBlocks.SILT_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.SILT_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.SILT_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_SILT_RESIN_BRICKS);
+
+            entries.add(ModBlocks.GRAPHITE_RESIN_BRICKS);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BLOCK);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.GRAPHITE_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_GRAPHITE_RESIN_BRICKS);
+
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BRICKS);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BLOCK);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.OBSIDIAN_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_OBSIDIAN_RESIN_BRICKS);
+
+            entries.add(ModBlocks.COCOA_RESIN_BRICKS);
+            entries.add(ModBlocks.COCOA_RESIN_BRICKS_STAIRS);
+            entries.add(ModBlocks.COCOA_RESIN_BRICKS_SLAB);
+            entries.add(ModBlocks.COCOA_RESIN_BRICKS_WALL);
+            entries.add(ModBlocks.COCOA_RESIN_BLOCK);
+            entries.add(ModBlocks.COCOA_RESIN_BLOCK_STAIRS);
+            entries.add(ModBlocks.COCOA_RESIN_BLOCK_SLAB);
+            entries.add(ModBlocks.COCOA_RESIN_BLOCK_WALL);
+            entries.add(ModBlocks.CHISELED_COCOA_RESIN_BRICKS);
+
+            entries.add(ModBlocks.POLISHED_RESIN);
+            entries.add(ModBlocks.POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.BEETROOT_POLISHED_RESIN);
+            entries.add(ModBlocks.BEETROOT_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.BEETROOT_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.BEETROOT_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.CARAMEL_POLISHED_RESIN);
+            entries.add(ModBlocks.CARAMEL_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.CARAMEL_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.CARAMEL_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.LEMON_POLISHED_RESIN);
+            entries.add(ModBlocks.LEMON_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.LEMON_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.LEMON_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.TOXIC_POLISHED_RESIN);
+            entries.add(ModBlocks.TOXIC_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.TOXIC_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.TOXIC_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.EMERALD_POLISHED_RESIN);
+            entries.add(ModBlocks.EMERALD_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.EMERALD_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.EMERALD_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.JADE_POLISHED_RESIN);
+            entries.add(ModBlocks.JADE_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.JADE_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.JADE_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.OCEAN_POLISHED_RESIN);
+            entries.add(ModBlocks.OCEAN_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.OCEAN_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.OCEAN_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.GLACIER_POLISHED_RESIN);
+            entries.add(ModBlocks.GLACIER_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.GLACIER_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.GLACIER_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.BUBBLE_POLISHED_RESIN);
+            entries.add(ModBlocks.BUBBLE_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.BUBBLE_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.BUBBLE_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.DUSK_POLISHED_RESIN);
+            entries.add(ModBlocks.DUSK_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.DUSK_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.DUSK_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.CHORUS_POLISHED_RESIN);
+            entries.add(ModBlocks.CHORUS_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.CHORUS_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.CHORUS_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.DAYBREAK_POLISHED_RESIN);
+            entries.add(ModBlocks.DAYBREAK_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.DAYBREAK_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.DAYBREAK_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.SILT_POLISHED_RESIN);
+            entries.add(ModBlocks.SILT_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.SILT_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.SILT_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.GRAPHITE_POLISHED_RESIN);
+            entries.add(ModBlocks.GRAPHITE_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.GRAPHITE_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.GRAPHITE_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.OBSIDIAN_POLISHED_RESIN);
+            entries.add(ModBlocks.OBSIDIAN_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.OBSIDIAN_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.OBSIDIAN_POLISHED_RESIN_WALL);
+            entries.add(ModBlocks.COCOA_POLISHED_RESIN);
+            entries.add(ModBlocks.COCOA_POLISHED_RESIN_STAIRS);
+            entries.add(ModBlocks.COCOA_POLISHED_RESIN_SLAB);
+            entries.add(ModBlocks.COCOA_POLISHED_RESIN_WALL);
         });
     }
 }

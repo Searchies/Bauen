@@ -6,8 +6,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.MultifaceBlock;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.item.Items;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
 import net.searchies.bauen.init.ModBlocks;
@@ -110,6 +115,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.MOSSY_TUFF_BRICKS_STAIRS)
                 .slab(ModBlocks.MOSSY_TUFF_BRICKS_SLAB)
                 .wall(ModBlocks.MOSSY_TUFF_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_TUFF_BRICKS)
+                .stairs(ModBlocks.CRACKED_TUFF_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_TUFF_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_TUFF_BRICKS_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SCULKED_DEEPSLATE_BRICKS)
                 .stairs(ModBlocks.SCULKED_DEEPSLATE_BRICKS_STAIRS)
                 .slab(ModBlocks.SCULKED_DEEPSLATE_BRICKS_SLAB)
@@ -370,97 +379,99 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_RED_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_RED_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_RED_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_RED_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_ORANGE_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_ORANGE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_ORANGE_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_ORANGE_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_ORANGE_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_YELLOW_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_YELLOW_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_YELLOW_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_YELLOW_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_YELLOW_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_LIME_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIME_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIME_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIME_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIME_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_GREEN_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GREEN_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GREEN_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GREEN_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GREEN_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_CYAN_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CYAN_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CYAN_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CYAN_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CYAN_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_LIGHT_BLUE_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_BLUE_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLUE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLUE_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLUE_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLUE_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_PINK_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PINK_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PINK_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PINK_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PINK_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_MAGENTA_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_MAGENTA_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_MAGENTA_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_MAGENTA_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_PURPLE_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PURPLE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PURPLE_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PURPLE_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_PURPLE_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_BROWN_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BROWN_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BROWN_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BROWN_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BROWN_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_BLACK_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLACK_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLACK_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLACK_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_BLACK_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_GRAY_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GRAY_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GRAY_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GRAY_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GRAY_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_LIGHT_GRAY_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA);
 
         registerSeat(ModBlocks.ABERRANT_WHITE_SEAT, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_WHITE_CONCRETE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_WHITE_CONCRETE_POWER);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_WHITE_TERRACOTTA);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_WHITE_GLAZED_TERRACOTTA);
+
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_WHITE_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_ORANGE_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_MAGENTA_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_YELLOW_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_LIME_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_PINK_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_GRAY_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_CYAN_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_PURPLE_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_BLUE_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_BROWN_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_GREEN_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_RED_GLAZED_TERRACOTTA,
+                ModBlocks.ABERRANT_BLACK_GLAZED_TERRACOTTA);
 
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.ABERRANT_RED_WOOL, ModBlocks.ABERRANT_RED_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.ABERRANT_ORANGE_WOOL, ModBlocks.ABERRANT_ORANGE_CARPET);
@@ -478,6 +489,253 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.ABERRANT_GRAY_WOOL, ModBlocks.ABERRANT_GRAY_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL, ModBlocks.ABERRANT_LIGHT_GRAY_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.ABERRANT_WHITE_WOOL, ModBlocks.ABERRANT_WHITE_CARPET);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BEETROOT_RESIN_BRICKS)
+                .stairs(ModBlocks.BEETROOT_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.BEETROOT_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.BEETROOT_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BEETROOT_RESIN_BLOCK)
+                .stairs(ModBlocks.BEETROOT_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.BEETROOT_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.BEETROOT_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BEETROOT_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BEETROOT_RESIN_CLUMP, ModItems.BEETROOT_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_RESIN_BRICKS)
+                .stairs(ModBlocks.CHORUS_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.CHORUS_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.CHORUS_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_RESIN_BLOCK)
+                .stairs(ModBlocks.CHORUS_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.CHORUS_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.CHORUS_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_CHORUS_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.CHORUS_RESIN_CLUMP, ModItems.CHORUS_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LEMON_RESIN_BRICKS)
+                .stairs(ModBlocks.LEMON_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.LEMON_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.LEMON_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LEMON_RESIN_BLOCK)
+                .stairs(ModBlocks.LEMON_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.LEMON_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.LEMON_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_LEMON_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.LEMON_RESIN_CLUMP, ModItems.LEMON_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLACIER_RESIN_BRICKS)
+                .stairs(ModBlocks.GLACIER_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.GLACIER_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.GLACIER_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLACIER_RESIN_BLOCK)
+                .stairs(ModBlocks.GLACIER_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.GLACIER_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.GLACIER_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_GLACIER_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GLACIER_RESIN_CLUMP, ModItems.GLACIER_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CARAMEL_RESIN_BRICKS)
+                .stairs(ModBlocks.CARAMEL_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.CARAMEL_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.CARAMEL_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CARAMEL_RESIN_BLOCK)
+                .stairs(ModBlocks.CARAMEL_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.CARAMEL_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.CARAMEL_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_CARAMEL_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.CARAMEL_RESIN_CLUMP, ModItems.CARAMEL_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TOXIC_RESIN_BRICKS)
+                .stairs(ModBlocks.TOXIC_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.TOXIC_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.TOXIC_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TOXIC_RESIN_BLOCK)
+                .stairs(ModBlocks.TOXIC_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.TOXIC_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.TOXIC_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_TOXIC_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.TOXIC_RESIN_CLUMP, ModItems.TOXIC_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JADE_RESIN_BRICKS)
+                .stairs(ModBlocks.JADE_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.JADE_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.JADE_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JADE_RESIN_BLOCK)
+                .stairs(ModBlocks.JADE_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.JADE_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.JADE_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_JADE_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.JADE_RESIN_CLUMP, ModItems.JADE_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BUBBLE_RESIN_BRICKS)
+                .stairs(ModBlocks.BUBBLE_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.BUBBLE_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.BUBBLE_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BUBBLE_RESIN_BLOCK)
+                .stairs(ModBlocks.BUBBLE_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.BUBBLE_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.BUBBLE_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_BUBBLE_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BUBBLE_RESIN_CLUMP, ModItems.BUBBLE_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OCEAN_RESIN_BRICKS)
+                .stairs(ModBlocks.OCEAN_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.OCEAN_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.OCEAN_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OCEAN_RESIN_BLOCK)
+                .stairs(ModBlocks.OCEAN_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.OCEAN_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.OCEAN_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_OCEAN_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.OCEAN_RESIN_CLUMP, ModItems.OCEAN_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EMERALD_RESIN_BRICKS)
+                .stairs(ModBlocks.EMERALD_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.EMERALD_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.EMERALD_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EMERALD_RESIN_BLOCK)
+                .stairs(ModBlocks.EMERALD_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.EMERALD_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.EMERALD_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_EMERALD_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.EMERALD_RESIN_CLUMP, ModItems.EMERALD_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DUSK_RESIN_BRICKS)
+                .stairs(ModBlocks.DUSK_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.DUSK_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.DUSK_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DUSK_RESIN_BLOCK)
+                .stairs(ModBlocks.DUSK_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.DUSK_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.DUSK_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_DUSK_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.DUSK_RESIN_CLUMP, ModItems.DUSK_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DAYBREAK_RESIN_BRICKS)
+                .stairs(ModBlocks.DAYBREAK_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.DAYBREAK_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.DAYBREAK_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DAYBREAK_RESIN_BLOCK)
+                .stairs(ModBlocks.DAYBREAK_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.DAYBREAK_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.DAYBREAK_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_DAYBREAK_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.DAYBREAK_RESIN_CLUMP, ModItems.DAYBREAK_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SILT_RESIN_BRICKS)
+                .stairs(ModBlocks.SILT_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.SILT_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.SILT_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SILT_RESIN_BLOCK)
+                .stairs(ModBlocks.SILT_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.SILT_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.SILT_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_SILT_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.SILT_RESIN_CLUMP, ModItems.SILT_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAPHITE_RESIN_BRICKS)
+                .stairs(ModBlocks.GRAPHITE_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.GRAPHITE_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.GRAPHITE_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAPHITE_RESIN_BLOCK)
+                .stairs(ModBlocks.GRAPHITE_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.GRAPHITE_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.GRAPHITE_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_GRAPHITE_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GRAPHITE_RESIN_CLUMP, ModItems.GRAPHITE_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OBSIDIAN_RESIN_BRICKS)
+                .stairs(ModBlocks.OBSIDIAN_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.OBSIDIAN_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.OBSIDIAN_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OBSIDIAN_RESIN_BLOCK)
+                .stairs(ModBlocks.OBSIDIAN_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.OBSIDIAN_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.OBSIDIAN_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_OBSIDIAN_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.OBSIDIAN_RESIN_CLUMP, ModItems.OBSIDIAN_RESIN_CLUMP);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COCOA_RESIN_BRICKS)
+                .stairs(ModBlocks.COCOA_RESIN_BRICKS_STAIRS)
+                .slab(ModBlocks.COCOA_RESIN_BRICKS_SLAB)
+                .wall(ModBlocks.COCOA_RESIN_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COCOA_RESIN_BLOCK)
+                .stairs(ModBlocks.COCOA_RESIN_BLOCK_STAIRS)
+                .slab(ModBlocks.COCOA_RESIN_BLOCK_SLAB)
+                .wall(ModBlocks.COCOA_RESIN_BLOCK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_COCOA_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.COCOA_RESIN_CLUMP, ModItems.COCOA_RESIN_CLUMP);
+
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_RESIN)
+                .stairs(ModBlocks.POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BEETROOT_POLISHED_RESIN)
+                .stairs(ModBlocks.BEETROOT_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.BEETROOT_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.BEETROOT_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CARAMEL_POLISHED_RESIN)
+                .stairs(ModBlocks.CARAMEL_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.CARAMEL_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.CARAMEL_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LEMON_POLISHED_RESIN)
+                .stairs(ModBlocks.LEMON_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.LEMON_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.LEMON_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TOXIC_POLISHED_RESIN)
+                .stairs(ModBlocks.TOXIC_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.TOXIC_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.TOXIC_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EMERALD_POLISHED_RESIN)
+                .stairs(ModBlocks.EMERALD_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.EMERALD_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.EMERALD_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JADE_POLISHED_RESIN)
+                .stairs(ModBlocks.JADE_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.JADE_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.JADE_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OCEAN_POLISHED_RESIN)
+                .stairs(ModBlocks.OCEAN_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.OCEAN_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.OCEAN_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GLACIER_POLISHED_RESIN)
+                .stairs(ModBlocks.GLACIER_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.GLACIER_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.GLACIER_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BUBBLE_POLISHED_RESIN)
+                .stairs(ModBlocks.BUBBLE_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.BUBBLE_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.BUBBLE_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DUSK_POLISHED_RESIN)
+                .stairs(ModBlocks.DUSK_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.DUSK_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.DUSK_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHORUS_POLISHED_RESIN)
+                .stairs(ModBlocks.CHORUS_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.CHORUS_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.CHORUS_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DAYBREAK_POLISHED_RESIN)
+                .stairs(ModBlocks.DAYBREAK_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.DAYBREAK_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.DAYBREAK_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SILT_POLISHED_RESIN)
+                .stairs(ModBlocks.SILT_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.SILT_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.SILT_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GRAPHITE_POLISHED_RESIN)
+                .stairs(ModBlocks.GRAPHITE_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.GRAPHITE_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.GRAPHITE_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OBSIDIAN_POLISHED_RESIN)
+                .stairs(ModBlocks.OBSIDIAN_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.OBSIDIAN_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.OBSIDIAN_POLISHED_RESIN_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COCOA_POLISHED_RESIN)
+                .stairs(ModBlocks.COCOA_POLISHED_RESIN_STAIRS)
+                .slab(ModBlocks.COCOA_POLISHED_RESIN_SLAB)
+                .wall(ModBlocks.COCOA_POLISHED_RESIN_WALL);
+
     }
 
     @Override
@@ -487,6 +745,23 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TROWEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ABERRANT_PASTE, Models.GENERATED);
         itemModelGenerator.register(ModBlocks.GOLD_CHAIN.asItem(), Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.BEETROOT_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHORUS_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEMON_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLACIER_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CARAMEL_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOXIC_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JADE_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BUBBLE_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OCEAN_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EMERALD_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DUSK_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DAYBREAK_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILT_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRAPHITE_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OBSIDIAN_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COCOA_RESIN_BRICK, Models.GENERATED);
     }
 
     public void registerSeat(Block block, BlockStateModelGenerator generator) {
