@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "bauen:block/beetroot_resin_block",
+    "side": "bauen:block/beetroot_resin_block",
+    "top": "bauen:block/beetroot_resin_block"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:toxic_resin_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:chiseled_toxic_resin_bricks"
+  }
+}

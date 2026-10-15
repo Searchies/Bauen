@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bubble_resin_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:bubble_resin_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:bubble_resin_bricks_slab_from_bubble_resin_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bubble_resin_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:bubble_resin_bricks_slab_from_bubble_resin_bricks_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "bauen:block/polished_resin",
+    "side": "bauen:block/polished_resin",
+    "top": "bauen:block/polished_resin"
+  }
+}

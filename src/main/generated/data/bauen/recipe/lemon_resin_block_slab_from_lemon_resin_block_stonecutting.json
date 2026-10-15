@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:lemon_resin_block",
+  "result": {
+    "count": 1,
+    "id": "bauen:lemon_resin_block_slab"
+  }
+}

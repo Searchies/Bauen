@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump",
+    "bauen:glacier_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:glacier_resin_block"
+  }
+}

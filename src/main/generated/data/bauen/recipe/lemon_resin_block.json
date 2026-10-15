@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump",
+    "bauen:lemon_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:lemon_resin_block"
+  }
+}

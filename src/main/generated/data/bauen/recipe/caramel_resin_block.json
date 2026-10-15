@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump",
+    "bauen:caramel_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:caramel_resin_block"
+  }
+}

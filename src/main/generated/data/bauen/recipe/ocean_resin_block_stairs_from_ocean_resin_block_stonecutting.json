@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:ocean_resin_block",
+  "result": {
+    "count": 1,
+    "id": "bauen:ocean_resin_block_stairs"
+  }
+}

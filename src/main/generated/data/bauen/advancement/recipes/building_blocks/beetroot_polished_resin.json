@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beetroot_resin_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:beetroot_resin_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:beetroot_polished_resin"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_beetroot_resin_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:beetroot_polished_resin"
+    ]
+  }
+}

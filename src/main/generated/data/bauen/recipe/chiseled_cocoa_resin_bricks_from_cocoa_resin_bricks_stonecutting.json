@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:cocoa_resin_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:chiseled_cocoa_resin_bricks"
+  }
+}
