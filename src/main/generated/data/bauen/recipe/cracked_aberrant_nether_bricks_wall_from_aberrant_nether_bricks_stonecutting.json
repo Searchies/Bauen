@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:aberrant_nether_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:cracked_aberrant_nether_bricks_wall"
+  }
+}

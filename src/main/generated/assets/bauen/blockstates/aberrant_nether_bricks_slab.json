@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/aberrant_nether_bricks_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/aberrant_nether_bricks"
+    },
+    "type=top": {
+      "model": "bauen:block/aberrant_nether_bricks_slab_top"
+    }
+  }
+}

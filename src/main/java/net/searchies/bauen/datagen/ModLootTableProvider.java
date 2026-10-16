@@ -2,8 +2,27 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.loottable.vanilla.VanillaBlockLootTableGenerator;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.loot.condition.MatchToolLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
+import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.LimitCountLootFunction;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.operator.BoundedIntUnaryOperator;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.registry.RegistryEntryLookup;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModItems;
 
@@ -777,5 +796,69 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COCOA_POLISHED_RESIN_STAIRS);
         addDrop(ModBlocks.COCOA_POLISHED_RESIN_SLAB, slabDrops(ModBlocks.COCOA_POLISHED_RESIN_SLAB));
         addDrop(ModBlocks.COCOA_POLISHED_RESIN_WALL);
+
+        addDrop(ModBlocks.AMETHYST_TILES);
+        addDrop(ModBlocks.AMETHYST_BRICKS);
+
+        addDrop(ModBlocks.ABERRANT_AMETHYST_BLOCK);
+        addDrop(ModBlocks.BUDDING_ABERRANT_AMETHYST, dropsNothing());
+        addDropWithSilkTouch(ModBlocks.SMALL_ABERRANT_AMETHYST_BUD);
+        addDropWithSilkTouch(ModBlocks.MEDIUM_ABERRANT_AMETHYST_BUD);
+        addDropWithSilkTouch(ModBlocks.LARGE_ABERRANT_AMETHYST_BUD);
+        addDrop(ModBlocks.ABERRANT_AMETHYST_CLUSTER, (Block block) -> dropsWithSilkTouch((Block)block, ((LeafEntry.Builder)((LootPoolEntry.Builder)((Object)((LeafEntry.Builder) ItemEntry.builder(ModItems.ABERRANT_AMETHYST_SHARD).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(4.0f)))).apply(ApplyBonusLootFunction.oreDrops(((RegistryWrapper.Impl)registries.getOrThrow(RegistryKeys.ENCHANTMENT)).getOrThrow(Enchantments.FORTUNE))))).conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().tag((RegistryWrapper.Impl)registries.getOrThrow(RegistryKeys.ITEM), ItemTags.CLUSTER_MAX_HARVESTABLES)))).alternatively((LootPoolEntry.Builder)this.applyExplosionDecay((ItemConvertible)block, ItemEntry.builder(ModItems.ABERRANT_AMETHYST_SHARD).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2.0f)))))));
+
+        addDrop(ModBlocks.ABERRANT_AMETHYST_TILES);
+        addDrop(ModBlocks.ABERRANT_AMETHYST_BRICKS);
+
+        addDrop(ModBlocks.AMETHYST_TILES_STAIRS);
+        addDrop(ModBlocks.AMETHYST_TILES_SLAB, slabDrops(ModBlocks.AMETHYST_TILES_SLAB));
+        addDrop(ModBlocks.AMETHYST_TILES_WALL);
+        addDrop(ModBlocks.AMETHYST_BRICKS_STAIRS);
+        addDrop(ModBlocks.AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.AMETHYST_BRICKS_SLAB));
+        addDrop(ModBlocks.AMETHYST_BRICKS_WALL);
+        addDrop(ModBlocks.ABERRANT_AMETHYST_TILES_STAIRS);
+        addDrop(ModBlocks.ABERRANT_AMETHYST_TILES_SLAB, slabDrops(ModBlocks.ABERRANT_AMETHYST_TILES_SLAB));
+        addDrop(ModBlocks.ABERRANT_AMETHYST_TILES_WALL);
+        addDrop(ModBlocks.ABERRANT_AMETHYST_BRICKS_STAIRS);
+        addDrop(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB));
+        addDrop(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL);
+
+        addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE);
+        addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS);
+        addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB, slabDrops(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB));
+        addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE_WALL);
+        addDrop(ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE);
+        addDrop(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE);
+        addDrop(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE);
+        addDrop(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_STAIRS);
+        addDrop(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_SLAB, slabDrops(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_SLAB));
+        addDrop(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_WALL);
+
+        addDrop(ModBlocks.ABERRANT_PUMPKIN);
+        addDrop(ModBlocks.ABERRANT_CARVED_PUMPKIN);
+        addDrop(ModBlocks.ABERRANT_JACK_O_LANTERN);
+
+        addDrop(ModBlocks.ABERRANT_OBSIDIAN);
+        addDrop(ModBlocks.ABERRANT_CRYING_OBSIDIAN);
+
+        addDrop(ModBlocks.ABERRANT_NETHERRACK);
+        addDrop(ModBlocks.ABERRANT_NETHER_BRICKS);
+        addDrop(ModBlocks.ABERRANT_NETHER_BRICKS_STAIRS);
+        addDrop(ModBlocks.ABERRANT_NETHER_BRICKS_SLAB, slabDrops(ModBlocks.ABERRANT_NETHER_BRICKS_SLAB));
+        addDrop(ModBlocks.ABERRANT_NETHER_BRICKS_WALL);
+        addDrop(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS);
+        addDrop(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_STAIRS);
+        addDrop(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_SLAB, slabDrops(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_SLAB));
+        addDrop(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_WALL);
+        addDrop(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS);
+        addDrop(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_STAIRS);
+        addDrop(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_SLAB, slabDrops(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_SLAB));
+        addDrop(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_WALL);
+        addDrop(ModBlocks.ABERRANT_RED_NETHER_BRICKS);
+        addDrop(ModBlocks.ABERRANT_RED_NETHER_BRICKS_STAIRS);
+        addDrop(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB, slabDrops(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB));
+        addDrop(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
+
+        addDrop(ModBlocks.ABERRANT_GLOWSTONE, (Block block) -> dropsWithSilkTouch((Block)block, (LootPoolEntry.Builder)applyExplosionDecay((ItemConvertible)block, ((LeafEntry.Builder)((LeafEntry.Builder)ItemEntry.builder(Items.GLOWSTONE_DUST).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))).apply(ApplyBonusLootFunction.uniformBonusCount(((RegistryWrapper.Impl)registries.getOrThrow(RegistryKeys.ENCHANTMENT)).getOrThrow(Enchantments.FORTUNE)))).apply(LimitCountLootFunction.builder(BoundedIntUnaryOperator.create(1, 4))))));
     }
 }

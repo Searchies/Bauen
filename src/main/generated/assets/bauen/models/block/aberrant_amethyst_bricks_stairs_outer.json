@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "bauen:block/aberrant_amethyst_bricks",
+    "side": "bauen:block/aberrant_amethyst_bricks",
+    "top": "bauen:block/aberrant_amethyst_bricks"
+  }
+}

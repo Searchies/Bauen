@@ -913,7 +913,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // ABERRANT //
 
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.ABERRANT_PASTE, 4)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.ABERRANT_PASTE, 8)
                     .input(Items.GLOW_BERRIES)
                     .input(Items.AMETHYST_SHARD)
                     .input(Items.GLOW_INK_SAC)
@@ -2588,7 +2588,77 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_POLISHED_RESIN, ModBlocks.OBSIDIAN_RESIN_BLOCK);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_POLISHED_RESIN, ModBlocks.COCOA_RESIN_BLOCK);
 
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES, Blocks.AMETHYST_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_SLAB, ModBlocks.AMETHYST_TILES, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_STAIRS, ModBlocks.AMETHYST_TILES);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.AMETHYST_TILES_WALL, ModBlocks.AMETHYST_TILES);
 
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICKS, ModBlocks.AMETHYST_TILES);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICKS_SLAB, ModBlocks.AMETHYST_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_BRICKS_STAIRS, ModBlocks.AMETHYST_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.AMETHYST_BRICKS_WALL, ModBlocks.AMETHYST_BRICKS);
+
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_BLOCK, ModItems.ABERRANT_AMETHYST_SHARD);
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_TILES, ModBlocks.ABERRANT_AMETHYST_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_TILES_SLAB, ModBlocks.ABERRANT_AMETHYST_TILES, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_TILES_STAIRS, ModBlocks.ABERRANT_AMETHYST_TILES);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.ABERRANT_AMETHYST_TILES_WALL, ModBlocks.ABERRANT_AMETHYST_TILES);
+
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_BRICKS, ModBlocks.ABERRANT_AMETHYST_TILES);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB, ModBlocks.ABERRANT_AMETHYST_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_BRICKS_STAIRS, ModBlocks.ABERRANT_AMETHYST_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL, ModBlocks.ABERRANT_AMETHYST_BRICKS);
+
+                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB,
+                        Ingredient.ofItems(ModBlocks.ABERRANT_SOUL_SANDSTONE, ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE))
+                        .offerTo(exporter);
+                createStairsRecipe(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS,
+                        Ingredient.ofItems(ModBlocks.ABERRANT_SOUL_SANDSTONE, ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE, ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE))
+                        .criterion(hasItem(ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE))
+                        .offerTo(exporter);
+                offerWallRecipe(RecipeCategory.DECORATIONS, ModBlocks.ABERRANT_SOUL_SANDSTONE_WALL, ModBlocks.ABERRANT_SOUL_SANDSTONE);
+                offerChiseledBlockRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE, ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB);
+                offerCutCopperRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE, ModBlocks.ABERRANT_SOUL_SANDSTONE);
+
+                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItem(ModBlocks.ABERRANT_SOUL_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE.asItem(),0.1f, 200)
+                        .criterion(hasItem(ModBlocks.ABERRANT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_SOUL_SANDSTONE))
+                        .offerTo(exporter);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE, ModBlocks.ABERRANT_SOUL_SANDSTONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB, ModBlocks.ABERRANT_SOUL_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS, ModBlocks.ABERRANT_SOUL_SANDSTONE);
+                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.ABERRANT_SOUL_SANDSTONE_WALL, ModBlocks.ABERRANT_SOUL_SANDSTONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE, ModBlocks.ABERRANT_SOUL_SANDSTONE);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_SLAB, ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_STAIRS, ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_JACK_O_LANTERN)
+                    .input('A', ModBlocks.ABERRANT_CARVED_PUMPKIN)
+                    .input('B', Blocks.SOUL_TORCH)
+                    .pattern("A")
+                    .pattern("B")
+                    .criterion(hasItem(ModBlocks.ABERRANT_CARVED_PUMPKIN), conditionsFromItem(ModBlocks.ABERRANT_CARVED_PUMPKIN))
+                    .offerTo(exporter);
+
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_NETHER_BRICKS, ModItems.ABERRANT_NETHER_BRICK);
+                CookingRecipeJsonBuilder.createSmelting(
+                    Ingredient.ofItem(ModBlocks.ABERRANT_NETHERRACK), RecipeCategory.MISC, ModItems.ABERRANT_NETHER_BRICK, 0.1f, 200)
+                    .criterion(hasItem(ModBlocks.ABERRANT_NETHERRACK), conditionsFromItem(ModBlocks.ABERRANT_NETHERRACK))
+                    .offerTo(exporter);
+
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_STAIRS, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_SLAB, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_WALL, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_STAIRS, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_SLAB, ModBlocks.ABERRANT_NETHER_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_WALL, ModBlocks.ABERRANT_NETHER_BRICKS);
             }
 
             public void offer2x2CompactingRecipe4(RecipeCategory category, ItemConvertible output, ItemConvertible input) {

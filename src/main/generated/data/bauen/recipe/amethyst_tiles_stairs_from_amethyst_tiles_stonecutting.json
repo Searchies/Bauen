@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:amethyst_tiles",
+  "result": {
+    "count": 1,
+    "id": "bauen:amethyst_tiles_stairs"
+  }
+}

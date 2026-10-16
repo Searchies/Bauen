@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "bauen:block/aberrant_jack_o_lantern",
+    "side": "bauen:block/aberrant_pumpkin_side",
+    "top": "bauen:block/aberrant_pumpkin_top"
+  }
+}

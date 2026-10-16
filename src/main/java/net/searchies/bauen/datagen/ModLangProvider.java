@@ -727,6 +727,69 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.COCOA_POLISHED_RESIN_SLAB.asItem(), "Cocoa Polished Resin Slab");
         translationBuilder.add(ModBlocks.COCOA_POLISHED_RESIN_WALL.asItem(), "Cocoa Polished Resin Wall");
 
+        translationBuilder.add(ModBlocks.AMETHYST_TILES.asItem(), "Amethyst Tiles");
+        translationBuilder.add(ModBlocks.AMETHYST_BRICKS.asItem(), "Amethyst Bricks");
+
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BLOCK.asItem(), "Block of Aberrant Amethyst");
+        translationBuilder.add(ModBlocks.BUDDING_ABERRANT_AMETHYST.asItem(), "Budding Aberrant Amethyst");
+        translationBuilder.add(ModBlocks.SMALL_ABERRANT_AMETHYST_BUD.asItem(), "Small Aberrant Amethyst Bud");
+        translationBuilder.add(ModBlocks.MEDIUM_ABERRANT_AMETHYST_BUD.asItem(), "Medium Aberrant Amethyst Bud");
+        translationBuilder.add(ModBlocks.LARGE_ABERRANT_AMETHYST_BUD.asItem(), "Large Aberrant Amethyst Bud");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_CLUSTER.asItem(), "Aberrant Amethyst Cluster");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_TILES.asItem(), "Aberrant Amethyst Tiles");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BRICKS.asItem(), "Aberrant Amethyst Bricks");
+        translationBuilder.add(ModItems.ABERRANT_AMETHYST_SHARD.asItem(), "Aberrant Amethyst Shard");
+
+        translationBuilder.add(ModBlocks.AMETHYST_TILES_STAIRS.asItem(), "Amethyst Tiles Stairs");
+        translationBuilder.add(ModBlocks.AMETHYST_TILES_SLAB.asItem(), "Amethyst Tiles Slab");
+        translationBuilder.add(ModBlocks.AMETHYST_TILES_WALL.asItem(), "Amethyst Tiles Wall");
+        translationBuilder.add(ModBlocks.AMETHYST_BRICKS_STAIRS.asItem(), "Amethyst Bricks Stairs");
+        translationBuilder.add(ModBlocks.AMETHYST_BRICKS_SLAB.asItem(), "Amethyst Bricks Slab");
+        translationBuilder.add(ModBlocks.AMETHYST_BRICKS_WALL.asItem(), "Amethyst Bricks Wall");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_TILES_STAIRS.asItem(), "Aberrant Amethyst Tiles Stairs");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_TILES_SLAB.asItem(), "Aberrant Amethyst Tiles Slab");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_TILES_WALL.asItem(), "Aberrant Amethyst Tiles Wall");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_STAIRS.asItem(), "Aberrant Amethyst Bricks Stairs");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB.asItem(), "Aberrant Amethyst Bricks Slab");
+        translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL.asItem(), "Aberrant Amethyst Bricks Wall");
+
+        translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE.asItem(), "Aberrant Soul Sandstone");
+        translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS.asItem(), "Aberrant Soul Sandstone Stairs");
+        translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB.asItem(), "Aberrant Soul Sandstone Slab");
+        translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_WALL.asItem(), "Aberrant Soul Sandstone Wall");
+        translationBuilder.add(ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE.asItem(), "Aberrant Cut Soul Sandstone");
+        translationBuilder.add(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE.asItem(), "Aberrant Chiseled Soul Sandstone");
+        translationBuilder.add(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE.asItem(), "Aberrant Smooth Soul Sandstone ");
+        translationBuilder.add(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_STAIRS.asItem(), "Aberrant Smooth Soul Sandstone Stairs");
+        translationBuilder.add(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_SLAB.asItem(), "Aberrant Smooth Soul Sandstone Slab");
+        translationBuilder.add(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_WALL.asItem(), "Aberrant Smooth Soul Sandstone Wall");
+
+        translationBuilder.add(ModBlocks.ABERRANT_PUMPKIN.asItem(), "Aberrant Pumpkin");
+        translationBuilder.add(ModBlocks.ABERRANT_CARVED_PUMPKIN.asItem(), "Aberrant Carved Pumpkin");
+        translationBuilder.add(ModBlocks.ABERRANT_JACK_O_LANTERN.asItem(), "Aberrant Jack o'Lantern");
+
+        translationBuilder.add(ModBlocks.ABERRANT_OBSIDIAN.asItem(), "Aberrant Obsidian");
+        translationBuilder.add(ModBlocks.ABERRANT_CRYING_OBSIDIAN.asItem(), "Aberrant Crying Obsidian");
+
+        translationBuilder.add(ModBlocks.ABERRANT_NETHERRACK.asItem(), "Aberrant Netherrack");
+        translationBuilder.add(ModBlocks.ABERRANT_NETHER_BRICKS.asItem(), "Aberrant Nether Bricks");
+        translationBuilder.add(ModBlocks.ABERRANT_NETHER_BRICKS_STAIRS.asItem(), "Aberrant Nether Bricks Stairs");
+        translationBuilder.add(ModBlocks.ABERRANT_NETHER_BRICKS_SLAB.asItem(), "Aberrant Nether Bricks Slab");
+        translationBuilder.add(ModBlocks.ABERRANT_NETHER_BRICKS_WALL.asItem(), "Aberrant Nether Bricks Wall");
+        translationBuilder.add(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS.asItem(), "Cracked Aberrant Nether Bricks");
+        translationBuilder.add(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_STAIRS.asItem(), "Cracked Aberrant Nether Bricks Stairs");
+        translationBuilder.add(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_SLAB.asItem(), "Cracked Aberrant Nether Bricks Slab");
+        translationBuilder.add(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_WALL.asItem(), "Cracked Aberrant Nether Bricks Wall");
+        translationBuilder.add(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS.asItem(), "Chiseled Aberrant Nether Bricks");
+        translationBuilder.add(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_STAIRS.asItem(), "Chiseled Aberrant Nether Bricks Stairs");
+        translationBuilder.add(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_SLAB.asItem(), "Chiseled Aberrant Nether Bricks Slab");
+        translationBuilder.add(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_WALL.asItem(), "Chiseled Aberrant Nether Bricks Wall");
+        translationBuilder.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS.asItem(), "Aberrant Red Nether Bricks");
+        translationBuilder.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_STAIRS.asItem(), "Aberrant Red Nether Bricks Stairs");
+        translationBuilder.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB.asItem(), "Aberrant Red Nether Bricks Slab");
+        translationBuilder.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL.asItem(), "Aberrant Red Nether Bricks Wall");
+        translationBuilder.add(ModBlocks.ABERRANT_GLOWSTONE.asItem(), "Aberrant Glowstone");
+        translationBuilder.add(ModItems.ABERRANT_NETHER_BRICK, "Aberrant Nether Brick");
 
         translationBuilder.add("itemgroup.bauen.bauen_blocks_group", "Bauen");
         translationBuilder.add("enchantment.bauen.multitool", "Multitool");

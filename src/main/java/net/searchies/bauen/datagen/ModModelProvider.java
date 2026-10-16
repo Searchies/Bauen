@@ -8,12 +8,14 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MultifaceBlock;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.client.render.model.json.ModelVariantOperator;
 import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
 import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.item.Items;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.WeightedPool;
 import net.searchies.bauen.Bauen;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModItems;
@@ -362,16 +364,16 @@ public class ModModelProvider extends FabricModelProvider {
             .slab(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB)
             .wall(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL);
 
-        registerSandstone(ModBlocks.SOUL_SANDSTONE, blockStateModelGenerator)
+        registerSandstone(ModBlocks.SOUL_SANDSTONE, blockStateModelGenerator, SOUL_SANDSTONE_MODELS)
             .stairs(ModBlocks.SOUL_SANDSTONE_STAIRS)
             .slab(ModBlocks.SOUL_SANDSTONE_SLAB)
             .wall(ModBlocks.SOUL_SANDSTONE_WALL);
-        registerSandstone(ModBlocks.SMOOTH_SOUL_SANDSTONE, blockStateModelGenerator)
+        registerSandstone(ModBlocks.SMOOTH_SOUL_SANDSTONE, blockStateModelGenerator, SOUL_SANDSTONE_MODELS)
             .stairs(ModBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS)
             .slab(ModBlocks.SMOOTH_SOUL_SANDSTONE_SLAB)
             .wall(ModBlocks.SMOOTH_SOUL_SANDSTONE_WALL);
-        registerSandstone(ModBlocks.CUT_SOUL_SANDSTONE, blockStateModelGenerator);
-        registerSandstone(ModBlocks.CHISELED_SOUL_SANDSTONE, blockStateModelGenerator);
+        registerSandstone(ModBlocks.CUT_SOUL_SANDSTONE, blockStateModelGenerator, SOUL_SANDSTONE_MODELS);
+        registerSandstone(ModBlocks.CHISELED_SOUL_SANDSTONE, blockStateModelGenerator, SOUL_SANDSTONE_MODELS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_TERRACOTTA);
 
@@ -736,6 +738,65 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.COCOA_POLISHED_RESIN_SLAB)
                 .wall(ModBlocks.COCOA_POLISHED_RESIN_WALL);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETHYST_TILES)
+                .stairs(ModBlocks.AMETHYST_TILES_STAIRS)
+                .slab(ModBlocks.AMETHYST_TILES_SLAB)
+                .wall(ModBlocks.AMETHYST_TILES_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AMETHYST_BRICKS)
+                .stairs(ModBlocks.AMETHYST_BRICKS_STAIRS)
+                .slab(ModBlocks.AMETHYST_BRICKS_SLAB)
+                .wall(ModBlocks.AMETHYST_BRICKS_WALL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_AMETHYST_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUDDING_ABERRANT_AMETHYST);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.SMALL_ABERRANT_AMETHYST_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.MEDIUM_ABERRANT_AMETHYST_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.LARGE_ABERRANT_AMETHYST_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.ABERRANT_AMETHYST_CLUSTER);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ABERRANT_AMETHYST_TILES)
+                .stairs(ModBlocks.ABERRANT_AMETHYST_TILES_STAIRS)
+                .slab(ModBlocks.ABERRANT_AMETHYST_TILES_SLAB)
+                .wall(ModBlocks.ABERRANT_AMETHYST_TILES_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ABERRANT_AMETHYST_BRICKS)
+                .stairs(ModBlocks.ABERRANT_AMETHYST_BRICKS_STAIRS)
+                .slab(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB)
+                .wall(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL);
+
+        registerSandstone(ModBlocks.ABERRANT_SOUL_SANDSTONE, blockStateModelGenerator, ABERRANT_SOUL_SANDSTONE_MODELS)
+                .stairs(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS)
+                .slab(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB)
+                .wall(ModBlocks.ABERRANT_SOUL_SANDSTONE_WALL);
+        registerSandstone(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE, blockStateModelGenerator, ABERRANT_SOUL_SANDSTONE_MODELS)
+                .stairs(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_STAIRS)
+                .slab(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_SLAB)
+                .wall(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_WALL);
+        registerSandstone(ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE, blockStateModelGenerator, ABERRANT_SOUL_SANDSTONE_MODELS);
+        registerSandstone(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE, blockStateModelGenerator, ABERRANT_SOUL_SANDSTONE_MODELS);
+
+        registerPumpkins(blockStateModelGenerator);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_OBSIDIAN);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CRYING_OBSIDIAN);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_NETHERRACK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ABERRANT_NETHER_BRICKS)
+                .stairs(ModBlocks.ABERRANT_NETHER_BRICKS_STAIRS)
+                .slab(ModBlocks.ABERRANT_NETHER_BRICKS_SLAB)
+                .wall(ModBlocks.ABERRANT_NETHER_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS)
+                .stairs(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_STAIRS)
+                .slab(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_SLAB)
+                .wall(ModBlocks.CRACKED_ABERRANT_NETHER_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS)
+                .stairs(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_STAIRS)
+                .slab(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_SLAB)
+                .wall(ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ABERRANT_RED_NETHER_BRICKS)
+                .stairs(ModBlocks.ABERRANT_RED_NETHER_BRICKS_STAIRS)
+                .slab(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB)
+                .wall(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GLOWSTONE);
     }
 
     @Override
@@ -762,6 +823,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GRAPHITE_RESIN_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.OBSIDIAN_RESIN_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.COCOA_RESIN_BRICK, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ABERRANT_AMETHYST_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ABERRANT_NETHER_BRICK, Models.GENERATED);
     }
 
     public void registerSeat(Block block, BlockStateModelGenerator generator) {
@@ -773,18 +837,34 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     // Modified from Minecraft Sandstone datagen (it's so ugly...)
-    static final Map<Block, TexturedModel> TEXTURED_MODELS =
-        Map.of(ModBlocks.SOUL_SANDSTONE, TexturedModel.SIDE_TOP_BOTTOM_WALL.get(ModBlocks.SOUL_SANDSTONE),
-                ModBlocks.SMOOTH_SOUL_SANDSTONE, TexturedModel.getCubeAll(TextureMap.getSubId(ModBlocks.SOUL_SANDSTONE, "_top")),
-                ModBlocks.CUT_SOUL_SANDSTONE, TexturedModel.CUBE_COLUMN.get(ModBlocks.SOUL_SANDSTONE).textures(textureMap -> textureMap.put(TextureKey.SIDE, TextureMap.getId(ModBlocks.CUT_SOUL_SANDSTONE))),
-                ModBlocks.CHISELED_SOUL_SANDSTONE, TexturedModel.CUBE_COLUMN.get(ModBlocks.CHISELED_SOUL_SANDSTONE).textures(textureMap -> {
-                    textureMap.put(TextureKey.END, TextureMap.getSubId(ModBlocks.SOUL_SANDSTONE, "_top"));
-                    textureMap.put(TextureKey.SIDE, TextureMap.getId(ModBlocks.CHISELED_SOUL_SANDSTONE));})
-        );
+    static final Map<Block, TexturedModel> SOUL_SANDSTONE_MODELS =
+    Map.of(ModBlocks.SOUL_SANDSTONE, TexturedModel.SIDE_TOP_BOTTOM_WALL.get(ModBlocks.SOUL_SANDSTONE),
+            ModBlocks.SMOOTH_SOUL_SANDSTONE, TexturedModel.getCubeAll(TextureMap.getSubId(ModBlocks.SOUL_SANDSTONE, "_top")),
+            ModBlocks.CUT_SOUL_SANDSTONE, TexturedModel.CUBE_COLUMN.get(ModBlocks.SOUL_SANDSTONE).textures(textureMap -> textureMap.put(TextureKey.SIDE, TextureMap.getId(ModBlocks.CUT_SOUL_SANDSTONE))),
+            ModBlocks.CHISELED_SOUL_SANDSTONE, TexturedModel.CUBE_COLUMN.get(ModBlocks.CHISELED_SOUL_SANDSTONE).textures(textureMap -> {
+                textureMap.put(TextureKey.END, TextureMap.getSubId(ModBlocks.SOUL_SANDSTONE, "_top"));
+                textureMap.put(TextureKey.SIDE, TextureMap.getId(ModBlocks.CHISELED_SOUL_SANDSTONE));})
+    );
 
-    public final BlockStateModelGenerator.BlockTexturePool registerSandstone(Block block, BlockStateModelGenerator generator) {
-        TexturedModel texturedModel = TEXTURED_MODELS.getOrDefault(block, TexturedModel.CUBE_ALL.get(block));
+    static final Map<Block, TexturedModel> ABERRANT_SOUL_SANDSTONE_MODELS =
+    Map.of(ModBlocks.ABERRANT_SOUL_SANDSTONE, TexturedModel.SIDE_TOP_BOTTOM_WALL.get(ModBlocks.ABERRANT_SOUL_SANDSTONE),
+            ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE, TexturedModel.getCubeAll(TextureMap.getSubId(ModBlocks.ABERRANT_SOUL_SANDSTONE, "_top")),
+            ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE, TexturedModel.CUBE_COLUMN.get(ModBlocks.ABERRANT_SOUL_SANDSTONE).textures(textureMap -> textureMap.put(TextureKey.SIDE, TextureMap.getId(ModBlocks.ABERRANT_CUT_SOUL_SANDSTONE))),
+            ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE, TexturedModel.CUBE_COLUMN.get(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE).textures(textureMap -> {
+                textureMap.put(TextureKey.END, TextureMap.getSubId(ModBlocks.ABERRANT_SOUL_SANDSTONE, "_top"));
+                textureMap.put(TextureKey.SIDE, TextureMap.getId(ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE));})
+    );
+
+    public final BlockStateModelGenerator.BlockTexturePool registerSandstone(Block block, BlockStateModelGenerator generator, Map<Block, TexturedModel> models) {
+        TexturedModel texturedModel = models.getOrDefault(block, TexturedModel.CUBE_ALL.get(block));
         return generator.new BlockTexturePool(texturedModel.getTextures()).base(block, texturedModel.getModel());
+    }
+
+    private void registerPumpkins(BlockStateModelGenerator generator) {
+        TextureMap textureMap = TextureMap.sideEnd(ModBlocks.ABERRANT_PUMPKIN);
+        generator.blockStateCollector.accept(generator.createSingletonBlockState(ModBlocks.ABERRANT_PUMPKIN, createWeightedVariant(Models.CUBE_BOTTOM_TOP.upload(ModBlocks.ABERRANT_PUMPKIN, textureMap, generator.modelCollector))));
+        generator.registerNorthDefaultHorizontalRotatable(ModBlocks.ABERRANT_CARVED_PUMPKIN, textureMap);
+        generator.registerNorthDefaultHorizontalRotatable(ModBlocks.ABERRANT_JACK_O_LANTERN, textureMap);
     }
 
 //    private void registerGoldHoards(BlockStateModelGenerator blockStateModelGenerator) {

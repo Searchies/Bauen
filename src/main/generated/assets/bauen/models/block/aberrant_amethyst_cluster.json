@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bauen:block/aberrant_amethyst_cluster"
+  }
+}

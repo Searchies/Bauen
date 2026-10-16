@@ -118,6 +118,12 @@
     "bauen:silt_polished_resin_wall",
     "bauen:graphite_polished_resin_wall",
     "bauen:obsidian_polished_resin_wall",
-    "bauen:cocoa_polished_resin_wall"
+    "bauen:cocoa_polished_resin_wall",
+    "bauen:amethyst_tiles_wall",
+    "bauen:amethyst_bricks_wall",
+    "bauen:aberrant_amethyst_tiles_wall",
+    "bauen:aberrant_amethyst_bricks_wall",
+    "bauen:aberrant_soul_sandstone_wall",
+    "bauen:aberrant_smooth_soul_sandstone_wall"
   ]
 }

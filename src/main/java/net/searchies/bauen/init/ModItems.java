@@ -59,6 +59,9 @@ public class ModItems {
     public static final Item COCOA_RESIN_CLUMP = registerBlockItem("cocoa_resin_clump", createBlockItemWithUniqueName(ModBlocks.COCOA_RESIN_CLUMP));
     public static final Item COCOA_RESIN_BRICK = registerItem("cocoa_resin_brick", Item::new);
 
+    public static final Item ABERRANT_AMETHYST_SHARD = registerItem("aberrant_amethyst_shard", Item::new);
+    public static final Item ABERRANT_NETHER_BRICK = registerItem("aberrant_nether_brick", Item::new);
+
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(Bauen.MOD_ID, name),
                 function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Bauen.MOD_ID, name)))));

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bauen:block/medium_aberrant_amethyst_bud"
+  }
+}

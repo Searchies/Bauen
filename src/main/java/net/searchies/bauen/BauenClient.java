@@ -23,6 +23,12 @@ public class BauenClient implements ClientModInitializer {
             ModBlocks.INDUSTRIAL_IRON_GRATE,
             ModBlocks.INDUSTRIAL_IRON_TRAPDOOR,
             ModBlocks.INDUSTRIAL_IRON_DOOR,
+            ModBlocks.ICE_STAIRS,
+            ModBlocks.ICE_SLAB,
+            ModBlocks.ICE_WALL,
+            ModBlocks.PACKED_ICE_STAIRS,
+            ModBlocks.PACKED_ICE_SLAB,
+            ModBlocks.PACKED_ICE_WALL,
             ModBlocks.BEETROOT_RESIN_CLUMP,
             ModBlocks.CHORUS_RESIN_CLUMP,
             ModBlocks.LEMON_RESIN_CLUMP,
@@ -38,7 +44,11 @@ public class BauenClient implements ClientModInitializer {
             ModBlocks.SILT_RESIN_CLUMP,
             ModBlocks.GRAPHITE_RESIN_CLUMP,
             ModBlocks.OBSIDIAN_RESIN_CLUMP,
-            ModBlocks.COCOA_RESIN_CLUMP);
+            ModBlocks.COCOA_RESIN_CLUMP,
+            ModBlocks.SMALL_ABERRANT_AMETHYST_BUD,
+            ModBlocks.MEDIUM_ABERRANT_AMETHYST_BUD,
+            ModBlocks.LARGE_ABERRANT_AMETHYST_BUD,
+            ModBlocks.ABERRANT_AMETHYST_CLUSTER);
 
         EntityRendererRegistry.register(ModEntities.SEAT, SeatRenderer::new);
     }
