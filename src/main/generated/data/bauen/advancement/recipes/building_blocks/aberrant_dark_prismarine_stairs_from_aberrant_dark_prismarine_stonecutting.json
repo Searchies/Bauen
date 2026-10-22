@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aberrant_dark_prismarine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:aberrant_dark_prismarine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:aberrant_dark_prismarine_stairs_from_aberrant_dark_prismarine_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aberrant_dark_prismarine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:aberrant_dark_prismarine_stairs_from_aberrant_dark_prismarine_stonecutting"
+    ]
+  }
+}

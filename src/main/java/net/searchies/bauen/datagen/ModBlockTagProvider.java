@@ -50,8 +50,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.GOLD_TRAPDOOR)
             .add(ModBlocks.GOLD_DOOR)
             .add(ModBlocks.GOLD_COINS)
-//            .add(ModBlocks.GOLD_HOARD)
-//            .add(ModBlocks.GOLD_HOARD_BLOCK)
+            .add(ModBlocks.GOLD_HOARD)
+            .add(ModBlocks.GOLD_HOARD_BLOCK)
 
             .add(ModBlocks.MIXED_COBBLESTONE)
             .add(ModBlocks.MIXED_COBBLESTONE_STAIRS)

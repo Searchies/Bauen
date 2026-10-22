@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:chiseled_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:chiseled_bricks_stairs"
+  }
+}

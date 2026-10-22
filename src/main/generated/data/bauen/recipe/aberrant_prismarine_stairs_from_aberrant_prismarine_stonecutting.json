@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:aberrant_prismarine",
+  "result": {
+    "count": 1,
+    "id": "bauen:aberrant_prismarine_stairs"
+  }
+}

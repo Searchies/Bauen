@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:cracked_granite_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:cracked_granite_bricks_stairs"
+  }
+}

@@ -3,6 +3,7 @@ package net.searchies.bauen.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancement.AdvancementCriterion;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -43,6 +44,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICKS_SLAB, ModBlocks.MOSSY_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICKS_WALL, ModBlocks.MOSSY_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_BRICKS, ModBlocks.MOSSY_BRICKS_STAIRS, ModBlocks.MOSSY_BRICKS_SLAB, ModBlocks.MOSSY_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_BRICKS)
                     .input(ModBlocks.CHISELED_BRICKS)
@@ -54,6 +56,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_BRICKS_WALL, ModBlocks.MOSSY_CHISELED_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_CHISELED_BRICKS, ModBlocks.MOSSY_CHISELED_BRICKS_STAIRS, ModBlocks.MOSSY_CHISELED_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(Blocks.BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -66,6 +69,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_BRICKS_SLAB, ModBlocks.CRACKED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_BRICKS_WALL, ModBlocks.CRACKED_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_BRICKS, ModBlocks.CRACKED_BRICKS_STAIRS, ModBlocks.CRACKED_BRICKS_SLAB, ModBlocks.CRACKED_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.CHISELED_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -78,6 +82,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_BRICKS_WALL, ModBlocks.CRACKED_CHISELED_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_CHISELED_BRICKS, ModBlocks.CRACKED_CHISELED_BRICKS_STAIRS, ModBlocks.CRACKED_CHISELED_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_BRICKS_WALL);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BRICKS, Blocks.BRICKS);
                 createStairsRecipe(ModBlocks.CHISELED_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CHISELED_BRICKS))
@@ -85,24 +90,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BRICKS_SLAB, ModBlocks.CHISELED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BRICKS_WALL, ModBlocks.CHISELED_BRICKS);
+                easyStonecutting(ModBlocks.CHISELED_BRICKS, ModBlocks.CHISELED_BRICKS_STAIRS, ModBlocks.CHISELED_BRICKS_SLAB, ModBlocks.CHISELED_BRICKS_WALL);
 
                 createStairsRecipe(ModBlocks.ICE_STAIRS, Ingredient.ofItem(Blocks.ICE))
                     .criterion(hasItem(Blocks.ICE), conditionsFromItem(Blocks.ICE))
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_SLAB, Blocks.ICE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_WALL, Blocks.ICE);
+                easyStonecutting(Blocks.ICE, ModBlocks.ICE_STAIRS, ModBlocks.ICE_SLAB, ModBlocks.ICE_WALL);
 
                 createStairsRecipe(ModBlocks.PACKED_ICE_STAIRS, Ingredient.ofItem(Blocks.PACKED_ICE))
                     .criterion(hasItem(Blocks.PACKED_ICE), conditionsFromItem(Blocks.PACKED_ICE))
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ICE_SLAB, Blocks.PACKED_ICE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PACKED_ICE_WALL, Blocks.PACKED_ICE);
+                easyStonecutting(Blocks.PACKED_ICE, ModBlocks.PACKED_ICE_STAIRS, ModBlocks.PACKED_ICE_SLAB, ModBlocks.PACKED_ICE_WALL);
 
                 createStairsRecipe(ModBlocks.MUD_STAIRS, Ingredient.ofItem(Blocks.MUD))
                     .criterion(hasItem(Blocks.MUD), conditionsFromItem(Blocks.MUD))
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_SLAB, Blocks.MUD);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_WALL, Blocks.MUD);
+                easyStonecutting(Blocks.MUD, ModBlocks.MUD_STAIRS, ModBlocks.MUD_SLAB, ModBlocks.MUD_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_PACKED_MUD, 1)
                     .input(Blocks.PACKED_MUD)
@@ -114,6 +123,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_PACKED_MUD_SLAB, ModBlocks.MOSSY_PACKED_MUD);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_PACKED_MUD_WALL, ModBlocks.MOSSY_PACKED_MUD);
+                easyStonecutting(ModBlocks.MOSSY_PACKED_MUD, ModBlocks.MOSSY_PACKED_MUD_STAIRS, ModBlocks.MOSSY_PACKED_MUD_SLAB, ModBlocks.MOSSY_PACKED_MUD_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICKS, 4)
                     .input('#', ModBlocks.MOSSY_PACKED_MUD)
@@ -126,6 +136,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICKS_SLAB, ModBlocks.MOSSY_MUD_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICKS_WALL, ModBlocks.MOSSY_MUD_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_MUD_BRICKS, ModBlocks.MOSSY_MUD_BRICKS_STAIRS, ModBlocks.MOSSY_MUD_BRICKS_SLAB, ModBlocks.MOSSY_MUD_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TUFF_BRICKS, 1)
                     .input(Blocks.TUFF_BRICKS)
@@ -137,6 +148,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TUFF_BRICKS_SLAB, ModBlocks.MOSSY_TUFF_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TUFF_BRICKS_WALL, ModBlocks.MOSSY_TUFF_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_TUFF_BRICKS, ModBlocks.MOSSY_TUFF_BRICKS_STAIRS, ModBlocks.MOSSY_TUFF_BRICKS_SLAB, ModBlocks.MOSSY_TUFF_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                                 Ingredient.ofItem(Blocks.TUFF_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -149,6 +161,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICKS_SLAB, ModBlocks.CRACKED_TUFF_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICKS_WALL, ModBlocks.CRACKED_TUFF_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_TUFF_BRICKS, ModBlocks.CRACKED_TUFF_BRICKS_STAIRS, ModBlocks.CRACKED_TUFF_BRICKS_SLAB, ModBlocks.CRACKED_TUFF_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULKED_DEEPSLATE_BRICKS, 1)
                     .input(Blocks.DEEPSLATE_BRICKS)
@@ -160,6 +173,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULKED_DEEPSLATE_BRICKS_SLAB, ModBlocks.SCULKED_DEEPSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULKED_DEEPSLATE_BRICKS_WALL, ModBlocks.SCULKED_DEEPSLATE_BRICKS);
+                easyStonecutting(ModBlocks.SCULKED_DEEPSLATE_BRICKS, ModBlocks.SCULKED_DEEPSLATE_BRICKS_STAIRS, ModBlocks.SCULKED_DEEPSLATE_BRICKS_SLAB, ModBlocks.SCULKED_DEEPSLATE_BRICKS_WALL);
 
                 // CUSTOM GOLD BLOCKS //
 
@@ -196,6 +210,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_SLAB, ModBlocks.CUT_GOLD);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_WALL, ModBlocks.CUT_GOLD);
+                easyStonecutting(ModBlocks.CUT_GOLD, ModBlocks.CUT_GOLD_STAIRS, ModBlocks.CUT_GOLD_SLAB, ModBlocks.CUT_GOLD_WALL);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GOLD, Blocks.GOLD_BLOCK, 4);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_TRAPDOOR, Items.GOLD_INGOT);
@@ -206,12 +221,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createDoorRecipe(ModBlocks.GOLD_DOOR, Ingredient.ofItem(Items.GOLD_INGOT))
                     .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
                     .offerTo(exporter);
-//                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_HOARD, 8)
-//                    .input('#', ModBlocks.GOLD_COINS)
-//                    .pattern("##")
-//                    .pattern("##")
-//                    .criterion(hasItem(ModBlocks.GOLD_COINS), conditionsFromItem(ModBlocks.GOLD_COINS))
-//                    .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_HOARD, 8)
+                    .input('#', ModBlocks.GOLD_COINS)
+                    .pattern("##")
+                    .pattern("##")
+                    .criterion(hasItem(ModBlocks.GOLD_COINS), conditionsFromItem(ModBlocks.GOLD_COINS))
+                    .offerTo(exporter);
 
                 // INDUSTRIAL IRON BLOCKS //
 
@@ -221,6 +236,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDUSTRIAL_IRON_SLAB, ModBlocks.INDUSTRIAL_IRON_BLOCK);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDUSTRIAL_IRON_WALL, ModBlocks.INDUSTRIAL_IRON_BLOCK);
+                easyStonecutting(ModBlocks.INDUSTRIAL_IRON_BLOCK, ModBlocks.INDUSTRIAL_IRON_STAIRS, ModBlocks.INDUSTRIAL_IRON_SLAB, ModBlocks.INDUSTRIAL_IRON_WALL);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_INDUSTRIAL_IRON, ModBlocks.INDUSTRIAL_IRON_BLOCK, 4);
                 createStairsRecipe(ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS, Ingredient.ofItem(ModBlocks.CUT_INDUSTRIAL_IRON))
@@ -228,6 +244,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_INDUSTRIAL_IRON_SLAB, ModBlocks.CUT_INDUSTRIAL_IRON);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_INDUSTRIAL_IRON_WALL, ModBlocks.CUT_INDUSTRIAL_IRON);
+                easyStonecutting(ModBlocks.CUT_INDUSTRIAL_IRON, ModBlocks.CUT_INDUSTRIAL_IRON_STAIRS, ModBlocks.CUT_INDUSTRIAL_IRON_SLAB, ModBlocks.CUT_INDUSTRIAL_IRON_WALL);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARVED_INDUSTRIAL_IRON, ModBlocks.INDUSTRIAL_IRON_BLOCK, 4);
                 offerGrateRecipe(ModBlocks.INDUSTRIAL_IRON_GRATE, ModBlocks.INDUSTRIAL_IRON_BLOCK);
@@ -248,6 +265,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_COBBLESTONE_SLAB, ModBlocks.MIXED_COBBLESTONE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_COBBLESTONE_WALL, ModBlocks.MIXED_COBBLESTONE);
+                easyStonecutting(ModBlocks.MIXED_COBBLESTONE, ModBlocks.MIXED_COBBLESTONE_STAIRS, ModBlocks.MIXED_COBBLESTONE_SLAB, ModBlocks.MIXED_COBBLESTONE_WALL);
 
                 // CLAY STUFF //
 
@@ -274,6 +292,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIDNIGHT_BRICKS_SLAB, ModBlocks.MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIDNIGHT_BRICKS_WALL, ModBlocks.MIDNIGHT_BRICKS);
+                easyStonecutting(ModBlocks.MIDNIGHT_BRICKS, ModBlocks.MIDNIGHT_BRICKS_STAIRS, ModBlocks.MIDNIGHT_BRICKS_SLAB, ModBlocks.MIDNIGHT_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MIDNIGHT_BRICKS)
                     .input(ModBlocks.MIDNIGHT_BRICKS)
@@ -285,6 +304,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MIDNIGHT_BRICKS_SLAB, ModBlocks.MOSSY_MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MIDNIGHT_BRICKS_WALL, ModBlocks.MOSSY_MIDNIGHT_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_MIDNIGHT_BRICKS, ModBlocks.MOSSY_MIDNIGHT_BRICKS_STAIRS, ModBlocks.MOSSY_MIDNIGHT_BRICKS_SLAB, ModBlocks.MOSSY_MIDNIGHT_BRICKS_WALL);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MIDNIGHT_BRICKS, ModBlocks.MIDNIGHT_BRICKS);
                 createStairsRecipe(ModBlocks.CHISELED_MIDNIGHT_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CHISELED_MIDNIGHT_BRICKS))
@@ -292,6 +312,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CHISELED_MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MIDNIGHT_BRICKS_WALL, ModBlocks.CHISELED_MIDNIGHT_BRICKS);
+                easyStonecutting(ModBlocks.CHISELED_MIDNIGHT_BRICKS, ModBlocks.CHISELED_MIDNIGHT_BRICKS_STAIRS, ModBlocks.CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CHISELED_MIDNIGHT_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS)
                     .input(ModBlocks.CHISELED_MIDNIGHT_BRICKS)
@@ -303,6 +324,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_WALL, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_STAIRS, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_MIDNIGHT_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.MIDNIGHT_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -315,6 +337,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CRACKED_MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MIDNIGHT_BRICKS_WALL, ModBlocks.CRACKED_MIDNIGHT_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_MIDNIGHT_BRICKS, ModBlocks.CRACKED_MIDNIGHT_BRICKS_STAIRS, ModBlocks.CRACKED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CRACKED_MIDNIGHT_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.CHISELED_MIDNIGHT_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -327,6 +350,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_WALL, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_STAIRS, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_MIDNIGHT_BRICKS_WALL);
 
                 // MIXED BRICKS //
 
@@ -338,6 +362,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TREATED_BRICKS_SLAB, ModBlocks.TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TREATED_BRICKS_WALL, ModBlocks.TREATED_BRICKS);
+                easyStonecutting(ModBlocks.TREATED_BRICKS, ModBlocks.TREATED_BRICKS_STAIRS, ModBlocks.TREATED_BRICKS_SLAB, ModBlocks.TREATED_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TREATED_BRICKS)
                     .input(ModBlocks.TREATED_BRICKS)
@@ -349,6 +374,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TREATED_BRICKS_SLAB, ModBlocks.MOSSY_TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_TREATED_BRICKS_WALL, ModBlocks.MOSSY_TREATED_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_TREATED_BRICKS, ModBlocks.MOSSY_TREATED_BRICKS_STAIRS, ModBlocks.MOSSY_TREATED_BRICKS_SLAB, ModBlocks.MOSSY_TREATED_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.TREATED_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -360,6 +386,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TREATED_BRICKS_SLAB, ModBlocks.CRACKED_TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TREATED_BRICKS_WALL, ModBlocks.CRACKED_TREATED_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_TREATED_BRICKS, ModBlocks.CRACKED_TREATED_BRICKS_STAIRS, ModBlocks.CRACKED_TREATED_BRICKS_SLAB, ModBlocks.CRACKED_TREATED_BRICKS_WALL);
 
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TREATED_BRICKS, ModBlocks.TREATED_BRICKS);
                 createStairsRecipe(ModBlocks.CHISELED_TREATED_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CHISELED_TREATED_BRICKS))
@@ -367,6 +394,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TREATED_BRICKS_SLAB, ModBlocks.CHISELED_TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TREATED_BRICKS_WALL, ModBlocks.CHISELED_TREATED_BRICKS);
+                easyStonecutting(ModBlocks.CHISELED_TREATED_BRICKS, ModBlocks.CHISELED_TREATED_BRICKS_STAIRS, ModBlocks.CHISELED_TREATED_BRICKS_SLAB, ModBlocks.CHISELED_TREATED_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS)
                     .input(ModBlocks.CHISELED_TREATED_BRICKS)
@@ -378,6 +406,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_WALL, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_CHISELED_TREATED_BRICKS, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_STAIRS, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_SLAB, ModBlocks.MOSSY_CHISELED_TREATED_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.CHISELED_TREATED_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -389,6 +418,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_WALL, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_CHISELED_TREATED_BRICKS, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_STAIRS, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_SLAB, ModBlocks.CRACKED_CHISELED_TREATED_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_BRICKS, 4)
                     .input(ModBlocks.TREATED_BRICKS)
@@ -400,6 +430,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_BRICKS_SLAB, ModBlocks.MIXED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MIXED_BRICKS_WALL, ModBlocks.MIXED_BRICKS);
+                easyStonecutting(ModBlocks.MIXED_BRICKS, ModBlocks.MIXED_BRICKS_STAIRS, ModBlocks.MIXED_BRICKS_SLAB, ModBlocks.MIXED_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MIXED_BRICKS)
                     .input(ModBlocks.MIXED_BRICKS)
@@ -411,6 +442,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MIXED_BRICKS_SLAB, ModBlocks.MOSSY_MIXED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MIXED_BRICKS_WALL, ModBlocks.MOSSY_MIXED_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_MIXED_BRICKS, ModBlocks.MOSSY_MIXED_BRICKS_STAIRS, ModBlocks.MOSSY_MIXED_BRICKS_SLAB, ModBlocks.MOSSY_MIXED_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.MIXED_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -422,6 +454,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MIXED_BRICKS_SLAB, ModBlocks.CRACKED_MIXED_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MIXED_BRICKS_WALL, ModBlocks.CRACKED_MIXED_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_MIXED_BRICKS, ModBlocks.CRACKED_MIXED_BRICKS_STAIRS, ModBlocks.CRACKED_MIXED_BRICKS_SLAB, ModBlocks.CRACKED_MIXED_BRICKS_WALL);
 
                 // CALCITE BRICKS //
 
@@ -437,7 +470,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_SLAB, ModBlocks.POLISHED_CALCITE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_WALL, ModBlocks.POLISHED_CALCITE);
-
+                easyStonecutting(ModBlocks.POLISHED_CALCITE, ModBlocks.POLISHED_CALCITE_STAIRS, ModBlocks.POLISHED_CALCITE_SLAB, ModBlocks.POLISHED_CALCITE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_BRICKS, 4)
                     .input('#', ModBlocks.POLISHED_CALCITE)
@@ -450,6 +483,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_BRICKS_SLAB, ModBlocks.CALCITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_BRICKS_WALL, ModBlocks.CALCITE_BRICKS);
+                easyStonecutting(ModBlocks.CALCITE_BRICKS, ModBlocks.CALCITE_BRICKS_STAIRS, ModBlocks.CALCITE_BRICKS_SLAB, ModBlocks.CALCITE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_BRICKS, 4)
                     .input('#', ModBlocks.CALCITE_BRICKS)
@@ -463,6 +497,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_BRICKS_SLAB, ModBlocks.POLISHED_CALCITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_BRICKS_WALL, ModBlocks.POLISHED_CALCITE_BRICKS);
+                easyStonecutting(ModBlocks.POLISHED_CALCITE_BRICKS, ModBlocks.POLISHED_CALCITE_BRICKS_STAIRS, ModBlocks.POLISHED_CALCITE_BRICKS_SLAB, ModBlocks.POLISHED_CALCITE_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CALCITE_BRICKS)
                     .input(ModBlocks.CALCITE_BRICKS)
@@ -474,6 +509,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CALCITE_BRICKS_SLAB, ModBlocks.MOSSY_CALCITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_CALCITE_BRICKS_WALL, ModBlocks.MOSSY_CALCITE_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_CALCITE_BRICKS, ModBlocks.MOSSY_CALCITE_BRICKS_STAIRS, ModBlocks.MOSSY_CALCITE_BRICKS_SLAB, ModBlocks.MOSSY_CALCITE_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.CALCITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -485,6 +521,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CALCITE_BRICKS_SLAB, ModBlocks.CRACKED_CALCITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_CALCITE_BRICKS_WALL, ModBlocks.CRACKED_CALCITE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_CALCITE_BRICKS, ModBlocks.CRACKED_CALCITE_BRICKS_STAIRS, ModBlocks.CRACKED_CALCITE_BRICKS_SLAB, ModBlocks.CRACKED_CALCITE_BRICKS_WALL);
 
                 // ANDESITE BRICKS //
 
@@ -499,6 +536,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS_SLAB, ModBlocks.ANDESITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANDESITE_BRICKS_WALL, ModBlocks.ANDESITE_BRICKS);
+                easyStonecutting(ModBlocks.ANDESITE_BRICKS, ModBlocks.ANDESITE_BRICKS_STAIRS, ModBlocks.ANDESITE_BRICKS_SLAB, ModBlocks.ANDESITE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_BRICKS, 4)
                     .input('#', ModBlocks.ANDESITE_BRICKS)
@@ -512,6 +550,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB, ModBlocks.POLISHED_ANDESITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_BRICKS_WALL, ModBlocks.POLISHED_ANDESITE_BRICKS);
+                easyStonecutting(ModBlocks.POLISHED_ANDESITE_BRICKS, ModBlocks.POLISHED_ANDESITE_BRICKS_STAIRS, ModBlocks.POLISHED_ANDESITE_BRICKS_SLAB, ModBlocks.POLISHED_ANDESITE_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANDESITE_BRICKS)
                     .input(ModBlocks.ANDESITE_BRICKS)
@@ -523,6 +562,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB, ModBlocks.MOSSY_ANDESITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_ANDESITE_BRICKS_WALL, ModBlocks.MOSSY_ANDESITE_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_ANDESITE_BRICKS, ModBlocks.MOSSY_ANDESITE_BRICKS_STAIRS, ModBlocks.MOSSY_ANDESITE_BRICKS_SLAB, ModBlocks.MOSSY_ANDESITE_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.ANDESITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -534,6 +574,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ANDESITE_BRICKS_SLAB, ModBlocks.CRACKED_ANDESITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ANDESITE_BRICKS_WALL, ModBlocks.CRACKED_ANDESITE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_ANDESITE_BRICKS, ModBlocks.CRACKED_ANDESITE_BRICKS_STAIRS, ModBlocks.CRACKED_ANDESITE_BRICKS_SLAB, ModBlocks.CRACKED_ANDESITE_BRICKS_WALL);
 
                 // DIORITE BRICKS //
 
@@ -548,6 +589,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIORITE_BRICKS_SLAB, ModBlocks.DIORITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DIORITE_BRICKS_WALL, ModBlocks.DIORITE_BRICKS);
+                easyStonecutting(ModBlocks.DIORITE_BRICKS, ModBlocks.DIORITE_BRICKS_STAIRS, ModBlocks.DIORITE_BRICKS_SLAB, ModBlocks.DIORITE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_BRICKS, 4)
                     .input('#', ModBlocks.DIORITE_BRICKS)
@@ -561,6 +603,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_BRICKS_SLAB, ModBlocks.POLISHED_DIORITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_BRICKS_WALL, ModBlocks.POLISHED_DIORITE_BRICKS);
+                easyStonecutting(ModBlocks.POLISHED_DIORITE_BRICKS, ModBlocks.POLISHED_DIORITE_BRICKS_STAIRS, ModBlocks.POLISHED_DIORITE_BRICKS_SLAB, ModBlocks.POLISHED_DIORITE_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DIORITE_BRICKS)
                     .input(ModBlocks.DIORITE_BRICKS)
@@ -572,6 +615,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DIORITE_BRICKS_SLAB, ModBlocks.MOSSY_DIORITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DIORITE_BRICKS_WALL, ModBlocks.MOSSY_DIORITE_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_DIORITE_BRICKS, ModBlocks.MOSSY_DIORITE_BRICKS_STAIRS, ModBlocks.MOSSY_DIORITE_BRICKS_SLAB, ModBlocks.MOSSY_DIORITE_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.DIORITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -583,6 +627,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DIORITE_BRICKS_SLAB, ModBlocks.CRACKED_DIORITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DIORITE_BRICKS_WALL, ModBlocks.CRACKED_DIORITE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_DIORITE_BRICKS, ModBlocks.CRACKED_DIORITE_BRICKS_STAIRS, ModBlocks.CRACKED_DIORITE_BRICKS_SLAB, ModBlocks.CRACKED_DIORITE_BRICKS_WALL);
 
                 // DRIPSTONE BRICKS //
 
@@ -598,6 +643,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_SLAB, ModBlocks.POLISHED_DRIPSTONE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_WALL, ModBlocks.POLISHED_DRIPSTONE);
+                easyStonecutting(ModBlocks.POLISHED_DRIPSTONE, ModBlocks.POLISHED_DRIPSTONE_STAIRS, ModBlocks.POLISHED_DRIPSTONE_SLAB, ModBlocks.POLISHED_DRIPSTONE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS, 4)
                     .input('#', ModBlocks.POLISHED_DRIPSTONE)
@@ -610,6 +656,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS_SLAB, ModBlocks.DRIPSTONE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_BRICKS_WALL, ModBlocks.DRIPSTONE_BRICKS);
+                easyStonecutting(ModBlocks.DRIPSTONE_BRICKS, ModBlocks.DRIPSTONE_BRICKS_STAIRS, ModBlocks.DRIPSTONE_BRICKS_SLAB, ModBlocks.DRIPSTONE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_BRICKS, 4)
                     .input('#', ModBlocks.DRIPSTONE_BRICKS)
@@ -623,6 +670,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB, ModBlocks.POLISHED_DRIPSTONE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_BRICKS_WALL, ModBlocks.POLISHED_DRIPSTONE_BRICKS);
+                easyStonecutting(ModBlocks.POLISHED_DRIPSTONE_BRICKS, ModBlocks.POLISHED_DRIPSTONE_BRICKS_STAIRS, ModBlocks.POLISHED_DRIPSTONE_BRICKS_SLAB, ModBlocks.POLISHED_DRIPSTONE_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DRIPSTONE_BRICKS)
                     .input(ModBlocks.DRIPSTONE_BRICKS)
@@ -634,6 +682,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB, ModBlocks.MOSSY_DRIPSTONE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DRIPSTONE_BRICKS_WALL, ModBlocks.MOSSY_DRIPSTONE_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_DRIPSTONE_BRICKS, ModBlocks.MOSSY_DRIPSTONE_BRICKS_STAIRS, ModBlocks.MOSSY_DRIPSTONE_BRICKS_SLAB, ModBlocks.MOSSY_DRIPSTONE_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.DRIPSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -645,6 +694,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DRIPSTONE_BRICKS_SLAB, ModBlocks.CRACKED_DRIPSTONE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DRIPSTONE_BRICKS_WALL, ModBlocks.CRACKED_DRIPSTONE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_DRIPSTONE_BRICKS, ModBlocks.CRACKED_DRIPSTONE_BRICKS_STAIRS, ModBlocks.CRACKED_DRIPSTONE_BRICKS_SLAB, ModBlocks.CRACKED_DRIPSTONE_BRICKS_WALL);
 
                 // GRANITE BRICKS //
 
@@ -659,6 +709,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRANITE_BRICKS_SLAB, ModBlocks.GRANITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRANITE_BRICKS_WALL, ModBlocks.GRANITE_BRICKS);
+                easyStonecutting(ModBlocks.GRANITE_BRICKS, ModBlocks.GRANITE_BRICKS_STAIRS, ModBlocks.GRANITE_BRICKS_SLAB, ModBlocks.GRANITE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_BRICKS, 4)
                     .input('#', ModBlocks.GRANITE_BRICKS)
@@ -672,6 +723,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_BRICKS_SLAB, ModBlocks.POLISHED_GRANITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_BRICKS_WALL, ModBlocks.POLISHED_GRANITE_BRICKS);
+                easyStonecutting(ModBlocks.POLISHED_GRANITE_BRICKS, ModBlocks.POLISHED_GRANITE_BRICKS_STAIRS, ModBlocks.POLISHED_GRANITE_BRICKS_SLAB, ModBlocks.POLISHED_GRANITE_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_GRANITE_BRICKS)
                     .input(ModBlocks.GRANITE_BRICKS)
@@ -683,6 +735,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_GRANITE_BRICKS_SLAB, ModBlocks.MOSSY_GRANITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_GRANITE_BRICKS_WALL, ModBlocks.MOSSY_GRANITE_BRICKS);
+                easyStonecutting(ModBlocks.MOSSY_GRANITE_BRICKS, ModBlocks.MOSSY_GRANITE_BRICKS_STAIRS, ModBlocks.MOSSY_GRANITE_BRICKS_SLAB, ModBlocks.MOSSY_GRANITE_BRICKS_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.GRANITE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -694,6 +747,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_GRANITE_BRICKS_SLAB, ModBlocks.CRACKED_GRANITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_GRANITE_BRICKS_WALL, ModBlocks.CRACKED_GRANITE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_GRANITE_BRICKS, ModBlocks.CRACKED_GRANITE_BRICKS_STAIRS, ModBlocks.CRACKED_GRANITE_BRICKS_SLAB, ModBlocks.CRACKED_GRANITE_BRICKS_WALL);
 
                 // OCEANSLATE //
 
@@ -707,6 +761,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_SLAB, ModBlocks.OCEANSLATE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_WALL, ModBlocks.OCEANSLATE);
+                easyStonecutting(ModBlocks.OCEANSLATE, ModBlocks.OCEANSLATE_STAIRS, ModBlocks.OCEANSLATE_SLAB, ModBlocks.OCEANSLATE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_BRICKS, 4)
                     .input('#', ModBlocks.POLISHED_OCEANSLATE)
@@ -719,6 +774,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_BRICKS_SLAB, ModBlocks.OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_BRICKS_WALL, ModBlocks.OCEANSLATE_BRICKS);
+                easyStonecutting(ModBlocks.OCEANSLATE_BRICKS, ModBlocks.OCEANSLATE_BRICKS_STAIRS, ModBlocks.OCEANSLATE_BRICKS_SLAB, ModBlocks.OCEANSLATE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_TILES, 4)
                     .input('#', ModBlocks.OCEANSLATE_BRICKS)
@@ -732,6 +788,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_TILES_SLAB, ModBlocks.OCEANSLATE_TILES);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEANSLATE_TILES_WALL, ModBlocks.OCEANSLATE_TILES);
+                easyStonecutting(ModBlocks.OCEANSLATE_TILES, ModBlocks.OCEANSLATE_TILES_STAIRS, ModBlocks.OCEANSLATE_TILES_SLAB, ModBlocks.OCEANSLATE_TILES_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_OCEANSLATE, 4)
                     .input('#', ModBlocks.OCEANSLATE)
@@ -745,6 +802,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_OCEANSLATE_SLAB, ModBlocks.POLISHED_OCEANSLATE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_OCEANSLATE_WALL, ModBlocks.POLISHED_OCEANSLATE);
+                easyStonecutting(ModBlocks.POLISHED_OCEANSLATE, ModBlocks.POLISHED_OCEANSLATE_STAIRS, ModBlocks.POLISHED_OCEANSLATE_SLAB, ModBlocks.POLISHED_OCEANSLATE_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.OCEANSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS,
@@ -756,6 +814,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_OCEANSLATE_BRICKS_WALL, ModBlocks.CRACKED_OCEANSLATE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_OCEANSLATE_BRICKS, ModBlocks.CRACKED_OCEANSLATE_BRICKS_STAIRS, ModBlocks.CRACKED_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_OCEANSLATE_BRICKS_WALL);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_OCEANSLATE_BRICKS)
                     .input(ModBlocks.OCEANSLATE_BRICKS)
@@ -767,6 +826,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB, ModBlocks.KELPY_OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL, ModBlocks.KELPY_OCEANSLATE_BRICKS);
+                easyStonecutting(ModBlocks.KELPY_OCEANSLATE_BRICKS, ModBlocks.KELPY_OCEANSLATE_BRICKS_STAIRS, ModBlocks.KELPY_OCEANSLATE_BRICKS_SLAB, ModBlocks.KELPY_OCEANSLATE_BRICKS_WALL);
 
                 // SEATS //
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_SEAT, 4)
@@ -947,6 +1007,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_DARK_PRISMARINE_SLAB, ModBlocks.ABERRANT_DARK_PRISMARINE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_DARK_PRISMARINE_WALL, ModBlocks.ABERRANT_DARK_PRISMARINE);
+                easyStonecutting(ModBlocks.ABERRANT_DARK_PRISMARINE, ModBlocks.ABERRANT_DARK_PRISMARINE_STAIRS, ModBlocks.ABERRANT_DARK_PRISMARINE_SLAB, ModBlocks.ABERRANT_DARK_PRISMARINE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -961,6 +1022,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_SLAB, ModBlocks.ABERRANT_PRISMARINE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_WALL, ModBlocks.ABERRANT_PRISMARINE);
+                easyStonecutting(ModBlocks.ABERRANT_PRISMARINE, ModBlocks.ABERRANT_PRISMARINE_STAIRS, ModBlocks.ABERRANT_PRISMARINE_SLAB, ModBlocks.ABERRANT_PRISMARINE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_BRICKS, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -974,6 +1036,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.ABERRANT_PRISMARINE_BRICKS), conditionsFromItem(ModBlocks.ABERRANT_PRISMARINE_BRICKS))
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_BRICKS_SLAB, ModBlocks.ABERRANT_PRISMARINE_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_BRICKS_STAIRS, ModBlocks.ABERRANT_PRISMARINE_BRICKS);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_PRISMARINE_BRICKS_SLAB, ModBlocks.ABERRANT_PRISMARINE_BRICKS, 2);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -988,6 +1052,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_SLAB, ModBlocks.ABERRANT_OCEANSLATE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_WALL, ModBlocks.ABERRANT_OCEANSLATE);
+                easyStonecutting(ModBlocks.ABERRANT_OCEANSLATE, ModBlocks.ABERRANT_OCEANSLATE_STAIRS, ModBlocks.ABERRANT_OCEANSLATE_SLAB, ModBlocks.ABERRANT_OCEANSLATE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -1002,6 +1067,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_SLAB, ModBlocks.ABERRANT_POLISHED_OCEANSLATE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_WALL, ModBlocks.ABERRANT_POLISHED_OCEANSLATE);
+                easyStonecutting(ModBlocks.ABERRANT_POLISHED_OCEANSLATE, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_STAIRS, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_SLAB, ModBlocks.ABERRANT_POLISHED_OCEANSLATE_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_TILES, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -1016,6 +1082,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_TILES_SLAB, ModBlocks.ABERRANT_OCEANSLATE_TILES);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_TILES_WALL, ModBlocks.ABERRANT_OCEANSLATE_TILES);
+                easyStonecutting(ModBlocks.ABERRANT_OCEANSLATE_TILES, ModBlocks.ABERRANT_OCEANSLATE_TILES_STAIRS, ModBlocks.ABERRANT_OCEANSLATE_TILES_SLAB, ModBlocks.ABERRANT_OCEANSLATE_TILES_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -1030,6 +1097,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.ABERRANT_OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.ABERRANT_OCEANSLATE_BRICKS);
+                easyStonecutting(ModBlocks.ABERRANT_OCEANSLATE_BRICKS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_STAIRS, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.ABERRANT_OCEANSLATE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -1044,6 +1112,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
+                easyStonecutting(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS, 8)
                         .input('P', ModItems.ABERRANT_PASTE)
@@ -1058,6 +1127,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS);
+                easyStonecutting(ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_STAIRS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS_WALL);
 
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SANDSTONE, Blocks.SOUL_SAND);
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SANDSTONE_SLAB,
@@ -2106,9 +2176,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(ModItems.BEETROOT_RESIN_CLUMP, 9)
                     .criterion(hasItem(ModItems.BEETROOT_RESIN_CLUMP), conditionsFromItem(ModItems.BEETROOT_RESIN_CLUMP))
                     .offerTo(exporter);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BLOCK_STAIRS, ModBlocks.BEETROOT_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.BEETROOT_RESIN_BLOCK_SLAB, ModBlocks.BEETROOT_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BLOCK_WALL, ModBlocks.BEETROOT_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.BEETROOT_RESIN_BLOCK, ModBlocks.BEETROOT_RESIN_BLOCK_STAIRS, ModBlocks.BEETROOT_RESIN_BLOCK_SLAB, ModBlocks.BEETROOT_RESIN_BLOCK_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                         Ingredient.ofItem(ModItems.BEETROOT_RESIN_CLUMP), RecipeCategory.MISC, ModItems.BEETROOT_RESIN_BRICK, 0.1f, 200)
@@ -2116,9 +2184,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BRICKS, ModItems.BEETROOT_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BRICKS_SLAB, ModBlocks.BEETROOT_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_RESIN_BRICKS_STAIRS, ModBlocks.BEETROOT_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.BEETROOT_RESIN_BRICKS_WALL, ModBlocks.BEETROOT_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.BEETROOT_RESIN_BRICKS, ModBlocks.BEETROOT_RESIN_BRICKS_STAIRS, ModBlocks.BEETROOT_RESIN_BRICKS_SLAB, ModBlocks.BEETROOT_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BEETROOT_RESIN_BRICKS, ModBlocks.BEETROOT_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CHORUS_RESIN_CLUMP, 9)
@@ -2136,9 +2202,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(ModItems.CHORUS_RESIN_CLUMP, 9)
                     .criterion(hasItem(ModItems.CHORUS_RESIN_CLUMP), conditionsFromItem(ModItems.CHORUS_RESIN_CLUMP))
                     .offerTo(exporter);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BLOCK_STAIRS, ModBlocks.CHORUS_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CHORUS_RESIN_BLOCK_SLAB, ModBlocks.CHORUS_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BLOCK_WALL, ModBlocks.CHORUS_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.CHORUS_RESIN_BLOCK, ModBlocks.CHORUS_RESIN_BLOCK_STAIRS, ModBlocks.CHORUS_RESIN_BLOCK_SLAB, ModBlocks.CHORUS_RESIN_BLOCK_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                         Ingredient.ofItem(ModItems.CHORUS_RESIN_CLUMP), RecipeCategory.MISC, ModItems.CHORUS_RESIN_BRICK, 0.1f, 200)
@@ -2146,9 +2210,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BRICKS, ModItems.CHORUS_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BRICKS_SLAB, ModBlocks.CHORUS_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_RESIN_BRICKS_STAIRS, ModBlocks.CHORUS_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CHORUS_RESIN_BRICKS_WALL, ModBlocks.CHORUS_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.CHORUS_RESIN_BRICKS, ModBlocks.CHORUS_RESIN_BRICKS_STAIRS, ModBlocks.CHORUS_RESIN_BRICKS_SLAB, ModBlocks.CHORUS_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CHORUS_RESIN_BRICKS, ModBlocks.CHORUS_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.LEMON_RESIN_CLUMP, 9)
@@ -2166,9 +2228,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(ModItems.LEMON_RESIN_CLUMP, 9)
                     .criterion(hasItem(ModItems.LEMON_RESIN_CLUMP), conditionsFromItem(ModItems.LEMON_RESIN_CLUMP))
                     .offerTo(exporter);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BLOCK_STAIRS, ModBlocks.LEMON_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.LEMON_RESIN_BLOCK_SLAB, ModBlocks.LEMON_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BLOCK_WALL, ModBlocks.LEMON_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.LEMON_RESIN_BLOCK, ModBlocks.LEMON_RESIN_BLOCK_STAIRS, ModBlocks.LEMON_RESIN_BLOCK_SLAB, ModBlocks.LEMON_RESIN_BLOCK_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                         Ingredient.ofItem(ModItems.LEMON_RESIN_CLUMP), RecipeCategory.MISC, ModItems.LEMON_RESIN_BRICK, 0.1f, 200)
@@ -2176,9 +2236,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BRICKS, ModItems.LEMON_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BRICKS_SLAB, ModBlocks.LEMON_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_RESIN_BRICKS_STAIRS, ModBlocks.LEMON_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.LEMON_RESIN_BRICKS_WALL, ModBlocks.LEMON_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.LEMON_RESIN_BRICKS, ModBlocks.LEMON_RESIN_BRICKS_STAIRS, ModBlocks.LEMON_RESIN_BRICKS_SLAB, ModBlocks.LEMON_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_LEMON_RESIN_BRICKS, ModBlocks.LEMON_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GLACIER_RESIN_CLUMP, 9)
@@ -2196,9 +2254,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(ModItems.GLACIER_RESIN_CLUMP, 9)
                     .criterion(hasItem(ModItems.GLACIER_RESIN_CLUMP), conditionsFromItem(ModItems.GLACIER_RESIN_CLUMP))
                     .offerTo(exporter);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BLOCK_STAIRS, ModBlocks.GLACIER_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.GLACIER_RESIN_BLOCK_SLAB, ModBlocks.GLACIER_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BLOCK_WALL, ModBlocks.GLACIER_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.GLACIER_RESIN_BLOCK, ModBlocks.GLACIER_RESIN_BLOCK_STAIRS, ModBlocks.GLACIER_RESIN_BLOCK_SLAB, ModBlocks.GLACIER_RESIN_BLOCK_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                         Ingredient.ofItem(ModItems.GLACIER_RESIN_CLUMP), RecipeCategory.MISC, ModItems.GLACIER_RESIN_BRICK, 0.1f, 200)
@@ -2206,9 +2262,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BRICKS, ModItems.GLACIER_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BRICKS_SLAB, ModBlocks.GLACIER_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_RESIN_BRICKS_STAIRS, ModBlocks.GLACIER_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.GLACIER_RESIN_BRICKS_WALL, ModBlocks.GLACIER_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.GLACIER_RESIN_BRICKS, ModBlocks.GLACIER_RESIN_BRICKS_STAIRS, ModBlocks.GLACIER_RESIN_BRICKS_SLAB, ModBlocks.GLACIER_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLACIER_RESIN_BRICKS, ModBlocks.GLACIER_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.CARAMEL_RESIN_CLUMP, 9)
@@ -2236,9 +2290,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BRICKS, ModItems.CARAMEL_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BRICKS_SLAB, ModBlocks.CARAMEL_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_RESIN_BRICKS_STAIRS, ModBlocks.CARAMEL_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.CARAMEL_RESIN_BRICKS_WALL, ModBlocks.CARAMEL_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.CARAMEL_RESIN_BRICKS, ModBlocks.CARAMEL_RESIN_BRICKS_STAIRS, ModBlocks.CARAMEL_RESIN_BRICKS_SLAB, ModBlocks.CARAMEL_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_CARAMEL_RESIN_BRICKS, ModBlocks.CARAMEL_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.TOXIC_RESIN_CLUMP, 9)
@@ -2256,9 +2308,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(ModItems.TOXIC_RESIN_CLUMP, 9)
                     .criterion(hasItem(ModItems.TOXIC_RESIN_CLUMP), conditionsFromItem(ModItems.TOXIC_RESIN_CLUMP))
                     .offerTo(exporter);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BLOCK_STAIRS, ModBlocks.TOXIC_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.TOXIC_RESIN_BLOCK_SLAB, ModBlocks.TOXIC_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BLOCK_WALL, ModBlocks.TOXIC_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.TOXIC_RESIN_BLOCK, ModBlocks.TOXIC_RESIN_BLOCK_STAIRS, ModBlocks.TOXIC_RESIN_BLOCK_SLAB, ModBlocks.TOXIC_RESIN_BLOCK_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                         Ingredient.ofItem(ModItems.TOXIC_RESIN_CLUMP), RecipeCategory.MISC, ModItems.TOXIC_RESIN_BRICK, 0.1f, 200)
@@ -2266,9 +2316,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BRICKS, ModItems.TOXIC_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BRICKS_SLAB, ModBlocks.TOXIC_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_RESIN_BRICKS_STAIRS, ModBlocks.TOXIC_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.TOXIC_RESIN_BRICKS_WALL, ModBlocks.TOXIC_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.TOXIC_RESIN_BRICKS, ModBlocks.TOXIC_RESIN_BRICKS_STAIRS, ModBlocks.TOXIC_RESIN_BRICKS_SLAB, ModBlocks.TOXIC_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TOXIC_RESIN_BRICKS, ModBlocks.TOXIC_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.JADE_RESIN_CLUMP, 9)
@@ -2286,9 +2334,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .input(ModItems.JADE_RESIN_CLUMP, 9)
                     .criterion(hasItem(ModItems.JADE_RESIN_CLUMP), conditionsFromItem(ModItems.JADE_RESIN_CLUMP))
                     .offerTo(exporter);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BLOCK_STAIRS, ModBlocks.JADE_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.JADE_RESIN_BLOCK_SLAB, ModBlocks.JADE_RESIN_BLOCK);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BLOCK_WALL, ModBlocks.JADE_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.JADE_RESIN_BLOCK, ModBlocks.JADE_RESIN_BLOCK_STAIRS, ModBlocks.JADE_RESIN_BLOCK_SLAB, ModBlocks.JADE_RESIN_BLOCK_WALL);
 
                 CookingRecipeJsonBuilder.createSmelting(
                         Ingredient.ofItem(ModItems.JADE_RESIN_CLUMP), RecipeCategory.MISC, ModItems.JADE_RESIN_BRICK, 0.1f, 200)
@@ -2296,9 +2342,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BRICKS, ModItems.JADE_RESIN_BRICK);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BRICKS_SLAB, ModBlocks.JADE_RESIN_BRICKS, 2);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_RESIN_BRICKS_STAIRS, ModBlocks.JADE_RESIN_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.JADE_RESIN_BRICKS_WALL, ModBlocks.JADE_RESIN_BRICKS);
+                easyStonecutting(ModBlocks.JADE_RESIN_BRICKS, ModBlocks.JADE_RESIN_BRICKS_STAIRS, ModBlocks.JADE_RESIN_BRICKS_SLAB, ModBlocks.JADE_RESIN_BRICKS_WALL);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_JADE_RESIN_BRICKS, ModBlocks.JADE_RESIN_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.BUBBLE_RESIN_CLUMP, 9)
@@ -2668,6 +2712,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .pattern("##")
                     .criterion(RecipeGenerator.hasItem(input), conditionsFromItem(input))
                     .offerTo(exporter);
+            }
+
+            public void easyStonecutting(Block main, Block stair, Block slab, Block wall) {
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, stair, main);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, slab, main, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, wall, main, 2);
             }
         };
     }

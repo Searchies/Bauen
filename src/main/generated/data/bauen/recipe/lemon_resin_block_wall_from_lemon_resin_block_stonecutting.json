@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": "bauen:lemon_resin_block",
   "result": {
-    "count": 1,
+    "count": 2,
     "id": "bauen:lemon_resin_block_wall"
   }
 }

@@ -116,7 +116,8 @@ public class ModItemGroups {
                     entries.add(ModBlocks.GOLD_TRAPDOOR);
                     entries.add(ModBlocks.GOLD_DOOR);
                     entries.add(ModBlocks.GOLD_COINS);
-//                    entries.add(ModBlocks.GOLD_HOARD);
+                    entries.add(ModBlocks.GOLD_HOARD);
+                    entries.add(ModBlocks.GOLD_HOARD_BLOCK);
 
                     // Kaolin Clay //
                     entries.add(ModItems.KAOLIN_CLAY_BALL);

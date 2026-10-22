@@ -49,8 +49,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.GOLD_TRAPDOOR.asItem(),"Gold Trapdoor");
         translationBuilder.add(ModBlocks.GOLD_DOOR.asItem(),"Gold Door");
         translationBuilder.add(ModBlocks.GOLD_COINS.asItem(),"Gold Coins");
-//        translationBuilder.add(ModBlocks.GOLD_HOARD.asItem(),"Gold Hoard");
-//        translationBuilder.add(ModBlocks.GOLD_HOARD_BLOCK.asItem(),"Gold Hoard Block");
+        translationBuilder.add(ModBlocks.GOLD_HOARD.asItem(),"Gold Hoard");
+        translationBuilder.add(ModBlocks.GOLD_HOARD_BLOCK.asItem(),"Gold Hoard Block");
 
         translationBuilder.add(ModBlocks.MIXED_COBBLESTONE.asItem(),"Mixed Cobblestone");
         translationBuilder.add(ModBlocks.MIXED_COBBLESTONE_STAIRS.asItem(),"Mixed Cobblestone Stairs");

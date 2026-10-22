@@ -15,6 +15,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
+import net.searchies.bauen.block.GoldHoardBlock;
 import net.searchies.bauen.block.SeatBlock;
 
 import java.util.function.Function;
@@ -88,10 +89,10 @@ public class ModBlocks {
     public static final Block GOLD_DOOR = registerCustomBlock("gold_door", settings -> new DoorBlock(BlockSetType.COPPER, settings), ABS_DOOR);
     public static final Block GOLD_COINS = registerCustomBlock("gold_coins", LeafLitterBlock::new,
             AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().noCollision().sounds(BlockSoundGroup.CHAIN).pistonBehavior(PistonBehavior.DESTROY));
-//    public static final Block GOLD_HOARD = registerCustomBlock("gold_hoard", GoldHoardBlock::new,
-//            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().notSolid().ticksRandomly().strength(2.0f,4.0f).requiresTool().sounds(BlockSoundGroup.CHAIN).blockVision((state, world, pos) -> state.get(GoldHoardBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY));
-//    public static final Block GOLD_HOARD_BLOCK = registerBlock("gold_hoard_block",
-//            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(3.0f,6.0f).sounds(BlockSoundGroup.CHAIN));
+    public static final Block GOLD_HOARD = registerCustomBlock("gold_hoard", GoldHoardBlock::new,
+            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).replaceable().notSolid().ticksRandomly().strength(2.0f,4.0f).requiresTool().sounds(BlockSoundGroup.CHAIN).blockVision((state, world, pos) -> state.get(GoldHoardBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY));
+    public static final Block GOLD_HOARD_BLOCK = registerBlock("gold_hoard_block",
+            AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(3.0f,6.0f).sounds(BlockSoundGroup.CHAIN));
 
     public static final Block MIXED_COBBLESTONE = registerBlock("mixed_cobblestone", ABS_COBBLE);
     public static final Block MIXED_COBBLESTONE_STAIRS = registerCustomBlock("mixed_cobblestone_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.MIXED_COBBLESTONE.getDefaultState(), ABS_COBBLE), ABS_COBBLE);
@@ -967,8 +968,8 @@ public class ModBlocks {
             entries.add(ModBlocks.GOLD_TRAPDOOR);
             entries.add(ModBlocks.GOLD_DOOR);
             entries.add(ModBlocks.GOLD_COINS);
-//            entries.add(ModBlocks.GOLD_HOARD);
-//            entries.add(ModBlocks.GOLD_HOARD_BLOCK);
+            entries.add(ModBlocks.GOLD_HOARD);
+            entries.add(ModBlocks.GOLD_HOARD_BLOCK);
 
             entries.add(ModBlocks.MIXED_COBBLESTONE);
             entries.add(ModBlocks.MIXED_COBBLESTONE_STAIRS);

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:mossy_chiseled_treated_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:mossy_chiseled_treated_bricks_stairs"
+  }
+}

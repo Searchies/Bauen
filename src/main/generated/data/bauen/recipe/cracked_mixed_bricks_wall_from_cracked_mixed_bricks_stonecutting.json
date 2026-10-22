@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:cracked_mixed_bricks",
+  "result": {
+    "count": 2,
+    "id": "bauen:cracked_mixed_bricks_wall"
+  }
+}

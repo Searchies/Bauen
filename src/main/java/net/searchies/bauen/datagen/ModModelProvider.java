@@ -13,6 +13,7 @@ import net.minecraft.client.render.model.json.ModelVariantOperator;
 import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
 import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.item.Items;
+import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.WeightedPool;
@@ -66,11 +67,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.GOLD_TRAPDOOR);
         blockStateModelGenerator.registerDoor(ModBlocks.GOLD_DOOR);
         blockStateModelGenerator.registerLeafLitter(ModBlocks.GOLD_COINS);
-//        registerGoldHoards(blockStateModelGenerator);
-//        GoldHoardBlock.LAYERS.getValues().forEach(layer -> {
-//            blockStateModelGenerator.createWeightedVariant()
-//        });
-//        WeightedVariant weightedVariant = BlockStateModelGenerator.createWeightedVariant(Models.CUBE_BOTTOM_TOP.upload(Blocks.GRASS_BLOCK, "_snow", textureMap, this.modelCollector));
+        registerGoldHoards(blockStateModelGenerator);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MIXED_COBBLESTONE)
                 .stairs(ModBlocks.MIXED_COBBLESTONE_STAIRS)
@@ -867,17 +864,18 @@ public class ModModelProvider extends FabricModelProvider {
         generator.registerNorthDefaultHorizontalRotatable(ModBlocks.ABERRANT_JACK_O_LANTERN, textureMap);
     }
 
-//    private void registerGoldHoards(BlockStateModelGenerator blockStateModelGenerator) {
-//        TextureMap textureMap = TextureMap.all(ModBlocks.GOLD_HOARD);
-//        WeightedVariant weightedVariant = createWeightedVariant(Models.CUBE_ALL.upload(ModBlocks.GOLD_HOARD_BLOCK, textureMap, blockStateModelGenerator.modelCollector));
-//        blockStateModelGenerator.blockStateCollector.accept(
-//            VariantsBlockModelDefinitionCreator.of(ModBlocks.GOLD_HOARD).with(
-//                BlockStateVariantMap.models(Properties.LAYERS).generate(
-//                        layers -> layers < 8 ? createWeightedVariant(ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height" + layers * 2)) : weightedVariant
-//                )
-//            )
-//        );
-//        blockStateModelGenerator.registerParentedItemModel(ModBlocks.GOLD_HOARD, ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height2"));
-//        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(ModBlocks.GOLD_HOARD_BLOCK, weightedVariant));
-//    }
+    // need this AND manual json
+    private void registerGoldHoards(BlockStateModelGenerator generator) {
+        TextureMap textureMap = TextureMap.all(ModBlocks.GOLD_HOARD);
+        WeightedVariant weightedVariant = createWeightedVariant(Models.CUBE_ALL.upload(ModBlocks.GOLD_HOARD_BLOCK, textureMap, generator.modelCollector));
+        generator.blockStateCollector.accept(
+            VariantsBlockModelDefinitionCreator.of(ModBlocks.GOLD_HOARD).with(
+                BlockStateVariantMap.models(Properties.LAYERS).generate(
+                        layers -> layers < 8 ? createWeightedVariant(ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height" + layers * 2)) : weightedVariant
+                )
+            )
+        );
+        generator.registerParentedItemModel(ModBlocks.GOLD_HOARD, ModelIds.getBlockSubModelId(ModBlocks.GOLD_HOARD, "_height2"));
+        generator.blockStateCollector.accept(generator.createSingletonBlockState(ModBlocks.GOLD_HOARD_BLOCK, weightedVariant));
+    }
 }

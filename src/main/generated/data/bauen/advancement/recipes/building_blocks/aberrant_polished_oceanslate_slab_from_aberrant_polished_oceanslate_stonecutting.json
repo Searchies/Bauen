@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aberrant_polished_oceanslate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:aberrant_polished_oceanslate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:aberrant_polished_oceanslate_slab_from_aberrant_polished_oceanslate_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aberrant_polished_oceanslate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:aberrant_polished_oceanslate_slab_from_aberrant_polished_oceanslate_stonecutting"
+    ]
+  }
+}
