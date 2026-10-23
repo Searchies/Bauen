@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aberrant_pink_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:aberrant_pink_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:aberrant_pink_concrete_stairs_from_aberrant_pink_concrete_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aberrant_pink_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:aberrant_pink_concrete_stairs_from_aberrant_pink_concrete_stonecutting"
+    ]
+  }
+}

@@ -589,6 +589,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_STAIRS)
             .add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB)
             .add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL)
+
             .add(ModBlocks.ABERRANT_GLOWSTONE);
 
         valueLookupBuilder(BlockTags.CHAINS).add(ModBlocks.GOLD_CHAIN);
@@ -719,7 +720,39 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.ABERRANT_AMETHYST_TILES_WALL)
             .add(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL)
             .add(ModBlocks.ABERRANT_SOUL_SANDSTONE_WALL)
-            .add(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_WALL);
+            .add(ModBlocks.ABERRANT_SMOOTH_SOUL_SANDSTONE_WALL)
+            .add(ModBlocks.ABERRANT_RED_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_RED_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_ORANGE_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_YELLOW_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_YELLOW_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_LIME_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_LIME_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_GREEN_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_GREEN_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_CYAN_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_CYAN_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_BLUE_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_BLUE_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_PINK_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_PINK_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_MAGENTA_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_PURPLE_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_PURPLE_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_BROWN_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_BROWN_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_BLACK_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_BLACK_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_GRAY_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_GRAY_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA_WALL)
+            .add(ModBlocks.ABERRANT_WHITE_CONCRETE_WALL)
+            .add(ModBlocks.ABERRANT_WHITE_TERRACOTTA_WALL);
 
     }
 }

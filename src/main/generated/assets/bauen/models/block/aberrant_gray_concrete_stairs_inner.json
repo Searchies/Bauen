@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "bauen:block/aberrant_gray_concrete",
+    "side": "bauen:block/aberrant_gray_concrete",
+    "top": "bauen:block/aberrant_gray_concrete"
+  }
+}

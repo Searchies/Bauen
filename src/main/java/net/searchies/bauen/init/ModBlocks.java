@@ -38,6 +38,8 @@ public class ModBlocks {
     private static final AbstractBlock.Settings ABS_PRISMARINE = AbstractBlock.Settings.copy(Blocks.PRISMARINE);
     private static final AbstractBlock.Settings ABS_SANDSTONE = AbstractBlock.Settings.copy(Blocks.SANDSTONE);
     private static final AbstractBlock.Settings ABS_TERRACOTA = AbstractBlock.Settings.copy(Blocks.TERRACOTTA);
+    private static final AbstractBlock.Settings ABS_WOOL = AbstractBlock.Settings.copy(Blocks.RED_WOOL);
+    private static final AbstractBlock.Settings ABS_CONCRETE = AbstractBlock.Settings.copy(Blocks.RED_CONCRETE);
     private static final AbstractBlock.Settings ABS_RESIN_BLOCK = AbstractBlock.Settings.copy(Blocks.RESIN_BLOCK);
     private static final AbstractBlock.Settings ABS_CLUMPS = AbstractBlock.Settings.copy(Blocks.RESIN_CLUMP);
     private static final AbstractBlock.Settings ABS_AMETHYST = AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK);
@@ -436,19 +438,34 @@ public class ModBlocks {
 
     public static final Block ABERRANT_TERRACOTTA = registerBlock("aberrant_terracotta", ABS_TERRACOTA);
 
-    public static final Block ABERRANT_RED_WOOL = registerCustomBlock("aberrant_red_wool", Block::new, AbstractBlock.Settings.copy(Blocks.RED_WOOL));
-
+    public static final Block ABERRANT_RED_WOOL = registerCustomBlock("aberrant_red_wool", Block::new, ABS_WOOL);
+    public static final Block ABERRANT_RED_WOOL_STAIRS = registerCustomBlock("aberrant_red_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_RED_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_RED_WOOL_SLAB = registerCustomBlock("aberrant_red_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
     public static final Block ABERRANT_RED_SEAT = registerCustomBlock("aberrant_red_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_RED_WOOL).strength(0.4f));
-    public static final Block ABERRANT_RED_CONCRETE = registerCustomBlock("aberrant_red_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.RED_CONCRETE));
+    public static final Block ABERRANT_RED_CONCRETE = registerCustomBlock("aberrant_red_concrete", Block::new, ABS_CONCRETE);
+    public static final Block ABERRANT_RED_CONCRETE_STAIRS = registerCustomBlock("aberrant_red_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_RED_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_RED_CONCRETE_SLAB = registerCustomBlock("aberrant_red_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_RED_CONCRETE_WALL = registerCustomBlock("aberrant_red_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
     public static final Block ABERRANT_RED_CONCRETE_POWER = registerCustomBlock("aberrant_red_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_RED_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.RED_CONCRETE_POWDER));
     public static final Block ABERRANT_RED_TERRACOTTA = registerBlock("aberrant_red_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_RED_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_red_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_RED_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_RED_TERRACOTTA_SLAB = registerCustomBlock("aberrant_red_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_RED_TERRACOTTA_WALL = registerCustomBlock("aberrant_red_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
     public static final Block ABERRANT_RED_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_red_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.RED_GLAZED_TERRACOTTA));
 
-    public static final Block ABERRANT_ORANGE_WOOL = registerCustomBlock("aberrant_orange_wool", Block::new, AbstractBlock.Settings.copy(Blocks.ORANGE_WOOL));
+    public static final Block ABERRANT_ORANGE_WOOL = registerCustomBlock("aberrant_orange_wool", Block::new, ABS_WOOL);
+    public static final Block ABERRANT_ORANGE_WOOL_STAIRS = registerCustomBlock("aberrant_orange_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_ORANGE_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_ORANGE_WOOL_SLAB = registerCustomBlock("aberrant_orange_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
     public static final Block ABERRANT_ORANGE_SEAT = registerCustomBlock("aberrant_orange_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_ORANGE_WOOL).strength(0.4f));
     public static final Block ABERRANT_ORANGE_CONCRETE = registerCustomBlock("aberrant_orange_concrete", Block::new, AbstractBlock.Settings.copy(Blocks.ORANGE_CONCRETE));
+    public static final Block ABERRANT_ORANGE_CONCRETE_STAIRS = registerCustomBlock("aberrant_orange_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_ORANGE_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_ORANGE_CONCRETE_SLAB = registerCustomBlock("aberrant_orange_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_ORANGE_CONCRETE_WALL = registerCustomBlock("aberrant_orange_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
     public static final Block ABERRANT_ORANGE_CONCRETE_POWER = registerCustomBlock("aberrant_orange_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_ORANGE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.ORANGE_CONCRETE_POWDER));
     public static final Block ABERRANT_ORANGE_TERRACOTTA = registerBlock("aberrant_orange_terracotta", ABS_TERRACOTA);
+    public static final Block ABERRANT_ORANGE_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_orange_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_ORANGE_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_ORANGE_TERRACOTTA_SLAB = registerCustomBlock("aberrant_orange_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_ORANGE_TERRACOTTA_WALL = registerCustomBlock("aberrant_orange_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
     public static final Block ABERRANT_ORANGE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_orange_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.ORANGE_GLAZED_TERRACOTTA));
 
     public static final Block ABERRANT_YELLOW_WOOL = registerCustomBlock("aberrant_yellow_wool", Block::new, AbstractBlock.Settings.copy(Blocks.YELLOW_WOOL));
@@ -457,6 +474,14 @@ public class ModBlocks {
     public static final Block ABERRANT_YELLOW_CONCRETE_POWER = registerCustomBlock("aberrant_yellow_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_YELLOW_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.YELLOW_CONCRETE_POWDER));
     public static final Block ABERRANT_YELLOW_TERRACOTTA = registerBlock("aberrant_yellow_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_YELLOW_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_yellow_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.YELLOW_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_YELLOW_WOOL_STAIRS = registerCustomBlock("aberrant_yellow_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_YELLOW_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_YELLOW_WOOL_SLAB = registerCustomBlock("aberrant_yellow_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_YELLOW_CONCRETE_STAIRS = registerCustomBlock("aberrant_yellow_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_YELLOW_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_YELLOW_CONCRETE_SLAB = registerCustomBlock("aberrant_yellow_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_YELLOW_CONCRETE_WALL = registerCustomBlock("aberrant_yellow_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_YELLOW_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_yellow_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_YELLOW_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_YELLOW_TERRACOTTA_SLAB = registerCustomBlock("aberrant_yellow_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_YELLOW_TERRACOTTA_WALL = registerCustomBlock("aberrant_yellow_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_LIME_WOOL = registerCustomBlock("aberrant_lime_wool", Block::new, AbstractBlock.Settings.copy(Blocks.LIME_WOOL));
     public static final Block ABERRANT_LIME_SEAT = registerCustomBlock("aberrant_lime_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_LIME_WOOL).strength(0.4f));
@@ -464,6 +489,14 @@ public class ModBlocks {
     public static final Block ABERRANT_LIME_CONCRETE_POWER = registerCustomBlock("aberrant_lime_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_LIME_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.LIME_CONCRETE_POWDER));
     public static final Block ABERRANT_LIME_TERRACOTTA = registerBlock("aberrant_lime_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_LIME_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_lime_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.LIME_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_LIME_WOOL_STAIRS = registerCustomBlock("aberrant_lime_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIME_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_LIME_WOOL_SLAB = registerCustomBlock("aberrant_lime_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_LIME_CONCRETE_STAIRS = registerCustomBlock("aberrant_lime_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIME_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIME_CONCRETE_SLAB = registerCustomBlock("aberrant_lime_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIME_CONCRETE_WALL = registerCustomBlock("aberrant_lime_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIME_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_lime_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIME_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_LIME_TERRACOTTA_SLAB = registerCustomBlock("aberrant_lime_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_LIME_TERRACOTTA_WALL = registerCustomBlock("aberrant_lime_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_GREEN_WOOL = registerCustomBlock("aberrant_green_wool", Block::new, AbstractBlock.Settings.copy(Blocks.GREEN_WOOL));
     public static final Block ABERRANT_GREEN_SEAT = registerCustomBlock("aberrant_green_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_GREEN_WOOL).strength(0.4f));
@@ -471,6 +504,14 @@ public class ModBlocks {
     public static final Block ABERRANT_GREEN_CONCRETE_POWER = registerCustomBlock("aberrant_green_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_GREEN_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.GREEN_CONCRETE_POWDER));
     public static final Block ABERRANT_GREEN_TERRACOTTA = registerBlock("aberrant_green_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_GREEN_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_green_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.GREEN_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_GREEN_WOOL_STAIRS = registerCustomBlock("aberrant_green_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_GREEN_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_GREEN_WOOL_SLAB = registerCustomBlock("aberrant_green_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_GREEN_CONCRETE_STAIRS = registerCustomBlock("aberrant_green_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_GREEN_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_GREEN_CONCRETE_SLAB = registerCustomBlock("aberrant_green_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_GREEN_CONCRETE_WALL = registerCustomBlock("aberrant_green_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_GREEN_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_green_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_GREEN_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_GREEN_TERRACOTTA_SLAB = registerCustomBlock("aberrant_green_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_GREEN_TERRACOTTA_WALL = registerCustomBlock("aberrant_green_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_CYAN_WOOL = registerCustomBlock("aberrant_cyan_wool", Block::new, AbstractBlock.Settings.copy(Blocks.CYAN_WOOL));
     public static final Block ABERRANT_CYAN_SEAT = registerCustomBlock("aberrant_cyan_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_CYAN_WOOL).strength(0.4f));
@@ -478,6 +519,14 @@ public class ModBlocks {
     public static final Block ABERRANT_CYAN_CONCRETE_POWER = registerCustomBlock("aberrant_cyan_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_CYAN_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.CYAN_CONCRETE_POWDER));
     public static final Block ABERRANT_CYAN_TERRACOTTA = registerBlock("aberrant_cyan_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_CYAN_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_cyan_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.CYAN_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_CYAN_WOOL_STAIRS = registerCustomBlock("aberrant_cyan_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_CYAN_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_CYAN_WOOL_SLAB = registerCustomBlock("aberrant_cyan_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_CYAN_CONCRETE_STAIRS = registerCustomBlock("aberrant_cyan_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_CYAN_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_CYAN_CONCRETE_SLAB = registerCustomBlock("aberrant_cyan_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_CYAN_CONCRETE_WALL = registerCustomBlock("aberrant_cyan_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_CYAN_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_cyan_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_CYAN_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_CYAN_TERRACOTTA_SLAB = registerCustomBlock("aberrant_cyan_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_CYAN_TERRACOTTA_WALL = registerCustomBlock("aberrant_cyan_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_LIGHT_BLUE_WOOL = registerCustomBlock("aberrant_light_blue_wool", Block::new, AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_WOOL));
     public static final Block ABERRANT_LIGHT_BLUE_SEAT = registerCustomBlock("aberrant_light_blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL).strength(0.4f));
@@ -485,6 +534,14 @@ public class ModBlocks {
     public static final Block ABERRANT_LIGHT_BLUE_CONCRETE_POWER = registerCustomBlock("aberrant_light_blue_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_CONCRETE_POWDER));
     public static final Block ABERRANT_LIGHT_BLUE_TERRACOTTA = registerBlock("aberrant_light_blue_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_LIGHT_BLUE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_light_blue_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_LIGHT_BLUE_WOOL_STAIRS = registerCustomBlock("aberrant_light_blue_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_LIGHT_BLUE_WOOL_SLAB = registerCustomBlock("aberrant_light_blue_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_LIGHT_BLUE_CONCRETE_STAIRS = registerCustomBlock("aberrant_light_blue_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIGHT_BLUE_CONCRETE_SLAB = registerCustomBlock("aberrant_light_blue_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIGHT_BLUE_CONCRETE_WALL = registerCustomBlock("aberrant_light_blue_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIGHT_BLUE_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_light_blue_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_LIGHT_BLUE_TERRACOTTA_SLAB = registerCustomBlock("aberrant_light_blue_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_LIGHT_BLUE_TERRACOTTA_WALL = registerCustomBlock("aberrant_light_blue_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_BLUE_WOOL = registerCustomBlock("aberrant_blue_wool", Block::new, AbstractBlock.Settings.copy(Blocks.BLUE_WOOL));
     public static final Block ABERRANT_BLUE_SEAT = registerCustomBlock("aberrant_blue_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_BLUE_WOOL).strength(0.4f));
@@ -492,6 +549,14 @@ public class ModBlocks {
     public static final Block ABERRANT_BLUE_CONCRETE_POWER = registerCustomBlock("aberrant_blue_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_BLUE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.BLUE_CONCRETE_POWDER));
     public static final Block ABERRANT_BLUE_TERRACOTTA = registerBlock("aberrant_blue_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_BLUE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_blue_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.BLUE_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_BLUE_WOOL_STAIRS = registerCustomBlock("aberrant_blue_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BLUE_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_BLUE_WOOL_SLAB = registerCustomBlock("aberrant_blue_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_BLUE_CONCRETE_STAIRS = registerCustomBlock("aberrant_blue_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BLUE_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BLUE_CONCRETE_SLAB = registerCustomBlock("aberrant_blue_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BLUE_CONCRETE_WALL = registerCustomBlock("aberrant_blue_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BLUE_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_blue_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BLUE_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_BLUE_TERRACOTTA_SLAB = registerCustomBlock("aberrant_blue_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_BLUE_TERRACOTTA_WALL = registerCustomBlock("aberrant_blue_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_PINK_WOOL = registerCustomBlock("aberrant_pink_wool", Block::new, AbstractBlock.Settings.copy(Blocks.PINK_WOOL));
     public static final Block ABERRANT_PINK_SEAT = registerCustomBlock("aberrant_pink_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_PINK_WOOL).strength(0.4f));
@@ -499,6 +564,14 @@ public class ModBlocks {
     public static final Block ABERRANT_PINK_CONCRETE_POWER = registerCustomBlock("aberrant_pink_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_PINK_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.PINK_CONCRETE_POWDER));
     public static final Block ABERRANT_PINK_TERRACOTTA = registerBlock("aberrant_pink_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_PINK_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_pink_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_PINK_WOOL_STAIRS = registerCustomBlock("aberrant_pink_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PINK_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_PINK_WOOL_SLAB = registerCustomBlock("aberrant_pink_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_PINK_CONCRETE_STAIRS = registerCustomBlock("aberrant_pink_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PINK_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_PINK_CONCRETE_SLAB = registerCustomBlock("aberrant_pink_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_PINK_CONCRETE_WALL = registerCustomBlock("aberrant_pink_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_PINK_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_pink_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PINK_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_PINK_TERRACOTTA_SLAB = registerCustomBlock("aberrant_pink_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_PINK_TERRACOTTA_WALL = registerCustomBlock("aberrant_pink_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_MAGENTA_WOOL = registerCustomBlock("aberrant_magenta_wool", Block::new, AbstractBlock.Settings.copy(Blocks.MAGENTA_WOOL));
     public static final Block ABERRANT_MAGENTA_SEAT = registerCustomBlock("aberrant_magenta_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_MAGENTA_WOOL).strength(0.4f));
@@ -506,6 +579,14 @@ public class ModBlocks {
     public static final Block ABERRANT_MAGENTA_CONCRETE_POWER = registerCustomBlock("aberrant_magenta_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_MAGENTA_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.MAGENTA_CONCRETE_POWDER));
     public static final Block ABERRANT_MAGENTA_TERRACOTTA = registerBlock("aberrant_magenta_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_MAGENTA_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_magenta_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.MAGENTA_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_MAGENTA_WOOL_STAIRS = registerCustomBlock("aberrant_magenta_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_MAGENTA_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_MAGENTA_WOOL_SLAB = registerCustomBlock("aberrant_magenta_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_MAGENTA_CONCRETE_STAIRS = registerCustomBlock("aberrant_magenta_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_MAGENTA_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_MAGENTA_CONCRETE_SLAB = registerCustomBlock("aberrant_magenta_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_MAGENTA_CONCRETE_WALL = registerCustomBlock("aberrant_magenta_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_MAGENTA_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_magenta_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_MAGENTA_TERRACOTTA_SLAB = registerCustomBlock("aberrant_magenta_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_MAGENTA_TERRACOTTA_WALL = registerCustomBlock("aberrant_magenta_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_PURPLE_WOOL = registerCustomBlock("aberrant_purple_wool", Block::new, AbstractBlock.Settings.copy(Blocks.PURPLE_WOOL));
     public static final Block ABERRANT_PURPLE_SEAT = registerCustomBlock("aberrant_purple_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_PURPLE_WOOL).strength(0.4f));
@@ -513,6 +594,14 @@ public class ModBlocks {
     public static final Block ABERRANT_PURPLE_CONCRETE_POWER = registerCustomBlock("aberrant_purple_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_PURPLE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.PURPLE_CONCRETE_POWDER));
     public static final Block ABERRANT_PURPLE_TERRACOTTA = registerBlock("aberrant_purple_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_PURPLE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_purple_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.PURPLE_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_PURPLE_WOOL_STAIRS = registerCustomBlock("aberrant_purple_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PURPLE_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_PURPLE_WOOL_SLAB = registerCustomBlock("aberrant_purple_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_PURPLE_CONCRETE_STAIRS = registerCustomBlock("aberrant_purple_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PURPLE_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_PURPLE_CONCRETE_SLAB = registerCustomBlock("aberrant_purple_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_PURPLE_CONCRETE_WALL = registerCustomBlock("aberrant_purple_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_PURPLE_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_purple_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_PURPLE_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_PURPLE_TERRACOTTA_SLAB = registerCustomBlock("aberrant_purple_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_PURPLE_TERRACOTTA_WALL = registerCustomBlock("aberrant_purple_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_BROWN_WOOL = registerCustomBlock("aberrant_brown_wool", Block::new, AbstractBlock.Settings.copy(Blocks.BROWN_WOOL));
     public static final Block ABERRANT_BROWN_SEAT = registerCustomBlock("aberrant_brown_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_BROWN_WOOL).strength(0.4f));
@@ -520,6 +609,14 @@ public class ModBlocks {
     public static final Block ABERRANT_BROWN_CONCRETE_POWER = registerCustomBlock("aberrant_brown_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_BROWN_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.BROWN_CONCRETE_POWDER));
     public static final Block ABERRANT_BROWN_TERRACOTTA = registerBlock("aberrant_brown_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_BROWN_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_brown_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.BROWN_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_BROWN_WOOL_STAIRS = registerCustomBlock("aberrant_brown_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BROWN_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_BROWN_WOOL_SLAB = registerCustomBlock("aberrant_brown_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_BROWN_CONCRETE_STAIRS = registerCustomBlock("aberrant_brown_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BROWN_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BROWN_CONCRETE_SLAB = registerCustomBlock("aberrant_brown_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BROWN_CONCRETE_WALL = registerCustomBlock("aberrant_brown_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BROWN_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_brown_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BROWN_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_BROWN_TERRACOTTA_SLAB = registerCustomBlock("aberrant_brown_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_BROWN_TERRACOTTA_WALL = registerCustomBlock("aberrant_brown_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_BLACK_WOOL = registerCustomBlock("aberrant_black_wool", Block::new, AbstractBlock.Settings.copy(Blocks.BLACK_WOOL));
     public static final Block ABERRANT_BLACK_SEAT = registerCustomBlock("aberrant_black_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_BLACK_WOOL).strength(0.4f));
@@ -527,6 +624,14 @@ public class ModBlocks {
     public static final Block ABERRANT_BLACK_CONCRETE_POWER = registerCustomBlock("aberrant_black_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_BLACK_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.BLACK_CONCRETE_POWDER));
     public static final Block ABERRANT_BLACK_TERRACOTTA = registerBlock("aberrant_black_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_BLACK_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_black_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.BLACK_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_BLACK_WOOL_STAIRS = registerCustomBlock("aberrant_black_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BLACK_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_BLACK_WOOL_SLAB = registerCustomBlock("aberrant_black_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_BLACK_CONCRETE_STAIRS = registerCustomBlock("aberrant_black_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BLACK_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BLACK_CONCRETE_SLAB = registerCustomBlock("aberrant_black_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BLACK_CONCRETE_WALL = registerCustomBlock("aberrant_black_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_BLACK_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_black_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_BLACK_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_BLACK_TERRACOTTA_SLAB = registerCustomBlock("aberrant_black_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_BLACK_TERRACOTTA_WALL = registerCustomBlock("aberrant_black_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_GRAY_WOOL = registerCustomBlock("aberrant_gray_wool", Block::new, AbstractBlock.Settings.copy(Blocks.GRAY_WOOL));
     public static final Block ABERRANT_GRAY_SEAT = registerCustomBlock("aberrant_gray_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_GRAY_WOOL).strength(0.4f));
@@ -534,6 +639,14 @@ public class ModBlocks {
     public static final Block ABERRANT_GRAY_CONCRETE_POWER = registerCustomBlock("aberrant_gray_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_GRAY_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.GRAY_CONCRETE_POWDER));
     public static final Block ABERRANT_GRAY_TERRACOTTA = registerBlock("aberrant_gray_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_GRAY_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_gray_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.GRAY_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_GRAY_WOOL_STAIRS = registerCustomBlock("aberrant_gray_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_GRAY_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_GRAY_WOOL_SLAB = registerCustomBlock("aberrant_gray_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_GRAY_CONCRETE_STAIRS = registerCustomBlock("aberrant_gray_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_GRAY_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_GRAY_CONCRETE_SLAB = registerCustomBlock("aberrant_gray_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_GRAY_CONCRETE_WALL = registerCustomBlock("aberrant_gray_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_GRAY_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_gray_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_GRAY_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_GRAY_TERRACOTTA_SLAB = registerCustomBlock("aberrant_gray_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_GRAY_TERRACOTTA_WALL = registerCustomBlock("aberrant_gray_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_LIGHT_GRAY_WOOL = registerCustomBlock("aberrant_light_gray_wool", Block::new, AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_WOOL));
     public static final Block ABERRANT_LIGHT_GRAY_SEAT = registerCustomBlock("aberrant_light_gray_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL).strength(0.4f));
@@ -541,6 +654,14 @@ public class ModBlocks {
     public static final Block ABERRANT_LIGHT_GRAY_CONCRETE_POWER = registerCustomBlock("aberrant_light_gray_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_CONCRETE_POWDER));
     public static final Block ABERRANT_LIGHT_GRAY_TERRACOTTA = registerBlock("aberrant_light_gray_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_LIGHT_GRAY_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_light_gray_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_LIGHT_GRAY_WOOL_STAIRS = registerCustomBlock("aberrant_light_gray_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_LIGHT_GRAY_WOOL_SLAB = registerCustomBlock("aberrant_light_gray_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_LIGHT_GRAY_CONCRETE_STAIRS = registerCustomBlock("aberrant_light_gray_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIGHT_GRAY_CONCRETE_SLAB = registerCustomBlock("aberrant_light_gray_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIGHT_GRAY_CONCRETE_WALL = registerCustomBlock("aberrant_light_gray_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_LIGHT_GRAY_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_light_gray_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_LIGHT_GRAY_TERRACOTTA_SLAB = registerCustomBlock("aberrant_light_gray_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_LIGHT_GRAY_TERRACOTTA_WALL = registerCustomBlock("aberrant_light_gray_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_WHITE_WOOL = registerCustomBlock("aberrant_white_wool", Block::new, AbstractBlock.Settings.copy(Blocks.WHITE_WOOL));
     public static final Block ABERRANT_WHITE_SEAT = registerCustomBlock("aberrant_white_seat", settings -> new SeatBlock(settings.nonOpaque()), AbstractBlock.Settings.copy(ModBlocks.ABERRANT_WHITE_WOOL).strength(0.4f));
@@ -548,6 +669,14 @@ public class ModBlocks {
     public static final Block ABERRANT_WHITE_CONCRETE_POWER = registerCustomBlock("aberrant_white_concrete_powder", settings -> new ConcretePowderBlock(ModBlocks.ABERRANT_WHITE_CONCRETE, settings), AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE_POWDER));
     public static final Block ABERRANT_WHITE_TERRACOTTA = registerBlock("aberrant_white_terracotta", ABS_TERRACOTA);
     public static final Block ABERRANT_WHITE_GLAZED_TERRACOTTA = registerCustomBlock("aberrant_white_glazed_terracotta", GlazedTerracottaBlock::new, AbstractBlock.Settings.copy(Blocks.WHITE_GLAZED_TERRACOTTA));
+    public static final Block ABERRANT_WHITE_WOOL_STAIRS = registerCustomBlock("aberrant_white_wool_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_WHITE_WOOL.getDefaultState(), ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_WHITE_WOOL_SLAB = registerCustomBlock("aberrant_white_wool_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_WOOL), ABS_WOOL);
+    public static final Block ABERRANT_WHITE_CONCRETE_STAIRS = registerCustomBlock("aberrant_white_concrete_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_WHITE_CONCRETE.getDefaultState(), ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_WHITE_CONCRETE_SLAB = registerCustomBlock("aberrant_white_concrete_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_WHITE_CONCRETE_WALL = registerCustomBlock("aberrant_white_concrete_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_CONCRETE), ABS_CONCRETE);
+    public static final Block ABERRANT_WHITE_TERRACOTTA_STAIRS = registerCustomBlock("aberrant_white_terracotta_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_WHITE_TERRACOTTA.getDefaultState(), ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_WHITE_TERRACOTTA_SLAB = registerCustomBlock("aberrant_white_terracotta_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_TERRACOTA), ABS_TERRACOTA);
+    public static final Block ABERRANT_WHITE_TERRACOTTA_WALL = registerCustomBlock("aberrant_white_terracotta_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_TERRACOTA), ABS_TERRACOTA);
 
     public static final Block ABERRANT_RED_CARPET = registerCustomBlock("aberrant_red_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.RED, settings), AbstractBlock.Settings.copy(Blocks.RED_CARPET));
     public static final Block ABERRANT_ORANGE_CARPET = registerCustomBlock("aberrant_orange_carpet", (AbstractBlock.Settings settings) -> new DyedCarpetBlock(DyeColor.ORANGE, settings), AbstractBlock.Settings.copy(Blocks.ORANGE_CARPET));
@@ -1274,6 +1403,12 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_RED_CONCRETE_POWER);
             entries.add(ModBlocks.ABERRANT_RED_TERRACOTTA);
             entries.add(ModBlocks.ABERRANT_RED_GLAZED_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_RED_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_RED_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_RED_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_RED_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_RED_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_RED_CONCRETE_SLAB);
 
             entries.add(ModBlocks.ABERRANT_ORANGE_WOOL);
             entries.add(ModBlocks.ABERRANT_ORANGE_SEAT);
@@ -1281,6 +1416,12 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE_POWER);
             entries.add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA);
             entries.add(ModBlocks.ABERRANT_ORANGE_GLAZED_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_ORANGE_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_ORANGE_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA_SLAB);
 
             entries.add(ModBlocks.ABERRANT_YELLOW_WOOL);
             entries.add(ModBlocks.ABERRANT_YELLOW_SEAT);
@@ -1379,6 +1520,124 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE_POWER);
             entries.add(ModBlocks.ABERRANT_WHITE_TERRACOTTA);
             entries.add(ModBlocks.ABERRANT_WHITE_GLAZED_TERRACOTTA);
+
+            entries.add(ModBlocks.ABERRANT_YELLOW_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_YELLOW_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_YELLOW_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_YELLOW_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIME_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIME_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIME_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIME_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIME_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIME_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_GREEN_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_GREEN_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_GREEN_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_GREEN_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_CYAN_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_CYAN_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_CYAN_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_CYAN_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_BLUE_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BLUE_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_BLUE_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BLUE_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_PINK_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PINK_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_PINK_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PINK_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_PINK_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PINK_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_PURPLE_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PURPLE_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_PURPLE_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_PURPLE_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_BROWN_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BROWN_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_BROWN_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BROWN_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_BLACK_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BLACK_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_BLACK_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_BLACK_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_GRAY_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_GRAY_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_GRAY_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_GRAY_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA_SLAB);
+            entries.add(ModBlocks.ABERRANT_WHITE_WOOL_STAIRS);
+            entries.add(ModBlocks.ABERRANT_WHITE_WOOL_SLAB);
+            entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE_STAIRS);
+            entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE_SLAB);
+            entries.add(ModBlocks.ABERRANT_WHITE_TERRACOTTA_STAIRS);
+            entries.add(ModBlocks.ABERRANT_WHITE_TERRACOTTA_SLAB);
+
+            entries.add(ModBlocks.ABERRANT_RED_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_RED_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_ORANGE_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_ORANGE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_YELLOW_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_YELLOW_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_LIME_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_LIME_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_GREEN_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_GREEN_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_CYAN_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_CYAN_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_BLUE_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_BLUE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_PINK_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_PINK_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_PURPLE_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_PURPLE_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_BROWN_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_BROWN_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_BLACK_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_BLACK_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_GRAY_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_GRAY_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA);
+            entries.add(ModBlocks.ABERRANT_WHITE_CONCRETE_WALL);
+            entries.add(ModBlocks.ABERRANT_WHITE_TERRACOTTA);
 
             entries.add(ModBlocks.ABERRANT_RED_CARPET);
             entries.add(ModBlocks.ABERRANT_ORANGE_CARPET);

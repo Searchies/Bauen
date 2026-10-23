@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/aberrant_white_wool_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/aberrant_white_wool"
+    },
+    "type=top": {
+      "model": "bauen:block/aberrant_white_wool_slab_top"
+    }
+  }
+}

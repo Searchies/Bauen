@@ -1107,11 +1107,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("BBB")
                         .criterion(hasItem(ModBlocks.CRACKED_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.CRACKED_OCEANSLATE_BRICKS))
                         .offerTo(exporter);
-                createStairsRecipe(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS, Ingredient.ofItem(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS))
-                        .criterion(hasItem(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS), conditionsFromItem(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS))
-                        .offerTo(exporter);
-                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
-                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS);
                 easyStonecutting(ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_STAIRS, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_SLAB, ModBlocks.CRACKED_ABERRANT_OCEANSLATE_BRICKS_WALL);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.KELPY_ABERRANT_OCEANSLATE_BRICKS, 8)
@@ -2015,6 +2010,70 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .criterion(hasItem(Blocks.WHITE_GLAZED_TERRACOTTA), conditionsFromItem(Blocks.WHITE_GLAZED_TERRACOTTA))
                     .offerTo(exporter);
 
+                easyRecipe(ModBlocks.ABERRANT_RED_WOOL, ModBlocks.ABERRANT_RED_WOOL_STAIRS, ModBlocks.ABERRANT_RED_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_RED_CONCRETE, ModBlocks.ABERRANT_RED_CONCRETE_STAIRS, ModBlocks.ABERRANT_RED_CONCRETE_SLAB, ModBlocks.ABERRANT_RED_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_RED_TERRACOTTA, ModBlocks.ABERRANT_RED_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_RED_TERRACOTTA_SLAB, ModBlocks.ABERRANT_RED_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_ORANGE_WOOL, ModBlocks.ABERRANT_ORANGE_WOOL_STAIRS, ModBlocks.ABERRANT_ORANGE_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_ORANGE_CONCRETE, ModBlocks.ABERRANT_ORANGE_CONCRETE_STAIRS, ModBlocks.ABERRANT_ORANGE_CONCRETE_SLAB, ModBlocks.ABERRANT_ORANGE_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_ORANGE_TERRACOTTA, ModBlocks.ABERRANT_ORANGE_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_ORANGE_TERRACOTTA_SLAB, ModBlocks.ABERRANT_ORANGE_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_YELLOW_WOOL, ModBlocks.ABERRANT_YELLOW_WOOL_STAIRS, ModBlocks.ABERRANT_YELLOW_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_YELLOW_CONCRETE, ModBlocks.ABERRANT_YELLOW_CONCRETE_STAIRS, ModBlocks.ABERRANT_YELLOW_CONCRETE_SLAB, ModBlocks.ABERRANT_YELLOW_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_YELLOW_TERRACOTTA, ModBlocks.ABERRANT_YELLOW_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_YELLOW_TERRACOTTA_SLAB, ModBlocks.ABERRANT_YELLOW_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_LIME_WOOL, ModBlocks.ABERRANT_LIME_WOOL_STAIRS, ModBlocks.ABERRANT_LIME_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_LIME_CONCRETE, ModBlocks.ABERRANT_LIME_CONCRETE_STAIRS, ModBlocks.ABERRANT_LIME_CONCRETE_SLAB, ModBlocks.ABERRANT_LIME_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_LIME_TERRACOTTA, ModBlocks.ABERRANT_LIME_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_LIME_TERRACOTTA_SLAB, ModBlocks.ABERRANT_LIME_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_GREEN_WOOL, ModBlocks.ABERRANT_GREEN_WOOL_STAIRS, ModBlocks.ABERRANT_GREEN_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_GREEN_CONCRETE, ModBlocks.ABERRANT_GREEN_CONCRETE_STAIRS, ModBlocks.ABERRANT_GREEN_CONCRETE_SLAB, ModBlocks.ABERRANT_GREEN_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_GREEN_TERRACOTTA, ModBlocks.ABERRANT_GREEN_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_GREEN_TERRACOTTA_SLAB, ModBlocks.ABERRANT_GREEN_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_CYAN_WOOL, ModBlocks.ABERRANT_CYAN_WOOL_STAIRS, ModBlocks.ABERRANT_CYAN_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_CYAN_CONCRETE, ModBlocks.ABERRANT_CYAN_CONCRETE_STAIRS, ModBlocks.ABERRANT_CYAN_CONCRETE_SLAB, ModBlocks.ABERRANT_CYAN_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_CYAN_TERRACOTTA, ModBlocks.ABERRANT_CYAN_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_CYAN_TERRACOTTA_SLAB, ModBlocks.ABERRANT_CYAN_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_LIGHT_BLUE_WOOL, ModBlocks.ABERRANT_LIGHT_BLUE_WOOL_STAIRS, ModBlocks.ABERRANT_LIGHT_BLUE_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE, ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_STAIRS, ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_SLAB, ModBlocks.ABERRANT_LIGHT_BLUE_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA, ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA_SLAB, ModBlocks.ABERRANT_LIGHT_BLUE_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_BLUE_WOOL, ModBlocks.ABERRANT_BLUE_WOOL_STAIRS, ModBlocks.ABERRANT_BLUE_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_BLUE_CONCRETE, ModBlocks.ABERRANT_BLUE_CONCRETE_STAIRS, ModBlocks.ABERRANT_BLUE_CONCRETE_SLAB, ModBlocks.ABERRANT_BLUE_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_BLUE_TERRACOTTA, ModBlocks.ABERRANT_BLUE_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_BLUE_TERRACOTTA_SLAB, ModBlocks.ABERRANT_BLUE_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_PINK_WOOL, ModBlocks.ABERRANT_PINK_WOOL_STAIRS, ModBlocks.ABERRANT_PINK_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_PINK_CONCRETE, ModBlocks.ABERRANT_PINK_CONCRETE_STAIRS, ModBlocks.ABERRANT_PINK_CONCRETE_SLAB, ModBlocks.ABERRANT_PINK_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_PINK_TERRACOTTA, ModBlocks.ABERRANT_PINK_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_PINK_TERRACOTTA_SLAB, ModBlocks.ABERRANT_PINK_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_MAGENTA_WOOL, ModBlocks.ABERRANT_MAGENTA_WOOL_STAIRS, ModBlocks.ABERRANT_MAGENTA_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_MAGENTA_CONCRETE, ModBlocks.ABERRANT_MAGENTA_CONCRETE_STAIRS, ModBlocks.ABERRANT_MAGENTA_CONCRETE_SLAB, ModBlocks.ABERRANT_MAGENTA_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_MAGENTA_TERRACOTTA, ModBlocks.ABERRANT_MAGENTA_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_MAGENTA_TERRACOTTA_SLAB, ModBlocks.ABERRANT_MAGENTA_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_PURPLE_WOOL, ModBlocks.ABERRANT_PURPLE_WOOL_STAIRS, ModBlocks.ABERRANT_PURPLE_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_PURPLE_CONCRETE, ModBlocks.ABERRANT_PURPLE_CONCRETE_STAIRS, ModBlocks.ABERRANT_PURPLE_CONCRETE_SLAB, ModBlocks.ABERRANT_PURPLE_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_PURPLE_TERRACOTTA, ModBlocks.ABERRANT_PURPLE_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_PURPLE_TERRACOTTA_SLAB, ModBlocks.ABERRANT_PURPLE_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_BROWN_WOOL, ModBlocks.ABERRANT_BROWN_WOOL_STAIRS, ModBlocks.ABERRANT_BROWN_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_BROWN_CONCRETE, ModBlocks.ABERRANT_BROWN_CONCRETE_STAIRS, ModBlocks.ABERRANT_BROWN_CONCRETE_SLAB, ModBlocks.ABERRANT_BROWN_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_BROWN_TERRACOTTA, ModBlocks.ABERRANT_BROWN_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_BROWN_TERRACOTTA_SLAB, ModBlocks.ABERRANT_BROWN_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_BLACK_WOOL, ModBlocks.ABERRANT_BLACK_WOOL_STAIRS, ModBlocks.ABERRANT_BLACK_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_BLACK_CONCRETE, ModBlocks.ABERRANT_BLACK_CONCRETE_STAIRS, ModBlocks.ABERRANT_BLACK_CONCRETE_SLAB, ModBlocks.ABERRANT_BLACK_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_BLACK_TERRACOTTA, ModBlocks.ABERRANT_BLACK_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_BLACK_TERRACOTTA_SLAB, ModBlocks.ABERRANT_BLACK_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_GRAY_WOOL, ModBlocks.ABERRANT_GRAY_WOOL_STAIRS, ModBlocks.ABERRANT_GRAY_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_GRAY_CONCRETE, ModBlocks.ABERRANT_GRAY_CONCRETE_STAIRS, ModBlocks.ABERRANT_GRAY_CONCRETE_SLAB, ModBlocks.ABERRANT_GRAY_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_GRAY_TERRACOTTA, ModBlocks.ABERRANT_GRAY_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_GRAY_TERRACOTTA_SLAB, ModBlocks.ABERRANT_GRAY_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_LIGHT_GRAY_WOOL, ModBlocks.ABERRANT_LIGHT_GRAY_WOOL_STAIRS, ModBlocks.ABERRANT_LIGHT_GRAY_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE, ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_STAIRS, ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_SLAB, ModBlocks.ABERRANT_LIGHT_GRAY_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA, ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA_SLAB, ModBlocks.ABERRANT_LIGHT_GRAY_TERRACOTTA_WALL);
+
+                easyRecipe(ModBlocks.ABERRANT_WHITE_WOOL, ModBlocks.ABERRANT_WHITE_WOOL_STAIRS, ModBlocks.ABERRANT_WHITE_WOOL_SLAB);
+                easyRecipe(ModBlocks.ABERRANT_WHITE_CONCRETE, ModBlocks.ABERRANT_WHITE_CONCRETE_STAIRS, ModBlocks.ABERRANT_WHITE_CONCRETE_SLAB, ModBlocks.ABERRANT_WHITE_CONCRETE_WALL);
+                easyRecipe(ModBlocks.ABERRANT_WHITE_TERRACOTTA, ModBlocks.ABERRANT_WHITE_TERRACOTTA_STAIRS, ModBlocks.ABERRANT_WHITE_TERRACOTTA_SLAB, ModBlocks.ABERRANT_WHITE_TERRACOTTA_WALL);
+
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_RED_CARPET, 8)
                     .input('P', ModItems.ABERRANT_PASTE)
                     .input('B', Blocks.RED_CARPET)
@@ -2718,6 +2777,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, stair, main);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, slab, main, 2);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, wall, main, 2);
+            }
+
+            public void easyStonecutting(Block main, Block stair, Block slab) {
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, stair, main);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, slab, main, 2);
+            }
+
+            public void easyRecipe(Block main, Block stair, Block slab) {
+                createStairsRecipe(stair, Ingredient.ofItem(main))
+                    .criterion(hasItem(main), conditionsFromItem(main))
+                    .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, slab, main);
+                easyStonecutting(main, stair, slab);
+            }
+
+            public void easyRecipe(Block main, Block stair, Block slab, Block wall) {
+                createStairsRecipe(stair, Ingredient.ofItem(main))
+                    .criterion(hasItem(main), conditionsFromItem(main))
+                    .offerTo(exporter);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, slab, main);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, wall, main);
+                easyStonecutting(main, stair, slab, wall);
             }
         };
     }

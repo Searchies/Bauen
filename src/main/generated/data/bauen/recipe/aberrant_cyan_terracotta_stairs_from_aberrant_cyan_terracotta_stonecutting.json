@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:aberrant_cyan_terracotta",
+  "result": {
+    "count": 1,
+    "id": "bauen:aberrant_cyan_terracotta_stairs"
+  }
+}

@@ -3,7 +3,6 @@ package net.searchies.bauen;
 import net.fabricmc.api.ModInitializer;
 
 import net.searchies.bauen.init.ModBlocks;
-
 import net.searchies.bauen.init.ModEntities;
 import net.searchies.bauen.init.ModItemGroups;
 import net.searchies.bauen.init.ModItems;

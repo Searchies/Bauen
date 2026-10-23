@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aberrant_red_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:aberrant_red_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:aberrant_red_concrete_slab_from_aberrant_red_concrete_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aberrant_red_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:aberrant_red_concrete_slab_from_aberrant_red_concrete_stonecutting"
+    ]
+  }
+}
