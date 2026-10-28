@@ -37,6 +37,8 @@ public class ModBlocks {
     private static final AbstractBlock.Settings ABS_SEA_LANTERN = AbstractBlock.Settings.copy(Blocks.SEA_LANTERN);
     private static final AbstractBlock.Settings ABS_PRISMARINE = AbstractBlock.Settings.copy(Blocks.PRISMARINE);
     private static final AbstractBlock.Settings ABS_SANDSTONE = AbstractBlock.Settings.copy(Blocks.SANDSTONE);
+    private static final AbstractBlock.Settings ABS_SOUL_SAND = AbstractBlock.Settings.copy(Blocks.SOUL_SAND);
+    private static final AbstractBlock.Settings ABS_SOUL_SOIL = AbstractBlock.Settings.copy(Blocks.SOUL_SOIL);
     private static final AbstractBlock.Settings ABS_TERRACOTA = AbstractBlock.Settings.copy(Blocks.TERRACOTTA);
     private static final AbstractBlock.Settings ABS_WOOL = AbstractBlock.Settings.copy(Blocks.RED_WOOL);
     private static final AbstractBlock.Settings ABS_CONCRETE = AbstractBlock.Settings.copy(Blocks.RED_CONCRETE);
@@ -983,6 +985,8 @@ public class ModBlocks {
     public static final Block ABERRANT_AMETHYST_BRICKS_SLAB = registerCustomBlock("aberrant_amethyst_bricks_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_AMETHYST), ABS_AMETHYST);
     public static final Block ABERRANT_AMETHYST_BRICKS_WALL = registerCustomBlock("aberrant_amethyst_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_AMETHYST), ABS_AMETHYST);
 
+    public static final Block ABERRANT_SOUL_SOIL = registerBlock("aberrant_soul_soil",  ABS_SOUL_SOIL);
+    public static final Block ABERRANT_SOUL_SAND = registerCustomBlock("aberrant_soul_sand", (AbstractBlock.Settings settings) -> new SoulSandBlock(ABS_SOUL_SAND), ABS_SOUL_SAND);
     public static final Block ABERRANT_SOUL_SANDSTONE = registerBlock("aberrant_soul_sandstone",  ABS_SANDSTONE);
     public static final Block ABERRANT_SOUL_SANDSTONE_STAIRS = registerCustomBlock("aberrant_soul_sandstone_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(ModBlocks.ABERRANT_SOUL_SANDSTONE.getDefaultState(), ABS_SANDSTONE), ABS_SANDSTONE);
     public static final Block ABERRANT_SOUL_SANDSTONE_SLAB = registerCustomBlock("aberrant_soul_sandstone_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_SANDSTONE), ABS_SANDSTONE);
@@ -1909,6 +1913,8 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB);
             entries.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL);
 
+            entries.add(ModBlocks.ABERRANT_SOUL_SOIL);
+            entries.add(ModBlocks.ABERRANT_SOUL_SAND);
             entries.add(ModBlocks.ABERRANT_SOUL_SANDSTONE);
             entries.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS);
             entries.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB);

@@ -856,6 +856,8 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB)
                 .wall(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_SOUL_SOIL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_SOUL_SAND);
         registerSandstone(ModBlocks.ABERRANT_SOUL_SANDSTONE, blockStateModelGenerator, ABERRANT_SOUL_SANDSTONE_MODELS)
                 .stairs(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS)
                 .slab(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB)

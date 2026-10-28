@@ -903,6 +903,8 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_STAIRS);
                     entries.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB);
                     entries.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL);
+                    entries.add(ModBlocks.ABERRANT_SOUL_SOIL);
+                    entries.add(ModBlocks.ABERRANT_SOUL_SAND);
                     entries.add(ModBlocks.ABERRANT_SOUL_SANDSTONE);
                     entries.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS);
                     entries.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB);

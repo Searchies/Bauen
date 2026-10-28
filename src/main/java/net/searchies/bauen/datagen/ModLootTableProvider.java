@@ -961,6 +961,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB, slabDrops(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB));
         addDrop(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL);
 
+        addDrop(ModBlocks.ABERRANT_SOUL_SOIL);
+        addDrop(ModBlocks.ABERRANT_SOUL_SAND);
         addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE);
         addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS);
         addDrop(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB, slabDrops(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB));

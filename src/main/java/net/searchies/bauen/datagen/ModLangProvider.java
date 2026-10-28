@@ -883,6 +883,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_SLAB.asItem(), "Aberrant Amethyst Bricks Slab");
         translationBuilder.add(ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL.asItem(), "Aberrant Amethyst Bricks Wall");
 
+        translationBuilder.add(ModBlocks.ABERRANT_SOUL_SOIL.asItem(), "Aberrant Soul Soil");
+        translationBuilder.add(ModBlocks.ABERRANT_SOUL_SAND.asItem(), "Aberrant Soul Sand");
         translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE.asItem(), "Aberrant Soul Sandstone");
         translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_STAIRS.asItem(), "Aberrant Soul Sandstone Stairs");
         translationBuilder.add(ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB.asItem(), "Aberrant Soul Sandstone Slab");
