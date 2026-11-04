@@ -12,6 +12,7 @@ import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.client.render.model.json.ModelVariantOperator;
 import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
@@ -22,6 +23,7 @@ import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModItems;
 
 import java.util.Map;
+import java.util.function.BiConsumer;
 
 import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
 
@@ -892,6 +894,15 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB)
                 .wall(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_GLOWSTONE);
+
+        registerRedstoneLamp(blockStateModelGenerator, ModBlocks.ABERRANT_REDSTONE_LAMP);
+
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.ABERRANT_OCHRE_FROGLIGHT, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.ABERRANT_VERDANT_FROGLIGHT, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.NETHERITE_BLOCK)
+                .fence(ModBlocks.NETHERITE_FENCE);
     }
 
     @Override
@@ -983,5 +994,11 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(slab);
         WeightedVariant weightedVariant = BlockStateModelGenerator.createWeightedVariant(TexturedModel.CARPET.get(wool).upload(carpet, generator.modelCollector));
         generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(carpet, weightedVariant));
+    }
+
+    private void registerRedstoneLamp(BlockStateModelGenerator generator, Block block) {
+        WeightedVariant weightedVariant = generator.createWeightedVariant(TexturedModel.CUBE_ALL.upload(block, generator.modelCollector));
+        WeightedVariant weightedVariant2 = generator.createWeightedVariant(generator.createSubModel(block, "_on", Models.CUBE_ALL, TextureMap::all));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(generator.createBooleanModelMap(Properties.LIT, weightedVariant2, weightedVariant)));
     }
 }

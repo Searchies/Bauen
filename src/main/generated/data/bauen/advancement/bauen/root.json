@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "has_dirt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:dirt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:gui/advancements/backgrounds/nether",
+    "description": {
+      "translate": "advancements.bauen.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "bauen:treated_bricks"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.bauen.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_dirt"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

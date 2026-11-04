@@ -15,6 +15,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.searchies.bauen.Bauen;
+import net.searchies.bauen.block.BuddingAberrantAmethystBlock;
 import net.searchies.bauen.block.GoldHoardBlock;
 import net.searchies.bauen.block.SeatBlock;
 
@@ -969,7 +970,7 @@ public class ModBlocks {
     public static final Block AMETHYST_BRICKS_WALL = registerCustomBlock("amethyst_bricks_wall", (AbstractBlock.Settings settings) -> new WallBlock(ABS_AMETHYST), ABS_AMETHYST);
 
     public static final Block ABERRANT_AMETHYST_BLOCK = registerBlock("aberrant_amethyst_block", ABS_AMETHYST);
-    public static final Block BUDDING_ABERRANT_AMETHYST = registerBlock("budding_aberrant_amethyst", ABS_BUDDING_AMETHYST);
+    public static final Block BUDDING_ABERRANT_AMETHYST = registerCustomBlock("budding_aberrant_amethyst", (AbstractBlock.Settings settings) -> new BuddingAberrantAmethystBlock(ABS_BUDDING_AMETHYST), ABS_BUDDING_AMETHYST);
     public static final Block SMALL_ABERRANT_AMETHYST_BUD = registerCustomBlock("small_aberrant_amethyst_bud", (AbstractBlock.Settings settings) -> new AmethystClusterBlock(3.0f, 8.0f, ABS_SMALL_AMETHYST_BUD), ABS_SMALL_AMETHYST_BUD);
     public static final Block MEDIUM_ABERRANT_AMETHYST_BUD = registerCustomBlock("medium_aberrant_amethyst_bud", (AbstractBlock.Settings settings) -> new AmethystClusterBlock(4.0f, 10.0f, ABS_MEDIUM_AMETHYST_BUD), ABS_MEDIUM_AMETHYST_BUD);
     public static final Block LARGE_ABERRANT_AMETHYST_BUD = registerCustomBlock("large_aberrant_amethyst_bud", (AbstractBlock.Settings settings) -> new AmethystClusterBlock(5.0f, 10.0f, ABS_LARGE_AMETHYST_BUD), ABS_LARGE_AMETHYST_BUD);
@@ -1028,6 +1029,14 @@ public class ModBlocks {
     public static final Block ABERRANT_RED_NETHER_BRICKS_WALL = registerCustomBlock("aberrant_red_nether_bricks_wall",  (AbstractBlock.Settings settings) -> new WallBlock(ABS_RED_NETHER_BRICKS), ABS_RED_NETHER_BRICKS);
 
     public static final Block ABERRANT_GLOWSTONE = registerBlock("aberrant_glowstone", AbstractBlock.Settings.copy(Blocks.GLOWSTONE));
+
+    public static final Block ABERRANT_REDSTONE_LAMP = registerCustomBlock("aberrant_redstone_lamp", RedstoneLampBlock::new, AbstractBlock.Settings.copy(Blocks.REDSTONE_LAMP));
+    public static final Block ABERRANT_OCHRE_FROGLIGHT = registerCustomBlock("aberrant_ochre_froglight", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.OCHRE_FROGLIGHT));
+    public static final Block ABERRANT_VERDANT_FROGLIGHT = registerCustomBlock("aberrant_verdant_froglight", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.VERDANT_FROGLIGHT));
+    public static final Block ABERRANT_PEARLESCENT_FROGLIGHT = registerCustomBlock("aberrant_pearlescent_froglight", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.PEARLESCENT_FROGLIGHT));
+
+    public static final Block NETHERITE_FENCE = registerCustomBlock("netherite_fence", FenceBlock::new,AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK));
+
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
@@ -1951,6 +1960,13 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB);
             entries.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
             entries.add(ModBlocks.ABERRANT_GLOWSTONE);
+
+            entries.add(ModBlocks.ABERRANT_REDSTONE_LAMP);
+            entries.add(ModBlocks.ABERRANT_OCHRE_FROGLIGHT);
+            entries.add(ModBlocks.ABERRANT_VERDANT_FROGLIGHT);
+            entries.add(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT);
+
+            entries.add(ModBlocks.NETHERITE_FENCE);
         });
     }
 }

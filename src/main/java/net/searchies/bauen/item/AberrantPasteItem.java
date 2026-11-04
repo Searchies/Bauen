@@ -181,7 +181,11 @@ public class AberrantPasteItem extends Item {
             Map.entry(Blocks.RED_NETHER_BRICK_WALL, ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL),
             Map.entry(Blocks.GLOWSTONE, ModBlocks.ABERRANT_GLOWSTONE),
             Map.entry(Blocks.SOUL_SAND, ModBlocks.ABERRANT_SOUL_SAND),
-            Map.entry(Blocks.SOUL_SOIL, ModBlocks.ABERRANT_SOUL_SOIL)
+            Map.entry(Blocks.SOUL_SOIL, ModBlocks.ABERRANT_SOUL_SOIL),
+            Map.entry(Blocks.REDSTONE_LAMP, ModBlocks.ABERRANT_REDSTONE_LAMP),
+            Map.entry(Blocks.OCHRE_FROGLIGHT, ModBlocks.ABERRANT_OCHRE_FROGLIGHT),
+            Map.entry(Blocks.VERDANT_FROGLIGHT, ModBlocks.ABERRANT_VERDANT_FROGLIGHT),
+            Map.entry(Blocks.PEARLESCENT_FROGLIGHT, ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT)
         );
 
     public AberrantPasteItem(Settings settings) {

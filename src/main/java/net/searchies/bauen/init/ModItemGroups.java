@@ -939,6 +939,11 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
                     entries.add(ModItems.ABERRANT_NETHER_BRICK);
                     entries.add(ModBlocks.ABERRANT_GLOWSTONE);
+                    entries.add(ModBlocks.ABERRANT_REDSTONE_LAMP);
+                    entries.add(ModBlocks.ABERRANT_OCHRE_FROGLIGHT);
+                    entries.add(ModBlocks.ABERRANT_VERDANT_FROGLIGHT);
+                    entries.add(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT);
+                    entries.add(ModBlocks.NETHERITE_FENCE);
                 }).build());
 
     public static void registerModItemGroups() {

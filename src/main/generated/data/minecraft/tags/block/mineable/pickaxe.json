@@ -804,6 +804,11 @@
     "bauen:aberrant_red_nether_bricks_stairs",
     "bauen:aberrant_red_nether_bricks_slab",
     "bauen:aberrant_red_nether_bricks_wall",
-    "bauen:aberrant_glowstone"
+    "bauen:aberrant_glowstone",
+    "bauen:aberrant_redstone_lamp",
+    "bauen:aberrant_ochre_froglight",
+    "bauen:aberrant_verdant_froglight",
+    "bauen:aberrant_pearlescent_froglight",
+    "bauen:netherite_fence"
   ]
 }

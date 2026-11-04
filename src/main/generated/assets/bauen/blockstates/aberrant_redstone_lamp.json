@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "bauen:block/aberrant_redstone_lamp"
+    },
+    "lit=true": {
+      "model": "bauen:block/aberrant_redstone_lamp_on"
+    }
+  }
+}

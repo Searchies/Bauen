@@ -820,7 +820,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         .add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_STAIRS)
         .add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB)
         .add(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL)
-        .add(ModBlocks.ABERRANT_GLOWSTONE);
+        .add(ModBlocks.ABERRANT_GLOWSTONE)
+        .add(ModBlocks.ABERRANT_REDSTONE_LAMP)
+        .add(ModBlocks.ABERRANT_OCHRE_FROGLIGHT)
+        .add(ModBlocks.ABERRANT_VERDANT_FROGLIGHT)
+        .add(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT)
+        .add(ModBlocks.NETHERITE_FENCE);
 
         valueLookupBuilder(BlockTags.CHAINS).add(ModBlocks.GOLD_CHAIN);
         valueLookupBuilder(BlockTags.LANTERNS).add(ModBlocks.GOLD_LANTERN);
@@ -1035,5 +1040,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         valueLookupBuilder(BlockTags.SOUL_SPEED_BLOCKS)
             .add(ModBlocks.ABERRANT_SOUL_SAND);
+
+        valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.NETHERITE_FENCE);
     }
 }

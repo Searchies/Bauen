@@ -2712,6 +2712,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_AMETHYST_BRICKS_STAIRS, ModBlocks.ABERRANT_AMETHYST_BRICKS);
                 offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ModBlocks.ABERRANT_AMETHYST_BRICKS_WALL, ModBlocks.ABERRANT_AMETHYST_BRICKS);
 
+                aberrantRecipe(ModBlocks.ABERRANT_SOUL_SAND, Blocks.SOUL_SAND);
+                aberrantRecipe(ModBlocks.ABERRANT_SOUL_SOIL, Blocks.SOUL_SOIL);
+
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB,
                         Ingredient.ofItems(ModBlocks.ABERRANT_SOUL_SANDSTONE, ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE))
                         .criterion(hasItem(ModBlocks.ABERRANT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_SOUL_SANDSTONE))
@@ -2748,6 +2751,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .criterion(hasItem(ModBlocks.ABERRANT_CARVED_PUMPKIN), conditionsFromItem(ModBlocks.ABERRANT_CARVED_PUMPKIN))
                     .offerTo(exporter);
 
+                aberrantRecipe(ModBlocks.ABERRANT_OBSIDIAN, Blocks.OBSIDIAN);
+                aberrantRecipe(ModBlocks.ABERRANT_CRYING_OBSIDIAN, Blocks.CRYING_OBSIDIAN);
+
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_NETHER_BRICKS, ModItems.ABERRANT_NETHER_BRICK);
                 CookingRecipeJsonBuilder.createSmelting(
                     Ingredient.ofItem(ModBlocks.ABERRANT_NETHERRACK), RecipeCategory.MISC, ModItems.ABERRANT_NETHER_BRICK, 0.1f, 200)
@@ -2762,6 +2768,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_STAIRS, ModBlocks.ABERRANT_NETHER_BRICKS);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_SLAB, ModBlocks.ABERRANT_NETHER_BRICKS);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_ABERRANT_NETHER_BRICKS_WALL, ModBlocks.ABERRANT_NETHER_BRICKS);
+
+                aberrantRecipe(ModBlocks.ABERRANT_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS);
+                easyStonecutting(ModBlocks.ABERRANT_RED_NETHER_BRICKS, ModBlocks.ABERRANT_RED_NETHER_BRICKS_STAIRS,
+                        ModBlocks.ABERRANT_RED_NETHER_BRICKS_SLAB, ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
+                aberrantRecipe(ModBlocks.ABERRANT_GLOWSTONE, Blocks.GLOWSTONE);
+
+                aberrantRecipe(ModBlocks.ABERRANT_REDSTONE_LAMP, Blocks.REDSTONE_LAMP);
+                aberrantRecipe(ModBlocks.ABERRANT_OCHRE_FROGLIGHT, Blocks.OCHRE_FROGLIGHT);
+                aberrantRecipe(ModBlocks.ABERRANT_VERDANT_FROGLIGHT, Blocks.VERDANT_FROGLIGHT);
+                aberrantRecipe(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT, Blocks.PEARLESCENT_FROGLIGHT);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_FENCE)
+                        .input('N', Blocks.NETHERITE_BLOCK)
+                        .input('G', Blocks.GOLD_BLOCK)
+                        .pattern("NGN")
+                        .pattern("NGN")
+                        .criterion(hasItem(Blocks.NETHERITE_BLOCK), conditionsFromItem(Blocks.NETHERITE_BLOCK))
+                        .offerTo(exporter);
             }
 
             public void offer2x2CompactingRecipe4(RecipeCategory category, ItemConvertible output, ItemConvertible input) {
@@ -2799,6 +2823,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, slab, main);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, wall, main);
                 easyStonecutting(main, stair, slab, wall);
+            }
+
+            public void aberrantRecipe(Block aberrantBlock, Block originalBlock) {
+                createShaped(RecipeCategory.BUILDING_BLOCKS, aberrantBlock, 8)
+                    .input('P', ModItems.ABERRANT_PASTE)
+                    .input('B', originalBlock)
+                    .pattern("BBB")
+                    .pattern("BPB")
+                    .pattern("BBB")
+                    .criterion(hasItem(originalBlock), conditionsFromItem(originalBlock))
+                    .offerTo(exporter);
             }
         };
     }

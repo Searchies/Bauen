@@ -1,6 +1,7 @@
 package net.searchies.bauen.mixin;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -31,6 +32,7 @@ public abstract class PlayerEntityMixin {
             if (speed == 8F) { // fuckass workaround for pickaxes
                 speed = 20F;
             }
+            speed += (float)player.getAttributeValue(EntityAttributes.MINING_EFFICIENCY);
             cir.setReturnValue(speed);
         }
     }
@@ -41,11 +43,7 @@ public abstract class PlayerEntityMixin {
 
         if (player.getMainHandStack().isOf(ModItems.TROWEL) &&
             player.getMainHandStack().getEnchantments().toString().contains("bauen:multitool")) {
-            List<Item> items = new ArrayList<>();
-            items.add(Items.IRON_PICKAXE);
-            items.add(Items.IRON_AXE);
-            items.add(Items.IRON_SHOVEL);
-            items.add(Items.IRON_HOE);
+            List<Item> items = List.of(Items.IRON_PICKAXE, Items.IRON_AXE, Items.IRON_SHOVEL, Items.IRON_HOE);
 
             for (Item item: items) {
                 if (item.isCorrectForDrops(new ItemStack(item), state)) {

@@ -923,7 +923,21 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ABERRANT_GLOWSTONE.asItem(), "Aberrant Glowstone");
         translationBuilder.add(ModItems.ABERRANT_NETHER_BRICK, "Aberrant Nether Brick");
 
+        translationBuilder.add(ModBlocks.ABERRANT_REDSTONE_LAMP.asItem(), "Aberrant Redstone Lamp");
+        translationBuilder.add(ModBlocks.ABERRANT_OCHRE_FROGLIGHT.asItem(), "Aberrant Ochre Froglight");
+        translationBuilder.add(ModBlocks.ABERRANT_VERDANT_FROGLIGHT.asItem(), "Aberrant Verdant Froglight");
+        translationBuilder.add(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT.asItem(), "Aberrant Pearlescent Froglight");
+
+        translationBuilder.add(ModBlocks.NETHERITE_FENCE.asItem(), "Netherite Fence");
+
         translationBuilder.add("itemgroup.bauen.bauen_blocks_group", "Bauen");
         translationBuilder.add("enchantment.bauen.multitool", "Multitool");
+
+
+        translationBuilder.add("advancements.bauen.root.title", "Bauen");
+        translationBuilder.add("advancements.bauen.root.description", "Bauen Advancements");
+
+        translationBuilder.add("advancements.bauen.netherite_fence.title", "Manic Dedication");
+        translationBuilder.add("advancements.bauen.netherite_fence.description", "Why in the hell would you make this?");
     }
 }

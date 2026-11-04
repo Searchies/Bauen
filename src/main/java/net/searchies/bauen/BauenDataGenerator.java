@@ -18,6 +18,7 @@ public class BauenDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModLangProvider::new);
         pack.addProvider(ModRegistryDataGenerator::new);
+        pack.addProvider(ModAdvancementsProvider::new);
     }
 
     @Override

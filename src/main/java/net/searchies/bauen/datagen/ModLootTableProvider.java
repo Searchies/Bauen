@@ -1000,5 +1000,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ABERRANT_RED_NETHER_BRICKS_WALL);
 
         addDrop(ModBlocks.ABERRANT_GLOWSTONE, (Block block) -> dropsWithSilkTouch((Block)block, (LootPoolEntry.Builder)applyExplosionDecay((ItemConvertible)block, ((LeafEntry.Builder)((LeafEntry.Builder)ItemEntry.builder(Items.GLOWSTONE_DUST).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))).apply(ApplyBonusLootFunction.uniformBonusCount(((RegistryWrapper.Impl)registries.getOrThrow(RegistryKeys.ENCHANTMENT)).getOrThrow(Enchantments.FORTUNE)))).apply(LimitCountLootFunction.builder(BoundedIntUnaryOperator.create(1, 4))))));
+
+        addDrop(ModBlocks.ABERRANT_REDSTONE_LAMP);
+        addDrop(ModBlocks.ABERRANT_OCHRE_FROGLIGHT);
+        addDrop(ModBlocks.ABERRANT_VERDANT_FROGLIGHT);
+        addDrop(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT);
+
+        addDrop(ModBlocks.NETHERITE_FENCE);
     }
 }
