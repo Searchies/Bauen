@@ -1,5 +1,13 @@
 {
   "values": [
-    "bauen:gold_bars"
+    "bauen:gold_bars",
+    "bauen:aberrant_copper_bars",
+    "bauen:waxed_aberrant_copper_bars",
+    "bauen:exposed_aberrant_copper_bars",
+    "bauen:waxed_exposed_aberrant_copper_bars",
+    "bauen:weathered_aberrant_copper_bars",
+    "bauen:waxed_weathered_aberrant_copper_bars",
+    "bauen:oxidized_aberrant_copper_bars",
+    "bauen:waxed_oxidized_aberrant_copper_bars"
   ]
 }

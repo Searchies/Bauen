@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "bauen:block/exposed_aberrant_copper_lantern"
+    },
+    "hanging=true": {
+      "model": "bauen:block/exposed_aberrant_copper_lantern_hanging"
+    }
+  }
+}

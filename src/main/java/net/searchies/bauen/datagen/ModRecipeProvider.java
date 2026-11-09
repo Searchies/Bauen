@@ -2786,6 +2786,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("NGN")
                         .criterion(hasItem(Blocks.NETHERITE_BLOCK), conditionsFromItem(Blocks.NETHERITE_BLOCK))
                         .offerTo(exporter);
+
+                aberrantRecipe(ModBlocks.ABERRANT_COPPER_BLOCK, Blocks.COPPER_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CUT_COPPER, ModBlocks.ABERRANT_COPPER_BLOCK, 4);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CUT_COPPER_STAIRS, ModBlocks.ABERRANT_COPPER_BLOCK, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CUT_COPPER_SLAB, ModBlocks.ABERRANT_COPPER_BLOCK, 3);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_CHISELED_COPPER, ModBlocks.ABERRANT_COPPER_BLOCK, 4);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_DOOR, ModBlocks.ABERRANT_COPPER_BLOCK, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_TRAPDOOR, ModBlocks.ABERRANT_COPPER_BLOCK, 2);
+                offerBulbRecipe(ModBlocks.ABERRANT_COPPER_BULB, ModBlocks.ABERRANT_COPPER_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_CHAINS.unaffected(), ModBlocks.ABERRANT_COPPER_BLOCK, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_LANTERNS.unaffected(), ModBlocks.ABERRANT_COPPER_BLOCK, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_BARS.unaffected(), ModBlocks.ABERRANT_COPPER_BLOCK, 2);
+
             }
 
             public void offer2x2CompactingRecipe4(RecipeCategory category, ItemConvertible output, ItemConvertible input) {

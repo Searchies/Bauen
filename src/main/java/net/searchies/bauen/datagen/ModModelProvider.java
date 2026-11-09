@@ -12,6 +12,7 @@ import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.client.render.model.json.ModelVariantOperator;
 import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
@@ -903,6 +904,96 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.NETHERITE_BLOCK)
                 .fence(ModBlocks.NETHERITE_FENCE);
+
+        // Custom Copper //
+
+        ModBlocks.ABERRANT_COPPER_BARS.getWaxingMap().forEach(blockStateModelGenerator::registerCopperBars);
+        ModBlocks.ABERRANT_COPPER_LANTERNS.getWaxingMap().forEach(blockStateModelGenerator::registerCopperLantern);
+        ModBlocks.ABERRANT_COPPER_CHAINS.getWaxingMap().forEach((block, waxed) -> {
+            blockStateModelGenerator.registerCopperChain(block, waxed);
+            blockStateModelGenerator.registerWaxable(block.asItem(), waxed.asItem());
+        });
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ABERRANT_CUT_COPPER)
+                .family(BlockFamilies.CUT_COPPER)
+                .stairs(ModBlocks.ABERRANT_CUT_COPPER_STAIRS)
+                .slab(ModBlocks.ABERRANT_CUT_COPPER_SLAB)
+                .parented(ModBlocks.ABERRANT_CUT_COPPER, ModBlocks.WAXED_ABERRANT_CUT_COPPER)
+                .parented(ModBlocks.ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_ABERRANT_CUT_COPPER_STAIRS)
+                .parented(ModBlocks.ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_ABERRANT_CUT_COPPER_SLAB)
+                .family(BlockFamilies.WAXED_CUT_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER)
+                .family(BlockFamilies.EXPOSED_CUT_COPPER)
+                .stairs(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS)
+                .slab(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB)
+                .parented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER)
+                .parented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS)
+                .parented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB)
+                .family(BlockFamilies.WAXED_EXPOSED_CUT_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER)
+                .family(BlockFamilies.WEATHERED_CUT_COPPER)
+                .stairs(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS)
+                .slab(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB)
+                .parented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER)
+                .parented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS)
+                .parented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB)
+                .family(BlockFamilies.WAXED_WEATHERED_CUT_COPPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER)
+                .family(BlockFamilies.OXIDIZED_CUT_COPPER)
+                .stairs(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS)
+                .slab(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB)
+                .parented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER)
+                .parented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS)
+                .parented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB)
+                .family(BlockFamilies.WAXED_OXIDIZED_CUT_COPPER);
+
+        blockStateModelGenerator.registerCopperBulb(ModBlocks.ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerWaxedCopperBulb(ModBlocks.ABERRANT_COPPER_BULB, ModBlocks.WAXED_ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerCopperBulb(ModBlocks.EXPOSED_ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerWaxedCopperBulb(ModBlocks.EXPOSED_ABERRANT_COPPER_BULB, ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerCopperBulb(ModBlocks.WEATHERED_ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerWaxedCopperBulb(ModBlocks.WEATHERED_ABERRANT_COPPER_BULB, ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerCopperBulb(ModBlocks.OXIDIZED_ABERRANT_COPPER_BULB);
+        blockStateModelGenerator.registerWaxedCopperBulb(ModBlocks.OXIDIZED_ABERRANT_COPPER_BULB, ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_BULB);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_COPPER_BLOCK);
+        blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_COPPER_BLOCK, ModBlocks.WAXED_ABERRANT_COPPER_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_CHISELED_COPPER, ModBlocks.WAXED_ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.EXPOSED_ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.EXPOSED_ABERRANT_CHISELED_COPPER, ModBlocks.WAXED_EXPOSED_ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEATHERED_ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_ABERRANT_CHISELED_COPPER, ModBlocks.WAXED_WEATHERED_ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OXIDIZED_ABERRANT_CHISELED_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_ABERRANT_CHISELED_COPPER, ModBlocks.WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerParentedDoor(ModBlocks.ABERRANT_COPPER_DOOR, ModBlocks.WAXED_ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerParentedDoor(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR, ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerParentedDoor(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR, ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerDoor(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR);
+        blockStateModelGenerator.registerParentedDoor(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR, ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR);
+
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerParentedTrapdoor(ModBlocks.ABERRANT_COPPER_TRAPDOOR, ModBlocks.WAXED_ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerParentedTrapdoor(ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR, ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerParentedTrapdoor(ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR, ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
+        blockStateModelGenerator.registerParentedTrapdoor(ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR, ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_COPPER_GRATE, ModBlocks.WAXED_ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerParented(ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE, ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE, ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE);
+        blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE, ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE);
     }
 
     @Override
@@ -973,7 +1064,7 @@ public class ModModelProvider extends FabricModelProvider {
         generator.registerNorthDefaultHorizontalRotatable(ModBlocks.ABERRANT_JACK_O_LANTERN, textureMap);
     }
 
-    // need this AND manual json
+    // need this AND manual model json
     private void registerGoldHoards(BlockStateModelGenerator generator) {
         TextureMap textureMap = TextureMap.all(ModBlocks.GOLD_HOARD);
         WeightedVariant weightedVariant = createWeightedVariant(Models.CUBE_ALL.upload(ModBlocks.GOLD_HOARD_BLOCK, textureMap, generator.modelCollector));

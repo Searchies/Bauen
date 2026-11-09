@@ -1,5 +1,13 @@
 {
   "values": [
-    "bauen:gold_lantern"
+    "bauen:gold_lantern",
+    "bauen:aberrant_copper_lantern",
+    "bauen:waxed_aberrant_copper_lantern",
+    "bauen:exposed_aberrant_copper_lantern",
+    "bauen:waxed_exposed_aberrant_copper_lantern",
+    "bauen:weathered_aberrant_copper_lantern",
+    "bauen:waxed_weathered_aberrant_copper_lantern",
+    "bauen:oxidized_aberrant_copper_lantern",
+    "bauen:waxed_oxidized_aberrant_copper_lantern"
   ]
 }

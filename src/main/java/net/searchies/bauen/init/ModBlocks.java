@@ -1037,6 +1037,87 @@ public class ModBlocks {
 
     public static final Block NETHERITE_FENCE = registerCustomBlock("netherite_fence", FenceBlock::new,AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK));
 
+    public static final AbstractBlock.Settings ABS_COPPER_BARS = AbstractBlock.Settings.create().requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque();
+    public static final AbstractBlock.Settings ABS_COPPER_TRAPDOOR = AbstractBlock.Settings.copy(Blocks.COPPER_TRAPDOOR);
+    public static final AbstractBlock.Settings ABS_COPPER_GRATE = AbstractBlock.Settings.copy(Blocks.COPPER_GRATE);
+    public static final AbstractBlock.Settings ABS_COPPER_DOOR = AbstractBlock.Settings.copy(Blocks.COPPER_DOOR);
+    public static final AbstractBlock.Settings ABS_COPPER_CHAINS = AbstractBlock.Settings.create().solid().requiresTool().strength(5.0f, 6.0f).sounds(BlockSoundGroup.CHAIN).nonOpaque();
+    public static final AbstractBlock.Settings ABS_COPPER_LANTERNS = AbstractBlock.Settings.create().mapColor(MapColor.IRON_GRAY).solid().strength(3.5f).sounds(BlockSoundGroup.LANTERN).luminance(state -> 15).nonOpaque().pistonBehavior(PistonBehavior.DESTROY);
+    public static final AbstractBlock.Settings ABS_COPPER_BULB = AbstractBlock.Settings.copy(Blocks.COPPER_BULB);
+
+    public static final Block ABERRANT_CUT_COPPER = registerCustomBlock("aberrant_cut_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER);
+    public static final Block ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, ABERRANT_CUT_COPPER.getDefaultState(), settings), ABS_COPPER);
+    public static final Block ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER);
+    public static final Block ABERRANT_CHISELED_COPPER = registerCustomBlock("aberrant_chiseled_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER);
+    public static final Block ABERRANT_COPPER_BLOCK = registerCustomBlock("aberrant_copper_block", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER);
+    public static final Block ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new OxidizableTrapdoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER_TRAPDOOR);
+    public static final Block ABERRANT_COPPER_GRATE = registerCustomBlock("aberrant_copper_grate", (AbstractBlock.Settings settings) -> new OxidizableGrateBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER_GRATE);
+    public static final Block ABERRANT_COPPER_DOOR = registerCustomBlock("aberrant_copper_door", (AbstractBlock.Settings settings) -> new OxidizableDoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER_DOOR);
+    public static final Block ABERRANT_COPPER_BULB = registerCustomBlock("aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new OxidizableBulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, settings), ABS_COPPER_BULB);
+    public static final CopperBlockSet ABERRANT_COPPER_BARS = CopperBlockSet.create("aberrant_copper_bars", ModBlocks::registerCustomBlock, PaneBlock::new, OxidizablePaneBlock::new, oxidationLevel -> ABS_COPPER_BARS);
+    public static final CopperBlockSet ABERRANT_COPPER_CHAINS = CopperBlockSet.create("aberrant_copper_chain", ModBlocks::registerCustomBlock, ChainBlock::new, OxidizableChainBlock::new, oxidationLevel -> ABS_COPPER_CHAINS);
+    public static final CopperBlockSet ABERRANT_COPPER_LANTERNS = CopperBlockSet.create("aberrant_copper_lantern", ModBlocks::registerCustomBlock, LanternBlock::new, OxidizableLanternBlock::new, oxidationLevel -> ABS_COPPER_LANTERNS);
+
+    public static final Block EXPOSED_ABERRANT_CUT_COPPER = registerCustomBlock("exposed_aberrant_cut_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER);
+    public static final Block EXPOSED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("exposed_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new OxidizableStairsBlock(Oxidizable.OxidationLevel.EXPOSED, ABERRANT_CUT_COPPER.getDefaultState(), settings), ABS_COPPER);
+    public static final Block EXPOSED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("exposed_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new OxidizableSlabBlock(Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER);
+    public static final Block EXPOSED_ABERRANT_CHISELED_COPPER = registerCustomBlock("exposed_aberrant_chiseled_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER);
+    public static final Block EXPOSED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("exposed_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new OxidizableTrapdoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER_TRAPDOOR);
+    public static final Block EXPOSED_ABERRANT_COPPER_GRATE = registerCustomBlock("exposed_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new OxidizableGrateBlock(Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER_GRATE);
+    public static final Block EXPOSED_ABERRANT_COPPER_DOOR = registerCustomBlock("exposed_aberrant_copper_door", (AbstractBlock.Settings settings) -> new OxidizableDoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER_DOOR);
+    public static final Block EXPOSED_ABERRANT_COPPER_BULB = registerCustomBlock("exposed_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new OxidizableBulbBlock(Oxidizable.OxidationLevel.EXPOSED, settings), ABS_COPPER_BULB);
+
+    public static final Block WEATHERED_ABERRANT_CUT_COPPER = registerCustomBlock("weathered_aberrant_cut_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER);
+    public static final Block WEATHERED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("weathered_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, ABERRANT_CUT_COPPER.getDefaultState(), settings), ABS_COPPER);
+    public static final Block WEATHERED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("weathered_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new OxidizableSlabBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER);
+    public static final Block WEATHERED_ABERRANT_CHISELED_COPPER = registerCustomBlock("weathered_aberrant_chiseled_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER);
+    public static final Block WEATHERED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("weathered_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new OxidizableTrapdoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_TRAPDOOR);
+    public static final Block WEATHERED_ABERRANT_COPPER_GRATE = registerCustomBlock("weathered_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new OxidizableGrateBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_GRATE);
+    public static final Block WEATHERED_ABERRANT_COPPER_DOOR = registerCustomBlock("weathered_aberrant_copper_door", (AbstractBlock.Settings settings) -> new OxidizableDoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_DOOR);
+    public static final Block WEATHERED_ABERRANT_COPPER_BULB = registerCustomBlock("weathered_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new OxidizableBulbBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_BULB);
+
+    public static final Block OXIDIZED_ABERRANT_CUT_COPPER = registerCustomBlock("oxidized_aberrant_cut_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER);
+    public static final Block OXIDIZED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("oxidized_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, ABERRANT_CUT_COPPER.getDefaultState(), settings), ABS_COPPER);
+    public static final Block OXIDIZED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("oxidized_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new OxidizableSlabBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER);
+    public static final Block OXIDIZED_ABERRANT_CHISELED_COPPER = registerCustomBlock("oxidized_aberrant_chiseled_copper", (AbstractBlock.Settings settings) -> new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER);
+    public static final Block OXIDIZED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("oxidized_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new OxidizableTrapdoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_TRAPDOOR);
+    public static final Block OXIDIZED_ABERRANT_COPPER_GRATE = registerCustomBlock("oxidized_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new OxidizableGrateBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_GRATE);
+    public static final Block OXIDIZED_ABERRANT_COPPER_DOOR = registerCustomBlock("oxidized_aberrant_copper_door", (AbstractBlock.Settings settings) -> new OxidizableDoorBlock(BlockSetType.COPPER, Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_DOOR);
+    public static final Block OXIDIZED_ABERRANT_COPPER_BULB = registerCustomBlock("oxidized_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new OxidizableBulbBlock(Oxidizable.OxidationLevel.WEATHERED, settings), ABS_COPPER_BULB);
+
+    public static final Block WAXED_ABERRANT_CUT_COPPER = registerBlock("waxed_aberrant_cut_copper", ABS_COPPER);
+    public static final Block WAXED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("waxed_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(WAXED_ABERRANT_CUT_COPPER.getDefaultState(), settings), ABS_COPPER);
+    public static final Block WAXED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("waxed_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block WAXED_ABERRANT_CHISELED_COPPER = registerBlock("waxed_aberrant_chiseled_copper", ABS_COPPER);
+    public static final Block WAXED_ABERRANT_COPPER_BLOCK = registerBlock("waxed_aberrant_copper_block", ABS_COPPER);
+    public static final Block WAXED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("waxed_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new TrapdoorBlock(BlockSetType.COPPER, settings), ABS_COPPER_TRAPDOOR);
+    public static final Block WAXED_ABERRANT_COPPER_GRATE = registerCustomBlock("waxed_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new GrateBlock(ABS_COPPER_GRATE), ABS_COPPER_GRATE);
+    public static final Block WAXED_ABERRANT_COPPER_DOOR = registerCustomBlock("waxed_aberrant_copper_door", (AbstractBlock.Settings settings) -> new DoorBlock(BlockSetType.COPPER, ABS_COPPER_DOOR), ABS_COPPER_DOOR);
+    public static final Block WAXED_ABERRANT_COPPER_BULB = registerCustomBlock("waxed_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new BulbBlock(ABS_COPPER_BULB), ABS_COPPER_BULB);
+    public static final Block WAXED_EXPOSED_ABERRANT_CUT_COPPER = registerBlock("waxed_exposed_aberrant_cut_copper", ABS_COPPER);
+    public static final Block WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("waxed_exposed_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(WAXED_EXPOSED_ABERRANT_CUT_COPPER.getDefaultState(), ABS_COPPER), ABS_COPPER);
+    public static final Block WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("waxed_exposed_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block WAXED_EXPOSED_ABERRANT_CHISELED_COPPER = registerBlock("waxed_exposed_aberrant_chiseled_copper", ABS_COPPER);
+    public static final Block WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("waxed_exposed_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new TrapdoorBlock(BlockSetType.COPPER, ABS_COPPER_TRAPDOOR), ABS_COPPER_TRAPDOOR);
+    public static final Block WAXED_EXPOSED_ABERRANT_COPPER_GRATE = registerCustomBlock("waxed_exposed_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new GrateBlock(ABS_COPPER_GRATE), ABS_COPPER_GRATE);
+    public static final Block WAXED_EXPOSED_ABERRANT_COPPER_DOOR = registerCustomBlock("waxed_exposed_aberrant_copper_door", (AbstractBlock.Settings settings) -> new DoorBlock(BlockSetType.COPPER,  ABS_COPPER_DOOR), ABS_COPPER_DOOR);
+    public static final Block WAXED_EXPOSED_ABERRANT_COPPER_BULB = registerCustomBlock("waxed_exposed_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new BulbBlock(ABS_COPPER_BULB), ABS_COPPER_BULB);
+    public static final Block WAXED_WEATHERED_ABERRANT_CUT_COPPER = registerBlock("waxed_weathered_aberrant_cut_copper", ABS_COPPER);
+    public static final Block WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("waxed_weathered_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(WAXED_WEATHERED_ABERRANT_CUT_COPPER.getDefaultState(), settings), ABS_COPPER);
+    public static final Block WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("waxed_weathered_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block WAXED_WEATHERED_ABERRANT_CHISELED_COPPER = registerBlock("waxed_weathered_aberrant_chiseled_copper", ABS_COPPER);
+    public static final Block WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("waxed_weathered_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new TrapdoorBlock(BlockSetType.COPPER, ABS_COPPER_TRAPDOOR), ABS_COPPER_TRAPDOOR);
+    public static final Block WAXED_WEATHERED_ABERRANT_COPPER_GRATE = registerCustomBlock("waxed_weathered_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new GrateBlock(ABS_COPPER_GRATE), ABS_COPPER_GRATE);
+    public static final Block WAXED_WEATHERED_ABERRANT_COPPER_DOOR = registerCustomBlock("waxed_weathered_aberrant_copper_door", (AbstractBlock.Settings settings) -> new DoorBlock(BlockSetType.COPPER, ABS_COPPER_DOOR), ABS_COPPER_DOOR);
+    public static final Block WAXED_WEATHERED_ABERRANT_COPPER_BULB = registerCustomBlock("waxed_weathered_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new BulbBlock(ABS_COPPER_BULB), ABS_COPPER_BULB);
+    public static final Block WAXED_OXIDIZED_ABERRANT_CUT_COPPER = registerBlock("waxed_oxidized_aberrant_cut_copper", ABS_COPPER);
+    public static final Block WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS = registerCustomBlock("waxed_oxidized_aberrant_cut_copper_stairs", (AbstractBlock.Settings settings) -> new StairsBlock(WAXED_OXIDIZED_ABERRANT_CUT_COPPER.getDefaultState(), ABS_COPPER), ABS_COPPER);
+    public static final Block WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB = registerCustomBlock("waxed_oxidized_aberrant_cut_copper_slab", (AbstractBlock.Settings settings) -> new SlabBlock(ABS_COPPER), ABS_COPPER);
+    public static final Block WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER = registerBlock("waxed_oxidized_aberrant_chiseled_copper", ABS_COPPER);
+    public static final Block WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR = registerCustomBlock("waxed_oxidized_aberrant_copper_trapdoor", (AbstractBlock.Settings settings) -> new TrapdoorBlock(BlockSetType.COPPER, ABS_COPPER_TRAPDOOR), ABS_COPPER_TRAPDOOR);
+    public static final Block WAXED_OXIDIZED_ABERRANT_COPPER_GRATE = registerCustomBlock("waxed_oxidized_aberrant_copper_grate", (AbstractBlock.Settings settings) -> new GrateBlock(ABS_COPPER_GRATE), ABS_COPPER_GRATE);
+    public static final Block WAXED_OXIDIZED_ABERRANT_COPPER_DOOR = registerCustomBlock("waxed_oxidized_aberrant_copper_door", (AbstractBlock.Settings settings) -> new DoorBlock(BlockSetType.COPPER, ABS_COPPER_DOOR), ABS_COPPER_DOOR);
+    public static final Block WAXED_OXIDIZED_ABERRANT_COPPER_BULB = registerCustomBlock("waxed_oxidized_aberrant_copper_bulb", (AbstractBlock.Settings settings) -> new BulbBlock(ABS_COPPER_BULB), ABS_COPPER_BULB);
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Bauen.MOD_ID, name));
@@ -1063,15 +1144,6 @@ public class ModBlocks {
         BlockItem item = new BlockItem(block, new Item.Settings().registryKey(key));
         Registry.register(Registries.ITEM, key, item);
     }
-
-//    private static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-//        return Blocks.register(Blocks.keyOf(id), factory, settings);
-//    }
-//
-//    public static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-//        Block block = factory.apply(settings.registryKey(key));
-//        return Registry.register(Registries.BLOCK, key, block);
-//    }
 
     public static void registerModBlocks() {
         Bauen.LOGGER.info(Bauen.MOD_ID + " || Registering ModBlocks");
@@ -1967,6 +2039,75 @@ public class ModBlocks {
             entries.add(ModBlocks.ABERRANT_PEARLESCENT_FROGLIGHT);
 
             entries.add(ModBlocks.NETHERITE_FENCE);
+
+            entries.add(ModBlocks.ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.ABERRANT_COPPER_BLOCK);
+            entries.add(ModBlocks.ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.ABERRANT_COPPER_BULB);
+
+            entries.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_BULB);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_BULB);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_BULB);
+
+            entries.add(ModBlocks.WAXED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.WAXED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.WAXED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.WAXED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_ABERRANT_COPPER_BLOCK);
+            entries.add(ModBlocks.WAXED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.WAXED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.WAXED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.WAXED_ABERRANT_COPPER_BULB);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_BULB);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_BULB);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR);
+            entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_BULB);
         });
     }
 }

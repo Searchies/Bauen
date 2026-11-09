@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.BlockRenderLayer;
+import net.minecraft.client.render.entity.EntityRendererFactories;
 import net.searchies.bauen.entity.SeatRenderer;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModEntities;
@@ -48,8 +49,36 @@ public class BauenClient implements ClientModInitializer {
             ModBlocks.SMALL_ABERRANT_AMETHYST_BUD,
             ModBlocks.MEDIUM_ABERRANT_AMETHYST_BUD,
             ModBlocks.LARGE_ABERRANT_AMETHYST_BUD,
-            ModBlocks.ABERRANT_AMETHYST_CLUSTER);
+            ModBlocks.ABERRANT_AMETHYST_CLUSTER,
+            ModBlocks.ABERRANT_COPPER_GRATE,
+            ModBlocks.ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.ABERRANT_COPPER_DOOR,
+            ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE,
+            ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR,
+            ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE,
+            ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR,
+            ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE,
+            ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR,
+            ModBlocks.WAXED_ABERRANT_COPPER_GRATE,
+            ModBlocks.WAXED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.WAXED_ABERRANT_COPPER_DOOR,
+            ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_GRATE,
+            ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR,
+            ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_GRATE,
+            ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR,
+            ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE,
+            ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR,
+            ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR);
 
-        EntityRendererRegistry.register(ModEntities.SEAT, SeatRenderer::new);
+        ModBlocks.ABERRANT_COPPER_CHAINS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
+        ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
+        ModBlocks.ABERRANT_COPPER_BARS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
+
+        EntityRendererFactories.register(ModEntities.SEAT, SeatRenderer::new);
     }
 }
