@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "bauen:block/pearl_polished_resin",
+    "side": "bauen:block/pearl_polished_resin",
+    "top": "bauen:block/pearl_polished_resin"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:grape_polished_resin",
+  "result": {
+    "count": 2,
+    "id": "bauen:grape_polished_resin_slab"
+  }
+}

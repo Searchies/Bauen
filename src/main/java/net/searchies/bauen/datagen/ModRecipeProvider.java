@@ -17,6 +17,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModItems;
+import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -2675,21 +2676,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_COCOA_RESIN_BRICKS, ModBlocks.COCOA_RESIN_BRICKS);
 
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RESIN, Blocks.RESIN_BLOCK);
+                easyStonecutting(ModBlocks.POLISHED_RESIN, ModBlocks.POLISHED_RESIN_STAIRS, ModBlocks.POLISHED_RESIN_SLAB, ModBlocks.POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEETROOT_POLISHED_RESIN, ModBlocks.BEETROOT_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.BEETROOT_POLISHED_RESIN, ModBlocks.BEETROOT_POLISHED_RESIN_STAIRS, ModBlocks.BEETROOT_POLISHED_RESIN_SLAB, ModBlocks.BEETROOT_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARAMEL_POLISHED_RESIN, ModBlocks.CARAMEL_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.CARAMEL_POLISHED_RESIN, ModBlocks.CARAMEL_POLISHED_RESIN_STAIRS, ModBlocks.CARAMEL_POLISHED_RESIN_SLAB, ModBlocks.CARAMEL_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_POLISHED_RESIN, ModBlocks.LEMON_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.LEMON_POLISHED_RESIN, ModBlocks.LEMON_POLISHED_RESIN_STAIRS, ModBlocks.LEMON_POLISHED_RESIN_SLAB, ModBlocks.LEMON_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TOXIC_POLISHED_RESIN, ModBlocks.TOXIC_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.TOXIC_POLISHED_RESIN, ModBlocks.TOXIC_POLISHED_RESIN_STAIRS, ModBlocks.TOXIC_POLISHED_RESIN_SLAB, ModBlocks.TOXIC_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMERALD_POLISHED_RESIN, ModBlocks.EMERALD_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.EMERALD_POLISHED_RESIN, ModBlocks.EMERALD_POLISHED_RESIN_STAIRS, ModBlocks.EMERALD_POLISHED_RESIN_SLAB, ModBlocks.EMERALD_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_POLISHED_RESIN, ModBlocks.JADE_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.JADE_POLISHED_RESIN, ModBlocks.JADE_POLISHED_RESIN_STAIRS, ModBlocks.JADE_POLISHED_RESIN_SLAB, ModBlocks.JADE_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OCEAN_POLISHED_RESIN, ModBlocks.OCEAN_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.OCEAN_POLISHED_RESIN, ModBlocks.OCEAN_POLISHED_RESIN_STAIRS, ModBlocks.OCEAN_POLISHED_RESIN_SLAB, ModBlocks.OCEAN_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLACIER_POLISHED_RESIN, ModBlocks.GLACIER_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.GLACIER_POLISHED_RESIN, ModBlocks.GLACIER_POLISHED_RESIN_STAIRS, ModBlocks.GLACIER_POLISHED_RESIN_SLAB, ModBlocks.GLACIER_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BUBBLE_POLISHED_RESIN, ModBlocks.BUBBLE_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.BUBBLE_POLISHED_RESIN, ModBlocks.BUBBLE_POLISHED_RESIN_STAIRS, ModBlocks.BUBBLE_POLISHED_RESIN_SLAB, ModBlocks.BUBBLE_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DUSK_POLISHED_RESIN, ModBlocks.DUSK_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.DUSK_POLISHED_RESIN, ModBlocks.DUSK_POLISHED_RESIN_STAIRS, ModBlocks.DUSK_POLISHED_RESIN_SLAB, ModBlocks.DUSK_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DAYBREAK_POLISHED_RESIN, ModBlocks.CHORUS_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.DAYBREAK_POLISHED_RESIN, ModBlocks.DAYBREAK_POLISHED_RESIN_STAIRS, ModBlocks.DAYBREAK_POLISHED_RESIN_SLAB, ModBlocks.DAYBREAK_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILT_POLISHED_RESIN, ModBlocks.SILT_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.SILT_POLISHED_RESIN, ModBlocks.SILT_POLISHED_RESIN_STAIRS, ModBlocks.SILT_POLISHED_RESIN_SLAB, ModBlocks.SILT_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_POLISHED_RESIN, ModBlocks.GRAPHITE_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.GRAPHITE_POLISHED_RESIN, ModBlocks.GRAPHITE_POLISHED_RESIN_STAIRS, ModBlocks.GRAPHITE_POLISHED_RESIN_SLAB, ModBlocks.GRAPHITE_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_POLISHED_RESIN, ModBlocks.OBSIDIAN_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.OBSIDIAN_POLISHED_RESIN, ModBlocks.OBSIDIAN_POLISHED_RESIN_STAIRS, ModBlocks.OBSIDIAN_POLISHED_RESIN_SLAB, ModBlocks.OBSIDIAN_POLISHED_RESIN_WALL);
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCOA_POLISHED_RESIN, ModBlocks.COCOA_RESIN_BLOCK);
+                easyStonecutting(ModBlocks.COCOA_POLISHED_RESIN, ModBlocks.COCOA_POLISHED_RESIN_STAIRS, ModBlocks.COCOA_POLISHED_RESIN_SLAB, ModBlocks.COCOA_POLISHED_RESIN_WALL);
 
                 offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES, Blocks.AMETHYST_BLOCK);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_TILES_SLAB, ModBlocks.AMETHYST_TILES, 2);
@@ -2799,6 +2816,98 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_LANTERNS.unaffected(), ModBlocks.ABERRANT_COPPER_BLOCK, 2);
                 offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_COPPER_BARS.unaffected(), ModBlocks.ABERRANT_COPPER_BLOCK, 2);
 
+                clumpRecipe(ModItems.BRASS_RESIN_CLUMP, Items.ORANGE_DYE, Items.YELLOW_DYE);
+                resinRecipe(ModItems.BRASS_RESIN_CLUMP, ModItems.BRASS_RESIN_BRICK, ModBlocks.BRASS_RESIN_BLOCK, ModBlocks.BRASS_RESIN_BLOCK_STAIRS, ModBlocks.BRASS_RESIN_BLOCK_SLAB, ModBlocks.BRASS_RESIN_BLOCK_WALL, ModBlocks.BRASS_POLISHED_RESIN, ModBlocks.BRASS_POLISHED_RESIN_STAIRS, ModBlocks.BRASS_POLISHED_RESIN_SLAB, ModBlocks.BRASS_POLISHED_RESIN_WALL, ModBlocks.BRASS_RESIN_BRICKS, ModBlocks.BRASS_RESIN_BRICKS_STAIRS, ModBlocks.BRASS_RESIN_BRICKS_SLAB, ModBlocks.BRASS_RESIN_BRICKS_WALL, ModBlocks.CHISELED_BRASS_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.DANDELION_RESIN_CLUMP, Items.WHITE_DYE, Items.YELLOW_DYE);
+                resinRecipe(ModItems.DANDELION_RESIN_CLUMP, ModItems.DANDELION_RESIN_BRICK, ModBlocks.DANDELION_RESIN_BLOCK, ModBlocks.DANDELION_RESIN_BLOCK_STAIRS, ModBlocks.DANDELION_RESIN_BLOCK_SLAB, ModBlocks.DANDELION_RESIN_BLOCK_WALL, ModBlocks.DANDELION_POLISHED_RESIN, ModBlocks.DANDELION_POLISHED_RESIN_STAIRS, ModBlocks.DANDELION_POLISHED_RESIN_SLAB, ModBlocks.DANDELION_POLISHED_RESIN_WALL, ModBlocks.DANDELION_RESIN_BRICKS, ModBlocks.DANDELION_RESIN_BRICKS_STAIRS, ModBlocks.DANDELION_RESIN_BRICKS_SLAB, ModBlocks.DANDELION_RESIN_BRICKS_WALL, ModBlocks.CHISELED_DANDELION_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.BOG_RESIN_CLUMP, Items.GREEN_DYE, Items.BLACK_DYE);
+                resinRecipe(ModItems.BOG_RESIN_CLUMP, ModItems.BOG_RESIN_BRICK, ModBlocks.BOG_RESIN_BLOCK, ModBlocks.BOG_RESIN_BLOCK_STAIRS, ModBlocks.BOG_RESIN_BLOCK_SLAB, ModBlocks.BOG_RESIN_BLOCK_WALL, ModBlocks.BOG_POLISHED_RESIN, ModBlocks.BOG_POLISHED_RESIN_STAIRS, ModBlocks.BOG_POLISHED_RESIN_SLAB, ModBlocks.BOG_POLISHED_RESIN_WALL, ModBlocks.BOG_RESIN_BRICKS, ModBlocks.BOG_RESIN_BRICKS_STAIRS, ModBlocks.BOG_RESIN_BRICKS_SLAB, ModBlocks.BOG_RESIN_BRICKS_WALL, ModBlocks.CHISELED_BOG_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.SCULK_RESIN_CLUMP, Items.CYAN_DYE, Items.BLACK_DYE);
+                resinRecipe(ModItems.SCULK_RESIN_CLUMP, ModItems.SCULK_RESIN_BRICK, ModBlocks.SCULK_RESIN_BLOCK, ModBlocks.SCULK_RESIN_BLOCK_STAIRS, ModBlocks.SCULK_RESIN_BLOCK_SLAB, ModBlocks.SCULK_RESIN_BLOCK_WALL, ModBlocks.SCULK_POLISHED_RESIN, ModBlocks.SCULK_POLISHED_RESIN_STAIRS, ModBlocks.SCULK_POLISHED_RESIN_SLAB, ModBlocks.SCULK_POLISHED_RESIN_WALL, ModBlocks.SCULK_RESIN_BRICKS, ModBlocks.SCULK_RESIN_BRICKS_STAIRS, ModBlocks.SCULK_RESIN_BRICKS_SLAB, ModBlocks.SCULK_RESIN_BRICKS_WALL, ModBlocks.CHISELED_SCULK_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.RETRO_RESIN_CLUMP, Items.LIME_DYE, Items.LIGHT_GRAY_DYE);
+                resinRecipe(ModItems.RETRO_RESIN_CLUMP, ModItems.RETRO_RESIN_BRICK, ModBlocks.RETRO_RESIN_BLOCK, ModBlocks.RETRO_RESIN_BLOCK_STAIRS, ModBlocks.RETRO_RESIN_BLOCK_SLAB, ModBlocks.RETRO_RESIN_BLOCK_WALL, ModBlocks.RETRO_POLISHED_RESIN, ModBlocks.RETRO_POLISHED_RESIN_STAIRS, ModBlocks.RETRO_POLISHED_RESIN_SLAB, ModBlocks.RETRO_POLISHED_RESIN_WALL, ModBlocks.RETRO_RESIN_BRICKS, ModBlocks.RETRO_RESIN_BRICKS_STAIRS, ModBlocks.RETRO_RESIN_BRICKS_SLAB, ModBlocks.RETRO_RESIN_BRICKS_WALL, ModBlocks.CHISELED_RETRO_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.DUST_RESIN_CLUMP, Items.BROWN_DYE, Items.GRAY_DYE);
+                resinRecipe(ModItems.DUST_RESIN_CLUMP, ModItems.DUST_RESIN_BRICK, ModBlocks.DUST_RESIN_BLOCK, ModBlocks.DUST_RESIN_BLOCK_STAIRS, ModBlocks.DUST_RESIN_BLOCK_SLAB, ModBlocks.DUST_RESIN_BLOCK_WALL, ModBlocks.DUST_POLISHED_RESIN, ModBlocks.DUST_POLISHED_RESIN_STAIRS, ModBlocks.DUST_POLISHED_RESIN_SLAB, ModBlocks.DUST_POLISHED_RESIN_WALL, ModBlocks.DUST_RESIN_BRICKS, ModBlocks.DUST_RESIN_BRICKS_STAIRS, ModBlocks.DUST_RESIN_BRICKS_SLAB, ModBlocks.DUST_RESIN_BRICKS_WALL, ModBlocks.CHISELED_DUST_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.BLOOD_RESIN_CLUMP, Items.RED_DYE, Items.MAGENTA_DYE);
+                resinRecipe(ModItems.BLOOD_RESIN_CLUMP, ModItems.BLOOD_RESIN_BRICK, ModBlocks.BLOOD_RESIN_BLOCK, ModBlocks.BLOOD_RESIN_BLOCK_STAIRS, ModBlocks.BLOOD_RESIN_BLOCK_SLAB, ModBlocks.BLOOD_RESIN_BLOCK_WALL, ModBlocks.BLOOD_POLISHED_RESIN, ModBlocks.BLOOD_POLISHED_RESIN_STAIRS, ModBlocks.BLOOD_POLISHED_RESIN_SLAB, ModBlocks.BLOOD_POLISHED_RESIN_WALL, ModBlocks.BLOOD_RESIN_BRICKS, ModBlocks.BLOOD_RESIN_BRICKS_STAIRS, ModBlocks.BLOOD_RESIN_BRICKS_SLAB, ModBlocks.BLOOD_RESIN_BRICKS_WALL, ModBlocks.CHISELED_BLOOD_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.RUBY_RESIN_CLUMP, Items.RED_DYE, Items.PINK_DYE);
+                resinRecipe(ModItems.RUBY_RESIN_CLUMP, ModItems.RUBY_RESIN_BRICK, ModBlocks.RUBY_RESIN_BLOCK, ModBlocks.RUBY_RESIN_BLOCK_STAIRS, ModBlocks.RUBY_RESIN_BLOCK_SLAB, ModBlocks.RUBY_RESIN_BLOCK_WALL, ModBlocks.RUBY_POLISHED_RESIN, ModBlocks.RUBY_POLISHED_RESIN_STAIRS, ModBlocks.RUBY_POLISHED_RESIN_SLAB, ModBlocks.RUBY_POLISHED_RESIN_WALL, ModBlocks.RUBY_RESIN_BRICKS, ModBlocks.RUBY_RESIN_BRICKS_STAIRS, ModBlocks.RUBY_RESIN_BRICKS_SLAB, ModBlocks.RUBY_RESIN_BRICKS_WALL, ModBlocks.CHISELED_RUBY_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.PEARL_RESIN_CLUMP, Items.WHITE_DYE, Items.LIGHT_GRAY_DYE);
+                resinRecipe(ModItems.PEARL_RESIN_CLUMP, ModItems.PEARL_RESIN_BRICK, ModBlocks.PEARL_RESIN_BLOCK, ModBlocks.PEARL_RESIN_BLOCK_STAIRS, ModBlocks.PEARL_RESIN_BLOCK_SLAB, ModBlocks.PEARL_RESIN_BLOCK_WALL, ModBlocks.PEARL_POLISHED_RESIN, ModBlocks.PEARL_POLISHED_RESIN_STAIRS, ModBlocks.PEARL_POLISHED_RESIN_SLAB, ModBlocks.PEARL_POLISHED_RESIN_WALL, ModBlocks.PEARL_RESIN_BRICKS, ModBlocks.PEARL_RESIN_BRICKS_STAIRS, ModBlocks.PEARL_RESIN_BRICKS_SLAB, ModBlocks.PEARL_RESIN_BRICKS_WALL, ModBlocks.CHISELED_PEARL_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.SNOWY_RESIN_CLUMP, Items.WHITE_DYE, Items.LIGHT_BLUE_DYE);
+                resinRecipe(ModItems.SNOWY_RESIN_CLUMP, ModItems.SNOWY_RESIN_BRICK, ModBlocks.SNOWY_RESIN_BLOCK, ModBlocks.SNOWY_RESIN_BLOCK_STAIRS, ModBlocks.SNOWY_RESIN_BLOCK_SLAB, ModBlocks.SNOWY_RESIN_BLOCK_WALL, ModBlocks.SNOWY_POLISHED_RESIN, ModBlocks.SNOWY_POLISHED_RESIN_STAIRS, ModBlocks.SNOWY_POLISHED_RESIN_SLAB, ModBlocks.SNOWY_POLISHED_RESIN_WALL, ModBlocks.SNOWY_RESIN_BRICKS, ModBlocks.SNOWY_RESIN_BRICKS_STAIRS, ModBlocks.SNOWY_RESIN_BRICKS_SLAB, ModBlocks.SNOWY_RESIN_BRICKS_WALL, ModBlocks.CHISELED_SNOWY_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.SUBZERO_RESIN_CLUMP, Items.PURPLE_DYE, Items.BLUE_DYE);
+                resinRecipe(ModItems.SUBZERO_RESIN_CLUMP, ModItems.SUBZERO_RESIN_BRICK, ModBlocks.SUBZERO_RESIN_BLOCK, ModBlocks.SUBZERO_RESIN_BLOCK_STAIRS, ModBlocks.SUBZERO_RESIN_BLOCK_SLAB, ModBlocks.SUBZERO_RESIN_BLOCK_WALL, ModBlocks.SUBZERO_POLISHED_RESIN, ModBlocks.SUBZERO_POLISHED_RESIN_STAIRS, ModBlocks.SUBZERO_POLISHED_RESIN_SLAB, ModBlocks.SUBZERO_POLISHED_RESIN_WALL, ModBlocks.SUBZERO_RESIN_BRICKS, ModBlocks.SUBZERO_RESIN_BRICKS_STAIRS, ModBlocks.SUBZERO_RESIN_BRICKS_SLAB, ModBlocks.SUBZERO_RESIN_BRICKS_WALL, ModBlocks.CHISELED_SUBZERO_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.GEM_RESIN_CLUMP, Items.CYAN_DYE, Items.LIGHT_BLUE_DYE);
+                resinRecipe(ModItems.GEM_RESIN_CLUMP, ModItems.GEM_RESIN_BRICK, ModBlocks.GEM_RESIN_BLOCK, ModBlocks.GEM_RESIN_BLOCK_STAIRS, ModBlocks.GEM_RESIN_BLOCK_SLAB, ModBlocks.GEM_RESIN_BLOCK_WALL, ModBlocks.GEM_POLISHED_RESIN, ModBlocks.GEM_POLISHED_RESIN_STAIRS, ModBlocks.GEM_POLISHED_RESIN_SLAB, ModBlocks.GEM_POLISHED_RESIN_WALL, ModBlocks.GEM_RESIN_BRICKS, ModBlocks.GEM_RESIN_BRICKS_STAIRS, ModBlocks.GEM_RESIN_BRICKS_SLAB, ModBlocks.GEM_RESIN_BRICKS_WALL, ModBlocks.CHISELED_GEM_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.ROTTEN_RESIN_CLUMP, Items.ORANGE_DYE, Items.BROWN_DYE);
+                resinRecipe(ModItems.ROTTEN_RESIN_CLUMP, ModItems.ROTTEN_RESIN_BRICK, ModBlocks.ROTTEN_RESIN_BLOCK, ModBlocks.ROTTEN_RESIN_BLOCK_STAIRS, ModBlocks.ROTTEN_RESIN_BLOCK_SLAB, ModBlocks.ROTTEN_RESIN_BLOCK_WALL, ModBlocks.ROTTEN_POLISHED_RESIN, ModBlocks.ROTTEN_POLISHED_RESIN_STAIRS, ModBlocks.ROTTEN_POLISHED_RESIN_SLAB, ModBlocks.ROTTEN_POLISHED_RESIN_WALL, ModBlocks.ROTTEN_RESIN_BRICKS, ModBlocks.ROTTEN_RESIN_BRICKS_STAIRS, ModBlocks.ROTTEN_RESIN_BRICKS_SLAB, ModBlocks.ROTTEN_RESIN_BRICKS_WALL, ModBlocks.CHISELED_ROTTEN_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.GRAPE_RESIN_CLUMP, Items.PURPLE_DYE, Items.MAGENTA_DYE);
+                resinRecipe(ModItems.GRAPE_RESIN_CLUMP, ModItems.GRAPE_RESIN_BRICK, ModBlocks.GRAPE_RESIN_BLOCK, ModBlocks.GRAPE_RESIN_BLOCK_STAIRS, ModBlocks.GRAPE_RESIN_BLOCK_SLAB, ModBlocks.GRAPE_RESIN_BLOCK_WALL, ModBlocks.GRAPE_POLISHED_RESIN, ModBlocks.GRAPE_POLISHED_RESIN_STAIRS, ModBlocks.GRAPE_POLISHED_RESIN_SLAB, ModBlocks.GRAPE_POLISHED_RESIN_WALL, ModBlocks.GRAPE_RESIN_BRICKS, ModBlocks.GRAPE_RESIN_BRICKS_STAIRS, ModBlocks.GRAPE_RESIN_BRICKS_SLAB, ModBlocks.GRAPE_RESIN_BRICKS_WALL, ModBlocks.CHISELED_GRAPE_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.REDSTONE_RESIN_CLUMP, Items.RED_DYE, Items.RED_DYE);
+                resinRecipe(ModItems.REDSTONE_RESIN_CLUMP, ModItems.REDSTONE_RESIN_BRICK, ModBlocks.REDSTONE_RESIN_BLOCK, ModBlocks.REDSTONE_RESIN_BLOCK_STAIRS, ModBlocks.REDSTONE_RESIN_BLOCK_SLAB, ModBlocks.REDSTONE_RESIN_BLOCK_WALL, ModBlocks.REDSTONE_POLISHED_RESIN, ModBlocks.REDSTONE_POLISHED_RESIN_STAIRS, ModBlocks.REDSTONE_POLISHED_RESIN_SLAB, ModBlocks.REDSTONE_POLISHED_RESIN_WALL, ModBlocks.REDSTONE_RESIN_BRICKS, ModBlocks.REDSTONE_RESIN_BRICKS_STAIRS, ModBlocks.REDSTONE_RESIN_BRICKS_SLAB, ModBlocks.REDSTONE_RESIN_BRICKS_WALL, ModBlocks.CHISELED_REDSTONE_RESIN_BRICKS);
+
+                clumpRecipe(ModItems.COPPER_RESIN_CLUMP, Items.GRAY_DYE, Items.COPPER_INGOT);
+                resinRecipe(ModItems.COPPER_RESIN_CLUMP, ModItems.COPPER_RESIN_BRICK, ModBlocks.COPPER_RESIN_BLOCK, ModBlocks.COPPER_RESIN_BLOCK_STAIRS, ModBlocks.COPPER_RESIN_BLOCK_SLAB, ModBlocks.COPPER_RESIN_BLOCK_WALL, ModBlocks.COPPER_POLISHED_RESIN, ModBlocks.COPPER_POLISHED_RESIN_STAIRS, ModBlocks.COPPER_POLISHED_RESIN_SLAB, ModBlocks.COPPER_POLISHED_RESIN_WALL, ModBlocks.COPPER_RESIN_BRICKS, ModBlocks.COPPER_RESIN_BRICKS_STAIRS, ModBlocks.COPPER_RESIN_BRICKS_SLAB, ModBlocks.COPPER_RESIN_BRICKS_WALL, ModBlocks.CHISELED_COPPER_RESIN_BRICKS);
+            }
+
+            public void clumpRecipe(Item clump, Item dye, Item dye2) {
+                if (dye2 == null) {
+                    createShaped(RecipeCategory.BUILDING_BLOCKS, clump, 9)
+                            .input('D', dye)
+                            .input('P', ModItems.ABERRANT_PASTE)
+                            .input('C', Items.RESIN_CLUMP)
+                            .pattern("CDC")
+                            .pattern("CPC")
+                            .pattern("CCC")
+                            .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                            .offerTo(exporter);
+                } else {
+                    createShaped(RecipeCategory.BUILDING_BLOCKS, clump, 9)
+                            .input('D', dye)
+                            .input('S', dye2)
+                            .input('P', ModItems.ABERRANT_PASTE)
+                            .input('C', Items.RESIN_CLUMP)
+                            .pattern("CDC")
+                            .pattern("CPC")
+                            .pattern("CSC")
+                            .criterion(hasItem(Items.RESIN_CLUMP), conditionsFromItem(Items.RESIN_CLUMP))
+                            .offerTo(exporter);
+                }
+            }
+
+            public void resinRecipe(Item clump, Item brick, Block resinBlock, Block resinBlockStairs, Block resinBlockSlab, Block resinBlockWall, Block polishedResin, Block polishedResinStairs, Block polishedResinSlab, Block polishedResinWall, Block resinBricks, Block resinBricksStairs, Block resinBricksSlab, Block resinBricksWall, Block chiseledResinBricks) {
+                CookingRecipeJsonBuilder.createSmelting(
+                                Ingredient.ofItem(clump), RecipeCategory.MISC, brick, 0.1f, 200)
+                        .criterion(hasItem(clump), conditionsFromItem(clump))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, resinBlock)
+                        .input(clump, 9)
+                        .criterion(hasItem(clump), conditionsFromItem(clump))
+                        .offerTo(exporter);
+                easyStonecutting(resinBlock, resinBlockStairs, resinBlockSlab, resinBlockWall);
+
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, polishedResin, resinBlock);
+                easyStonecutting(polishedResin, polishedResinStairs, polishedResinSlab, polishedResinWall);
+
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, resinBricks, brick);
+                easyStonecutting(resinBricks, resinBricksStairs, resinBricksSlab, resinBricksWall);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, chiseledResinBricks, resinBricks);
             }
 
             public void offer2x2CompactingRecipe4(RecipeCategory category, ItemConvertible output, ItemConvertible input) {

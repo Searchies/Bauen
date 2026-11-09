@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "bauen:block/snowy_resin_bricks",
+    "side": "bauen:block/snowy_resin_bricks",
+    "top": "bauen:block/snowy_resin_bricks"
+  }
+}

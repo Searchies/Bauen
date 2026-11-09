@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:emerald_polished_resin",
+  "result": {
+    "count": 2,
+    "id": "bauen:emerald_polished_resin_wall"
+  }
+}

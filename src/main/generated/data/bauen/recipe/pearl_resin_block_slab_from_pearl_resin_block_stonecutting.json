@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:pearl_resin_block",
+  "result": {
+    "count": 2,
+    "id": "bauen:pearl_resin_block_slab"
+  }
+}

@@ -73,7 +73,23 @@ public class BauenClient implements ClientModInitializer {
             ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR,
             ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE,
             ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR,
-            ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR);
+            ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR,
+            ModBlocks.BRASS_RESIN_CLUMP,
+            ModBlocks.DANDELION_RESIN_CLUMP,
+            ModBlocks.BOG_RESIN_CLUMP,
+            ModBlocks.SCULK_RESIN_CLUMP,
+            ModBlocks.RETRO_RESIN_CLUMP,
+            ModBlocks.DUST_RESIN_CLUMP,
+            ModBlocks.BLOOD_RESIN_CLUMP,
+            ModBlocks.RUBY_RESIN_CLUMP,
+            ModBlocks.PEARL_RESIN_CLUMP,
+            ModBlocks.SNOWY_RESIN_CLUMP,
+            ModBlocks.SUBZERO_RESIN_CLUMP,
+            ModBlocks.GEM_RESIN_CLUMP,
+            ModBlocks.ROTTEN_RESIN_CLUMP,
+            ModBlocks.GRAPE_RESIN_CLUMP,
+            ModBlocks.REDSTONE_RESIN_CLUMP,
+            ModBlocks.COPPER_RESIN_CLUMP);
 
         ModBlocks.ABERRANT_COPPER_CHAINS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
         ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));

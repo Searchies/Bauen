@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:cocoa_polished_resin",
+  "result": {
+    "count": 1,
+    "id": "bauen:cocoa_polished_resin_stairs"
+  }
+}

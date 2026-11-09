@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": "minecraft:resin_clump",
+    "D": "minecraft:purple_dye",
+    "P": "bauen:aberrant_paste",
+    "S": "minecraft:blue_dye"
+  },
+  "pattern": [
+    "CDC",
+    "CPC",
+    "CSC"
+  ],
+  "result": {
+    "count": 9,
+    "id": "bauen:subzero_resin_clump"
+  }
+}
