@@ -960,6 +960,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
                     entries.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB);
                     entries.add(ModBlocks.EXPOSED_ABERRANT_CHISELED_COPPER);
+                    entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER);
                     entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR);
                     entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE);
                     entries.add(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR);
@@ -968,6 +969,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
                     entries.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB);
                     entries.add(ModBlocks.WEATHERED_ABERRANT_CHISELED_COPPER);
+                    entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER);
                     entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR);
                     entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE);
                     entries.add(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR);
@@ -976,6 +978,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
                     entries.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB);
                     entries.add(ModBlocks.OXIDIZED_ABERRANT_CHISELED_COPPER);
+                    entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER);
                     entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
                     entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE);
                     entries.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR);
@@ -993,6 +996,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
                     entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB);
                     entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CHISELED_COPPER);
+                    entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER);
                     entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR);
                     entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_GRATE);
                     entries.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR);
@@ -1001,6 +1005,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
                     entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB);
                     entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CHISELED_COPPER);
+                    entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER);
                     entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR);
                     entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_GRATE);
                     entries.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR);
@@ -1009,6 +1014,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
                     entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB);
                     entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER);
+                    entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER);
                     entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
                     entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE);
                     entries.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR);
@@ -1253,6 +1259,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.CHISELED_COPPER_RESIN_BRICKS);
                     entries.add(ModBlocks.COPPER_RESIN_CLUMP);
                     entries.add(ModItems.COPPER_RESIN_BRICK);
+                    entries.add(ModItems.ABERRANT_PASTE);
                 }).build());
 
     public static void registerModItemGroups() {

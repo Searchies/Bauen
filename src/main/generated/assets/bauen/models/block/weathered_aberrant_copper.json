@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "minecraft:block/oxidized_chiseled_copper"
+    "all": "bauen:block/weathered_aberrant_copper"
   }
 }

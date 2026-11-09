@@ -1008,6 +1008,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.NETHERITE_FENCE);
 
+        ModBlocks.ABERRANT_COPPER_CHAINS.forEach(this::addDrop);
+        ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(this::addDrop);
+        ModBlocks.ABERRANT_COPPER_BARS.forEach(this::addDrop);
+
         addDrop(ModBlocks.ABERRANT_CUT_COPPER);
         addDrop(ModBlocks.ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.ABERRANT_CUT_COPPER_SLAB));
@@ -1018,14 +1022,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.ABERRANT_COPPER_DOOR));
         addDrop(ModBlocks.ABERRANT_COPPER_BULB);
 
-        ModBlocks.ABERRANT_COPPER_CHAINS.forEach(this::addDrop);
-        ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(this::addDrop);
-        ModBlocks.ABERRANT_COPPER_BARS.forEach(this::addDrop);
-
         addDrop(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER);
         addDrop(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB));
         addDrop(ModBlocks.EXPOSED_ABERRANT_CHISELED_COPPER);
+        addDrop(ModBlocks.EXPOSED_ABERRANT_COPPER);
         addDrop(ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR);
         addDrop(ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE);
         addDrop(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR));
@@ -1034,6 +1035,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB));
         addDrop(ModBlocks.WEATHERED_ABERRANT_CHISELED_COPPER);
+        addDrop(ModBlocks.WEATHERED_ABERRANT_COPPER);
         addDrop(ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR);
         addDrop(ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE);
         addDrop(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR));
@@ -1042,6 +1044,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB));
         addDrop(ModBlocks.OXIDIZED_ABERRANT_CHISELED_COPPER);
+        addDrop(ModBlocks.OXIDIZED_ABERRANT_COPPER);
         addDrop(ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
         addDrop(ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE);
         addDrop(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR));
@@ -1051,6 +1054,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB));
         addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_CHISELED_COPPER);
+        addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER);
         addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR);
         addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_GRATE);
         addDrop(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR));
@@ -1059,6 +1063,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB));
         addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_CHISELED_COPPER);
+        addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER);
         addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR);
         addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_GRATE);
         addDrop(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR));
@@ -1067,6 +1072,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
         addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB, slabDrops(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB));
         addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER);
+        addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER);
         addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR);
         addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE);
         addDrop(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR, doorDrops(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR));

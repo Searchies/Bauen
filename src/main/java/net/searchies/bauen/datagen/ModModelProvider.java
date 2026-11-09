@@ -915,37 +915,32 @@ public class ModModelProvider extends FabricModelProvider {
         });
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ABERRANT_CUT_COPPER)
-                .family(BlockFamilies.CUT_COPPER)
                 .stairs(ModBlocks.ABERRANT_CUT_COPPER_STAIRS)
-                .slab(ModBlocks.ABERRANT_CUT_COPPER_SLAB)
-                .parented(ModBlocks.ABERRANT_CUT_COPPER, ModBlocks.WAXED_ABERRANT_CUT_COPPER)
-                .parented(ModBlocks.ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_ABERRANT_CUT_COPPER_STAIRS)
-                .parented(ModBlocks.ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_ABERRANT_CUT_COPPER_SLAB)
-                .family(BlockFamilies.WAXED_CUT_COPPER);
+                .slab(ModBlocks.ABERRANT_CUT_COPPER_SLAB);
+        blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_CUT_COPPER, ModBlocks.WAXED_ABERRANT_CUT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_ABERRANT_CUT_COPPER_STAIRS);
+        blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_ABERRANT_CUT_COPPER_SLAB);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER)
-                .family(BlockFamilies.EXPOSED_CUT_COPPER)
                 .stairs(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS)
-                .slab(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB)
-                .parented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER)
-                .parented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS)
-                .parented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB)
-                .family(BlockFamilies.WAXED_EXPOSED_CUT_COPPER);
+                .slab(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB);
+        blockStateModelGenerator.registerParented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS);
+        blockStateModelGenerator.registerParented(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER)
-                .family(BlockFamilies.WEATHERED_CUT_COPPER)
                 .stairs(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS)
-                .slab(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB)
-                .parented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER)
-                .parented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS)
-                .parented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB)
-                .family(BlockFamilies.WAXED_WEATHERED_CUT_COPPER);
+                .slab(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB);
+        blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS);
+        blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER)
-                .family(BlockFamilies.OXIDIZED_CUT_COPPER)
                 .stairs(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS)
-                .slab(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB)
-                .parented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER)
-                .parented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS)
-                .parented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB)
-                .family(BlockFamilies.WAXED_OXIDIZED_CUT_COPPER);
+                .slab(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB);
+        blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS);
+        blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB);
 
         blockStateModelGenerator.registerCopperBulb(ModBlocks.ABERRANT_COPPER_BULB);
         blockStateModelGenerator.registerWaxedCopperBulb(ModBlocks.ABERRANT_COPPER_BULB, ModBlocks.WAXED_ABERRANT_COPPER_BULB);
@@ -958,6 +953,12 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_COPPER_BLOCK);
         blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_COPPER_BLOCK, ModBlocks.WAXED_ABERRANT_COPPER_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.EXPOSED_ABERRANT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.EXPOSED_ABERRANT_COPPER, ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEATHERED_ABERRANT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.WEATHERED_ABERRANT_COPPER, ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OXIDIZED_ABERRANT_COPPER);
+        blockStateModelGenerator.registerParented(ModBlocks.OXIDIZED_ABERRANT_COPPER, ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABERRANT_CHISELED_COPPER);
         blockStateModelGenerator.registerParented(ModBlocks.ABERRANT_CHISELED_COPPER, ModBlocks.WAXED_ABERRANT_CHISELED_COPPER);

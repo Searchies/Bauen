@@ -942,7 +942,6 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_CHAINS.oxidized().asItem(), "Oxidized Aberrant Copper Chain");
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_LANTERNS.oxidized().asItem(), "Oxidized Aberrant Copper Lantern");
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_BARS.oxidized().asItem(), "Oxidized Aberrant Copper Bars");
-
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_CHAINS.waxed().asItem(), "Waxed Aberrant Copper Chain");
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_LANTERNS.waxed().asItem(), "Waxed Aberrant Copper Lantern");
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_BARS.waxed().asItem(), "Waxed Aberrant Copper Bars");
@@ -965,11 +964,11 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_GRATE.asItem(), "Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_DOOR.asItem(), "Aberrant Copper Door");
         translationBuilder.add(ModBlocks.ABERRANT_COPPER_BULB.asItem(), "Aberrant Copper Bulb");
-
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER.asItem(), "Exposed Aberrant Cut Copper");
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS.asItem(), "Exposed Aberrant Copper Stairs");
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB.asItem(), "Exposed Aberrant Cut Copper Slab");
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_CHISELED_COPPER.asItem(), "Exposed Aberrant Chiseled Copper");
+        translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_COPPER.asItem(), "Exposed Aberrant Copper");
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_COPPER_TRAPDOOR.asItem(), "Exposed Aberrant Copper Trapdoor");
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_COPPER_GRATE.asItem(), "Exposed Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.EXPOSED_ABERRANT_COPPER_DOOR.asItem(), "Exposed Aberrant Copper Door");
@@ -978,6 +977,7 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_STAIRS.asItem(), "Weathered Aberrant Cut Copper Stairs");
         translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_CUT_COPPER_SLAB.asItem(), "Weathered Aberrant Cut Copper Slab");
         translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_CHISELED_COPPER.asItem(), "Weathered Aberrant Chiseled Copper");
+        translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_COPPER.asItem(), "Weathered Aberrant Copper");
         translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_COPPER_TRAPDOOR.asItem(), "Weathered Aberrant Copper Trapdoor");
         translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_COPPER_GRATE.asItem(), "Weathered Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.WEATHERED_ABERRANT_COPPER_DOOR.asItem(), "Weathered Aberrant Copper Door");
@@ -986,6 +986,7 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_STAIRS.asItem(), "Oxidized Aberrant Cut Copper Stairs");
         translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_CUT_COPPER_SLAB.asItem(), "Oxidized Aberrant Cut Copper Slab");
         translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_CHISELED_COPPER.asItem(), "Oxidized Aberrant Chiseled Copper");
+        translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_COPPER.asItem(), "Oxidized Aberrant Copper");
         translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_TRAPDOOR.asItem(), "Oxidized Aberrant Copper Trapdoor");
         translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_GRATE.asItem(), "Oxidized Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.OXIDIZED_ABERRANT_COPPER_DOOR.asItem(), "Oxidized Aberrant Copper Door");
@@ -1004,6 +1005,7 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_STAIRS.asItem(), "Waxed Exposed Aberrant Cut Copper Stairs");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CUT_COPPER_SLAB.asItem(), "Waxed Exposed Aberrant Cut Copper Slab");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_CHISELED_COPPER.asItem(), "Waxed Exposed Aberrant Chiseled Copper");
+        translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER.asItem(), "Waxed Exposed Aberrant Copper");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_TRAPDOOR.asItem(), "Waxed Exposed Aberrant Copper Trapdoor");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_GRATE.asItem(), "Waxed Exposed Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.WAXED_EXPOSED_ABERRANT_COPPER_DOOR.asItem(), "Waxed Exposed Aberrant Copper Door");
@@ -1012,6 +1014,7 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_STAIRS.asItem(), "Waxed Weathered Aberrant Cut Copper Stairs");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CUT_COPPER_SLAB.asItem(), "Waxed Weathered Aberrant Cut Copper Slab");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_CHISELED_COPPER.asItem(), "Waxed Weathered Aberrant Chiseled Copper");
+        translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER.asItem(), "Waxed Weathered Aberrant Copper");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_TRAPDOOR.asItem(), "Waxed Weathered Aberrant Copper Trapdoor");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_GRATE.asItem(), "Waxed Weathered Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.WAXED_WEATHERED_ABERRANT_COPPER_DOOR.asItem(), "Waxed Weathered Aberrant Copper Door");
@@ -1019,7 +1022,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER.asItem(), "Waxed Oxidized Aberrant Cut Copper");
         translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_STAIRS.asItem(), "Waxed Oxidized Aberrant Cut Copper Stairs");
         translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CUT_COPPER_SLAB.asItem(), "Waxed Oxidized Aberrant Cut Copper Slab");
-        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER.asItem(), "Waxed Oxidized Aberrant Chiseled Copper");
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_CHISELED_COPPER.asItem(), "Waxed Oxidized Aberrant Copper");
+        translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER.asItem(), "Waxed Oxidized Aberrant Copper");
         translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_TRAPDOOR.asItem(), "Waxed Oxidized Aberrant Copper Trapdoor");
         translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_GRATE.asItem(), "Waxed Oxidized Aberrant Copper Grate");
         translationBuilder.add(ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_DOOR.asItem(), "Waxed Oxidized Aberrant Copper Door");

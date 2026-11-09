@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:block/weathered_cut_copper_stairs"
+    "model": "bauen:block/weathered_aberrant_cut_copper_stairs"
   }
 }
