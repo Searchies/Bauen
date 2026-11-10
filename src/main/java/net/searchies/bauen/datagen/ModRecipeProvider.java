@@ -2732,6 +2732,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 aberrantRecipe(ModBlocks.ABERRANT_SOUL_SAND, Blocks.SOUL_SAND);
                 aberrantRecipe(ModBlocks.ABERRANT_SOUL_SOIL, Blocks.SOUL_SOIL);
 
+                offer2x2CompactingRecipe4(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SOUL_SANDSTONE, ModBlocks.ABERRANT_SOUL_SAND);
                 createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABERRANT_SOUL_SANDSTONE_SLAB,
                         Ingredient.ofItems(ModBlocks.ABERRANT_SOUL_SANDSTONE, ModBlocks.ABERRANT_CHISELED_SOUL_SANDSTONE))
                         .criterion(hasItem(ModBlocks.ABERRANT_SOUL_SANDSTONE), conditionsFromItem(ModBlocks.ABERRANT_SOUL_SANDSTONE))

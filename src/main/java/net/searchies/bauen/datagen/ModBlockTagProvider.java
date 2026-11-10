@@ -2,6 +2,8 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
@@ -1130,6 +1132,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         .add(ModBlocks.COPPER_RESIN_CLUMP);
 
         valueLookupBuilder(BlockTags.CHAINS)
+                .add(ModBlocks.GOLD_CHAIN)
+                .add(ModBlocks.ABERRANT_COPPER_CHAINS.getAll());
+        valueLookupBuilder(ConventionalBlockTags.CHAINS)
                 .add(ModBlocks.GOLD_CHAIN)
                 .add(ModBlocks.ABERRANT_COPPER_CHAINS.getAll());
         valueLookupBuilder(BlockTags.LANTERNS)

@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "chain": "bauen:block/weathered_aberrant_copper_chain",
+    "knot": "bauen:item/weathered_aberrant_copper_chain"
+  }
+}
