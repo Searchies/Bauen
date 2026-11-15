@@ -89,7 +89,16 @@ public class BauenClient implements ClientModInitializer {
             ModBlocks.ROTTEN_RESIN_CLUMP,
             ModBlocks.GRAPE_RESIN_CLUMP,
             ModBlocks.REDSTONE_RESIN_CLUMP,
-            ModBlocks.COPPER_RESIN_CLUMP);
+            ModBlocks.COPPER_RESIN_CLUMP,
+            ModBlocks.SWEETBERRY_RESIN_CLUMP,
+            ModBlocks.KELP_RESIN_CLUMP,
+            ModBlocks.GLITTER_RESIN_CLUMP,
+            ModBlocks.BLAZE_RESIN_CLUMP,
+            ModBlocks.ZAP_RESIN_CLUMP,
+            ModBlocks.NIGHTWAY_RESIN_CLUMP,
+            ModBlocks.RIPE_RESIN_CLUMP,
+            ModBlocks.SLUDGE_RESIN_CLUMP,
+            ModBlocks.ARMADILLO_RESIN_CLUMP);
 
         ModBlocks.ABERRANT_COPPER_CHAINS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
         ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));

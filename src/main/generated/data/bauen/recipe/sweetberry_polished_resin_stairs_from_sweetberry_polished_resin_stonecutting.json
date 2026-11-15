@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:sweetberry_polished_resin",
+  "result": {
+    "count": 1,
+    "id": "bauen:sweetberry_polished_resin_stairs"
+  }
+}

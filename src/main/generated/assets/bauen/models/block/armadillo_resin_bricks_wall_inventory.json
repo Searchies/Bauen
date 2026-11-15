@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "bauen:block/armadillo_resin_bricks"
+  }
+}

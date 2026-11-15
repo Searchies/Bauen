@@ -1043,6 +1043,33 @@ public class ModModelProvider extends FabricModelProvider {
 
         registerResin(blockStateModelGenerator, ModBlocks.COPPER_POLISHED_RESIN, ModBlocks.COPPER_POLISHED_RESIN_STAIRS, ModBlocks.COPPER_POLISHED_RESIN_SLAB, ModBlocks.COPPER_POLISHED_RESIN_WALL, ModBlocks.COPPER_RESIN_BRICKS, ModBlocks.COPPER_RESIN_BRICKS_STAIRS, ModBlocks.COPPER_RESIN_BRICKS_SLAB, ModBlocks.COPPER_RESIN_BRICKS_WALL, ModBlocks.COPPER_RESIN_BLOCK, ModBlocks.COPPER_RESIN_BLOCK_STAIRS, ModBlocks.COPPER_RESIN_BLOCK_SLAB, ModBlocks.COPPER_RESIN_BLOCK_WALL, ModBlocks.CHISELED_COPPER_RESIN_BRICKS);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.COPPER_RESIN_CLUMP, ModItems.COPPER_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.SWEETBERRY_POLISHED_RESIN, ModBlocks.SWEETBERRY_POLISHED_RESIN_STAIRS, ModBlocks.SWEETBERRY_POLISHED_RESIN_SLAB, ModBlocks.SWEETBERRY_POLISHED_RESIN_WALL, ModBlocks.SWEETBERRY_RESIN_BRICKS, ModBlocks.SWEETBERRY_RESIN_BRICKS_STAIRS, ModBlocks.SWEETBERRY_RESIN_BRICKS_SLAB, ModBlocks.SWEETBERRY_RESIN_BRICKS_WALL, ModBlocks.SWEETBERRY_RESIN_BLOCK, ModBlocks.SWEETBERRY_RESIN_BLOCK_STAIRS, ModBlocks.SWEETBERRY_RESIN_BLOCK_SLAB, ModBlocks.SWEETBERRY_RESIN_BLOCK_WALL, ModBlocks.CHISELED_SWEETBERRY_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.SWEETBERRY_RESIN_CLUMP, ModItems.SWEETBERRY_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.KELP_POLISHED_RESIN, ModBlocks.KELP_POLISHED_RESIN_STAIRS, ModBlocks.KELP_POLISHED_RESIN_SLAB, ModBlocks.KELP_POLISHED_RESIN_WALL, ModBlocks.KELP_RESIN_BRICKS, ModBlocks.KELP_RESIN_BRICKS_STAIRS, ModBlocks.KELP_RESIN_BRICKS_SLAB, ModBlocks.KELP_RESIN_BRICKS_WALL, ModBlocks.KELP_RESIN_BLOCK, ModBlocks.KELP_RESIN_BLOCK_STAIRS, ModBlocks.KELP_RESIN_BLOCK_SLAB, ModBlocks.KELP_RESIN_BLOCK_WALL, ModBlocks.CHISELED_KELP_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.KELP_RESIN_CLUMP, ModItems.KELP_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.GLITTER_POLISHED_RESIN, ModBlocks.GLITTER_POLISHED_RESIN_STAIRS, ModBlocks.GLITTER_POLISHED_RESIN_SLAB, ModBlocks.GLITTER_POLISHED_RESIN_WALL, ModBlocks.GLITTER_RESIN_BRICKS, ModBlocks.GLITTER_RESIN_BRICKS_STAIRS, ModBlocks.GLITTER_RESIN_BRICKS_SLAB, ModBlocks.GLITTER_RESIN_BRICKS_WALL, ModBlocks.GLITTER_RESIN_BLOCK, ModBlocks.GLITTER_RESIN_BLOCK_STAIRS, ModBlocks.GLITTER_RESIN_BLOCK_SLAB, ModBlocks.GLITTER_RESIN_BLOCK_WALL, ModBlocks.CHISELED_GLITTER_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.GLITTER_RESIN_CLUMP, ModItems.GLITTER_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.BLAZE_POLISHED_RESIN, ModBlocks.BLAZE_POLISHED_RESIN_STAIRS, ModBlocks.BLAZE_POLISHED_RESIN_SLAB, ModBlocks.BLAZE_POLISHED_RESIN_WALL, ModBlocks.BLAZE_RESIN_BRICKS, ModBlocks.BLAZE_RESIN_BRICKS_STAIRS, ModBlocks.BLAZE_RESIN_BRICKS_SLAB, ModBlocks.BLAZE_RESIN_BRICKS_WALL, ModBlocks.BLAZE_RESIN_BLOCK, ModBlocks.BLAZE_RESIN_BLOCK_STAIRS, ModBlocks.BLAZE_RESIN_BLOCK_SLAB, ModBlocks.BLAZE_RESIN_BLOCK_WALL, ModBlocks.CHISELED_BLAZE_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BLAZE_RESIN_CLUMP, ModItems.BLAZE_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.ZAP_POLISHED_RESIN, ModBlocks.ZAP_POLISHED_RESIN_STAIRS, ModBlocks.ZAP_POLISHED_RESIN_SLAB, ModBlocks.ZAP_POLISHED_RESIN_WALL, ModBlocks.ZAP_RESIN_BRICKS, ModBlocks.ZAP_RESIN_BRICKS_STAIRS, ModBlocks.ZAP_RESIN_BRICKS_SLAB, ModBlocks.ZAP_RESIN_BRICKS_WALL, ModBlocks.ZAP_RESIN_BLOCK, ModBlocks.ZAP_RESIN_BLOCK_STAIRS, ModBlocks.ZAP_RESIN_BLOCK_SLAB, ModBlocks.ZAP_RESIN_BLOCK_WALL, ModBlocks.CHISELED_ZAP_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.ZAP_RESIN_CLUMP, ModItems.ZAP_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.NIGHTWAY_POLISHED_RESIN, ModBlocks.NIGHTWAY_POLISHED_RESIN_STAIRS, ModBlocks.NIGHTWAY_POLISHED_RESIN_SLAB, ModBlocks.NIGHTWAY_POLISHED_RESIN_WALL, ModBlocks.NIGHTWAY_RESIN_BRICKS, ModBlocks.NIGHTWAY_RESIN_BRICKS_STAIRS, ModBlocks.NIGHTWAY_RESIN_BRICKS_SLAB, ModBlocks.NIGHTWAY_RESIN_BRICKS_WALL, ModBlocks.NIGHTWAY_RESIN_BLOCK, ModBlocks.NIGHTWAY_RESIN_BLOCK_STAIRS, ModBlocks.NIGHTWAY_RESIN_BLOCK_SLAB, ModBlocks.NIGHTWAY_RESIN_BLOCK_WALL, ModBlocks.CHISELED_NIGHTWAY_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.NIGHTWAY_RESIN_CLUMP, ModItems.NIGHTWAY_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.RIPE_POLISHED_RESIN, ModBlocks.RIPE_POLISHED_RESIN_STAIRS, ModBlocks.RIPE_POLISHED_RESIN_SLAB, ModBlocks.RIPE_POLISHED_RESIN_WALL, ModBlocks.RIPE_RESIN_BRICKS, ModBlocks.RIPE_RESIN_BRICKS_STAIRS, ModBlocks.RIPE_RESIN_BRICKS_SLAB, ModBlocks.RIPE_RESIN_BRICKS_WALL, ModBlocks.RIPE_RESIN_BLOCK, ModBlocks.RIPE_RESIN_BLOCK_STAIRS, ModBlocks.RIPE_RESIN_BLOCK_SLAB, ModBlocks.RIPE_RESIN_BLOCK_WALL, ModBlocks.CHISELED_RIPE_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.RIPE_RESIN_CLUMP, ModItems.RIPE_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.SLUDGE_POLISHED_RESIN, ModBlocks.SLUDGE_POLISHED_RESIN_STAIRS, ModBlocks.SLUDGE_POLISHED_RESIN_SLAB, ModBlocks.SLUDGE_POLISHED_RESIN_WALL, ModBlocks.SLUDGE_RESIN_BRICKS, ModBlocks.SLUDGE_RESIN_BRICKS_STAIRS, ModBlocks.SLUDGE_RESIN_BRICKS_SLAB, ModBlocks.SLUDGE_RESIN_BRICKS_WALL, ModBlocks.SLUDGE_RESIN_BLOCK, ModBlocks.SLUDGE_RESIN_BLOCK_STAIRS, ModBlocks.SLUDGE_RESIN_BLOCK_SLAB, ModBlocks.SLUDGE_RESIN_BLOCK_WALL, ModBlocks.CHISELED_SLUDGE_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.SLUDGE_RESIN_CLUMP, ModItems.SLUDGE_RESIN_CLUMP);
+
+        registerResin(blockStateModelGenerator, ModBlocks.ARMADILLO_POLISHED_RESIN, ModBlocks.ARMADILLO_POLISHED_RESIN_STAIRS, ModBlocks.ARMADILLO_POLISHED_RESIN_SLAB, ModBlocks.ARMADILLO_POLISHED_RESIN_WALL, ModBlocks.ARMADILLO_RESIN_BRICKS, ModBlocks.ARMADILLO_RESIN_BRICKS_STAIRS, ModBlocks.ARMADILLO_RESIN_BRICKS_SLAB, ModBlocks.ARMADILLO_RESIN_BRICKS_WALL, ModBlocks.ARMADILLO_RESIN_BLOCK, ModBlocks.ARMADILLO_RESIN_BLOCK_STAIRS, ModBlocks.ARMADILLO_RESIN_BLOCK_SLAB, ModBlocks.ARMADILLO_RESIN_BLOCK_WALL, ModBlocks.CHISELED_ARMADILLO_RESIN_BRICKS);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.ARMADILLO_RESIN_CLUMP, ModItems.ARMADILLO_RESIN_CLUMP);
     }
 
     @Override
@@ -1089,6 +1116,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GRAPE_RESIN_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.REDSTONE_RESIN_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.COPPER_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEETBERRY_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KELP_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLITTER_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLAZE_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZAP_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NIGHTWAY_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RIPE_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SLUDGE_RESIN_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARMADILLO_RESIN_BRICK, Models.GENERATED);
     }
 
     public void registerResin(BlockStateModelGenerator generator, Block polishedResin, Block polishedResinStairs, Block polishedResinSlab, Block polishedResinWall, Block resinBrick, Block resinBrickStairs, Block resinBrickSlab, Block resinBrickWall, Block resinBlock, Block resinBlockStairs, Block resinBlockSlab, Block resinBlockWall, Block chiseledResinBrick) {

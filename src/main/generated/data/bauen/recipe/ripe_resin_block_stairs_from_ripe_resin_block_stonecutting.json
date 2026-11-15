@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:ripe_resin_block",
+  "result": {
+    "count": 1,
+    "id": "bauen:ripe_resin_block_stairs"
+  }
+}

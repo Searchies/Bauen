@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump",
+    "bauen:sweetberry_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:sweetberry_resin_block"
+  }
+}

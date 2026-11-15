@@ -95,6 +95,25 @@ public class ModItems {
     public static final Item COPPER_RESIN_CLUMP = registerBlockItem("copper_resin_clump", createBlockItemWithUniqueName(ModBlocks.COPPER_RESIN_CLUMP));
     public static final Item COPPER_RESIN_BRICK = registerItem("copper_resin_brick", Item::new);
 
+    public static final Item SWEETBERRY_RESIN_CLUMP = registerBlockItem("sweetberry_resin_clump", createBlockItemWithUniqueName(ModBlocks.SWEETBERRY_RESIN_CLUMP));
+    public static final Item SWEETBERRY_RESIN_BRICK = registerItem("sweetberry_resin_brick", Item::new);
+    public static final Item KELP_RESIN_CLUMP = registerBlockItem("kelp_resin_clump", createBlockItemWithUniqueName(ModBlocks.KELP_RESIN_CLUMP));
+    public static final Item KELP_RESIN_BRICK = registerItem("kelp_resin_brick", Item::new);
+    public static final Item GLITTER_RESIN_CLUMP = registerBlockItem("glitter_resin_clump", createBlockItemWithUniqueName(ModBlocks.GLITTER_RESIN_CLUMP));
+    public static final Item GLITTER_RESIN_BRICK = registerItem("glitter_resin_brick", Item::new);
+    public static final Item BLAZE_RESIN_CLUMP = registerBlockItem("blaze_resin_clump", createBlockItemWithUniqueName(ModBlocks.BLAZE_RESIN_CLUMP));
+    public static final Item BLAZE_RESIN_BRICK = registerItem("blaze_resin_brick", Item::new);
+    public static final Item ZAP_RESIN_CLUMP = registerBlockItem("zap_resin_clump", createBlockItemWithUniqueName(ModBlocks.ZAP_RESIN_CLUMP));
+    public static final Item ZAP_RESIN_BRICK = registerItem("zap_resin_brick", Item::new);
+    public static final Item NIGHTWAY_RESIN_CLUMP = registerBlockItem("nightway_resin_clump", createBlockItemWithUniqueName(ModBlocks.NIGHTWAY_RESIN_CLUMP));
+    public static final Item NIGHTWAY_RESIN_BRICK = registerItem("nightway_resin_brick", Item::new);
+    public static final Item RIPE_RESIN_CLUMP = registerBlockItem("ripe_resin_clump", createBlockItemWithUniqueName(ModBlocks.RIPE_RESIN_CLUMP));
+    public static final Item RIPE_RESIN_BRICK = registerItem("ripe_resin_brick", Item::new);
+    public static final Item SLUDGE_RESIN_CLUMP = registerBlockItem("sludge_resin_clump", createBlockItemWithUniqueName(ModBlocks.SLUDGE_RESIN_CLUMP));
+    public static final Item SLUDGE_RESIN_BRICK = registerItem("sludge_resin_brick", Item::new);
+    public static final Item ARMADILLO_RESIN_CLUMP = registerBlockItem("armadillo_resin_clump", createBlockItemWithUniqueName(ModBlocks.ARMADILLO_RESIN_CLUMP));
+    public static final Item ARMADILLO_RESIN_BRICK = registerItem("armadillo_resin_brick", Item::new);
+
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(Bauen.MOD_ID, name),
                 function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Bauen.MOD_ID, name)))));
