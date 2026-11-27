@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": "minecraft:resin_clump",
+    "D": "minecraft:light_blue_dye",
+    "P": "bauen:aberrant_paste"
+  },
+  "pattern": [
+    "CDC",
+    "CPC",
+    "CCC"
+  ],
+  "result": {
+    "count": 9,
+    "id": "bauen:glacier_resin_clump"
+  }
+}

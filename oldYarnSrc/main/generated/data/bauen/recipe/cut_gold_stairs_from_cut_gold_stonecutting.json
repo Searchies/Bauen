@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:cut_gold",
+  "result": {
+    "count": 1,
+    "id": "bauen:cut_gold_stairs"
+  }
+}

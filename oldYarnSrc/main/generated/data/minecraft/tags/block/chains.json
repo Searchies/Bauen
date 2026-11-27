@@ -1,0 +1,13 @@
+{
+  "values": [
+    "bauen:gold_chain",
+    "bauen:aberrant_copper_chain",
+    "bauen:waxed_aberrant_copper_chain",
+    "bauen:exposed_aberrant_copper_chain",
+    "bauen:waxed_exposed_aberrant_copper_chain",
+    "bauen:weathered_aberrant_copper_chain",
+    "bauen:waxed_weathered_aberrant_copper_chain",
+    "bauen:oxidized_aberrant_copper_chain",
+    "bauen:waxed_oxidized_aberrant_copper_chain"
+  ]
+}

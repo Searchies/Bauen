@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:toxic_polished_resin",
+  "result": {
+    "count": 1,
+    "id": "bauen:toxic_polished_resin_stairs"
+  }
+}

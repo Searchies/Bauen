@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump",
+    "bauen:nightway_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:nightway_resin_block"
+  }
+}

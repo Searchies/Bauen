@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/oxidized_aberrant_cut_copper_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/oxidized_aberrant_cut_copper"
+    },
+    "type=top": {
+      "model": "bauen:block/oxidized_aberrant_cut_copper_slab_top"
+    }
+  }
+}

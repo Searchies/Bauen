@@ -1,19 +1,17 @@
 package net.searchies.bauen.datagen;
 
-import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementEntry;
-import net.minecraft.advancement.AdvancementFrame;
-import net.minecraft.advancement.AdvancementRewards;
-import net.minecraft.advancement.criterion.ChangedDimensionCriterion;
-import net.minecraft.advancement.criterion.InventoryChangedCriterion;
-import net.minecraft.block.Blocks;
-import net.minecraft.data.DataOutput;
-import net.minecraft.data.advancement.AdvancementProvider;
-import net.minecraft.data.advancement.AdvancementTabGenerator;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementRewards;
+import net.minecraft.advancements.AdvancementType;
+import net.minecraft.advancements.criterion.InventoryChangeTrigger;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.advancements.AdvancementProvider;
+import net.minecraft.data.advancements.AdvancementSubProvider;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Blocks;
 import net.searchies.bauen.Bauen;
 import net.searchies.bauen.init.ModBlocks;
 
@@ -22,42 +20,42 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModAdvancementsProvider extends AdvancementProvider {
-    public ModAdvancementsProvider(DataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public ModAdvancementsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture, List.of(new BauenAdvancements()));
     }
 
-    public static class BauenAdvancements implements AdvancementTabGenerator {
+    public static class BauenAdvancements implements AdvancementSubProvider {
 
         @Override
-        public void accept(RegistryWrapper.WrapperLookup registries, Consumer<AdvancementEntry> exporter) {
+        public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolder> exporter) {
 
-            AdvancementEntry root = Advancement.Builder.create()
+            AdvancementHolder root = Advancement.Builder.advancement()
                     .display(
                             ModBlocks.TREATED_BRICKS,
-                            Text.translatable("advancements.bauen.root.title"),
-                            Text.translatable("advancements.bauen.root.description"),
-                            Identifier.ofVanilla("gui/advancements/backgrounds/nether"),
-                            AdvancementFrame.TASK,
+                            Component.translatable("advancements.bauen.root.title"),
+                            Component.translatable("advancements.bauen.root.description"),
+                            Identifier.withDefaultNamespace("gui/advancements/backgrounds/nether"),
+                            AdvancementType.TASK,
                             false,
                             false,
                             false)
-                    .criterion("has_dirt", InventoryChangedCriterion.Conditions.items(Blocks.DIRT))
-                    .build(exporter, Bauen.MOD_ID + ":bauen/root");
+                    .addCriterion("has_dirt", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.DIRT))
+                    .save(exporter, Bauen.MOD_ID + ":bauen/root");
 
-            Advancement.Builder.create()
+            Advancement.Builder.advancement()
                     .parent(root)
                     .display(
                             ModBlocks.NETHERITE_FENCE,
-                            Text.translatable("advancements.bauen.netherite_fence.title"),
-                            Text.translatable("advancements.bauen.netherite_fence.description"),
+                            Component.translatable("advancements.bauen.netherite_fence.title"),
+                            Component.translatable("advancements.bauen.netherite_fence.description"),
                             null,
-                            AdvancementFrame.CHALLENGE,
+                            AdvancementType.CHALLENGE,
                             true,
                             true,
                             false)
                     .rewards(AdvancementRewards.Builder.experience(500))
-                    .criterion("has_netherite_fence", InventoryChangedCriterion.Conditions.items(ModBlocks.NETHERITE_FENCE))
-                    .build(exporter, "bauen/obtain_netherite_fence");
+                    .addCriterion("has_netherite_fence", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.NETHERITE_FENCE))
+                    .save(exporter, "bauen/obtain_netherite_fence");
 
         }
     }

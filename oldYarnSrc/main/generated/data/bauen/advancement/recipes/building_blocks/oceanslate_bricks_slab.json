@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oceanslate_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:oceanslate_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:oceanslate_bricks_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oceanslate_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:oceanslate_bricks_slab"
+    ]
+  }
+}

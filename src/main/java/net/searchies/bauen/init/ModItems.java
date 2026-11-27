@@ -1,17 +1,14 @@
 package net.searchies.bauen.init;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.equipment.trim.ArmorTrimMaterials;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.level.block.Block;
 import net.searchies.bauen.Bauen;
 import net.searchies.bauen.item.AberrantPasteItem;
 import net.searchies.bauen.item.TrowelItem;
@@ -114,27 +111,27 @@ public class ModItems {
     public static final Item ARMADILLO_RESIN_CLUMP = registerBlockItem("armadillo_resin_clump", createBlockItemWithUniqueName(ModBlocks.ARMADILLO_RESIN_CLUMP));
     public static final Item ARMADILLO_RESIN_BRICK = registerItem("armadillo_resin_brick", Item::new);
 
-    private static Item registerItem(String name, Function<Item.Settings, Item> function) {
-        return Registry.register(Registries.ITEM, Identifier.of(Bauen.MOD_ID, name),
-                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Bauen.MOD_ID, name)))));
+    private static Item registerItem(String name, Function<Item.Properties, Item> function) {
+        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(Bauen.MOD_ID, name),
+                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Bauen.MOD_ID, name)))));
     }
 
     public static void registerModItems() {
         Bauen.LOGGER.info(Bauen.MOD_ID + " || Registering ModItems");
     }
 
-    public static Item registerBlockItem(String name, Function<Item.Settings, Item> function) {
-        Item item = function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Bauen.MOD_ID, name))));
+    public static Item registerBlockItem(String name, Function<Item.Properties, Item> function) {
+        Item item = function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Bauen.MOD_ID, name))));
         if (item instanceof BlockItem blockItem) {
-            blockItem.appendBlocks(Item.BLOCK_ITEMS, item);
+            blockItem.registerBlocks(Item.BY_BLOCK, item);
         }
 
-        return Registry.register(Registries.ITEM, Identifier.of(Bauen.MOD_ID, name), item);
+        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(Bauen.MOD_ID, name), item);
     }
 
     // Line 1636 in Items.java
-    private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
-        return settings -> new BlockItem(block, settings.useItemPrefixedTranslationKey());
+    private static Function<Item.Properties, Item> createBlockItemWithUniqueName(Block block) {
+        return settings -> new BlockItem(block, settings.useItemDescriptionPrefix());
     }
 }
 

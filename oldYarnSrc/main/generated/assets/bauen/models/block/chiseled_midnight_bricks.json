@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "bauen:block/chiseled_midnight_bricks"
+  }
+}

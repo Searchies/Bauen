@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump",
+    "bauen:graphite_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:graphite_resin_block"
+  }
+}

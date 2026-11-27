@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump",
+    "bauen:emerald_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:emerald_resin_block"
+  }
+}

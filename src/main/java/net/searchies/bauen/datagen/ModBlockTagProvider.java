@@ -4,23 +4,21 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup registries) {
-        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+    protected void addTags(HolderLookup.Provider registries) {
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
         .add(ModBlocks.MOSSY_BRICKS)
         .add(ModBlocks.MOSSY_BRICKS_STAIRS)
         .add(ModBlocks.MOSSY_BRICKS_SLAB)
@@ -840,9 +838,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         .add(ModBlocks.ABERRANT_COPPER_GRATE)
         .add(ModBlocks.ABERRANT_COPPER_DOOR)
         .add(ModBlocks.ABERRANT_COPPER_BULB)
-        .add(ModBlocks.ABERRANT_COPPER_CHAINS.getAll())
-        .add(ModBlocks.ABERRANT_COPPER_LANTERNS.getAll())
-        .add(ModBlocks.ABERRANT_COPPER_BARS.getAll())
+        .addAll(ModBlocks.ABERRANT_COPPER_CHAINS.asList())
+        .addAll(ModBlocks.ABERRANT_COPPER_LANTERNS.asList())
+        .addAll(ModBlocks.ABERRANT_COPPER_BARS.asList())
         .add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER)
         .add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_STAIRS)
         .add(ModBlocks.EXPOSED_ABERRANT_CUT_COPPER_SLAB)
@@ -1259,16 +1257,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         valueLookupBuilder(BlockTags.CHAINS)
                 .add(ModBlocks.GOLD_CHAIN)
-                .add(ModBlocks.ABERRANT_COPPER_CHAINS.getAll());
+                .addAll(ModBlocks.ABERRANT_COPPER_CHAINS.asList());
         valueLookupBuilder(ConventionalBlockTags.CHAINS)
                 .add(ModBlocks.GOLD_CHAIN)
-                .add(ModBlocks.ABERRANT_COPPER_CHAINS.getAll());
+                .addAll(ModBlocks.ABERRANT_COPPER_CHAINS.asList());
         valueLookupBuilder(BlockTags.LANTERNS)
                 .add(ModBlocks.GOLD_LANTERN)
-                .add(ModBlocks.ABERRANT_COPPER_LANTERNS.getAll());
+                .addAll(ModBlocks.ABERRANT_COPPER_LANTERNS.asList());
         valueLookupBuilder(BlockTags.BARS)
                 .add(ModBlocks.GOLD_BARS)
-                .add(ModBlocks.ABERRANT_COPPER_BARS.getAll());
+                .addAll(ModBlocks.ABERRANT_COPPER_BARS.asList());
         valueLookupBuilder(BlockTags.WALLS)
             .add(ModBlocks.MOSSY_BRICKS_WALL)
             .add(ModBlocks.CRACKED_BRICKS_WALL)

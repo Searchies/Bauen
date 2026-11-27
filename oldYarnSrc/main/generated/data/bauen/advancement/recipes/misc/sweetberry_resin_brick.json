@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sweetberry_resin_clump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:sweetberry_resin_clump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:sweetberry_resin_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sweetberry_resin_clump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:sweetberry_resin_brick"
+    ]
+  }
+}

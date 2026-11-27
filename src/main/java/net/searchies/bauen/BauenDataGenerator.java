@@ -2,9 +2,10 @@ package net.searchies.bauen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecraft.registry.RegistryBuilder;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.Registries;
 import net.searchies.bauen.datagen.*;
+import net.searchies.bauen.init.datagen.ModTrimMaterials;
 
 public class BauenDataGenerator implements DataGeneratorEntrypoint {
     @Override
@@ -22,7 +23,8 @@ public class BauenDataGenerator implements DataGeneratorEntrypoint {
     }
 
     @Override
-    public void buildRegistry(RegistryBuilder registryBuilder) {
-        registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+    public void buildRegistry(RegistrySetBuilder registryBuilder) {
+        registryBuilder.add(Registries.ENCHANTMENT, ModEnchantments::bootstrap);
+        registryBuilder.add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
     }
 }

@@ -1,35 +1,39 @@
 package net.searchies.bauen.item;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.*;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Container;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import java.util.*;
 
 public class TrowelItem extends Item {
-    public TrowelItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings) {
+    public TrowelItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties settings) {
         super(settings.shovel(material, attackDamage, attackSpeed));
     }
 
     // ill totally optimize this later...
 
     @Override
-    public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-        if (miner instanceof PlayerEntity player) {
-            Inventory inventory = player.getInventory();
+    public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity miner) {
+        if (miner instanceof Player player) {
+            Container inventory = player.getInventory();
             List<BlockItem> blocks = new ArrayList<>();
             List<Integer> slots = new ArrayList<>();
 
             int counter = 0;
             while (counter <= 8) {
-                ItemStack tempStack = inventory.getStack(counter);
+                ItemStack tempStack = inventory.getItem(counter);
                 if (tempStack.getItem() instanceof BlockItem tempBlock) {
                     blocks.add(tempBlock);
                     slots.add(counter);
@@ -45,26 +49,26 @@ public class TrowelItem extends Item {
             BlockItem block = blocks.get(rng);
             int slot = slots.get(rng);
 
-            if (!world.isClient()) {
-                world.setBlockState(pos, block.getBlock().getDefaultState());
+            if (!world.isClientSide()) {
+                world.setBlockAndUpdate(pos, block.getBlock().defaultBlockState());
                 if (!player.isCreative()) {
-                    inventory.getStack(slot).setCount(inventory.getStack(slot).getCount() - 1);
+                    inventory.getItem(slot).setCount(inventory.getItem(slot).getCount() - 1);
                 }
             }
-            return super.postMine(block.getDefaultStack(), world, state, pos, miner);
+            return super.mineBlock(block.getDefaultInstance(), world, state, pos, miner);
         }
         return true;
     }
 
     @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
-        Inventory inventory = context.getPlayer().getInventory();
+    public InteractionResult useOn(UseOnContext context) {
+        Container inventory = context.getPlayer().getInventory();
         List<BlockItem> blocks = new ArrayList<>();
         List<Integer> slots = new ArrayList<>();
 
         int counter = 0;
         while (counter <= 8) {
-            ItemStack tempStack = inventory.getStack(counter);
+            ItemStack tempStack = inventory.getItem(counter);
             if (tempStack.getItem() instanceof BlockItem tempBlock) {
                 blocks.add(tempBlock);
                 slots.add(counter);
@@ -72,7 +76,7 @@ public class TrowelItem extends Item {
             counter++;
         }
 
-        if (blocks.isEmpty()) return ActionResult.PASS;
+        if (blocks.isEmpty()) return InteractionResult.PASS;
 
         Random rand = new Random();
         int rng = rand.nextInt(blocks.size());
@@ -80,21 +84,21 @@ public class TrowelItem extends Item {
         BlockItem block = blocks.get(rng);
         int slot = slots.get(rng);
 
-        World world = context.getWorld();
-        BlockPos pos = context.getBlockPos();
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
 
-        if (!world.isClient()) {
-            boolean isPlaced = block.place(new ItemPlacementContext(
-                world, context.getPlayer(), null, block.getDefaultStack(),
-                context.getHitResult().withSide(context.getSide()))).isAccepted();
+        if (!world.isClientSide()) {
+            boolean isPlaced = block.place(new BlockPlaceContext(
+                world, context.getPlayer(), null, block.getDefaultInstance(),
+                context.getHitResult().withDirection(context.getClickedFace()))).consumesAction();
 
             if (!context.getPlayer().isCreative() && isPlaced) {
-                inventory.getStack(slot).setCount(inventory.getStack(slot).getCount() - 1);
+                inventory.getItem(slot).setCount(inventory.getItem(slot).getCount() - 1);
             }
 
-            world.playSound(null, pos, SoundEvents.BLOCK_PACKED_MUD_STEP, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, SoundEvents.PACKED_MUD_STEP, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
-        return ActionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 }

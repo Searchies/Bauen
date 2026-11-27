@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump",
+    "bauen:chorus_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:chorus_resin_block"
+  }
+}

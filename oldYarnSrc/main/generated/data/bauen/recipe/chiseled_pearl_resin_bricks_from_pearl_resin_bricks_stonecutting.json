@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:pearl_resin_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:chiseled_pearl_resin_bricks"
+  }
+}

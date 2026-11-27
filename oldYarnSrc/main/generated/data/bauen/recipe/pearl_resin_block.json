@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump",
+    "bauen:pearl_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:pearl_resin_block"
+  }
+}

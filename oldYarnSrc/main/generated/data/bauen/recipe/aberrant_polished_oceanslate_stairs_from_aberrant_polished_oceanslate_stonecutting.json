@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:aberrant_polished_oceanslate",
+  "result": {
+    "count": 1,
+    "id": "bauen:aberrant_polished_oceanslate_stairs"
+  }
+}

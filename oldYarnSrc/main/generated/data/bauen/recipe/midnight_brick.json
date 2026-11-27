@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.3,
+  "ingredient": "bauen:kaolin_clay_ball",
+  "result": {
+    "id": "bauen:midnight_brick"
+  }
+}

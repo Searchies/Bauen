@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:aberrant_green_concrete",
+  "result": {
+    "count": 1,
+    "id": "bauen:aberrant_green_concrete_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:dusk_resin_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:chiseled_dusk_resin_bricks"
+  }
+}

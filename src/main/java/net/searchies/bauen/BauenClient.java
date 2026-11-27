@@ -3,8 +3,8 @@ package net.searchies.bauen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.render.BlockRenderLayer;
-import net.minecraft.client.render.entity.EntityRendererFactories;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.searchies.bauen.entity.SeatRenderer;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModEntities;
@@ -12,7 +12,7 @@ import net.searchies.bauen.init.ModEntities;
 public class BauenClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
+        BlockRenderLayerMap.putBlocks(ChunkSectionLayer.CUTOUT,
             ModBlocks.GOLD_CHAIN,
             ModBlocks.GOLD_LANTERN,
             ModBlocks.GOLD_TRAPDOOR,
@@ -100,10 +100,10 @@ public class BauenClient implements ClientModInitializer {
             ModBlocks.SLUDGE_RESIN_CLUMP,
             ModBlocks.ARMADILLO_RESIN_CLUMP);
 
-        ModBlocks.ABERRANT_COPPER_CHAINS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
-        ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
-        ModBlocks.ABERRANT_COPPER_BARS.forEach(block -> BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, block));
+        ModBlocks.ABERRANT_COPPER_CHAINS.forEach(block -> BlockRenderLayerMap.putBlocks(ChunkSectionLayer.CUTOUT, block));
+        ModBlocks.ABERRANT_COPPER_LANTERNS.forEach(block -> BlockRenderLayerMap.putBlocks(ChunkSectionLayer.CUTOUT, block));
+        ModBlocks.ABERRANT_COPPER_BARS.forEach(block -> BlockRenderLayerMap.putBlocks(ChunkSectionLayer.CUTOUT, block));
 
-        EntityRendererFactories.register(ModEntities.SEAT, SeatRenderer::new);
+        EntityRenderers.register(ModEntities.SEAT, SeatRenderer::new);
     }
 }

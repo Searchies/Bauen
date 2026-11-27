@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:caramel_resin_block",
+  "result": {
+    "count": 1,
+    "id": "bauen:caramel_resin_block_stairs"
+  }
+}

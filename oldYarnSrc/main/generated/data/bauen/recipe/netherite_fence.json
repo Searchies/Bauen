@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": "minecraft:gold_block",
+    "N": "minecraft:netherite_block"
+  },
+  "pattern": [
+    "NGN",
+    "NGN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:netherite_fence"
+  }
+}

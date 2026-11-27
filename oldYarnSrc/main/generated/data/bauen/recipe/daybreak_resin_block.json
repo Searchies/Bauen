@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump",
+    "bauen:daybreak_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:daybreak_resin_block"
+  }
+}

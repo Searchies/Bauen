@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump",
+    "bauen:obsidian_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:obsidian_resin_block"
+  }
+}

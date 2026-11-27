@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "bauen:block/aberrant_nether_bricks",
+    "side": "bauen:block/aberrant_nether_bricks",
+    "top": "bauen:block/aberrant_nether_bricks"
+  }
+}

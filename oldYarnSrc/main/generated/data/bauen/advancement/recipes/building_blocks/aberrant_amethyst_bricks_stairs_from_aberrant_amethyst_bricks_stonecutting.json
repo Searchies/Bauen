@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aberrant_amethyst_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:aberrant_amethyst_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:aberrant_amethyst_bricks_stairs_from_aberrant_amethyst_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aberrant_amethyst_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:aberrant_amethyst_bricks_stairs_from_aberrant_amethyst_bricks_stonecutting"
+    ]
+  }
+}

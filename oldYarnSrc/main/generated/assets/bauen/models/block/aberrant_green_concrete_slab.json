@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bauen:block/aberrant_green_concrete",
+    "side": "bauen:block/aberrant_green_concrete",
+    "top": "bauen:block/aberrant_green_concrete"
+  }
+}

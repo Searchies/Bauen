@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/cut_gold_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/cut_gold"
+    },
+    "type=top": {
+      "model": "bauen:block/cut_gold_slab_top"
+    }
+  }
+}

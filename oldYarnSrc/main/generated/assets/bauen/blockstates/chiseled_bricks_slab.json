@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/chiseled_bricks_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/chiseled_bricks"
+    },
+    "type=top": {
+      "model": "bauen:block/chiseled_bricks_slab_top"
+    }
+  }
+}

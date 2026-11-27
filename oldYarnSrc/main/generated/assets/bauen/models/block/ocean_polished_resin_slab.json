@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bauen:block/ocean_polished_resin",
+    "side": "bauen:block/ocean_polished_resin",
+    "top": "bauen:block/ocean_polished_resin"
+  }
+}

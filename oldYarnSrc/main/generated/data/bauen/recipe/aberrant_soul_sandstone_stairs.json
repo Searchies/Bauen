@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": [
+      "bauen:aberrant_soul_sandstone",
+      "bauen:aberrant_chiseled_soul_sandstone",
+      "bauen:aberrant_cut_soul_sandstone"
+    ]
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bauen:aberrant_soul_sandstone_stairs"
+  }
+}

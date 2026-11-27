@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "bauen:block/aberrant_soul_sandstone_top",
+    "side": "bauen:block/aberrant_cut_soul_sandstone"
+  }
+}

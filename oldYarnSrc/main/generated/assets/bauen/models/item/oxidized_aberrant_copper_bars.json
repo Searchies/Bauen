@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bauen:block/oxidized_aberrant_copper_bars"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:aberrant_paste",
+    "bauen:aberrant_paste",
+    "bauen:aberrant_paste",
+    "bauen:aberrant_paste"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:aberrant"
+  }
+}

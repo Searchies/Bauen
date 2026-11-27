@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "bauen:subzero_resin_clump",
+  "result": {
+    "id": "bauen:subzero_resin_brick"
+  }
+}

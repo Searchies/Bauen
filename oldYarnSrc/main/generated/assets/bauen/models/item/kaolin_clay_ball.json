@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bauen:item/kaolin_clay_ball"
+  }
+}

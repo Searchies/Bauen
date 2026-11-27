@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:obsidian_polished_resin",
+  "result": {
+    "count": 1,
+    "id": "bauen:obsidian_polished_resin_stairs"
+  }
+}

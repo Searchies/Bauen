@@ -1,20 +1,19 @@
 package net.searchies.bauen.init;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.searchies.bauen.Bauen;
 import net.searchies.bauen.entity.SeatEntity;
 
 public class ModEntities {
-    public static final EntityType<SeatEntity> SEAT = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(Bauen.MOD_ID, "seat_entity"),
-            EntityType.Builder.create(SeatEntity::new, SpawnGroup.MISC).dimensions(0.5f, 0.5f).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(Bauen.MOD_ID + ":seat_entity"))));
+    public static final EntityType<SeatEntity> SEAT = Registry.register(BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(Bauen.MOD_ID, "seat_entity"),
+            EntityType.Builder.of(SeatEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.parse(Bauen.MOD_ID + ":seat_entity"))));
 
     public static void registerModEntities() {
 

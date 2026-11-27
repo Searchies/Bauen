@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:blood_polished_resin",
+  "result": {
+    "count": 1,
+    "id": "bauen:blood_polished_resin_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:treated_bricks",
+  "result": {
+    "count": 2,
+    "id": "bauen:treated_bricks_slab"
+  }
+}

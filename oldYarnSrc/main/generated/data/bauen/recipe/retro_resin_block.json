@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump",
+    "bauen:retro_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:retro_resin_block"
+  }
+}

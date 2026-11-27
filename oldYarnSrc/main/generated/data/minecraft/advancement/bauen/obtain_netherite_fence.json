@@ -1,0 +1,37 @@
+{
+  "parent": "bauen:bauen/root",
+  "criteria": {
+    "has_netherite_fence": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:netherite_fence"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.bauen.netherite_fence.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "bauen:netherite_fence"
+    },
+    "title": {
+      "translate": "advancements.bauen.netherite_fence.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_fence"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  },
+  "sends_telemetry_event": true
+}

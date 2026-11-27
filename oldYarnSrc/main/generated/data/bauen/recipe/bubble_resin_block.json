@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump",
+    "bauen:bubble_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:bubble_resin_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/aberrant_light_gray_concrete_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/aberrant_light_gray_concrete"
+    },
+    "type=top": {
+      "model": "bauen:block/aberrant_light_gray_concrete_slab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ruby_polished_resin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:ruby_polished_resin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:ruby_polished_resin_stairs_from_ruby_polished_resin_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ruby_polished_resin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:ruby_polished_resin_stairs_from_ruby_polished_resin_stonecutting"
+    ]
+  }
+}

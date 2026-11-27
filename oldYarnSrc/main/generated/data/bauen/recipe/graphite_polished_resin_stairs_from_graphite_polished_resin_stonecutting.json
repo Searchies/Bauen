@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:graphite_polished_resin",
+  "result": {
+    "count": 1,
+    "id": "bauen:graphite_polished_resin_stairs"
+  }
+}

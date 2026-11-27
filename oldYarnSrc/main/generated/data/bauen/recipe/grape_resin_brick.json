@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "bauen:grape_resin_clump",
+  "result": {
+    "id": "bauen:grape_resin_brick"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "#minecraft:wooden_slabs",
+    "W": "minecraft:pink_wool"
+  },
+  "pattern": [
+    "WW",
+    "SS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bauen:pink_seat"
+  }
+}

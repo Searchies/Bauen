@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aberrant_blue_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:aberrant_blue_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:aberrant_blue_concrete_stairs_from_aberrant_blue_concrete_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aberrant_blue_concrete"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:aberrant_blue_concrete_stairs_from_aberrant_blue_concrete_stonecutting"
+    ]
+  }
+}

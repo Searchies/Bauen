@@ -2,19 +2,19 @@ package net.searchies.bauen.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.core.HolderLookup;
 import net.searchies.bauen.init.ModBlocks;
 import net.searchies.bauen.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
 public class ModLangProvider extends FabricLanguageProvider {
-    public ModLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public ModLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
 
     @Override
-    public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModBlocks.MOSSY_BRICKS.asItem(),"Mossy Bricks");
         translationBuilder.add(ModBlocks.MOSSY_BRICKS_STAIRS.asItem(),"Mossy Bricks Stairs");
         translationBuilder.add(ModBlocks.MOSSY_BRICKS_SLAB.asItem(),"Mossy Bricks Slab");
@@ -1431,7 +1431,6 @@ public class ModLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("itemgroup.bauen.bauen_blocks_group", "Bauen");
         translationBuilder.add("enchantment.bauen.multitool", "Multitool");
-
 
         translationBuilder.add("advancements.bauen.root.title", "Bauen");
         translationBuilder.add("advancements.bauen.root.description", "Bauen Advancements");

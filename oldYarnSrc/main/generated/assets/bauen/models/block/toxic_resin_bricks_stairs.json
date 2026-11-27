@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "bauen:block/toxic_resin_bricks",
+    "side": "bauen:block/toxic_resin_bricks",
+    "top": "bauen:block/toxic_resin_bricks"
+  }
+}

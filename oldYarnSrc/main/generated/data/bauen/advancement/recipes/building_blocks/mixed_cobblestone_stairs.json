@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mixed_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:mixed_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:mixed_cobblestone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mixed_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:mixed_cobblestone_stairs"
+    ]
+  }
+}

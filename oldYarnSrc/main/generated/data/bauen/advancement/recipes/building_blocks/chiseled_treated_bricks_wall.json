@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chiseled_treated_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bauen:chiseled_treated_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bauen:chiseled_treated_bricks_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chiseled_treated_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bauen:chiseled_treated_bricks_wall"
+    ]
+  }
+}

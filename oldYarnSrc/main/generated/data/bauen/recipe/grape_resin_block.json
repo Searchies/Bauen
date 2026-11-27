@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump",
+    "bauen:grape_resin_clump"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bauen:grape_resin_block"
+  }
+}

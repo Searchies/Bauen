@@ -1,14 +1,14 @@
 package net.searchies.bauen.item;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemUsageContext;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.ActionResult;
-import net.minecraft.world.World;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.searchies.bauen.init.ModBlocks;
 
 import java.util.Map;
@@ -260,28 +260,28 @@ public class AberrantPasteItem extends Item {
             Map.entry(Blocks.WAXED_OXIDIZED_COPPER_BULB, ModBlocks.WAXED_OXIDIZED_ABERRANT_COPPER_BULB)
         );
 
-    public AberrantPasteItem(Settings settings) {
+    public AberrantPasteItem(Properties settings) {
         super(settings);
     }
 
     @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
-        World world = context.getWorld();
-        BlockState blockState = world.getBlockState(context.getBlockPos());
+    public InteractionResult useOn(UseOnContext context) {
+        Level world = context.getLevel();
+        BlockState blockState = world.getBlockState(context.getClickedPos());
         Block block = blockState.getBlock();
 
         if (GOO_MAP.containsKey(block)) {
-            if (!world.isClient()) {
-                world.setBlockState(context.getBlockPos(), GOO_MAP.get(block).getDefaultState());
+            if (!world.isClientSide()) {
+                world.setBlockAndUpdate(context.getClickedPos(), GOO_MAP.get(block).defaultBlockState());
 
-                context.getStack().decrement(1);
+                context.getItemInHand().shrink(1);
 
-                world.playSound(null, context.getBlockPos(), SoundEvents.ITEM_HONEYCOMB_WAX_ON, SoundCategory.BLOCKS);
+                world.playSound(null, context.getClickedPos(), SoundEvents.HONEYCOMB_WAX_ON, SoundSource.BLOCKS);
 
-                return ActionResult.SUCCESS;
+                return InteractionResult.SUCCESS;
             }
         }
 
-        return ActionResult.PASS;
+        return InteractionResult.PASS;
     }
 }

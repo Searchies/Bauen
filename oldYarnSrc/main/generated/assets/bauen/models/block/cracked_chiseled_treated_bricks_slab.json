@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "bauen:block/cracked_chiseled_treated_bricks",
+    "side": "bauen:block/cracked_chiseled_treated_bricks",
+    "top": "bauen:block/cracked_chiseled_treated_bricks"
+  }
+}

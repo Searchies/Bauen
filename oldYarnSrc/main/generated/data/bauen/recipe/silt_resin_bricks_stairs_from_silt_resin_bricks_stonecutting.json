@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "bauen:silt_resin_bricks",
+  "result": {
+    "count": 1,
+    "id": "bauen:silt_resin_bricks_stairs"
+  }
+}

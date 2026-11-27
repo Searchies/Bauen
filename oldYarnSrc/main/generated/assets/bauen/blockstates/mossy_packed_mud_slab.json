@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bauen:block/mossy_packed_mud_slab"
+    },
+    "type=double": {
+      "model": "bauen:block/mossy_packed_mud"
+    },
+    "type=top": {
+      "model": "bauen:block/mossy_packed_mud_slab_top"
+    }
+  }
+}
